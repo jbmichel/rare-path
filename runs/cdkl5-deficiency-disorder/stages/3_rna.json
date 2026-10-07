@@ -1,0 +1,169 @@
+{
+  "assessments": [
+    {
+      "hypothesis_name": "MAP1S-brake release",
+      "modality": "rna",
+      "strategy": "RNAi knockdown of MAP1S in forebrain neurons using a chemically stabilized, CNS-configured siRNA (divalent/di-siRNA or lipophilic conjugate) delivered intrathecally/intracerebroventricularly. Rationale for choosing RNAi over an ASO for the same target: the desired perturbation is PARTIAL, tunable lowering (MAP1S is not a disease gene - it is a normal protein whose microtubule occupancy must be reduced, not abolished), and RISC-mediated knockdown gives a flat, long-duration (months per dose in rodent/NHP for di-siRNA) plateau that is easier to titrate to a 30-50% target than bolus ASO pharmacology. Execution plan: (1) define the therapeutic window in Cdkl5-null primary/iPSC neurons by titrating Map1s siRNA and reading microtubule growth-episode length plus dendritic cargo transport; (2) confirm that partial knockdown rescues dendritic arborization; (3) only then move to in vivo di-siRNA ICV in Cdkl5-null mice with visual evoked potentials and convulsant-threshold EEG as animal-level endpoints. Note phospho-EB2 is NOT a valid PD marker for this arm - MAP1S lowering acts downstream of the kinase and will not restore EB2 phosphorylation; PD must be MAP1S protein/mRNA itself.",
+      "existing_agents": [
+        "No MAP1S-directed siRNA or RNAi agent identified in clinical or preclinical development (no agent retrieved)",
+        "Platform precedent only: ALN-APP/mivelsiran, an intrathecally administered CNS siRNA, is in Phase 2 (NCT06393712) - establishes that CNS siRNA is a dosable human modality, but says nothing about MAP1S"
+      ],
+      "disease_relevant_cells": [
+        "Forebrain excitatory (glutamatergic) cortical and hippocampal neurons",
+        "Forebrain GABAergic interneurons",
+        "Visual cortex neurons (cortical visual impairment circuits)"
+      ],
+      "delivery_feasibility": {
+        "target_tissue": "Forebrain cortex and hippocampus (bilateral, broad); CSF-accessible CNS",
+        "target_cell": "Postmitotic forebrain neurons - both excitatory and inhibitory subtypes; the dendritic compartment is where the phenotype lives, but RISC loading occurs in the soma",
+        "expected_access": "INFERENCE (supportive): intrathecal/ICV-delivered di-siRNA chemistries achieve broad CNS distribution with neuronal uptake in rodent and NHP, and the approach has reached Phase 2 in humans (NCT06393712, EVIDENCE). However, CSF-delivered nucleic acids distribute along a ventricular/pial-surface gradient, so deep cortical layers and hippocampus receive less than superficial structures; whether the needed fraction of deep-layer and interneuron populations is reached at a tolerated dose is unverified for this target (HYPOTHESIS, not_studied). Repeat intrathecal dosing in infants/young children is procedurally established (nusinersen precedent, PMID:34412058, EVIDENCE) and durable siRNA pharmacology would reduce dosing frequency relative to ASO.",
+        "major_constraint": "Cell-type uniformity, not organ access. CDD pathology arises in both excitatory and inhibitory forebrain neurons (PMID:24838000, EVIDENCE), and CSF-delivered siRNA gives a steep concentration gradient. A gradient of MAP1S knockdown across a circuit may be worse than none: because MAP1S lowering is a brake release rather than restoration of a missing enzyme, cells that are over-knocked-down near the ventricle could acquire the opposite microtubule phenotype while deep cells remain untreated. There is no way to make RNAi cell-type-selective by chemistry alone."
+      },
+      "supporting_evidence": [
+        {
+          "statement": "Lowering MAP1S levels rescued abnormal microtubule dynamics in Cdkl5 knockout neurons - this is a knockdown rescue, i.e. the exact perturbation RNAi performs, already validated in the disease-relevant cell type in vitro.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:30266824"
+        },
+        {
+          "statement": "Two independent phosphoproteomic studies converge on microtubule regulators as the physiological CDKL5 substrates, so the node being targeted is the best-supported proximal mechanism rather than an association.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:30377159"
+        },
+        {
+          "statement": "An intrathecally delivered siRNA (ALN-APP) has advanced to a Phase 2 CNS trial, establishing CNS RNAi as a clinically dosable modality rather than a speculative one.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "NCT06393712"
+        },
+        {
+          "statement": "Because the intervention is downstream of the kinase, it should be genotype-agnostic across deletions, truncating, splice and missense variants - unusually valuable in a disease where every allele-specific approach serves only a sliver of patients.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": "PMID:30266824"
+        },
+        {
+          "statement": "Repeat intrathecal dosing of nucleic acid drugs in paediatric neurological disease is clinically established, so the administration route is not the blocking issue.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:34412058"
+        }
+      ],
+      "contradictory_evidence": [
+        {
+          "statement": "The only rescue demonstrated is of a cell-biological phenotype (microtubule growth dynamics). No evidence was retrieved that MAP1S lowering improves dendritic arborization, EEG, visual evoked responses or behaviour in any animal.",
+          "kind": "EVIDENCE",
+          "stance": "inconclusive",
+          "source": "PMID:30266824"
+        },
+        {
+          "statement": "Cdkl5 knockout mice do not have spontaneous seizures, only abnormal EEG responses to convulsants - so the model cannot demonstrate the single endpoint families care most about, and any MAP1S-lowering programme would advance on surrogate endpoints only.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "PMID:24838000"
+        },
+        {
+          "statement": "MAP1S has CDKL5-independent roles (autophagy, cytoskeletal/mitotic functions); the tolerated depth and duration of knockdown in postmitotic neurons, and whether partial lowering has a usable window at all, is unknown.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        },
+        {
+          "statement": "No MAP1S-targeting RNAi agent, tool siRNA with in vivo CNS data, or Map1s/Cdkl5 double-mutant animal was identified; this is an unstarted discovery programme.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": ""
+        }
+      ],
+      "biggest_unknown": "Whether there is any dose of MAP1S lowering that normalizes microtubule dynamics without creating a reciprocal defect - i.e. does a therapeutic window exist at all? This is answerable cheaply and should be answered before any delivery work: a graded Map1s knockdown series (siRNA or shRNA) in Cdkl5-null and wild-type neurons, reading microtubule growth-episode length, dendritic cargo transport and dendritic arborization, to produce a dose-response curve in both genotypes. If the wild-type curve degrades at the same dose that corrects the null curve, the hypothesis is dead regardless of modality.",
+      "biggest_failure_mode": "Spatially non-uniform knockdown converting a uniform deficit into a mosaic of opposite cytoskeletal defects across the forebrain. Unlike enzyme or protein restoration, where under-dosed cells simply remain untreated, brake release overshoots: CSF-delivered siRNA will knock MAP1S down hardest in periventricular and superficial cells and least in deep cortex, so the same dose that corrects deep-layer neurons may push superficial neurons past normal. Combined with the fact that the mouse model has no spontaneous seizures to read out, a programme could reach in vivo studies with no endpoint capable of detecting this harm.",
+      "conclusion": "INSUFFICIENT EVIDENCE",
+      "conclusion_note": "The RNA modality can execute the desired perturbation - partial, durable, CNS-wide MAP1S lowering is exactly what a CNS-configured siRNA does, and the validating experiment in the source paper was itself a knockdown. The block is biological, not technical: a single in vitro rescue of a cell-biological phenotype is not sufficient to justify CNS siRNA development. Recommendation to funders: do not fund siRNA chemistry or delivery work yet. Fund the graded-knockdown dose-response in Cdkl5-null and wild-type neurons, then a Map1s-reduction x Cdkl5-null in vivo cross with dendritic morphology, visual evoked potentials and convulsant-threshold EEG. If that cross is positive, CNS siRNA becomes a well-matched and comparatively de-risked modality; if negative, the whole MAP1S node closes for all modalities at once, which is itself worth the money."
+    },
+    {
+      "hypothesis_name": "Genotype-stratified CDKL5 output boost",
+      "modality": "rna",
+      "strategy": "Honest assessment: the three implementations named in this hypothesis - splice-correcting ASOs, NMD modulation/readthrough, and missense protein stabilization - are oligonucleotide and small-molecule strategies. None is an RNA-therapeutics (siRNA/mRNA) strategy, and RNAi is mechanistically the wrong direction for a loss-of-function disorder. The only RNA modality that addresses this biology is mRNA protein replacement: LNP-formulated, chemically modified CDKL5 mRNA delivered to forebrain neurons to transiently supply catalytically competent kinase, with phospho-EB2 as a direct PD readout. I evaluated that and judge it not viable, for reasons below. A secondary consideration worth recording: because CDKL5 restoration to the brain raises phospho-EB2 (PMID:39033321), mRNA-driven CDKL5 expression IS a legitimate and useful research tool - for rapid, dose-controlled titration in neuronal culture to define how much CDKL5 protein is enough and to classify patient missense alleles as null, hypomorphic or dominant-negative. I recommend it in that role, not as a therapeutic.",
+      "existing_agents": [
+        "No CDKL5 mRNA therapeutic identified at any stage",
+        "No CNS-tropic LNP in clinical development for neuronal mRNA delivery identified",
+        "Ataluren (readthrough, nonsense variants) was tested in CDKL5 and Dravet, NCT02758626, completed - a small-molecule, not RNA, implementation of the same hypothesis and the only output-boost agent actually trialled in CDD"
+      ],
+      "disease_relevant_cells": [
+        "Forebrain excitatory cortical and hippocampal neurons",
+        "Forebrain GABAergic interneurons",
+        "Visual cortex neurons"
+      ],
+      "delivery_feasibility": {
+        "target_tissue": "Forebrain cortex and hippocampus - requires broad, bilateral, sustained coverage",
+        "target_cell": "Postmitotic forebrain neurons. Site of action is intracellular (cytoplasmic translation, then kinase acting at microtubules/centrosome/nucleus), so the mRNA must enter the neuronal cytosol, not merely reach the parenchyma",
+        "expected_access": "EVIDENCE/INFERENCE (contradictory): systemically dosed LNPs do not cross the blood-brain barrier and default to hepatocyte tropism; no clinically validated neuron-tropic LNP exists. CSF-administered LNPs transfect ependyma, meninges and some glia far more readily than deep parenchymal neurons, and postmitotic neurons are poor LNP transfection targets. Any neuron-tropic CNS LNP is early preclinical technology with no human data - maturity level: research-stage, not a platform one can build an ultra-rare programme on today.",
+        "major_constraint": "Two compounding and, together, disqualifying problems. (1) Neuronal tropism: no mature delivery vehicle puts mRNA into deep-layer cortical and hippocampal neurons at scale. (2) Durability mismatch: mRNA gives days of protein, while CDD is a lifelong developmental disorder in which CDKL5 is needed continuously for dendritic and synaptic maturation. Chronic repeat intrathecal LNP dosing in infants, with ionizable lipid deposition in CNS tissue, has no safety precedent. Even a solved tropism problem leaves a pharmacokinetic profile mismatched to the disease."
+      },
+      "supporting_evidence": [
+        {
+          "statement": "Restoring CDKL5 protein to the mouse brain increases EB2 phosphorylation, confirming that exogenously supplied CDKL5 is catalytically functional in vivo and giving any protein-restoration approach a direct, quantitative success criterion.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:39033321"
+        },
+        {
+          "statement": "CDKL5 is a kinase - a catalytic protein - so sub-stoichiometric restoration may suffice, which in principle lowers the bar for a transient-expression modality relative to restoring a structural protein.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": "UniProt:O76039"
+        },
+        {
+          "statement": "X-inactivation mosaicism in heterozygous females means a fraction of cells are already wild-type, so partial restoration in the affected fraction could be meaningful rather than all-or-nothing.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": "MONDO:0100039"
+        },
+        {
+          "statement": "CDKL5 transcript is most abundant in brain, consistent with the brain being the necessary - and the hardest - delivery target.",
+          "kind": "EVIDENCE",
+          "stance": "inconclusive",
+          "source": "UniProt:O76039"
+        }
+      ],
+      "contradictory_evidence": [
+        {
+          "statement": "The three implementations the hypothesis actually specifies (splice correction, NMD/readthrough, missense stabilization) are oligonucleotide and small-molecule mechanisms. RNA therapeutics as scoped here cannot execute any of them; assigning this hypothesis to the RNA modality is a category mismatch.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": ""
+        },
+        {
+          "statement": "Ataluren, the readthrough implementation of this hypothesis, was already trialled in CDKL5 and Dravet nonsense variants and completed without becoming a therapy for CDD - a caution that output-boost strategies in this disease have been attempted and have not yet produced a drug.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "NCT02758626"
+        },
+        {
+          "statement": "No neuron-tropic LNP or CNS mRNA agent was identified in clinical development; the delivery vehicle required does not exist at clinical maturity.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": ""
+        },
+        {
+          "statement": "If missense kinase-domain variants act dominant-negatively, supplying additional wild-type CDKL5 might be partially neutralized; this is unresolved and would also affect dose requirements.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        },
+        {
+          "statement": "Each non-replacement implementation serves only a small variant subset of an ultra-rare disease, and deletions are not addressable at all - the addressable population per agent is very small.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": "MONDO:0100039"
+        }
+      ],
+      "biggest_unknown": "How much CDKL5 protein is enough, and for how long must it be present - continuously, or only during a developmental window? If a pulse of kinase activity during a defined window were sufficient, transient mRNA would become conceptually attractive and the calculus would change. Nothing retrieved addresses reversibility or timing; the HYPOTHESIS that restoring CDKL5 after symptom onset reverses deficits remains untested. This question should be answered with dose- and time-controlled CDKL5 expression in neurons and in Cdkl5-null mice, using phospho-EB2 for engagement and dendritic morphology plus visual evoked potentials for effect - and the answer governs every restoration modality, not just RNA.",
+      "biggest_failure_mode": "Building a programme on a delivery vehicle that does not exist. The failure would not be a negative efficacy readout but a silent one: CSF-administered LNP transfecting ependyma and meninges, producing detectable CDKL5 mRNA and even measurable whole-tissue phospho-EB2 signal from non-neuronal cells, while deep-layer cortical and hippocampal neurons - the cells that actually drive the phenotype - are untransfected. Bulk-tissue PD assays would read as success while the target cell population is untouched, and the error would surface only at the efficacy endpoint after substantial spend.",
+      "conclusion": "NO PLAUSIBLE DELIVERY PATH",
+      "conclusion_note": "For the RNA modality specifically, and on today's technology. This is not a judgement on the underlying biology, which is sound and well-supported: raising functional CDKL5 protein should help, and phospho-EB2 gives an unusually clean success criterion (PMID:39033321). The verdict is that RNA cannot carry it. Two of the three named implementations belong to the oligonucleotide agent (splice correction, NMD modulation) and one to the small-molecule agent (readthrough, stabilization) - this hypothesis should be prosecuted there, and the ataluren CDD experience (NCT02758626) is directly relevant prior art for that handoff. The remaining RNA option, CDKL5 mRNA replacement, fails on neuronal tropism and on a durability profile mismatched to a lifelong developmental disorder. Recommendation to funders: do not fund CNS mRNA delivery work for CDD. Do fund CDKL5 mRNA as a bench reagent for the variant-function catalogue the hypothesis itself calls for - transfecting patient missense and splice alleles into neurons and reading phospho-EB2 to classify each as null, hypomorphic or dominant-negative. That catalogue is the enabling asset for every output-boost approach, it resolves the dominant-negative question that could make stabilization harmful, and it is cheap. Revisit the therapeutic question only if a neuron-tropic CNS delivery vehicle reaches human data."
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "candidates": [
+    {
+      "name": "Allele-selective WASHC5 lowering",
+      "biological_hypothesis": "If dominant SPG8 missense variants act by incorporating a faulty strumpellin into the WASH complex and poisoning it (dominant-negative), then selectively removing the mutant transcript while preserving the wild-type allele should restore WASH-dependent endosomal actin sorting. This is also the cleanest way to resolve the central mechanistic uncertainty: rescue by mutant-selective knockdown supports dominant-negative, whereas worsening on total knockdown supports haploinsufficiency.",
+      "target_or_process": "WASHC5 (strumpellin) mutant mRNA / mutant allele expression in corticospinal neurons",
+      "desired_perturbation": "Selective reduction of the mutant allele transcript, with wild-type levels preserved or modestly increased",
+      "plausible_modalities": [
+        "oligonucleotide",
+        "rna"
+      ],
+      "evidence_for": [
+        {
+          "statement": "SPG8 is caused by heterozygous, mostly missense variants in WASHC5, encoding a core subunit of the multiprotein WASH complex - a genetic architecture compatible with a mutant subunit interfering with complex function.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "MONDO:0011339"
+        },
+        {
+          "statement": "In Dictyostelium the patient-equivalent strumpellin N471D variant causes endolysosomal defects and loses several normal interaction partners, i.e. the mutant protein is expressed and mis-functions rather than simply being absent.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:30061306"
+        },
+        {
+          "statement": "A mouse knockout study re-examining haploinsufficiency reportedly found no motor phenotype in heterozygous animals, arguing against loss of one copy being sufficient and therefore favouring a toxic/interfering allele.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": "PMID:26572744"
+        }
+      ],
+      "evidence_against": [
+        {
+          "statement": "Dominant-negative action has not been demonstrated in any human neuronal system; earlier cell work proposed haploinsufficiency. If haploinsufficiency is correct, mutant lowering is at best neutral and non-selective lowering is harmful.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": "PMID:26572744"
+        },
+        {
+          "statement": "SPG8 variants are private and scattered across WASHC5, so a single allele-selective oligonucleotide would serve very few patients unless a linked-SNP haplotype strategy works; this has not been assessed for WASHC5.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        },
+        {
+          "statement": "Delivery to deep layer-V corticospinal somata and lifelong knockdown in an early-onset, fast-progressing disease are unproven for this indication.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        }
+      ],
+      "key_biological_uncertainty": "Whether mutant strumpellin is actively toxic to WASH complex function (removing it helps) or whether WASHC5 dosage is limiting (removing it hurts). Must be settled in patient iPSC-derived neurons with isogenic controls and allele-specific vs total knockdown before committing."
+    },
+    {
+      "name": "Endolysosomal flux restoration (mechanism-agnostic)",
+      "biological_hypothesis": "Whatever the allelic mechanism, the convergent cellular consequence proposed for SPG8 is impaired actin-dependent endosomal sorting with downstream endolysosomal dysfunction. Enhancing lysosomal biogenesis and degradative/autophagic flux, or relieving the specific sorting bottleneck, could compensate without knowing whether the mutant allele is toxic or absent. This is the hypothesis most robust to the stated uncertainty.",
+      "target_or_process": "Endolysosomal degradative capacity / autophagic flux downstream of WASH-dependent sorting (candidate nodes: TFEB-dependent lysosomal biogenesis, mTORC1 signalling)",
+      "desired_perturbation": "Increase lysosomal biogenesis and cargo clearance; normalize endosomal cargo residence and lysosomal function in patient neurons",
+      "plausible_modalities": [
+        "small_molecule"
+      ],
+      "evidence_for": [
+        {
+          "statement": "The proposed molecular consequence of strumpellin dysfunction is impaired actin-dependent endosomal sorting with endolysosomal defects, giving a measurable process to correct irrespective of allelic mechanism.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "MONDO:0011339"
+        },
+        {
+          "statement": "Loss of normal strumpellin function in Dictyostelium produces an endolysosomal system defect, supporting endolysosomal dysfunction as a real downstream readout.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:30061306"
+        },
+        {
+          "statement": "Because the intervention acts downstream of WASHC5 it is agnostic to variant identity and would serve all SPG8 genotypes, with a far simpler development path than allele-selective oligonucleotides.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": ""
+        }
+      ],
+      "evidence_against": [
+        {
+          "statement": "The causal step from endosomal mis-sorting to corticospinal axon degeneration is not established, so correcting a bulk lysosomal readout may not correct the disease-relevant lesion.",
+          "kind": "EVIDENCE",
+          "stance": "inconclusive",
+          "source": "MONDO:0011339"
+        },
+        {
+          "statement": "No SPG8-specific pharmacological rescue of an endolysosomal phenotype was identified in this search; the hypothesis rests on pathway logic, not rescue data.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        },
+        {
+          "statement": "Which cargoes are mis-sorted in neurons is unknown, so the node to push (biogenesis vs retrieval vs fusion) cannot yet be chosen; non-specific lysosomal/mTOR manipulation has neuronal liabilities.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        }
+      ],
+      "key_biological_uncertainty": "Whether the endolysosomal abnormality is the degeneration-driving lesion in long corticospinal axons or an incidental marker - and if the former, which step is rate-limiting."
+    },
+    {
+      "name": "Distal axon maintenance in long corticospinal tracts",
+      "biological_hypothesis": "SPG8 pathology, like HSP generally, is inferred to begin at the distal end of the longest corticospinal axons, where cargo delivery and cytoskeletal maintenance are most demanding. If endosomal sorting failure manifests chiefly as failed axonal cargo delivery and distal cytoskeletal destabilization, interventions improving axonal transport and stabilizing the axonal cytoskeleton could slow degeneration independently of the allelic mechanism - a shared-final-pathway strategy pursued across other HSP and axonal neuropathy genes.",
+      "target_or_process": "Axonal transport and actin/microtubule stability in distal corticospinal axons (candidate nodes: tubulin post-translational modification, microtubule-stabilizing machinery)",
+      "desired_perturbation": "Restore efficient bidirectional axonal cargo transport and distal cytoskeletal integrity; delay distal axonal dieback",
+      "plausible_modalities": [
+        "small_molecule",
+        "protein"
+      ],
+      "evidence_for": [
+        {
+          "statement": "SPG8 key pathology is length-dependent degeneration of long corticospinal axons together with endosomal/lysosomal trafficking defects - two processes that intersect at axonal cargo transport.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "MONDO:0011339"
+        },
+        {
+          "statement": "A strumpellin variant disrupts actin-dependent endosomal machinery and its interaction partners, making defective actin-based cargo handling a plausible upstream cause of distal transport failure.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:30061306"
+        },
+        {
+          "statement": "A downstream axon-maintenance strategy is indifferent to whether SPG8 arises from a toxic or absent allele, and is testable in patient iPSC neurons with length-dependent transport and distal degeneration readouts.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": ""
+        }
+      ],
+      "evidence_against": [
+        {
+          "statement": "The length-dependent axonal pathology in SPG8 is inferred from HSP as a class, not demonstrated for WASHC5, and no validated SPG8 model reproducing spastic paraplegia is established, so there is no in vivo system in which to show benefit.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "MONDO:0011339"
+        },
+        {
+          "statement": "Axonal transport deficits have not been shown in SPG8 patient neurons in what we retrieved; the link from WASH complex failure to transport failure is unestablished.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        },
+        {
+          "statement": "SPG8 has relatively early onset and rapid progression, so a purely downstream maintenance intervention may be insufficient unless started presymptomatically.",
+          "kind": "INFERENCE",
+          "stance": "inconclusive",
+          "source": "MONDO:0011339"
+        }
+      ],
+      "key_biological_uncertainty": "Whether distal axonal transport/cytoskeletal failure is present and rate-limiting in SPG8 neurons, and whether a model exists in which slowing distal axonopathy translates into a motor phenotype."
+    }
+  ],
+  "conclusion": "MECHANISM UNCERTAIN",
+  "conclusion_note": "All three hypotheses are stated at the level of biology rather than specific agents, because the decisive fact - mutant-allele toxicity vs WASHC5 dosage insufficiency - is unresolved and flips the sign of the most proximal intervention. Recommended sequencing: (1) build patient iPSC-derived corticospinal neurons with isogenic controls and run allele-specific vs total WASHC5 knockdown plus wild-type overexpression; rescue by mutant-selective lowering with worsening on total lowering settles the question. (2) In parallel, and robust to the answer, define a quantitative endolysosomal and axonal-transport phenotype in those neurons - without such a phenotype neither downstream hypothesis is testable. Key supports are thin: the heterozygous-knockout mouse finding is an unconfirmed recollection from PMID:26572744 and should be verified from the primary paper before being used against haploinsufficiency, and the only direct variant-function data retrieved is from Dictyostelium (PMID:30061306), not a neuronal system. No SPG8-specific pharmacological rescue and no validated vertebrate model reproducing spastic paraplegia were identified; in an ultra-rare disease that absence is not evidence against these hypotheses. Decision support for researchers, not medical advice."
+}

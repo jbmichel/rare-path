@@ -1,0 +1,77 @@
+{
+  "assessments": [
+    {
+      "hypothesis_name": "Allele-selective WASHC5 lowering",
+      "modality": "rna",
+      "strategy": "Mutant-selective RNAi: chemically stabilized siRNA (e.g. divalent/di-siRNA or fully modified conjugate architectures designed for CNS delivery after intrathecal/intracerebroventricular dosing) with the SNP/mutation positioned in the guide seed region to discriminate the mutant WASHC5 allele from wild type. Two deployment routes: (a) variant-directed siRNA per private missense variant (N471D and others), (b) haplotype-directed siRNA against a common heterozygous SNP in the WASHC5 3'UTR/coding region in cis with the mutant allele - this requires prior phasing of each patient and has not been assessed for WASHC5. mRNA replacement is NOT a sensible route here: strumpellin is a core subunit of a stoichiometric pentameric cytosolic complex, so untargeted overexpression risks further complex imbalance, and mRNA/LNP does not reach CNS neurons. The honest first use of this modality is as a mechanism-resolving tool in patient iPSC-derived cortical neurons (allele-selective vs total knockdown, isogenic controls), not as a clinical candidate.",
+      "existing_agents": [],
+      "disease_relevant_cells": [
+        "Layer V corticospinal upper motor neurons (soma in motor cortex, axons to lumbar spinal cord)",
+        "Spinal interneurons/other CNS neurons (possible contributors)",
+        "Patient fibroblasts and iPSC-derived cortical neurons (model cells)"
+      ],
+      "delivery_feasibility": {
+        "target_tissue": "Brain (deep motor cortex) and spinal cord",
+        "target_cell": "Layer V corticospinal projection neurons - soma for silencing, distal axon as the degenerating compartment",
+        "expected_access": "Intrathecal/ICV-delivered modified siRNA distributes to spinal cord, superficial cortex and some deep gray structures in rodent/NHP work; penetration into deep cortical layer V across the full rostro-caudal cortex is the weakest link and in our view substantially less uniform than for intrathecal ASOs, which already have human CNS precedent (nusinersen, tofersen). No siRNA is approved for a CNS indication. No systemic route (LNP, GalNAc) reaches these neurons.",
+        "major_constraint": "Reaching a sufficient fraction of deep layer-V corticospinal somata, and doing so from an early age in a fast-progressing disease, with repeat intrathecal dosing over decades"
+      },
+      "supporting_evidence": [
+        {
+          "statement": "SPG8 is autosomal dominant with mostly missense variants in a core subunit of the multiprotein WASH complex, a genetic architecture compatible with a mutant subunit poisoning the complex - the situation in which allele-selective lowering is the correct perturbation.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "MONDO:0011339"
+        },
+        {
+          "statement": "The patient-equivalent strumpellin N471D variant in Dictyostelium causes endolysosomal defects and loses normal interaction partners, i.e. the mutant protein is made and misbehaves rather than being absent - a transcript that exists and can be targeted by RNAi.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:30061306"
+        },
+        {
+          "statement": "RNAi acts in the cytoplasm on mature mRNA, which suits a missense (non-splicing, non-nuclear-retained) target; single-nucleotide discrimination by seed-positioned siRNA is established in principle for other dominant alleles, so the chemistry question is tractable even if unproven for WASHC5.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": ""
+        },
+        {
+          "statement": "Because the same reagent reads out mechanism, an allele-selective siRNA in patient iPSC cortical neurons is a high-information, low-cost experiment regardless of whether it ever becomes a drug: rescue supports dominant-negative, worsening on total knockdown supports haploinsufficiency.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        }
+      ],
+      "contradictory_evidence": [
+        {
+          "statement": "If WASHC5 is dosage-limiting (haploinsufficiency, as earlier cell work proposed), lowering is neutral at best and any wild-type off-target lowering is actively harmful. Imperfect allele selectivity is far more consequential here than in a pure gain-of-function disease.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": "PMID:26572744"
+        },
+        {
+          "statement": "A reported absence of motor phenotype in heterozygous Washc5 knockout mice argues against simple haploinsufficiency but equally means there is no validated in vivo model in which an allele-selective siRNA could be shown to rescue a motor phenotype; a patient-missense knock-in mouse would have to be built first. We did not confirm this report in full text.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": "PMID:26572744"
+        },
+        {
+          "statement": "ClinicalTrials.gov shows no WASHC5/SPG8 interventional program and no RNA-based program in any HSP; the only genetic HSP programs retrieved are AAV gene addition in recessive AP4-related SPG47/SPG50 (out of scope here). There is no CNS siRNA precedent to borrow a regulatory or dosing path from.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "NCT06948019; NCT05518188"
+        },
+        {
+          "statement": "SPG8 variants are private and scattered, so a variant-specific siRNA is an n-of-1 or n-of-few product; a linked-SNP haplotype approach has not been examined for WASHC5 and would still need per-patient phasing plus demonstration that the mutant allele is the one silenced.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        }
+      ],
+      "biggest_unknown": "Whether mutant strumpellin is actively toxic to WASH complex function (so removing it helps) or WASHC5 dosage is limiting (so removing it hurts) - unresolved, and it inverts the sign of this entire strategy.",
+      "biggest_failure_mode": "Not chemistry but target-cell coverage combined with the dosage risk: intrathecal siRNA is likely to silence superficial cortex, spinal cord and glia far better than deep layer-V corticospinal somata, so the cells that matter get partial knockdown while the rest of the CNS gets near-complete knockdown - exactly the distribution that maximizes wild-type/off-target loss in bystander cells while under-treating the disease-driving neuron.",
+      "conclusion": "MECHANISM UNCERTAIN",
+      "conclusion_note": "Mechanism must be settled first in patient iPSC-derived cortical neurons (allele-selective vs total knockdown, isogenic controls). Secondarily, for the clinical question specifically, oligonucleotide (intrathecal ASO) has better CNS precedent than siRNA; RNAi's value in SPG8 today is as a mechanism-resolving tool compound, and mRNA replacement has no plausible delivery path to corticospinal neurons."
+    }
+  ]
+}

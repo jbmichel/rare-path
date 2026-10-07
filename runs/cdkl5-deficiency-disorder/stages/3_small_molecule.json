@@ -1,0 +1,224 @@
+{
+  "assessments": [
+    {
+      "hypothesis_name": "MAP1S-brake release",
+      "modality": "small_molecule",
+      "strategy": "Pharmacologically reduce MAP1S occupancy on dendritic microtubules without CDKL5 kinase activity. Three conceivable small-molecule routes: (a) degrader/PROTAC-type lowering of MAP1S protein, (b) direct disruption of the MAP1S microtubule-binding interface, (c) indirect normalization of microtubule growth-episode length with a microtubule-stabilizing/destabilizing agent at sub-cytotoxic dose (e.g. brain-penetrant epothilone-class compounds used in neurodegeneration). None of these has a CDKL5-specific precedent; (a) and (b) require discovery from scratch and MAP1S has no known druggable pocket. Honest finding: for this node, oligonucleotide/RNA lowering is the modality that matches the validated rescue experiment (Map1s knockdown), and small molecules add no advantage beyond CNS distribution.",
+      "existing_agents": [
+        "No MAP1S-directed agent at any stage - no curated drug mechanism for this node was identified - source: mcp__rp__chembl_target_drugs (CDKL5 returned empty mechanisms; no MAP1S program retrieved)",
+        "Brain-penetrant microtubule-modulating tool compounds (epothilone D-class) exist as a conceptual surrogate but were not retrieved in a CDD context - tool/preclinical - microtubule stabilization - no source retrieved"
+      ],
+      "disease_relevant_cells": [
+        "Forebrain glutamatergic cortical and hippocampal neurons (dendritic compartment)",
+        "Forebrain GABAergic interneurons",
+        "Visual cortex neurons"
+      ],
+      "delivery_feasibility": {
+        "target_tissue": "Forebrain cortex and hippocampus",
+        "target_cell": "Postmitotic excitatory and inhibitory neurons, specifically the dendritic arbor",
+        "expected_access": "A CNS-penetrant small molecule would in principle reach all forebrain neurons including both excitatory and inhibitory populations and the dendritic compartment - this is the one genuine advantage of the modality over oligonucleotides, which distribute unevenly after intrathecal dosing (INFERENCE, supportive). But access is moot without a ligandable target.",
+        "major_constraint": "MAP1S is an intracellular microtubule-associated protein with no reported small-molecule binding site; a degrader requires a binder first. Any non-selective microtubule-acting agent would hit dividing cells and axonal transport system-wide, and the therapeutic window for partial MAP1S reduction is undefined."
+      },
+      "supporting_evidence": [
+        {
+          "statement": "Lowering MAP1S levels rescued abnormal microtubule dynamics in Cdkl5 knockout neurons, establishing MAP1S reduction as the perturbation to execute and giving a clear in vitro screening endpoint (microtubule growth-episode length) that a small-molecule screen could read out.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:30266824"
+        },
+        {
+          "statement": "Phospho-EB2 is a measurable in vivo readout of CDKL5 pathway activity; note it reports kinase activity, not MAP1S occupancy, so a MAP1S-lowering small molecule would NOT be expected to move it - the screen must use microtubule-dynamics and dendritic-morphology readouts instead.",
+          "kind": "INFERENCE",
+          "stance": "inconclusive",
+          "source": "PMID:39033321"
+        },
+        {
+          "statement": "Because the intervention is downstream of the kinase, a small molecule acting here would be genotype-agnostic across deletions, truncating, splice and missense variants.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": "PMID:30266824"
+        }
+      ],
+      "contradictory_evidence": [
+        {
+          "statement": "No MAP1S-directed chemical matter at any stage was identified; ChEMBL holds no curated mechanism even for CDKL5 itself, indicating this node is chemically unexplored.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "mcp__rp__chembl_target_drugs (CDKL5)"
+        },
+        {
+          "statement": "The validated rescue was genetic lowering of MAP1S levels, which maps onto ASO/siRNA pharmacology rather than occupancy-based small-molecule pharmacology; a small molecule would have to reproduce a dose reduction, the hardest thing for an inhibitor to do selectively.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": "PMID:30266824"
+        },
+        {
+          "statement": "The rescue shown is cell-biological only - no animal-level (EEG, visual evoked potential, behaviour) benefit of MAP1S lowering has been demonstrated, so the target itself is not yet de-risked for any modality.",
+          "kind": "EVIDENCE",
+          "stance": "inconclusive",
+          "source": "PMID:30266824"
+        }
+      ],
+      "biggest_unknown": "Whether MAP1S can be made ligandable at all, and whether partial MAP1S reduction improves any animal-level phenotype in Cdkl5-null mice. The second question must be answered genetically (conditional Map1s reduction or CNS ASO) before any chemistry investment is justified.",
+      "biggest_failure_mode": "Spending years on a target with no binding pocket and no in vivo proof-of-concept: the program stalls at hit-finding against MAP1S, and even a successful binder may not reduce microtubule occupancy the way a dose reduction does.",
+      "conclusion": "NO EXISTING AGENT IDENTIFIED",
+      "conclusion_note": "Target biology is the best-supported in CDD, but there is no MAP1S chemical matter and the required perturbation (protein dose reduction) is better matched to oligonucleotides. Recommendation: do not start small-molecule chemistry here until genetic MAP1S lowering shows an in vivo phenotype rescue."
+    },
+    {
+      "hypothesis_name": "Genotype-stratified CDKL5 output boost",
+      "modality": "small_molecule",
+      "strategy": "Two small-molecule implementations: (1) translational readthrough / NMD modulation for nonsense alleles - ataluren has already been tested in CDKL5 nonsense patients; (2) pharmacological chaperoning of hypomorphic kinase-domain missense variants, i.e. a ligand that binds the CDKL5 ATP site or an allosteric pocket and stabilizes the fold without blocking catalysis (the pattern used for other misfolded kinases/enzymes). Both require a variant-function catalogue first, since the fraction of output-limited alleles is unknown. Success criterion for either is restored EB2/MAP1S phosphorylation.",
+      "existing_agents": [
+        "Ataluren - completed Phase 2 in nonsense mutations in CDKL5 and Dravet syndrome - translational readthrough of premature stop codons - NCT02758626 (results not retrieved; no efficacy claim should be made)",
+        "No CDKL5 protein-stabilizing or chaperone small molecule at any stage - ChEMBL returns no curated mechanism for CDKL5 - mcp__rp__chembl_target_drugs (CDKL5)",
+        "No CDKL5-directed kinase-site ligand reported in retrieved sources - novel chemistry required"
+      ],
+      "disease_relevant_cells": [
+        "Forebrain glutamatergic neurons",
+        "Forebrain GABAergic interneurons",
+        "Cells with the mutant allele on the active X in mosaic heterozygous females"
+      ],
+      "delivery_feasibility": {
+        "target_tissue": "Forebrain (cortex, hippocampus); readthrough agents must also reach neurons, not only peripheral tissue",
+        "target_cell": "All CDKL5-expressing neurons; in mosaic females specifically the subset expressing the mutant allele",
+        "expected_access": "Oral CNS-penetrant small molecules can in principle reach all neuronal subtypes uniformly, including the mosaic mutant-expressing subset - a real advantage over any focally delivered modality (INFERENCE, supportive). Ataluren has been administered to CDKL5 patients, so systemic tolerability in this population has been explored (EVIDENCE, NCT02758626); its CNS exposure and neuronal readthrough efficiency were not retrieved and must be treated as unknown.",
+        "major_constraint": "Readthrough efficiency in neurons is typically low single-digit percent for other diseases and is codon-context dependent; it is unknown whether it can raise CDKL5 protein above the disease threshold. For missense chaperoning, an ATP-site ligand risks inhibiting the very kinase activity it stabilizes."
+      },
+      "supporting_evidence": [
+        {
+          "statement": "Ataluren was taken into a completed Phase 2 trial specifically for nonsense mutations in CDKL5, establishing that a readthrough small molecule has already been administered to this genotype subset and that the clinical path exists.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "NCT02758626"
+        },
+        {
+          "statement": "Restoring CDKL5 protein in mouse brain raises EB2 phosphorylation, giving any output-boosting small molecule a direct, quantitative target-engagement endpoint.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:39033321"
+        },
+        {
+          "statement": "Because heterozygous females are mosaic, modest percentage increases in output from the mutant allele may move many cells above threshold, which fits the low-efficiency profile of readthrough pharmacology better than it fits an all-or-nothing requirement.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": "MONDO:0100039"
+        },
+        {
+          "statement": "Splice and truncating variants are a substantial share of the CDKL5 variant spectrum, so output-boosting addresses a real, if partial, subset of patients.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "MONDO:0100039"
+        }
+      ],
+      "contradictory_evidence": [
+        {
+          "statement": "No CDKL5 stabilizer or chaperone exists at any stage and ChEMBL has no curated mechanism for the target, so the missense-chaperoning arm is an unstarted discovery program rather than repurposing.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "mcp__rp__chembl_target_drugs (CDKL5)"
+        },
+        {
+          "statement": "If kinase-domain missense variants act dominant-negatively rather than hypomorphically, stabilizing the mutant protein would increase a harmful species - the direction of effect is unresolved.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        },
+        {
+          "statement": "Each implementation serves only a fraction of an ultra-rare disease; deletion alleles are not addressable by any small molecule in this hypothesis.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": "MONDO:0100039"
+        },
+        {
+          "statement": "The ataluren CDKL5 trial is listed as completed but no outcome was retrieved; absence of a successor program is suggestive but not evidence of failure, especially in ultra-rare disease.",
+          "kind": "INFERENCE",
+          "stance": "inconclusive",
+          "source": "NCT02758626"
+        }
+      ],
+      "biggest_unknown": "What fraction of CDKL5 alleles are output-limited (hypomorphic) rather than null or dominant-negative, and how much protein restoration crosses the threshold. The enabling experiment is a variant-function catalogue: express patient missense/splice alleles in neurons and classify each by phospho-EB2.",
+      "biggest_failure_mode": "Readthrough raises full-length CDKL5 by only a few percent in neurons - far below the threshold needed - while the missense-chaperone arm never finds a ligand that stabilizes without inhibiting; the program consumes a stratification effort that each time leaves a handful of eligible patients.",
+      "conclusion": "INSUFFICIENT EVIDENCE",
+      "conclusion_note": "One repurposable agent (ataluren) has genuinely been tested in CDKL5 nonsense patients, so this is not a blank slate; but without retrieved outcome data and without a variant-function catalogue the required perturbation cannot be shown to be achievable. Highest-value next step is allele classification, not chemistry."
+    },
+    {
+      "hypothesis_name": "E/I-rebalance for the encephalopathy",
+      "modality": "small_molecule",
+      "strategy": "Reduce forebrain network hyperexcitability or restore synaptic-maturation signalling with CNS-penetrant small molecules, using mechanisms already clinically tested in CDD. This is the only CDD hypothesis with approved and clinical-stage chemical matter: neurosteroid GABA-A positive modulation (ganaxolone), serotonergic mechanisms (fenfluramine, bexicaserin/LP352), and cholesterol-24-hydroxylase inhibition (soticlestat). A mechanistically CDD-specific extension would target the altered Akt/rpS6 axis, but direction of correction is unspecified and mTOR-pathway drugs are double-edged in epilepsy.",
+      "existing_agents": [
+        "Ganaxolone - Phase 3 completed in CDKL5 deficiency disorder (the regulatory basis for its CDD use) - GABA-A receptor positive allosteric modulator (neurosteroid) - NCT03572933",
+        "Fenfluramine - Phase 2 completed and Phase 3 active in CDD - serotonergic / 5-HT receptor agonism with sigma-1 activity - NCT03861871, NCT05064878",
+        "Soticlestat (TAK-935/OV935) - Phase 2 completed in CDD and DEE; a separate rare-epilepsy study was terminated after negative Phase 3 SKYLINE/SKYWAY results - cholesterol 24-hydroxylase (CH24H) inhibitor - NCT03694275, NCT03650452, NCT03635073",
+        "Bexicaserin (LP352) - Phase 2 / open-label long-term safety and expanded access in DEE including CDD - 5-HT2C receptor superagonist - NCT05626634, NCT06149663",
+        "No agent targeting the Akt/rpS6 axis in CDD identified - novel or repurposed program required"
+      ],
+      "disease_relevant_cells": [
+        "Forebrain glutamatergic cortical and hippocampal neurons",
+        "Forebrain GABAergic interneurons (target of GABA-A positive modulation)",
+        "Visual cortex circuits"
+      ],
+      "delivery_feasibility": {
+        "target_tissue": "Cortex, hippocampus, visual cortex; whole forebrain network",
+        "target_cell": "Synaptic receptors on both excitatory and inhibitory forebrain neurons",
+        "expected_access": "Demonstrated: ganaxolone, fenfluramine, soticlestat and bexicaserin are orally dosed CNS-active drugs that have been given to CDD patients in registrational and Phase 2 trials, so brain exposure at pharmacodynamically active levels is established for this exact population (EVIDENCE, NCT03572933, NCT03861871, NCT03694275, NCT05626634). Small molecules also reach the mosaic mutant-expressing neuronal subset uniformly, which focal modalities do not (INFERENCE).",
+        "major_constraint": "Delivery is solved; biology is not. These agents act on generic excitability nodes, not on CDD-specific pathophysiology, so efficacy is partial seizure reduction rather than disease modification - and they do nothing for dendritic arborization, cortical visual impairment or developmental trajectory."
+      },
+      "supporting_evidence": [
+        {
+          "statement": "A Phase 3 randomized placebo-controlled trial of adjunctive ganaxolone was completed specifically in CDKL5 deficiency disorder, demonstrating that the E/I-rebalance route is not only testable but has already yielded a clinically deployed CDD therapy.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "NCT03572933"
+        },
+        {
+          "statement": "Fenfluramine has advanced from Phase 2 to an active Phase 3 in CDD, showing an independent serotonergic excitability mechanism with sufficient signal to justify registrational investment.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "NCT03861871, NCT05064878"
+        },
+        {
+          "statement": "Cdkl5 knockout mice provide quantitative, currently testable circuit endpoints - convulsant-threshold EEG, reduced visual evoked potentials, dendritic arborization, altered Akt/rpS6 signalling - and distinct behaviours map to excitatory versus inhibitory forebrain neurons, so cell-type-resolved pharmacology can be evaluated.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:24838000"
+        },
+        {
+          "statement": "Visual evoked potential is the most attractive pharmacodynamic endpoint for small-molecule testing in CDD because it is quantitative, translatable to patients with cortical visual impairment, and does not require spontaneous seizures in the model.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": "PMID:24838000"
+        }
+      ],
+      "contradictory_evidence": [
+        {
+          "statement": "Knockout mice do not have spontaneous seizures, only altered convulsant sensitivity, so the primary clinical endpoint - refractory infantile seizures - cannot be modelled in the standard mouse, and preclinical anti-seizure efficacy claims for new agents are not testable there.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "PMID:24838000"
+        },
+        {
+          "statement": "Soticlestat's rare-epilepsy study was terminated after negative Phase 3 SKYLINE and SKYWAY results, a concrete demonstration that a mechanistically plausible excitability-lowering small molecule can fail at scale in DEE populations.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "NCT03635073"
+        },
+        {
+          "statement": "The causal chain from lost substrate phosphorylation to epilepsy remains unestablished, so no CDD-specific small-molecule target in this hypothesis can be named; the existing agents are symptomatic, not disease-modifying.",
+          "kind": "EVIDENCE",
+          "stance": "inconclusive",
+          "source": "PMID:30266824"
+        },
+        {
+          "statement": "Patients' seizures are by definition pharmacoresistant to broad anti-seizure medicines, and the approved options reduce but do not abolish seizures, so generic excitability reduction has a demonstrated ceiling.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": "MONDO:0100039"
+        }
+      ],
+      "biggest_unknown": "Which neuron subtype and developmental window generate the epileptic phenotype, and whether any model shows spontaneous CDD-like seizures. Without a seizure-competent model (patient-derived neuronal networks/organoids, rat, or conditional cell-type-specific mice) the most important endpoint cannot be interrogated preclinically, even though visual-evoked-potential and dendritic endpoints can be now.",
+      "biggest_failure_mode": "Mechanism-blind repurposing: the next candidate reduces seizure counts modestly like its predecessors, leaves development, cognition and cortical vision untouched, and the soticlestat pattern repeats - a plausible excitability mechanism that passes Phase 2 signal-seeking and fails a powered Phase 3.",
+      "conclusion": "OK",
+      "conclusion_note": "Delivery and chemical matter are genuinely solved here - this is the only CDD route with an approved-level agent - but the ceiling is symptomatic benefit. Recommended use of foundation resources: fund a seizure-competent CDD model and adopt visual evoked potential as a cross-species pharmacodynamic endpoint, rather than another broad anti-seizure repurposing trial."
+    }
+  ]
+}

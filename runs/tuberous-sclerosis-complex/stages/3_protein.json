@@ -1,0 +1,83 @@
+{
+  "assessments": [
+    {
+      "hypothesis_name": "Downstream damage: neurovascular/neuroinflammatory axis",
+      "modality": "protein",
+      "strategy": "Two separable biologic arms. (1) IL-1 pathway blockade with anakinra (recombinant IL-1Ra) or canakinumab (anti-IL-1b mAb) to suppress astrocyte-derived IL-1b signalling in TSC cortex; anakinra is the only arm with any human epilepsy precedent (FIRES). (2) VEGF ligand trap / VEGFR blockade (bevacizumab, aflibercept, ramucirumab) to normalise abnormal cerebral vasculature and BBB leak. Both are extracellular targets, which is the one genuine advantage of biologics here. Proposed use is adjunctive on top of a rapalog, not as a substitute, because the key uncertainty is whether the axis is mTOR-independent at all.",
+      "existing_agents": [
+        "Anakinra (approved IL-1Ra; used off-label in refractory epilepsy/FIRES, PMID:33681649)",
+        "Canakinumab (approved anti-IL-1b mAb)",
+        "Rilonacept (IL-1 trap)",
+        "Bevacizumab / aflibercept / ramucirumab (approved anti-VEGF ligand traps and VEGFR2 mAb)"
+      ],
+      "disease_relevant_cells": [
+        "Cortical/hippocampal astrocytes (source of IL-1b, CXCL10 in Tsc1-GFAP CKO)",
+        "Brain microvascular endothelial cells (BBB leak, VEGF responsive)",
+        "Dysmorphic neurons and giant cells in tubers",
+        "Perivascular/microglial cells in the epileptogenic network"
+      ],
+      "delivery_feasibility": {
+        "target_tissue": "Brain cortex and hippocampus — the epileptogenic network around tubers",
+        "target_cell": "Astrocytes (IL-1 arm) and brain microvascular endothelium (VEGF arm)",
+        "expected_access": "Anti-VEGF biologics act on the luminal endothelial surface and therefore do NOT need to cross the BBB — this arm is deliverable in principle (INFERENCE, supportive). IL-1 blockade is the hard case: anakinra CSF penetration is low single-digit percent of plasma at standard dosing and is usually pushed with high-dose IV or intrathecal routes in FIRES (INFERENCE from clinical practice, inconclusive). Astrocytic IL-1b signalling in parenchyma is behind the BBB; a focally leaky BBB in TSC may paradoxically improve access but unevenly and only where lesions already leak (HYPOTHESIS).",
+        "major_constraint": "Parenchymal astrocyte access for IL-1 blockade. No engineered BBB-shuttle IL-1Ra or anti-IL-1b exists; transferrin/TfR1 shuttle platforms are clinical-stage for enzymes but have never been applied to cytokine blockade, so this would be a de novo engineering programme, not a repurposing one."
+      },
+      "supporting_evidence": [
+        {
+          "statement": "IL-1b and CXCL10 are elevated in neocortex and hippocampus of Tsc1-GFAP CKO mice and localise mainly to astrocytes, giving a defined extracellular ligand that a biologic can neutralise.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:26003087"
+        },
+        {
+          "statement": "Brain VEGF is elevated with abnormal cerebral vessel anatomy and two-photon-confirmed BBB leak in Tsc1-GFAP CKO mice, and VEGFR antagonism was tested in that model.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:38049961"
+        },
+        {
+          "statement": "IL-1 blockade with anakinra is used early and empirically in FIRES, an inflammatory refractory epilepsy, establishing that neutralising IL-1 can be attempted in human epileptic encephalopathy with acceptable tolerability.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:33681649"
+        },
+        {
+          "statement": "VEGF is a secreted ligand and VEGFR2 is luminal on endothelium, so an approved ligand trap can engage the target without BBB penetration — unusual for a CNS indication.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": ""
+        }
+      ],
+      "contradictory_evidence": [
+        {
+          "statement": "The same study showing astrocytic IL-1b/CXCL10 elevation found these markers were reversed by mTORC1 inhibition, implying they are downstream readouts rather than an mTOR-independent driver; a biologic added to a rapalog may therefore be redundant.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "PMID:26003087"
+        },
+        {
+          "statement": "A ClinicalTrials.gov search for TSC with anakinra returned no studies; no human TSC trial of IL-1 or VEGF blockade for epilepsy was identified.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "clinicaltrials.gov search (condition: tuberous sclerosis complex; intervention: anakinra) — 0 studies"
+        },
+        {
+          "statement": "Chronic systemic anti-VEGF in children risks impaired growth-plate and physiological angiogenesis, hypertension, proteinuria and wound-healing failure; TSC patients also already carry renal angiomyolipoma bleeding risk, making chronic anti-angiogenic exposure in a paediatric lifelong indication a poor risk fit.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": ""
+        },
+        {
+          "statement": "Standard subcutaneous anakinra achieves only a small fraction of plasma levels in CSF, so parenchymal astrocytic IL-1 signalling may not be meaningfully engaged at tolerated doses.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": ""
+        }
+      ],
+      "biggest_unknown": "Whether any part of this axis is mTOR-independent. Everything retrieved is consistent with IL-1b/CXCL10 and VEGF being obligate downstream consequences of mTORC1 hyperactivation. If so, a biologic adds nothing to a rapalog, and the entire rationale collapses. This is cheaply decidable: dose anakinra (high-dose IV) or an anti-VEGF agent on top of near-maximal rapamycin in Tsc1-GFAP CKO mice and ask for incremental seizure-burden reduction. Do not run a biologic monotherapy arm as the primary test.",
+      "biggest_failure_mode": "Not toxicity and not target validity — it is that the biologic reaches the wrong compartment for the arm that matters. The IL-1 arm has the better mechanistic story (astrocyte-localised, seizure-proximal) but the worse delivery (parenchymal, behind the BBB, no shuttle-engineered IL-1 biologic exists). The VEGF arm has the better delivery (luminal endothelium, approved traps, no BBB crossing needed) but the worse story (vascular normalisation is an indirect route to seizure control, and chronic anti-angiogenesis is hard to justify in children). The two advantages do not combine, so neither arm is currently a viable biologic programme.",
+      "conclusion": "NO PLAUSIBLE DELIVERY PATH",
+      "conclusion_note": "Honest finding for the arm that matters. For IL-1 blockade — the arm with the stronger mechanistic link to seizures — there is no biologic that reliably reaches parenchymal astrocytes at tolerated systemic doses, and no shuttle-engineered IL-1 agent exists even preclinically. The anti-VEGF arm is deliverable but mechanistically indirect and carries unacceptable chronic paediatric exposure risk. Given that PMID:26003087 shows the inflammatory markers are themselves rapalog-reversible, a small molecule that is brain-penetrant and already suppresses the whole axis dominates any biologic here. Recommendation to funders: do not start a biologic programme on this hypothesis. Spend instead on the one cheap decisive experiment — anakinra or anti-VEGF added on top of maximal rapamycin in Tsc1-GFAP CKO — and revisit only if that shows a clear incremental effect."
+    }
+  ]
+}

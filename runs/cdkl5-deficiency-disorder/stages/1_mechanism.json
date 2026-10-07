@@ -1,0 +1,82 @@
+{
+  "disease_name": "CDKL5 deficiency disorder (CDD)",
+  "identifiers": [
+    "MONDO:0100039",
+    "UniProt:O76039"
+  ],
+  "causal_defect": "Loss-of-function variants in the X-linked gene CDKL5 (Xp22). CDKL5 makes a serine/threonine kinase. Variant types include deletions, truncating, splice and missense variants, most of them in the catalytic domain. Most patients are heterozygous females, who are mosaic because of X-inactivation; hemizygous males are usually more severely affected. Genotype groups (truncating vs missense; females vs males) may behave differently.",
+  "molecular_consequence": "Patients lose CDKL5 kinase activity. Its known physiological substrates are microtubule-associated proteins, mainly MAP1S, EB2 and ARHGEF2 (target motif R-P-X-S/T-A/G/P/S), and these proteins become under-phosphorylated. Without MAP1S phosphorylation, MAP1S stays bound to microtubules. Dendritic microtubules then grow for longer, and cargo transport along dendrites is impaired. The downstream effects are reduced dendritic arborization, abnormal synapse formation and maturation, and altered Akt/rpS6 signalling. Proposed roles in phosphorylating MECP2 and in forming cilia are less well established.",
+  "key_cell_types": [
+    "Forebrain excitatory (glutamatergic) cortical and hippocampal neurons",
+    "Forebrain inhibitory (GABAergic) interneurons",
+    "Visual cortex circuits (linked to cortical visual impairment)"
+  ],
+  "key_pathology": [
+    "Seizures starting in early infancy that resist treatment (developmental and epileptic encephalopathy)",
+    "Reduced dendritic arborization and abnormal maturation of synapses",
+    "Faulty regulation of dendritic microtubule growth and cargo transport",
+    "Cortical visual impairment (reduced visual evoked responses in mice)",
+    "Low muscle tone (hypotonia), severe developmental delay, movement and sleep disorders"
+  ],
+  "evidence_strength": "Moderate. The cause (monogenic loss of function) is certain, and two independent studies have validated physiological substrates. The link from loss of substrate phosphorylation to seizures and to the patients' symptoms is not established.",
+  "major_unknowns": [
+    "How losing microtubule substrate phosphorylation leads to epilepsy (knockout mice do not have spontaneous seizures; PMID:24838000)",
+    "Whether symptoms can be reversed, and over what time window (not found in retrieved literature)",
+    "Whether missense variants have residual or dominant-negative activity, and how the genotype groups differ",
+    "How much X-inactivation mosaicism explains differences in severity between females",
+    "Whether MECP2 phosphorylation and roles in cilia or the nucleus matter in the disease",
+    "Which neuron subtypes and which developmental stage drive seizures vs cognitive problems"
+  ],
+  "key_evidence": [
+    {
+      "statement": "CDD is a monogenic disease caused by mutations in CDKL5.",
+      "kind": "EVIDENCE",
+      "stance": "supportive",
+      "source": "MONDO:0100039"
+    },
+    {
+      "statement": "CDKL5 is a kinase found in the nucleus, centrosome and cilium basal body. Its transcript is most abundant in brain.",
+      "kind": "EVIDENCE",
+      "stance": "supportive",
+      "source": "UniProt:O76039"
+    },
+    {
+      "statement": "CDKL5 phosphorylates MAP1S, EB2 and ARHGEF2. These phosphorylations are lost in knockout mice, and EB2 phosphorylation is reduced in neurons derived from patients. Lowering MAP1S levels rescued the abnormal microtubule dynamics in knockout neurons.",
+      "kind": "EVIDENCE",
+      "stance": "supportive",
+      "source": "PMID:30266824"
+    },
+    {
+      "statement": "Two independent phosphoproteomics studies agree that CDKL5 substrates are microtubule regulators.",
+      "kind": "EVIDENCE",
+      "stance": "supportive",
+      "source": "PMID:30377159"
+    },
+    {
+      "statement": "Cdkl5 knockout mice show hypoactivity, limb clasping, reduced dendritic arborization, abnormal EEG responses to convulsant drugs, reduced visual evoked responses and altered Akt/rpS6 signalling. Different behaviours can be traced to excitatory vs inhibitory forebrain neurons. Notably, knockout mice do not have spontaneous seizures; they only show abnormal EEG responses to convulsants.",
+      "kind": "EVIDENCE",
+      "stance": "supportive",
+      "source": "PMID:24838000"
+    },
+    {
+      "statement": "Delivering CDKL5 to the mouse brain with an AAV vector (injected into the brain ventricles) raised EB2 phosphorylation. This makes phospho-EB2 a usable biomarker of CDKL5 activity. Gene therapy itself is out of scope for this team.",
+      "kind": "EVIDENCE",
+      "stance": "supportive",
+      "source": "PMID:39033321"
+    },
+    {
+      "statement": "Because the substrates are microtubule-associated proteins, the main defect probably lies in neuronal cytoskeleton dynamics and dendrite and synapse development. Phospho-EB2 could serve as an assay readout for modifiers or replacement strategies.",
+      "kind": "INFERENCE",
+      "stance": "supportive",
+      "source": "PMID:30266824"
+    },
+    {
+      "statement": "Restoring CDKL5 after symptoms start may reverse neurological deficits. Searches did not retrieve evidence either way.",
+      "kind": "HYPOTHESIS",
+      "stance": "not_studied",
+      "source": ""
+    }
+  ],
+  "conclusion": "OK",
+  "conclusion_note": "The cause is clear: CDKL5 loss of function. Rate-limiting gaps for any therapy: whether deficits can be reversed, and how the molecular defect leads to seizures. Some PubMed searches failed with rate-limit errors (HTTP 429), so the evidence here is incomplete. The Gmail, Google Calendar and Google Drive connectors need authorization in claude.ai connector settings before they can be used."
+}

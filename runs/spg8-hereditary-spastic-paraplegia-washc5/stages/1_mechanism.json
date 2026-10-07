@@ -1,0 +1,52 @@
+{
+  "disease_name": "Hereditary spastic paraplegia 8 (SPG8), WASHC5/strumpellin",
+  "identifiers": [
+    "MONDO:0011339"
+  ],
+  "causal_defect": "Heterozygous (autosomal dominant), mostly missense variants in WASHC5 (KIAA0196), which encodes strumpellin, a core subunit of the WASH complex (actin-dependent endosomal sorting).",
+  "molecular_consequence": "Strumpellin/WASH complex dysfunction probably impairs actin-dependent sorting at endosomes and causes endolysosomal defects. It is unresolved whether variants act by too little protein (haploinsufficiency) or by a faulty protein disrupting the normal one (dominant-negative).",
+  "key_cell_types": [
+    "Long corticospinal upper motor neurons (axons)",
+    "Patient fibroblasts / iPSC-derived neurons as model cells"
+  ],
+  "key_pathology": [
+    "Degeneration starting at the far end of long corticospinal axons (inferred from HSP generally)",
+    "Defects in endosomal and lysosomal trafficking",
+    "Relatively early onset and rapid progression"
+  ],
+  "evidence_strength": "weak-moderate: the causal gene is solid, but the disease mechanism (dominant-negative vs haploinsufficiency) and the step from endosomal defect to neuron degeneration are not established.",
+  "major_unknowns": [
+    "Dominant-negative vs haploinsufficiency (test with patient iPSC neurons and allele-specific knockdown)",
+    "Whether any validated model reproduces spastic paraplegia, and whether a knock-in mouse carrying a patient missense variant exists",
+    "Which cargo proteins are mis-sorted in neurons, and whether lysosome function is disrupted",
+    "Why SPG8 starts relatively early and progresses quickly compared with other HSPs"
+  ],
+  "key_evidence": [
+    {
+      "statement": "Monarch defines SPG8 as HSP caused by mutation in WASHC5.",
+      "kind": "EVIDENCE",
+      "stance": "supportive",
+      "source": "MONDO:0011339"
+    },
+    {
+      "statement": "In Dictyostelium, the strumpellin N471D variant causes endolysosomal system defects and loses several interacting proteins.",
+      "kind": "EVIDENCE",
+      "stance": "supportive",
+      "source": "PMID:30061306"
+    },
+    {
+      "statement": "Earlier cell studies proposed haploinsufficiency for SPG8 variants; a mouse knockout study re-examined this. Recalled detail, not confirmed in the truncated abstract: heterozygous knockout mice show no motor phenotype, which argues against simple haploinsufficiency.",
+      "kind": "INFERENCE",
+      "stance": "contradictory",
+      "source": "PMID:26572744"
+    },
+    {
+      "statement": "Dominant missense variants in a subunit of a multi-protein complex are compatible with a dominant-negative mechanism; if true, allele-selective silencing (e.g. ASO) would be the logical approach rather than raising strumpellin levels.",
+      "kind": "HYPOTHESIS",
+      "stance": "not_studied",
+      "source": ""
+    }
+  ],
+  "conclusion": "MECHANISM UNCERTAIN",
+  "conclusion_note": "The causal gene is clear, but the mechanism (too little protein vs a toxic, interfering protein) is unresolved. That choice decides whether to silence the mutant copy or raise strumpellin levels. Resolve it in patient iPSC neurons before choosing a treatment approach. The search was brief and the mouse-knockout detail is recalled, not confirmed."
+}

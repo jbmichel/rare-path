@@ -1,0 +1,147 @@
+{
+  "assessments": [
+    {
+      "hypothesis_name": "Endolysosomal flux restoration (mechanism-agnostic)",
+      "modality": "small_molecule",
+      "strategy": "Pharmacologically raise lysosomal biogenesis/autophagic-degradative flux downstream of WASH-dependent sorting, using TFEB-activating or mTORC1-modulating tool compounds (rapamycin/rapalogs, torin, trehalose, curcumin analogues) as a chemical-probe set rather than a lead series. The decision-relevant step is not chemistry but assay: SPG8 patient fibroblasts and iPSC-derived cortical neurons must first be shown to have a quantifiable, reproducible endolysosomal deficit (cargo residence time, lysosomal proteolytic capacity, autophagic flux) that a reference compound can normalize. Only if a defect exists and is flux-limited does a lysosomal-biogenesis agent become a credible SPG8 program. Treat this as probe-first screening, not a defined target.",
+      "existing_agents": [
+        "Sirolimus (rapamycin) - approved (non-neurological indications) - mTORC1 inhibitor, indirect TFEB activation; CNS-penetrant but immunosuppressive - INFERENCE from established pharmacology, not SPG8 data",
+        "Everolimus - approved - mTORC1 inhibitor, used in CNS indications (TSC-associated epilepsy), demonstrating achievable brain target engagement - INFERENCE",
+        "Trehalose - nutraceutical/clinical-stage in other neurodegeneration - mTOR-independent autophagy inducer; poor CNS exposure after oral dosing - INFERENCE",
+        "Torin-1 / small-molecule TFEB activators - preclinical tool compounds only - mTORC1 inhibition / TFEB nuclear translocation - INFERENCE"
+      ],
+      "disease_relevant_cells": [
+        "Layer V corticospinal upper motor neurons, especially distal axon compartment",
+        "SPG8 patient fibroblasts (tractable surrogate)",
+        "iPSC-derived cortical/motor neurons"
+      ],
+      "delivery_feasibility": {
+        "target_tissue": "CNS: motor cortex and corticospinal tract (whole axon length, including thoracolumbar cord)",
+        "target_cell": "Corticospinal projection neuron, with the functionally critical compartment being the distal axon far from the soma",
+        "expected_access": "Good in principle for the chemical class: brain-penetrant mTOR inhibitors achieve CNS target engagement in humans (everolimus in TSC) - EVIDENCE-adjacent/INFERENCE. Small molecules distribute to axonal compartments once past the BBB, which is the main advantage of this modality over oligonucleotides here.",
+        "major_constraint": "Not BBB penetration but selectivity/chronic tolerability: lifelong systemic mTORC1 inhibition in a slowly progressive childhood-onset disease carries immunosuppression and growth/metabolic liabilities, and mTORC1 inhibition in neurons also suppresses local axonal translation needed for axon maintenance - a plausible mechanism by which the intervention worsens the target pathology."
+      },
+      "supporting_evidence": [
+        {
+          "statement": "The stated molecular consequence of strumpellin dysfunction is impaired actin-dependent endosomal sorting with endolysosomal defects, providing a cellular process that a small molecule could in principle modulate.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "MONDO:0011339"
+        },
+        {
+          "statement": "A strumpellin N471D variant produces endolysosomal system defects in Dictyostelium, i.e. an endolysosomal readout exists for at least one patient-type variant in a non-neuronal system.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:30061306"
+        },
+        {
+          "statement": "Brain-penetrant mTORC1 inhibitors are clinically available, so if lysosomal biogenesis were validated as the node, an existing-agent repurposing path would not require new chemistry.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": ""
+        }
+      ],
+      "contradictory_evidence": [
+        {
+          "statement": "No SPG8-specific pharmacological rescue of any endolysosomal phenotype was retrieved; a targeted search for WASH complex/strumpellin endosomal sorting rescue returned no records.",
+          "kind": "EVIDENCE",
+          "stance": "inconclusive",
+          "source": "PubMed query 'WASH complex strumpellin endosomal sorting rescue' - 0 results"
+        },
+        {
+          "statement": "No literature was retrieved connecting TFEB/lysosomal-biogenesis pharmacology to any hereditary spastic paraplegia, so the proposed node is pathway logic transplanted from other lysosomal diseases, not an HSP-validated mechanism.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "PubMed query 'TFEB activator trehalose neuron lysosomal biogenesis hereditary spastic paraplegia' - 0 results"
+        },
+        {
+          "statement": "The causal step from endosomal mis-sorting to corticospinal axon degeneration is unestablished, so a bulk lysosomal readout may be a bystander marker and its normalization may not be disease-modifying.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "MONDO:0011339"
+        }
+      ],
+      "biggest_unknown": "Whether SPG8 patient neurons show any measurable endolysosomal flux deficit at all - no such cellular phenotype has been demonstrated in human SPG8 cells in what we retrieved. Until that assay reads out, there is no pharmacodynamic endpoint and no way to select a compound or a dose.",
+      "biggest_failure_mode": "Pushing a generic lysosomal-biogenesis/mTOR lever when the actual lesion is a specific cargo mis-retrieval step: WASH-dependent sorting failure traps or degrades cargo that should be recycled, and increasing degradative flux accelerates loss of exactly that cargo. The intervention would then be directionally wrong rather than merely ineffective, while still producing a 'corrected' lysosomal biomarker.",
+      "conclusion": "THERAPEUTIC HYPOTHESIS NOT TESTABLE YET",
+      "conclusion_note": "Chemistry is not the limiting factor - brain-penetrant agents exist. The limiting factor is that no SPG8 cellular endolysosomal phenotype has been demonstrated to screen against, and the direction of the desired perturbation (more degradation vs better recycling) is undetermined. Recommended next step is phenotyping SPG8 patient fibroblasts and iPSC neurons for cargo sorting and lysosomal function, not compound work."
+    },
+    {
+      "hypothesis_name": "Distal axon maintenance in long corticospinal tracts",
+      "modality": "small_molecule",
+      "strategy": "Enhance axonal transport and microtubule resilience in distal corticospinal axons by selective HDAC6 inhibition, raising alpha-tubulin acetylation to improve motor-protein/microtubule engagement. This is a shared-final-pathway, genotype-agnostic approach: it requires no resolution of the dominant-negative vs haploinsufficiency question. Test sequence: (1) establish whether SPG8 iPSC neurons show reduced tubulin acetylation and/or slowed bidirectional cargo transport in long axons (microfluidic/compartmentalized culture); (2) if yes, test a CNS-penetrant selective HDAC6 inhibitor for normalization; (3) only then seek an in vivo system. Readouts are established in the axonopathy field, which makes this the more executable of the two hypotheses despite being purely downstream.",
+      "existing_agents": [
+        "EKZ-438 - clinical-stage/advanced preclinical - highly selective (>8500-fold), CNS-penetrant HDAC6 inhibitor, 12 nM potency, characterized in ALS/FTD models - EVIDENCE PMID:41061670",
+        "CHDI/Ricolinostat-class and 'novel potent HDAC6 inhibitors' - preclinical - increase tubulin acetylation at nanomolar concentrations and rescue mitochondrial axonal transport in CMT2F primary neurons - EVIDENCE PMID:31845794",
+        "Tubastatin A (and the inhibitor used in CMT2D mice) - tool compound - HDAC6 inhibition restored alpha-tubulin acetylation, rescued axonal transport and improved motor function in vivo - EVIDENCE PMID:29520015",
+        "PXT3003 - phase III in CMT1A - unrelated mechanism (neuregulin pathway), cited only as precedent that downstream pathway modulation reaches late-stage trials in inherited axonopathy - EVIDENCE PMID:37455204"
+      ],
+      "disease_relevant_cells": [
+        "Layer V corticospinal motor neurons - distal axon and synaptic terminal compartment is the presumed site of initial failure",
+        "iPSC-derived cortical neurons in length-dependent/microfluidic culture"
+      ],
+      "delivery_feasibility": {
+        "target_tissue": "Motor cortex plus the entire corticospinal tract length to lumbar cord",
+        "target_cell": "Corticospinal projection neuron; the required site of action is the distal axon, kilometres of cytoplasm from the soma in human scale",
+        "expected_access": "Favourable and unusually well-matched to this modality. Small molecules reach the distal axon cytoplasm by diffusion once across the BBB, which no oligonucleotide or protein modality achieves comparably; next-generation HDAC6 inhibitors were explicitly engineered for CNS penetrance after first-generation compounds failed on that axis - EVIDENCE PMID:41061670. HDAC6 is cytosolic and ubiquitous, so no cell-type-specific uptake problem exists.",
+        "major_constraint": "Lack of cell-type selectivity rather than lack of access: HDAC6 inhibition acts in every CNS and peripheral cell, and chronic dosing from childhood in a lifelong disease raises an untested long-term safety question. Secondary constraint: no in vivo SPG8 model exists in which to demonstrate motor benefit before human trial."
+      },
+      "supporting_evidence": [
+        {
+          "statement": "HDAC6 inhibition increases alpha-tubulin acetylation, enhances microtubule resiliency and motor-protein binding, and thereby facilitates intracellular transport; a next-generation highly selective and CNS-penetrant inhibitor (EKZ-438, 12 nM, >8500-fold selective) has been characterized in neurodegeneration models.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:41061670"
+        },
+        {
+          "statement": "Potent HDAC6 inhibitors with low toxicity and promising PK rescue axonal transport of mitochondria in a primary neuronal model of an inherited axonopathy caused by a dominantly acting mutation (CMT2F/HSPB1) - a close genetic analogy to SPG8's dominant missense architecture.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:31845794"
+        },
+        {
+          "statement": "In CMT2D mice, an HDAC6 inhibitor restored alpha-tubulin acetylation, rescued axonal transport deficits and improved motor function in vivo, establishing that this pharmacology can convert a transport deficit into a motor benefit in a length-dependent axonopathy.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:29520015"
+        },
+        {
+          "statement": "Because the mechanism acts downstream of WASHC5 on a shared final pathway, it would serve all SPG8 genotypes and sidesteps the unresolved dominant-negative vs haploinsufficiency question.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": ""
+        }
+      ],
+      "contradictory_evidence": [
+        {
+          "statement": "All transport-rescue evidence retrieved comes from CMT2D, CMT2F and amyloid-beta models, not from WASHC5; no study linking HDAC6 or tubulin acetylation to WASH complex biology or to any HSP was retrieved. The mechanistic bridge from endosomal sorting failure to microtubule-based transport failure is assumed, not shown.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "PMID:31845794; PMID:29520015"
+        },
+        {
+          "statement": "Length-dependent corticospinal axonopathy in SPG8 is inferred from HSP as a class rather than demonstrated for WASHC5, and no validated SPG8 model reproducing spastic paraplegia exists, so there is currently no in vivo system in which to show benefit.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "MONDO:0011339"
+        },
+        {
+          "statement": "WASH-dependent sorting is actin-based; HDAC6 inhibition acts chiefly on microtubule acetylation (and secondarily on cortactin/actin), so the pharmacology may address a different cytoskeletal system than the one SPG8 disrupts.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": "PMID:30061306"
+        },
+        {
+          "statement": "SPG8 has relatively early onset and rapid progression, so a downstream maintenance intervention may need presymptomatic initiation to matter - a hard trial design in an ultra-rare dominant disease without a biomarker.",
+          "kind": "INFERENCE",
+          "stance": "inconclusive",
+          "source": "MONDO:0011339"
+        }
+      ],
+      "biggest_unknown": "Whether SPG8 neurons actually have an axonal transport or tubulin-acetylation deficit. This is cheaply answerable in patient iPSC neurons with established assays, and it is the single experiment that would justify or kill the approach. Note that HDAC6 inhibition can improve transport in cells that have no acetylation deficit, so the rescue must be tied to a measured baseline abnormality.",
+      "biggest_failure_mode": "A false-positive rescue: HDAC6 inhibition non-specifically boosts transport in almost any cultured neuron, so an SPG8 culture will likely show 'improvement' whether or not transport failure drives the disease. The program then advances on a pharmacodynamic effect that is real but disease-irrelevant, into a trial with no SPG8 animal model and an ultra-rare, heterogeneous, rapidly progressing population - the point at which it fails is the clinical endpoint, after the money is spent.",
+      "conclusion": "OK",
+      "conclusion_note": "Executable now and the stronger of the two hypotheses for this modality: a CNS-penetrant selective agent exists (EKZ-438 class), delivery to distal axons favours small molecules over all other modalities, and the gating experiment is a single transport/acetylation phenotyping study in SPG8 iPSC neurons. The mechanistic link to WASHC5 remains hypothetical and the absence of an in vivo SPG8 model is the main development gap."
+    }
+  ]
+}

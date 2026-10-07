@@ -1,0 +1,135 @@
+{
+  "candidates": [
+    {
+      "name": "Dose-capped MeCP2 function restoration",
+      "biological_hypothesis": "Rett phenotypes reflect ongoing absence of MeCP2 reader/NCoR-recruiting function in mature neurons rather than fixed developmental damage, so re-supplying functional MeCP2 protein (or its activity) to MeCP2-null cells should restore chromatin/transcriptional state and improve phenotype — provided total MeCP2 activity stays inside the narrow non-toxic window set by duplication syndrome.",
+      "target_or_process": "MeCP2 protein function (methyl-DNA reading + NCoR corepressor recruitment) in CNS neurons",
+      "desired_perturbation": "Restore MeCP2 function in deficient cells to near-normal levels without exceeding normal dose",
+      "plausible_modalities": [
+        "protein",
+        "rna",
+        "oligonucleotide"
+      ],
+      "evidence_for": [
+        {
+          "statement": "Peripherally administered TAT-MeCP2 fusion protein reached brain, extended Mecp2-/y lifespan >50% and rescued hippocampal CA2 neuron size — direct pharmacological proof that supplying MeCP2 protein is therapeutic.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID 35460749"
+        },
+        {
+          "statement": "TAT-MeCP2e2 reversed H3K9/H4K16 hyperacetylation in patient fibroblasts, giving a human-cell molecular rescue biomarker usable as a dose/activity readout.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID 35460749"
+        },
+        {
+          "statement": "Adult symptomatic reversal upon normalising MeCP2 levels (shown in the reciprocal duplication model with ASOs) indicates neuroanatomy remains competent for post-onset molecular correction.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID 26605526"
+        }
+      ],
+      "evidence_against": [
+        {
+          "statement": "MECP2 is dose-sensitive in both directions; overexpression causes duplication syndrome, so any MeCP2-adding or locus-upregulating therapy risks toxicity, and in mosaic females the wild-type-expressing cells would be exposed to supraphysiological total dose.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "PMID 26605526"
+        },
+        {
+          "statement": "Protein/mRNA modalities face CNS delivery, broad neuronal biodistribution and repeat-dosing immunogenicity hurdles; TAT-fusion brain exposure in mice may not scale to human brain volume.",
+          "kind": "INFERENCE",
+          "stance": "inconclusive",
+          "source": "PMID 35460749"
+        }
+      ],
+      "key_biological_uncertainty": "Whether a fraction-of-cells × per-cell-dose combination exists that corrects enough mosaic neurons without overshooting MeCP2 activity in already-wild-type cells; and how durable a non-integrating protein/mRNA supply must be."
+    },
+    {
+      "name": "Neurotrophic node augmentation (NGF/BDNF axis)",
+      "biological_hypothesis": "Because MeCP2 loss causes thousands of individually small transcriptional changes, no single dysregulated gene explains the phenotype; instead convergent deficits in neurotrophic signalling underlie the arrested neuronal maturation (small somas, reduced dendritic complexity and synapse number). Restoring neurotrophin-receptor signalling downstream of MeCP2 should promote neuronal maturation/maintenance without touching MECP2 dose.",
+      "target_or_process": "NGF–TrkA and BDNF–TrkB signalling in CNS neurons",
+      "desired_perturbation": "Increase neurotrophic receptor signalling tone",
+      "plausible_modalities": [
+        "protein",
+        "small_molecule"
+      ],
+      "evidence_for": [
+        {
+          "statement": "Intranasal 'painless' NGF mutein given to already symptomatic MeCP2+/- female mice improved survival and behaviour, showing a downstream neurotrophic node is druggable in the disease-relevant mosaic genotype and post-onset.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID 37633263"
+        },
+        {
+          "statement": "Pathology is arrested maturation and deficient BDNF/NGF-axis signalling without neurodegeneration, so a trophic stimulus acts on surviving, structurally correctable neurons.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID 40673967"
+        },
+        {
+          "statement": "Intranasal delivery and engineered low-nociception muteins address the historic blockers to neurotrophin therapeutics (BBB exclusion, pain from NGF).",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": "PMID 37633263"
+        }
+      ],
+      "evidence_against": [
+        {
+          "statement": "Convergence of Rett pathology onto the neurotrophin axis as the dominant driver is asserted, not demonstrated; the single-node assumption conflicts with the broad small-magnitude transcriptional phenotype.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        },
+        {
+          "statement": "Behavioural improvement in Mecp2+/- mice can occur while prefrontal/anterior cingulate projection abnormalities persist (shown for environmental enrichment), so rodent behavioural rescue by a trophic agent may overstate translatable benefit.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "PMID 40673967"
+        }
+      ],
+      "key_biological_uncertainty": "Whether trophic stimulation reaches and benefits the circuits that drive human morbidity (brainstem respiratory, cortical E/I) or only produces a behavioural-level effect, and whether chronic Trk agonism is safe in a developing CNS."
+    },
+    {
+      "name": "Brainstem autonomic/respiratory circuit stabilisation",
+      "biological_hypothesis": "Apnoea, breath-holding and autonomic instability arise from excitation/inhibition imbalance in brainstem respiratory and autonomic neurons lacking MeCP2. This morbidity driver may be partly independent of the cortical/cognitive phenotype and correctable by pharmacologically rebalancing E/I or neuromodulatory drive in those nuclei, decoupling symptom control from MECP2 dose.",
+      "target_or_process": "Brainstem respiratory/autonomic network excitability and its neuromodulatory (GABAergic / monoaminergic / glutamatergic) inputs",
+      "desired_perturbation": "Reduce pathological excitation / increase inhibitory-neuromodulatory stabilisation of brainstem respiratory rhythm",
+      "plausible_modalities": [
+        "small_molecule"
+      ],
+      "evidence_for": [
+        {
+          "statement": "Brainstem autonomic/respiratory instability is an explicit major morbidity driver in MECP2 Rett, and E/I imbalance is a stated core pathology — identifying a symptom-level target distinct from cortical phenotypes.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "Monarch MONDO:0010726"
+        },
+        {
+          "statement": "Because the respiratory phenotype is network-excitability-driven rather than degenerative, small molecules acting on neuronal excitability could give rapid, dose-titratable, reversible benefit with an objective endpoint (apnoea frequency) unaffected by the MECP2 dose ceiling.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": "PMID 26605526"
+        }
+      ],
+      "evidence_against": [
+        {
+          "statement": "It is unknown whether brainstem respiratory pathology responds to the same or any intervention that helps cognitive/motor phenotypes; a brainstem-only agent would be symptomatic, not disease-modifying.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        },
+        {
+          "statement": "No specific agent for this node was identified in the sources retrieved here; prior clinical attempts at respiratory pharmacotherapy in Rett were not verified in this search.",
+          "kind": "EVIDENCE",
+          "stance": "inconclusive",
+          "source": ""
+        }
+      ],
+      "key_biological_uncertainty": "Which neurotransmitter system is the dominant, drug-accessible lesion in MeCP2-deficient brainstem respiratory nuclei, and whether chronic modulation there is tolerable alongside seizure risk."
+    }
+  ],
+  "conclusion": "MECHANISM UNCERTAIN",
+  "conclusion_note": "Causal gene and post-onset reversibility are solid, so hypothesis 1 (dose-capped MeCP2 function restoration) is the best-grounded strategy and the one with a usable human-cell pharmacodynamic readout (H3K9/H4K16 acetylation, PMID 35460749); its binding constraint is the bidirectional dose window (PMID 26605526), which should be treated as the primary design question, not an afterthought. Hypothesis 2 has genuine post-onset in vivo rescue in the disease-relevant mosaic female genotype (PMID 37633263) but rests on an unproven single-node convergence assumption. Hypothesis 3 targets the dominant morbidity driver but, within this search, NO EXISTING AGENT IDENTIFIED — my targeted searches for respiratory pharmacotherapy and for trofinetide/IGF-1 trials returned nothing usable, so the agent landscape for hypotheses 2 and 3 is unverified here and should be resolved by the agent-finding step rather than assumed. Which downstream node is best to drug remains unresolved. Decision support for researchers only; not medical advice."
+}

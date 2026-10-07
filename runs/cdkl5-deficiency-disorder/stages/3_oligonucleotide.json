@@ -1,0 +1,168 @@
+{
+  "assessments": [
+    {
+      "hypothesis_name": "MAP1S-brake release",
+      "modality": "oligonucleotide",
+      "strategy": "Gapmer RNase-H1 ASO against MAP1S mRNA, delivered intrathecally/intracerebroventricularly for broad CNS neuronal uptake, titrated to partial (~40-60%) knockdown rather than maximal suppression. MAP1S is an intracellular, cytoplasmic microtubule-binding protein, so protein-level or antibody approaches are excluded and transcript lowering is the natural way to execute the desired perturbation (reduce MAP1S dose). The first use is not a drug but a decisive in vivo tool: dose a MAP1S gapmer (or Malat1-style control) into Cdkl5-null mice and read dendritic arborization, visual evoked potentials and convulsant-threshold EEG. Because the intervention is downstream of the kinase, it is genotype-agnostic across deletions, truncating, splice and missense alleles.",
+      "existing_agents": [],
+      "disease_relevant_cells": [
+        "Forebrain excitatory cortical and hippocampal neurons (dendritic compartment)",
+        "Forebrain GABAergic interneurons",
+        "Visual cortex neurons"
+      ],
+      "delivery_feasibility": {
+        "target_tissue": "CNS - cortex, hippocampus, visual cortex",
+        "target_cell": "Postmitotic forebrain neurons (excitatory and inhibitory); knockdown must occur in the neuronal soma to deplete MAP1S from dendritic microtubules",
+        "expected_access": "Intrathecal/ICV gapmer ASOs are a clinically validated CNS delivery route with naked (unconjugated) uptake into neurons and glia; CSF dosing every 3-6 months is established practice in pediatric neurology. Free uptake into neurons is productive and RNase H1 is active in both nucleus and cytoplasm, so the relevant compartment is accessible for a cytoplasmic mRNA such as MAP1S.",
+        "major_constraint": "Intrathecal ASOs distribute in a gradient: superficial cortex, spinal cord and brainstem are well covered, but deep structures and, critically, uniform deep-cortical/hippocampal neuronal knockdown is less complete; achieving the uniform partial lowering across forebrain excitatory and inhibitory neurons that this hypothesis requires - while staying inside an unknown therapeutic window - is the binding constraint. In infants with CDD (seizure onset in the first months), repeated intrathecal dosing from early infancy is procedurally feasible but adds risk."
+      },
+      "supporting_evidence": [
+        {
+          "statement": "Lowering MAP1S levels rescued abnormal microtubule dynamics in Cdkl5 knockout neurons, identifying MAP1S reduction (exactly what an RNase-H ASO delivers) as the mediator of a core cellular phenotype.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:30266824"
+        },
+        {
+          "statement": "Two independent phosphoproteomic studies converge on microtubule regulators (MAP1S, EB2, ARHGEF2) as the physiological CDKL5 substrates, so the MAP1S node is the best-supported proximal mechanism to target.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:30377159"
+        },
+        {
+          "statement": "Phospho-EB2 is a measurable in vivo readout of CDKL5 pathway activity, usable as an orthogonal assay when interpreting MAP1S-lowering experiments.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:39033321"
+        },
+        {
+          "statement": "MAP1S mRNA is the only tractable handle on this node: the desired perturbation is a reduction in protein dose of an intracellular cytoskeletal protein, which is precisely the perturbation RNase-H gapmers execute, and dose can be tuned by ASO dose rather than being all-or-none.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": "PMID:30266824"
+        },
+        {
+          "statement": "CNS-delivered ASOs that reduce a target transcript are an established, clinically validated modality in neurodevelopmental and epileptic disorders via the intrathecal route.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:34412058"
+        }
+      ],
+      "contradictory_evidence": [
+        {
+          "statement": "The rescue demonstrated is cell-biological (microtubule growth dynamics) only; no evidence was retrieved that MAP1S lowering improves dendritic arborization, EEG, visual or behavioural phenotypes in any animal. The therapeutic chain from microtubule dynamics to CDD symptoms is unproven.",
+          "kind": "EVIDENCE",
+          "stance": "inconclusive",
+          "source": "PMID:30266824"
+        },
+        {
+          "statement": "Cdkl5 knockout mice do not have spontaneous seizures, so the model cannot demonstrate seizure rescue - the phenotype that matters most to families - for a MAP1S ASO; only surrogate readouts (convulsant threshold EEG, VEPs, dendritic morphology) are available.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "PMID:24838000"
+        },
+        {
+          "statement": "MAP1S has CDKL5-independent roles (autophagy, mitosis, cytoskeletal turnover); chronic CNS-wide knockdown could produce on-target toxicity, and no safe-lowering window has been defined.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        },
+        {
+          "statement": "No MAP1S-targeting oligonucleotide, clinical or preclinical, was identified; this is a de novo discovery program with no repurposable agent.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": ""
+        }
+      ],
+      "biggest_unknown": "Whether partial MAP1S lowering in vivo converts the microtubule-dynamics rescue into any organism-level benefit in Cdkl5-null mice, and whether that benefit survives after symptom onset (postnatal window). Secondarily, how much MAP1S lowering is tolerated by normal neurons.",
+      "biggest_failure_mode": "Mechanistic, not delivery: MAP1S lowering normalizes a cell-biological readout but leaves dendritic, circuit and EEG phenotypes untouched because CDKL5 loss acts through several parallel substrates (EB2, ARHGEF2, Akt/rpS6) that a MAP1S ASO does not address - a single-node fix for a multi-node kinase deficiency. The ASO would be pharmacologically successful and therapeutically inert.",
+      "conclusion": "OK",
+      "conclusion_note": "Delivery is credible (intrathecal gapmer precedent) and the modality executes exactly the perturbation the rescue experiment used. The program should not advance past one gating in vivo experiment: CNS MAP1S gapmer (or conditional Map1s reduction) in Cdkl5-null mice with dendritic morphology, VEP and convulsant-threshold EEG endpoints. A negative result should stop the hypothesis."
+    },
+    {
+      "hypothesis_name": "Genotype-stratified CDKL5 output boost",
+      "modality": "oligonucleotide",
+      "strategy": "Steric-blocking (fully 2'-modified, non-gapmer) splice-switching ASOs that restore full-length CDKL5 mRNA, delivered intrathecally. Three distinct sub-strategies with very different maturity: (1) variant-specific splice correction for patients whose allele creates a cryptic splice site or deep-intronic pseudoexon - the n-of-1/n-of-few path, closest to precedent; (2) blocking a native poison/non-productive exon or alternative 3'UTR element in CDKL5 to raise output from the remaining functional allele - requires first demonstrating such an element exists in CDKL5, which was not established in retrieved evidence; (3) ASO-mediated NMD modulation for nonsense alleles - mechanistically weak, since stabilizing a truncated transcript yields a truncated kinase. Success criterion is quantitative and already defined: restoration of EB2 phosphorylation. Enabling work is a variant-function catalogue classifying patient alleles as null, hypomorphic or dominant-negative.",
+      "existing_agents": [],
+      "disease_relevant_cells": [
+        "Forebrain excitatory cortical and hippocampal neurons",
+        "Forebrain GABAergic interneurons",
+        "Visual cortex neurons"
+      ],
+      "delivery_feasibility": {
+        "target_tissue": "CNS - cortex, hippocampus; CDKL5 transcript is most abundant in brain",
+        "target_cell": "Postmitotic forebrain neurons; splice correction must occur in the nucleus on CDKL5 pre-mRNA, so nuclear access in the specific neurons expressing the mutant allele is required",
+        "expected_access": "Intrathecal steric-block ASOs reach neuronal nuclei and act on pre-mRNA; this is the exact mechanism and route of a validated motor-neuron splice ASO and of patient-specific splice ASOs for ultra-rare neurological variants, so the delivery and regulatory path exists in principle.",
+        "major_constraint": "Two layers. First, the standard intrathecal gradient leaves deep forebrain neurons - the cells that drive CDD seizures and cognition - less well covered than spinal/superficial targets, and CDD requires broad bilateral forebrain correction, which is a harder ask than the spinal-cord indications that established the route. Second and more limiting: in mosaic heterozygous females, benefit accrues only in cells where the mutant allele is the active X; delivery must reach a sufficient fraction of exactly those interspersed cells, and there is no way to enrich for them."
+      },
+      "supporting_evidence": [
+        {
+          "statement": "CDD is monogenic loss of function of CDKL5 and variant classes include splice variants, so a defined subset of patients has alleles mechanistically amenable to splice-switching ASOs rather than requiring whole-gene replacement.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "MONDO:0100039"
+        },
+        {
+          "statement": "Splice-modulating ASOs that raise output of a haploinsufficient neuronal gene are clinically validated, and a patient-specific splice ASO has been developed for an ultra-rare variant, establishing both the mechanism and an n-of-few regulatory path.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:34412058"
+        },
+        {
+          "statement": "Restoring CDKL5 protein to the mouse brain raised EB2 phosphorylation, confirming added CDKL5 is functional in vivo and giving any output-boosting ASO a direct, quantitative pharmacodynamic success criterion.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:39033321"
+        },
+        {
+          "statement": "CDKL5 transcript is most abundant in brain, so the pre-mRNA substrate for a splice-switching ASO is present in the target cells.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "UniProt:O76039"
+        },
+        {
+          "statement": "Because splice correction acts on the patient's own locus, it produces authentically regulated, correctly localized CDKL5 (nucleus, centrosome, basal body) rather than ectopic overexpression - an advantage over dose-insensitive approaches if CDKL5 is overexpression-toxic.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": "UniProt:O76039"
+        }
+      ],
+      "contradictory_evidence": [
+        {
+          "statement": "Each implementation serves only a small variant subset of an already ultra-rare disease; deletions and most truncating alleles are not addressable by splice switching at all, which severely limits the addressable population per agent and makes conventional development economics implausible.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": "MONDO:0100039"
+        },
+        {
+          "statement": "No CDKL5-specific splice-correcting or output-boosting oligonucleotide was identified in retrieved evidence, and no validated CDKL5 poison exon or non-productive splicing element was retrieved; the poison-exon sub-strategy therefore currently lacks its essential target.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": ""
+        },
+        {
+          "statement": "In mosaic heterozygous females the wild-type allele is already active in roughly half of cells; correcting the mutant allele only helps in cells where it is the active X, so maximum achievable benefit is bounded by mosaicism and by how much of a cell-autonomous deficit remains - an efficacy ceiling absent from the male hemizygous case.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": "MONDO:0100039"
+        },
+        {
+          "statement": "Whether symptoms can be reversed after onset, and over what window, is unresolved; since CDD seizures begin in the first months of life, an output-boosting ASO may arrive after the developmental window in which dendritic and synaptic maturation can still be corrected.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        },
+        {
+          "statement": "Cdkl5 knockout mice lack spontaneous seizures and carry no human splice variant, so there is no animal model in which a human-variant-specific splice ASO can be efficacy-tested; preclinical proof must rest on patient-derived neurons with phospho-EB2 readout plus a humanized or transgenic line built for the purpose.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "PMID:24838000"
+        }
+      ],
+      "biggest_unknown": "What fraction of CDKL5 patients carry alleles that are genuinely output-limited and splice-correctable (cryptic splice sites, pseudoexons) rather than outright null - this number is currently unknown and determines whether the strategy has any population at all. Equally unknown is how much restored CDKL5 protein, in what fraction of forebrain neurons, is enough to cross the disease threshold.",
+      "biggest_failure_mode": "Not delivery and not chemistry, but denominator: after building the variant-function catalogue, the splice-correctable subset proves to be a handful of individuals worldwide, each needing a bespoke ASO with its own toxicology, so the program never escapes serial n-of-1 academic efforts. The adjacent failure is attempting the generalizable version (a CDKL5 poison-exon ASO that would serve all patients with one allele intact) only to find CDKL5 has no exploitable non-productive splicing element.",
+      "conclusion": "INSUFFICIENT EVIDENCE",
+      "conclusion_note": "The modality is mechanistically apt and the intrathecal splice-ASO route is validated, but two prerequisites are missing from retrieved evidence: (1) no catalogue of which CDKL5 patient alleles are splice-correctable or hypomorphic, and (2) no retrieved evidence of a CDKL5 poison exon or other non-productive splicing element that would permit one agent to serve many patients. Recommended gating work, in order: sequence-level survey of CDD variant databases for cryptic-splice/pseudoexon alleles to size the population; RNA-seq of patient neurons for non-productive CDKL5 splicing events; and a minigene/patient-neuron panel scoring missense and splice alleles by phospho-EB2 to separate hypomorphic from null and to exclude dominant-negative behaviour before any stabilization strategy is pursued. Note that NMD-modulation for nonsense alleles should be deprioritized - it yields more truncated kinase, not more function."
+    }
+  ]
+}

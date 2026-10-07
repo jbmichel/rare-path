@@ -1,0 +1,93 @@
+{
+  "assessments": [
+    {
+      "hypothesis_name": "Allele-selective WASHC5 lowering",
+      "modality": "oligonucleotide",
+      "strategy": "Gapmer RNase-H1 ASO (or siRNA, see RNA agent) designed either (a) directly against the patient's WASHC5 missense point mutation, or (b) against a heterozygous SNP phased in cis with the mutant allele, delivered intrathecally for chronic CNS exposure. Because WASHC5 mutations are private, the realistic clinical format is an N-of-1/N-of-few mutation-directed ASO (nusinersen/tofersen-style chemistry, milasen-style regulatory path) rather than a single product serving the SPG8 population; a SNP-haplotype product only becomes viable if a few common WASHC5 haplotypes carry most mutant alleles, which has not been examined. Critically, the first and highest-value use of these tools is not therapeutic but mechanistic: in patient iPSC-derived cortical neurons, compare mutant-selective knockdown vs total WASHC5 knockdown vs non-targeting control on endosomal actin/WASH-dependent cargo sorting and axonal readouts. Rescue by selective knockdown with no harm (or benefit) from total knockdown supports dominant-negative and licenses the therapeutic program; worsening with total knockdown and no benefit from selective knockdown kills it and redirects to upregulation.",
+      "existing_agents": [
+        "No WASHC5-directed oligonucleotide exists (no clinical or preclinical agent identified)",
+        "Precedent chemistry/route: nusinersen, tofersen (intrathecal CNS ASOs, approved)",
+        "Precedent for allele-selective design: SNP-targeting RNase-H ASOs with >100-fold allele discrimination in HTT (PMID:23963702); stereopure SNP3-targeting mHTT ASOs (PMID:39027419); WVE-120101/120102 (clinically tested, discontinued for lack of efficacy)"
+      ],
+      "disease_relevant_cells": [
+        "Layer V corticospinal upper motor neurons (soma in motor cortex; distal axon in spinal cord white matter)",
+        "Spinal cord dorsal column sensory axons (subclinical involvement in HSP)",
+        "Patient fibroblasts and iPSC-derived cortical/motor neurons (model cells for the mechanism experiment)"
+      ],
+      "delivery_feasibility": {
+        "target_tissue": "CNS: motor cortex (somata) and spinal cord white matter (axons)",
+        "target_cell": "Layer V corticospinal pyramidal neurons",
+        "expected_access": "EVIDENCE: intrathecal ASOs achieve therapeutic CNS target engagement in humans (nusinersen, tofersen approved; both act on spinal/brainstem motor neurons). INFERENCE: intrathecal delivery gives good spinal cord and superficial/periventricular exposure but a steep rostral gradient, with deep cortical layer V among the least well-exposed compartments; cortical somatic knockdown in SPG8 would likely be partial. Repeat intrathecal dosing every few months is established and tolerable. HYPOTHESIS: cortex-sufficient knockdown may require intracerebroventricular dosing or improved chemistries; conjugate routes (antibody-oligonucleotide, peptide-oligonucleotide) are preclinical-stage for CNS and should not be assumed.",
+        "major_constraint": "Reaching layer V corticospinal somata, not reaching the CNS: the degenerating unit is the distal axon of a deep cortical neuron, and mRNA knockdown must occur in the soma. Quantitative allele-specific knockdown in deep cortex after intrathecal dosing is unproven for any program."
+      },
+      "supporting_evidence": [
+        {
+          "statement": "RNase-H ASOs can be engineered with positional chemical modification to discriminate a single nucleotide change by >100-fold, in patient cells and a humanized mouse, with tolerable CNS injection — so single-nucleotide allele selectivity is a solved design problem in principle.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:23963702"
+        },
+        {
+          "statement": "Stereopure PS/PN ASOs targeting a heterozygous SNP gave potent, durable, allele-selective mHTT lowering in vitro and in vivo, confirming the SNP-haplotype strategy is technically executable.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:39027419"
+        },
+        {
+          "statement": "Haplotype phasing of a disease mutation to candidate target SNPs is a validated workflow (long-read single-molecule phasing without family data), so the equivalent analysis could be run on WASHC5 cheaply.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:33209959"
+        },
+        {
+          "statement": "Comprehensive haplotype analysis across ancestries was required to cover most HD patients with 2-3 SNP products; this is the template for asking whether WASHC5 mutant alleles cluster on few haplotypes.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:31708117"
+        },
+        {
+          "statement": "Intrathecal ASO dosing is an approved, repeatable delivery route for motor-neuron disease (nusinersen, tofersen), so route and chronic-dosing risk are not the novel part of this program.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": ""
+        },
+        {
+          "statement": "Patient-equivalent strumpellin N471D is expressed and mis-functions with loss of normal interactors rather than being absent, which is the precondition for a mutant-lowering strategy to be beneficial.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:30061306"
+        }
+      ],
+      "contradictory_evidence": [
+        {
+          "statement": "Dominant-negative action of WASHC5 missense variants has not been shown in any human neuronal system; if WASHC5 dosage is instead limiting, mutant-selective lowering is at best neutral and any off-allele (wild-type) knockdown is actively harmful. The direction of the required transcript change is therefore not established.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": "PMID:26572744"
+        },
+        {
+          "statement": "Allele-selective CNS ASOs have already failed clinically in the one indication where they were tested at scale: WVE-120101/120102 against SNP-phased mutant HTT were discontinued for lack of demonstrable benefit, indicating that in-vitro selectivity does not guarantee sufficient in-vivo mutant lowering in the relevant neurons.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "PMID:33209959"
+        },
+        {
+          "statement": "WASHC5 mutations are private and scattered; no clinical oligonucleotide program for any HSP gene was found on ClinicalTrials.gov, so there is neither a product nor a regulatory precedent cohort for SPG8 and each patient may need a bespoke ASO.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "ClinicalTrials.gov search: hereditary spastic paraplegia + antisense oligonucleotide, 0 studies"
+        },
+        {
+          "statement": "Whether WASHC5 mutant alleles sit on a small number of shared haplotypes (making a SNP product feasible) has not been studied.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        }
+      ],
+      "biggest_unknown": "Whether lowering mutant WASHC5 is the therapeutically correct direction at all. Dominant-negative vs haploinsufficiency is unresolved, and the same ASO toolkit is the cleanest instrument to resolve it (allele-selective vs total knockdown in isogenic patient iPSC cortical neurons). Until that experiment reads out, the therapeutic hypothesis is not testable in vivo.",
+      "biggest_failure_mode": "Insufficient mutant-allele knockdown specifically in layer V corticospinal somata after intrathecal dosing — the HTT allele-selective programs achieved excellent selectivity in cells yet failed to deliver clinical benefit in deep CNS targets — compounded by the fact that in SPG8 the pathology begins at the distal axon, so even complete somatic knockdown started after symptom onset may not reverse established axonal degeneration.",
+      "conclusion": "THERAPEUTIC HYPOTHESIS NOT TESTABLE YET",
+      "conclusion_note": "The oligonucleotide toolkit is technically adequate (single-nucleotide discrimination is demonstrated; intrathecal chronic dosing is approved practice), and there is no WASHC5 agent of any kind. But the required direction of transcript change is unresolved, so a therapeutic program cannot be specified. Recommended, bounded next step (cheap, decision-changing): (1) in patient-derived iPSC cortical neurons with isogenic correction, run mutant-selective vs total WASHC5 ASO/siRNA knockdown against WASH-dependent endosomal cargo sorting and lysosomal readouts; (2) in parallel, phase WASHC5 mutant alleles in available SPG8 families against common coding/3'UTR SNPs to learn whether any non-bespoke product is even possible. Do not commission a clinical ASO before (1) reads out in the dominant-negative direction."
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "assessments": [
+    {
+      "hypothesis_name": "Dose-capped MeCP2 function restoration",
+      "modality": "protein",
+      "strategy": "Deliver functional MeCP2 protein to CNS neurons as a cell-penetrating fusion (TAT-MeCP2e2-type), or a BBB-shuttle-conjugated (e.g. transferrin-receptor/CD98 bispecific) MeCP2 construct, dosed systemically or intrathecally. Because MeCP2 is a nuclear chromatin reader, the biologic must traverse BBB, plasma membrane and nuclear envelope in a large fraction of neurons. The dose-capping argument for protein is pharmacokinetic rather than genetic: a non-integrating protein with a finite half-life gives a self-limiting, titratable exposure, unlike gene addition.",
+      "existing_agents": [
+        "TAT-MeCP2e2 recombinant fusion protein (preclinical tool, mouse and patient-fibroblast data; PMID 35460749)",
+        "No approved or clinical-stage MeCP2 protein therapeutic identified in ClinicalTrials.gov search of Rett syndrome (NCT list returned trofinetide, rhIGF-1, vorinostat, fenfluramine, NA-921, NTI164 — none is MeCP2 protein replacement)"
+      ],
+      "disease_relevant_cells": [
+        "Mature excitatory cortical and hippocampal neurons (incl. CA2)",
+        "GABAergic interneurons",
+        "Brainstem respiratory/autonomic neurons",
+        "Astrocytes and microglia (modifier)"
+      ],
+      "delivery_feasibility": {
+        "target_tissue": "Whole CNS — cortex, hippocampus, and critically brainstem respiratory nuclei",
+        "target_cell": "Nuclei of MeCP2-null neurons (the ~50% of cells silencing the wild-type allele in mosaic females); ideally also glia",
+        "expected_access": "Low and unquantified at the cell-population level. EVIDENCE: peripherally dosed TAT-MeCP2 reached mouse brain and extended Mecp2-/y lifespan >50% with CA2 soma-size rescue (PMID 35460749). INFERENCE: this demonstrates functionally meaningful but not necessarily widespread nuclear delivery; the fraction of neurons achieving nuclear MeCP2 occupancy was not established as a delivery parameter, and TAT-mediated uptake is non-selective, dominated by peripheral organs, and scales poorly to a ~1400 cm3 human brain with a 1000-fold larger diffusion path.",
+        "major_constraint": "Three serial barriers for a 486-aa nuclear protein: BBB, plasma membrane, nuclear import — plus the mosaic requirement that a large fraction of null neurons each receive enough protein. This is a fundamentally harder delivery problem than any approved biologic has solved."
+      },
+      "supporting_evidence": [
+        {
+          "statement": "Intraperitoneal TAT-MeCP2 fusion protein extended Mecp2-/y lifespan >50% and rescued hippocampal CA2 neuron size — direct pharmacological proof that supplying MeCP2 protein from the periphery is therapeutic in vivo.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID 35460749"
+        },
+        {
+          "statement": "TAT-MeCP2e2 reversed H3K9/H4K16 hyperacetylation in patient fibroblasts, providing a human-cell, on-target molecular pharmacodynamic readout that could serve as a dose-finding biomarker and guard against overshoot.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID 35460749"
+        },
+        {
+          "statement": "Adult symptomatic reversal on normalising MeCP2 levels indicates the substrate neuroanatomy stays competent for post-onset correction, so a protein with chronic repeat dosing is in principle timely.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID 26605526"
+        },
+        {
+          "statement": "A protein with a finite half-life is intrinsically dose-capped and withdrawable, which is the one real advantage protein replacement holds over gene addition for a bidirectionally dose-sensitive gene.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": "PMID 26605526; PMID 35460749"
+        }
+      ],
+      "contradictory_evidence": [
+        {
+          "statement": "MeCP2 is annotated as a nucleus-localised chromosomal methyl-CpG-binding protein, i.e. entirely intracellular biology with no extracellular or receptor-accessible site of action — the worst case for a biologic.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "UniProt P51608"
+        },
+        {
+          "statement": "MECP2 overexpression causes duplication syndrome; in mosaic females a non-selective cell-penetrating protein will load wild-type-expressing neurons as readily as null ones, so the therapeutic window must be achieved by total dose alone, with no cell selectivity.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "PMID 26605526"
+        },
+        {
+          "statement": "Chronic lifelong repeat dosing of a non-human-presented nuclear antigen fused to a viral TAT peptide is a high anti-drug-antibody risk; neutralisation or accelerated clearance would erode effect, and MeCP2 epitopes are novel to the immune system of a null male but not of a mosaic female.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": ""
+        },
+        {
+          "statement": "No MeCP2 protein therapeutic has entered clinical trials in Rett syndrome in the records retrieved, despite strong mouse data since 2022 — consistent with unresolved CMC/delivery/scale obstacles rather than lack of interest.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "ClinicalTrials.gov search, condition Rett syndrome"
+        },
+        {
+          "statement": "Behavioural rescue in Mecp2+/- mice can occur while prefrontal/anterior cingulate projection abnormalities persist, so murine survival/behaviour endpoints used for the TAT-MeCP2 result may overstate translatable benefit.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "PMID 40673967"
+        }
+      ],
+      "biggest_unknown": "What fraction of MeCP2-null neurons actually achieved nuclear MeCP2 occupancy at therapeutic doses of TAT-MeCP2, and whether that fraction is reachable in a human brain without exceeding the duplication-syndrome ceiling in the co-resident wild-type-expressing neurons. Until nuclear-delivered fraction is measured per cell type, the dose window is undefined.",
+      "biggest_failure_mode": "Non-selective cell-penetrating delivery cannot separate 'enough MeCP2 in null neurons' from 'too much MeCP2 in wild-type neurons' — the mosaic architecture collapses the therapeutic window, and the brainstem respiratory nuclei that drive mortality are the least likely to be adequately dosed.",
+      "conclusion": "NO PLAUSIBLE DELIVERY PATH",
+      "conclusion_note": "Honest finding for the protein modality specifically: the target is a nuclear chromatin protein needing broad, fraction-of-cells nuclear delivery across the whole CNS within a narrow bidirectional dose window, with lifelong repeat dosing. The TAT-MeCP2 mouse result (PMID 35460749) is a genuine and important proof of mechanism and should be pursued as a tool and as a dose/PD-biomarker system, but it is not a credible human delivery path as formulated. RNA and oligonucleotide routes to the same hypothesis face fewer serial barriers. Recommend funding protein work only as mechanism-validation and biomarker development, not as the lead clinical modality."
+    },
+    {
+      "hypothesis_name": "Neurotrophic node augmentation (NGF/BDNF axis)",
+      "modality": "protein",
+      "strategy": "Supply an engineered neurotrophin or Trk-directed biologic to raise trophic signalling tone at an extracellular, receptor-mediated site of action: intranasal 'painless' NGF mutein (hNGF-P61S/R100E-type), TrkB agonist antibodies, or BBB-shuttle-fused BDNF/NT variants. Mechanistically this is a far better fit for a biologic than MeCP2 replacement — the receptor is on the neuronal surface, and no nuclear entry is needed.",
+      "existing_agents": [
+        "Recombinant human IGF-1 (mecasermin) — completed Phase 2 in Rett syndrome (NCT01777542); closest protein biologic precedent for trophic-axis augmentation in this disease",
+        "Trofinetide — IGF-1 tripeptide analogue, FDA-approved for Rett syndrome 2023, validating the trophic-axis pharmacology clinically (NCT04776746 terminated on approval to switch patients to commercial product)",
+        "'Painless' NGF mutein, intranasal — preclinical in MeCP2+/- females (PMID 37633263)",
+        "NA-921 / Bionetide, oral peptide, Phase 2/3 and Phase 3 (NCT06849973, NCT06840496) — peptide neuroprotective agent, mechanism adjacent"
+      ],
+      "disease_relevant_cells": [
+        "Trk-expressing mature cortical and hippocampal neurons",
+        "GABAergic interneurons (BDNF-TrkB-dependent maturation)",
+        "Brainstem respiratory neurons (BDNF-dependent respiratory rhythm)",
+        "Basal forebrain cholinergic neurons (TrkA/NGF-responsive)"
+      ],
+      "delivery_feasibility": {
+        "target_tissue": "CNS; intranasal route biases exposure to olfactory bulb, frontal cortex and, via perivascular/trigeminal routes, brainstem",
+        "target_cell": "Cell-surface TrkA/TrkB/p75 on neurons — extracellular target, no intracellular entry required",
+        "expected_access": "Plausible and partially demonstrated. EVIDENCE: intranasal painless NGF mutein in symptomatic MeCP2+/- females improved survival and behaviour (PMID 37633263), implying pharmacologically sufficient CNS exposure in the correct mosaic genotype. INFERENCE: intranasal neurotrophin delivery in humans gives low, steeply rostro-caudally declining parenchymal concentrations; coverage of deep cortical and brainstem targets is the open question, and trophic signalling may propagate beyond the directly exposed region via retrograde transport, partially relaxing the biodistribution requirement.",
+        "major_constraint": "Quantity and uniformity of CNS exposure by the nasal route in a human-sized brain, and the fact that trophic signalling must be sustained chronically; systemic neurotrophin dosing is limited by nociception (mitigated by muteins) and peripheral target engagement."
+      },
+      "supporting_evidence": [
+        {
+          "statement": "Intranasal painless NGF mutein improved survival and behaviour in already-symptomatic MeCP2+/- female mice — the disease-relevant mosaic genotype, dosed post-onset.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID 37633263"
+        },
+        {
+          "statement": "Trofinetide, an IGF-1-derived trophic-axis agent, is approved for Rett syndrome, and rhIGF-1 completed Phase 2 — clinical precedent that augmenting a trophic node produces measurable benefit in patients without touching MECP2 dose.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "NCT04776746; NCT01777542"
+        },
+        {
+          "statement": "Rett pathology is arrested maturation with reduced soma size, dendritic complexity and synapse number, without neurodegeneration, so a trophic stimulus acts on surviving, structurally correctable neurons.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID 40673967"
+        },
+        {
+          "statement": "Trk receptors are cell-surface, making this target fully addressable by a biologic and entirely sidestepping the MECP2 dose-sensitivity constraint — the strongest argument for protein modality in Rett.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": "UniProt P51608"
+        },
+        {
+          "statement": "Engineered low-nociception NGF muteins plus intranasal administration together neutralise the two historic blockers of neurotrophin therapeutics (BBB exclusion and NGF-induced pain); this is a maturing, not speculative, technology, though no NGF mutein is approved for a CNS indication.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": "PMID 37633263"
+        }
+      ],
+      "contradictory_evidence": [
+        {
+          "statement": "Convergence of Rett pathology onto the neurotrophin axis as the dominant driver is asserted rather than demonstrated, and conflicts with the broad small-magnitude transcriptional phenotype; the mechanism is disease-modifying-adjacent, not causal correction.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        },
+        {
+          "statement": "Behavioural improvement in Mecp2+/- mice occurred with environmental enrichment while prefrontal/anterior cingulate projection abnormalities persisted, so trophic-agent behavioural rescue in rodents is a weak predictor of circuit normalisation or human benefit.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "PMID 40673967"
+        },
+        {
+          "statement": "The approved trophic-axis agent trofinetide delivers symptomatic, partial benefit rather than disease reversal, bounding the realistic ceiling for a second-generation neurotrophin biologic on the same axis; a new agent must beat an available standard of care.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": "NCT04776746"
+        },
+        {
+          "statement": "Chronic Trk agonism in a developing CNS carries theoretical risks (aberrant sprouting, hyperalgesia via residual p75/TrkA signalling, seizure threshold changes through BDNF-TrkB in an already E/I-imbalanced, seizure-prone brain); not addressed in the retrieved sources.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        }
+      ],
+      "biggest_unknown": "Whether intranasal neurotrophin exposure reaches the brainstem respiratory and autonomic nuclei that drive human morbidity and mortality, at concentrations producing Trk phosphorylation — and whether any benefit exceeds what trofinetide already provides.",
+      "biggest_failure_mode": "A real but shallow, symptomatic trophic effect that is indistinguishable from or additive-at-best to approved trofinetide, achieved in a regional distribution (rostral cortex) that misses the brainstem; compounded by BDNF-TrkB agonism potentially lowering seizure threshold in a seizure-prone population.",
+      "conclusion": "OK",
+      "conclusion_note": "This is the viable protein-modality hypothesis in Rett: an extracellular, receptor-mediated target with existing clinical precedent on the same axis and preclinical rescue in the correct mosaic genotype. Priority experiments: (1) quantify intranasal mutein exposure and Trk phosphorylation by region in Mecp2+/- females, brainstem explicitly; (2) measure plethysmographic apnoea, not only behaviour, as primary endpoint; (3) head-to-head and combination against trofinetide; (4) seizure-threshold safety in a Mecp2+/- seizure challenge. Decision support only, not medical advice."
+    }
+  ]
+}

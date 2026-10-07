@@ -1,0 +1,181 @@
+{
+  "candidates": [
+    {
+      "name": "CNS-optimized catalytic mTOR inhibition",
+      "biological_hypothesis": "Rapalogs only partially inhibit mTORC1 and penetrate the brain poorly, which explains the ~30-40% seizure response. A brain-penetrant ATP-competitive mTOR kinase inhibitor would suppress both rapamycin-resistant mTORC1 outputs (4E-BP/cap-dependent translation) and mTORC2 in neurons and glia, giving deeper target engagement in tubers and epileptogenic cortex.",
+      "target_or_process": "mTOR kinase (mTORC1 + mTORC2) in CNS",
+      "desired_perturbation": "Reduce hyperactive mTOR catalytic signalling in brain tissue to near-normal levels, with sustained CNS exposure at tolerated systemic doses",
+      "plausible_modalities": [
+        "small_molecule"
+      ],
+      "evidence_for": [
+        {
+          "statement": "Everolimus reduced refractory seizures in TSC in the randomized EXIST-3 trial, validating mTOR inhibition as an anti-seizure mechanism in humans.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:30169322"
+        },
+        {
+          "statement": "Real-world seizure response to everolimus was only ~31% overall (46% children, 14% adults), indicating incomplete efficacy of allosteric mTORC1 inhibition.",
+          "kind": "EVIDENCE",
+          "stance": "inconclusive",
+          "source": "PMID:38042867"
+        },
+        {
+          "statement": "Brain-penetrant ATP-competitive mTOR inhibitors were explicitly developed because everolimus has limited brain permeability and only partially inhibits mTOR; lead compounds corrected aberrant mTOR activity and extended survival of neuronal Tsc1-knockout mice.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:37399505"
+        },
+        {
+          "statement": "A brain-penetrant mTOR catalytic inhibitor (TC1) reduced seizure burden in a hypomorphic Tsc2 mouse model with a translationally relevant seizure phenotype.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:37545094"
+        },
+        {
+          "statement": "Deeper, brain-restricted mTOR inhibition should convert partial seizure responders into responders and may also address TAND endpoints.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        }
+      ],
+      "evidence_against": [
+        {
+          "statement": "Candidate catalytic inhibitors from the same program showed genotoxicity risk in vitro, poor oral exposure in higher species, or dose-limiting toxicity in cynomolgus macaque; the authors describe them as tool compounds, not clinical candidates.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "PMID:37399505"
+        },
+        {
+          "statement": "Dual mTORC1/mTORC2 inhibition removes the sparing of mTORC2 that underlies rapalog tolerability, so chronic paediatric dosing (immunosuppression, metabolic effects, neuronal mTORC2 loss) may not be feasible.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": ""
+        },
+        {
+          "statement": "Lesions regrow when rapalogs stop; deeper inhibition may still be cytostatic rather than curative, requiring lifelong therapy.",
+          "kind": "INFERENCE",
+          "stance": "inconclusive",
+          "source": "PMID:24729041"
+        }
+      ],
+      "key_biological_uncertainty": "Whether a therapeutic window exists for chronic catalytic mTOR inhibition in children, and whether residual seizures/TAND in rapalog non-responders reflect insufficient target engagement (fixable) or fixed developmental circuit abnormality (not fixable)."
+    },
+    {
+      "name": "Presymptomatic window: EEG-guided prevention",
+      "biological_hypothesis": "Much of TSC neurological disability is the consequence of early, often subclinical epileptiform activity and spasms acting on a developing cortex. Intervening before clinical seizure onset — triggered by EEG epileptiform discharges in genetically diagnosed infants — modifies epileptogenesis rather than treating established disease. The same logic argues for testing mTOR inhibition (not only GABAergic drugs) inside this window.",
+      "target_or_process": "Epileptogenesis in infancy; GABA transaminase (vigabatrin) and/or early mTORC1 inhibition during the critical developmental period",
+      "desired_perturbation": "Suppress epileptiform network activity and mTORC1 hyperactivation before seizure onset, to prevent infantile spasms, drug-resistant epilepsy and secondary developmental injury",
+      "plausible_modalities": [
+        "small_molecule"
+      ],
+      "evidence_for": [
+        {
+          "statement": "EPISTOP prospectively compared preventive versus conventional vigabatrin in 94 seizure-naive TSC infants using monthly video-EEG; epileptiform discharges preceded seizures in 54 infants, establishing a detectable presymptomatic window.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:33180985"
+        },
+        {
+          "statement": "Timing and characteristics of the first epileptiform EEG in EPISTOP infants predicted epilepsy and neurodevelopmental outcome at 24 months; TSC2 patients had earlier epileptiform EEG.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:33778971"
+        },
+        {
+          "statement": "Reviews of EPISTOP and PREVeNT conclude that early-life vigabatrin may reduce refractory epilepsy and epileptic spasms in TSC, supporting presymptomatic EEG surveillance.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:38865948"
+        },
+        {
+          "statement": "Everolimus seizure response was much higher in children (46%) than adults (14%), consistent with a developmental window of reversibility.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:38042867"
+        },
+        {
+          "statement": "Adding an mTOR inhibitor to presymptomatic vigabatrin would target the causal driver during the same window and improve cognitive/TAND outcomes beyond seizure control.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        }
+      ],
+      "evidence_against": [
+        {
+          "statement": "EPISTOP could not be run as a pure RCT at all sites (4 of 10 centres refused randomization, giving an open-label arm), so the strength of the prevention evidence is limited and required bias-corrected re-analysis.",
+          "kind": "EVIDENCE",
+          "stance": "inconclusive",
+          "source": "PMID:39625912"
+        },
+        {
+          "statement": "Preventive benefit is best documented for epilepsy/spasm endpoints; durable improvement in intellectual outcome and autism is not established, and some developmental damage is likely prenatal and therefore unreachable postnatally.",
+          "kind": "INFERENCE",
+          "stance": "inconclusive",
+          "source": "PMID:33778971"
+        },
+        {
+          "statement": "Vigabatrin carries irreversible retinal toxicity risk, a serious constraint for treating infants who may never have become symptomatic.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": "PMID:31912454"
+        }
+      ],
+      "key_biological_uncertainty": "How much of TAND is prenatally fixed versus driven by postnatal epileptiform activity — i.e. whether a prevention trial with cognitive (not just seizure) endpoints can succeed, and whether earlier mTOR inhibition adds to GABAergic prevention."
+    },
+    {
+      "name": "Downstream damage: neurovascular/neuroinflammatory axis",
+      "biological_hypothesis": "Beyond cell growth, TSC loss drives VEGF overexpression, abnormal cerebral vasculature with blood-brain-barrier leak, and astrocyte-derived IL-1b/CXCL10 inflammation. These are proximate contributors to seizures and ongoing injury, and blocking them could reduce seizure burden without needing full mTOR suppression — and could complement, or substitute where, mTOR inhibition is not tolerated.",
+      "target_or_process": "VEGF/VEGFR signalling, BBB integrity, and IL-1b/astrocytic neuroinflammation in TSC brain",
+      "desired_perturbation": "Restore BBB integrity and lower neuroinflammatory signalling (VEGFR antagonism, TGF-b/ALK5 modulation, IL-1 pathway blockade)",
+      "plausible_modalities": [
+        "small_molecule",
+        "protein"
+      ],
+      "evidence_for": [
+        {
+          "statement": "In Tsc1-GFAP CKO mice, brain VEGF was elevated with abnormal cerebral vessel anatomy and in vivo two-photon-confirmed BBB leak; VEGFR antagonist (apatinib) and BBB stabilizer (RepSox) were tested as interventions.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:38049961"
+        },
+        {
+          "statement": "IL-1b and CXCL10 are increased in neocortex and hippocampus of Tsc1-GFAP CKO mice, localized mainly to astrocytes, and anti-inflammatory treatment was tested against epilepsy in this model.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID:26003087"
+        },
+        {
+          "statement": "Anti-VEGF or anti-IL-1 agents already exist clinically (oncology, autoinflammatory disease), so this hypothesis is addressable by repurposing.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": ""
+        }
+      ],
+      "evidence_against": [
+        {
+          "statement": "The inflammatory markers were themselves reversed by mTORC1 inhibition, implying they are downstream consequences rather than an independent mTOR-insensitive driver; blocking them may add little to a rapalog.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "PMID:26003087"
+        },
+        {
+          "statement": "No human TSC trial of VEGF or IL-1 pathway blockade for epilepsy has been identified; chronic anti-VEGF therapy in children carries growth/vascular safety concerns.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": ""
+        },
+        {
+          "statement": "Evidence rests on one conditional-knockout mouse model; magnitude of seizure benefit versus mTOR inhibition is unquantified in what was retrieved.",
+          "kind": "INFERENCE",
+          "stance": "inconclusive",
+          "source": "PMID:38049961"
+        }
+      ],
+      "key_biological_uncertainty": "Whether neurovascular/inflammatory changes contribute causally and mTOR-independently to seizures, or are purely reversible downstream readouts — decidable by testing these agents on top of, not instead of, rapamycin in Tsc1/Tsc2 mouse models."
+    }
+  ],
+  "conclusion": "OK",
+  "conclusion_note": "Mechanism and mTORC1 inhibition are human-validated, so the strategic question is not target identification but (a) depth/CNS exposure of mTOR inhibition, (b) timing within a developmental window, and (c) whether any mTOR-independent driver justifies a separate agent. Hypothesis 1 is pharmacologically de-risked biologically but chemically unsolved (tool compounds only, PMID:37399505). Hypothesis 2 is the highest-value near-term clinical decision but needs cognitive endpoints and faces trial-design/ethics constraints (PMID:39625912). Hypothesis 3 is the weakest: current evidence suggests the inflammatory axis is rapamycin-reversible and therefore possibly redundant — treat as add-on mechanism-testing, not a standalone program. Decision support only, not medical advice."
+}

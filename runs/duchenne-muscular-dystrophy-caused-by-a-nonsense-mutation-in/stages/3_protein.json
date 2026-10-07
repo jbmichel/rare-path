@@ -1,0 +1,84 @@
+{
+  "assessments": [
+    {
+      "hypothesis_name": "Downstream-degeneration-brake",
+      "modality": "protein",
+      "strategy": "The node named in the hypothesis (class I/II HDACs) is nuclear and not addressable by a biologic, so a protein approach must substitute an extracellular node in the same fibro-adipogenic / regeneration program: ligand traps or neutralising antibodies against secreted profibrotic and anti-anabolic factors in the dystrophic muscle interstitium — anti-CTGF/CCN2 (pamrevlumab), anti-myostatin/activin (domagrozumab, apitegromab, taldefgrobep alfa), anti-TGF-beta, or anti-inflammatory cytokine blockade. All are IgG/Fc-fusion scale, dosed IV/SC, acting on soluble ligands in the endomysium where FAPs, macrophages and myofibers reside — i.e. a pharmacologically clean, genotype-agnostic perturbation that does not require entry into the myofiber and is fully compatible with an exon 55 nonsense allele. Honest finding: this exact strategy has been tested at scale in DMD and failed on function, twice at Phase 3.",
+      "existing_agents": [
+        "Pamrevlumab (anti-CTGF/CCN2 mAb) — Phase 3 in both ambulatory and non-ambulatory DMD, both TERMINATED for missing primary endpoint (NCT04632940, NCT04371666)",
+        "Domagrozumab (PF-06252616, anti-myostatin mAb) — Phase 2 in ambulatory DMD, no difference vs placebo on 4-stair-climb or any secondary endpoint (PMID 32522498); programme discontinued",
+        "Taldefgrobep alfa, apitegromab (anti-myostatin/pro-myostatin biologics) — developed in neuromuscular disease; no positive DMD functional readout retrieved in this session",
+        "Corticosteroids and givinostat are the standard-of-care comparators for this arm but are small molecules, not biologics"
+      ],
+      "disease_relevant_cells": [
+        "fibro-adipogenic progenitors (endomysial interstitium) — principal source of fibrosis and fat",
+        "infiltrating macrophages / innate immune cells",
+        "skeletal myofibers (as responders to myostatin/TGF-beta signalling at the sarcolemmal surface)",
+        "satellite cells",
+        "cardiac fibroblasts and cardiomyocytes"
+      ],
+      "delivery_feasibility": {
+        "target_tissue": "Skeletal muscle endomysial interstitium and cardiac interstitium; diaphragm and intercostals for the outcomes that actually drive mortality",
+        "target_cell": "Fibro-adipogenic progenitors and macrophages in the endomysium, plus ligand receptors on the myofiber surface — all engaged from the extracellular space, so no intracellular delivery is needed",
+        "expected_access": "Adequate in principle. IgG biodistribution to muscle interstitium is typically only ~1-5% of plasma concentration, but dystrophic muscle has a leaky, inflamed, hypervascular interstitium which raises exposure; pamrevlumab and domagrozumab both demonstrated systemic target engagement (free-drug/total-ligand PK-PD modelling for domagrozumab, PMID 36104012). Diaphragm and heart exposure in patients is essentially uncharacterised.",
+        "major_constraint": "Not access to the organ but access to the right compartment at a pharmacologically meaningful concentration in fibrotic, fat-replaced regions — the very tissue the therapy is meant to rescue is the least perfused. Fibrotic/adipose-replaced muscle is a diffusion barrier, so the biologic is best positioned in young, still-perfused muscle, i.e. before the window in which decline is being measured."
+      },
+      "supporting_evidence": [
+        {
+          "statement": "The downstream cascade is a legitimate, genotype-agnostic therapeutic axis in DMD: paired human muscle biopsies showed that pharmacologically suppressing the fibro-adipogenic programme increased muscle-tissue fraction and reduced fibrosis, necrosis and fatty replacement, and a Phase 3 trial of that mechanism met a functional endpoint.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID 27566866; PMID 38508835"
+        },
+        {
+          "statement": "The nodes a biologic would hit are extracellular secreted ligands (CTGF/CCN2, myostatin, TGF-beta), so the modality is mechanistically well matched: no myofiber entry, no nuclear access, no need to touch the mutant transcript. This decouples the arm entirely from the exon 55 PTC / NMD question.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": ""
+        },
+        {
+          "statement": "Biologics against these ligands are clinically mature in DMD-adjacent use: domagrozumab was safe and well tolerated in DMD boys and in FKRP limb-girdle dystrophy with dose-proportional PK and measurable myostatin suppression in serum and muscle tissue, establishing that repeat dosing in paediatric dystrophic muscle is practical.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID 32522498; PMID 33961310; PMID 28881472"
+        }
+      ],
+      "contradictory_evidence": [
+        {
+          "statement": "Anti-CTGF (pamrevlumab) failed its primary endpoint in DMD in two separate Phase 3 trials, in ambulatory and in non-ambulatory patients, both on background corticosteroids — both terminated with 'Study did not meet its primary endpoint' as the stated reason. This is the single most direct test of an antifibrotic biologic as a degeneration brake in DMD, and it was negative.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "NCT04632940; NCT04371666"
+        },
+        {
+          "statement": "Anti-myostatin (domagrozumab) failed in a randomised, double-blind, placebo-controlled Phase 2 in 120 ambulatory DMD boys: difference in 4-stair-climb change at week 49 was 0.27 s (95% CI -7.4 to 7.9; p=0.94), with no significant difference on any secondary clinical endpoint — i.e. target engagement without functional benefit.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "PMID 32522498"
+        },
+        {
+          "statement": "The same CTGF-neutralising antibody also failed Phase 3 in idiopathic pulmonary fibrosis despite positive Phase 2, suggesting the negative DMD result reflects the limits of single-ligand CTGF blockade as an antifibrotic strategy rather than a DMD-specific execution problem.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "PMID 38762797; PMID 39114938"
+        },
+        {
+          "statement": "The target actually named in the hypothesis — class I/II HDACs — is nuclear/intracellular and cannot be engaged by an antibody or recombinant protein. A biologic therefore cannot reproduce the one mechanism in this arm with a positive controlled functional trial; it can only attack a different, so-far-unsuccessful node in the same pathway.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": ""
+        },
+        {
+          "statement": "Dystrophic muscle is chronically inflamed with an activated innate immune compartment, which plausibly raises anti-drug antibody risk on years-long paediatric dosing; immunogenicity data across these DMD programmes was not retrieved in this session.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        }
+      ],
+      "biggest_unknown": "Whether any single secreted ligand is load-bearing in dystrophic fibro-fatty remodelling. The two human tests (CTGF, myostatin) both showed target engagement without functional benefit, which points to a redundant, multi-ligand network in which neutralising one node is simply absorbed — the opposite of what a broad epigenetic modifier does. Secondary unknown: whether the relevant compartments for mortality (diaphragm, myocardium) receive any meaningful antibody exposure, which no DMD biologic programme has demonstrated.",
+      "biggest_failure_mode": "Repeating the pamrevlumab/domagrozumab outcome: excellent tolerability and demonstrable suppression of the chosen circulating ligand, with no effect on timed function tests — target engagement that does not convert into preserved contractile tissue because the fibro-adipogenic programme is driven redundantly and because the muscle regions most in need are the least accessible to a 150 kDa IgG.",
+      "conclusion": "MECHANISM UNCERTAIN",
+      "conclusion_note": "Delivery is NOT the limiting issue here — the targets are extracellular and antibody access to dystrophic muscle interstitium is demonstrably sufficient for target engagement. The limiting issue is biological: the specific node this arm names (HDACs) is not biologic-addressable, and every extracellular surrogate node tested in DMD to date (CTGF, myostatin) has engaged its target and failed on function, including two terminated Phase 3 trials. Recommendation for a foundation or sponsor: do not fund another single-ligand neutralising biologic against this cascade as a stand-alone bet. The protein modality only becomes interesting again if (a) a de-risking experiment in patient-derived FAP/myotube co-culture or mdx/canine muscle identifies which secreted driver is actually rate-limiting for fibro-fatty conversion, and (b) multi-ligand trapping (e.g. combined TGF-beta superfamily blockade) is shown to beat single-node blockade in a model with measurable fat-fraction MRI readout. For this exon 55 nonsense patient today, the actionable version of the degeneration-brake arm is the approved small molecule, not a biologic."
+    }
+  ]
+}

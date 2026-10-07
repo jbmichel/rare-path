@@ -1,0 +1,70 @@
+{
+  "disease_name": "Tuberous sclerosis complex (TSC)",
+  "identifiers": [
+    "MONDO:0001734"
+  ],
+  "causal_defect": "Heterozygous loss-of-function variants in TSC1 (hamartin) or TSC2 (tuberin), with a somatic second hit in lesions. These are tumor-suppressor genes. TSC2 cases are generally more severe than TSC1 cases, and about 10–15% of patients have no mutation identified.",
+  "molecular_consequence": "Loss of the TSC1/TSC2/TBC1D7 complex removes the GAP activity of TSC2 toward RHEB. RHEB then stays GTP-bound and mTORC1 is constitutively active. This drives cell growth, protein synthesis and anabolic metabolism, suppresses autophagy, and disturbs neuronal migration, synaptic function and excitability.",
+  "key_cell_types": [
+    "Neural progenitors / radial glia giving rise to dysmorphic neurons and giant cells (cortical tubers)",
+    "Subependymal cells (SEN/SEGA)",
+    "Perivascular epithelioid cells (PEComa: renal angiomyolipoma, LAM)",
+    "Cardiac myocytes (rhabdomyoma)",
+    "Skin fibroblasts (angiofibroma)"
+  ],
+  "key_pathology": [
+    "Cortical tubers and epileptogenic networks causing early-onset, drug-resistant epilepsy, infantile spasms and TAND (autism, intellectual disability)",
+    "SEGA growth with risk of hydrocephalus",
+    "Renal angiomyolipoma with bleeding risk and loss of kidney function",
+    "Lymphangioleiomyomatosis (LAM), mainly in women",
+    "Cardiac rhabdomyomas and facial angiofibromas"
+  ],
+  "evidence_strength": "Strong. The causal genes and the mTORC1 mechanism are established, and pharmacological mTORC1 inhibition improves SEGA, angiomyolipoma and seizures in randomized phase 3 trials (EXIST-1/2/3). This is direct human proof that the mechanism drives disease.",
+  "major_unknowns": [
+    "Whether mTORC1-independent effects of TSC loss (for example on mTORC2, autophagy or metabolism) drive epilepsy and TAND",
+    "How much of the neurological disease can be reversed after the developmental period, and the best timing for preventive treatment",
+    "Why lesions regrow after rapalogs are stopped, and the incomplete seizure response (about 30–40% responders)",
+    "Mechanism in patients with no mutation identified (mosaicism, deep intronic variants)",
+    "Whether tissue-selective or brain-penetrant mTORC1 inhibitors could improve the therapeutic window"
+  ],
+  "key_evidence": [
+    {
+      "statement": "In the randomized phase 3 trial EXIST-1, the mTORC1 inhibitor everolimus shrank SEGA, and in the subgroup with angiomyolipomas it also produced angiomyolipoma responses.",
+      "kind": "EVIDENCE",
+      "stance": "supportive",
+      "source": "PMID:24729041; NCT00789828"
+    },
+    {
+      "statement": "In EXIST-3, adjunctive everolimus reduced treatment-refractory seizures in TSC compared with placebo.",
+      "kind": "EVIDENCE",
+      "stance": "supportive",
+      "source": "PMID:30169322"
+    },
+    {
+      "statement": "In real-world use, about 31% of patients had a seizure response to everolimus, with more responders among children (46%) than adults (14%). This points to a developmental window and only partial reversibility of the neurological disease.",
+      "kind": "EVIDENCE",
+      "stance": "inconclusive",
+      "source": "PMID:38042867"
+    },
+    {
+      "statement": "TSC hamartomas show loss of heterozygosity at TSC1 or TSC2, consistent with a two-hit tumor-suppressor mechanism. LOH was more frequent at TSC2.",
+      "kind": "EVIDENCE",
+      "stance": "supportive",
+      "source": "PMID:8824721"
+    },
+    {
+      "statement": "mTOR dysregulation is the shared mechanism behind epileptogenic malformations of cortical development, including TSC tubers.",
+      "kind": "EVIDENCE",
+      "stance": "supportive",
+      "source": "PMID:29338461"
+    },
+    {
+      "statement": "Neurological features, especially TAND and epilepsy that has already become established, are partly fixed developmental consequences. Treatment that starts before seizure onset is therefore likely to give more benefit than mTOR inhibition alone can achieve later.",
+      "kind": "HYPOTHESIS",
+      "stance": "not_studied",
+      "source": ""
+    }
+  ],
+  "conclusion": "OK",
+  "conclusion_note": "The mechanism is well established, from TSC1/TSC2 loss through RHEB to mTORC1 hyperactivation, and human trials of rapalogs validate it. The remaining gap is neurological: fixed developmental damage limits how much patients improve with mTORC1 inhibition. That makes better CNS agents and earlier or preventive treatment the main decision points."
+}

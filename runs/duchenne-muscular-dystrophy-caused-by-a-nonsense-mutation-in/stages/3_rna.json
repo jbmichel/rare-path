@@ -1,0 +1,83 @@
+{
+  "assessments": [
+    {
+      "hypothesis_name": "PTC-readthrough-restore-full-length",
+      "modality": "rna",
+      "strategy": "Two RNA-based routes exist, and they are very different in maturity. (1) Anticodon-engineered suppressor tRNA (sup-tRNA) matched to the exon 55 stop codon (likely TGA given CGA>TGA hypermutability), chemically modified and delivered as LNP-formulated RNA; this acts in the myofiber cytoplasm at the ribosome and would restore full-length Dp427m without altering the genome. (2) RNAi/siRNA knockdown of NMD machinery (UPF1/SMG1) to raise mutant transcript abundance as an ADJUNCT to a readthrough agent — not a standalone therapy. mRNA protein replacement is not a credible route here: the dystrophin CDS is ~11.5 kb and the protein must be assembled at the sarcolemma of multinucleated, post-mitotic myofibers across ~30-40% of body mass, so mRNA replacement is ruled out on size, dose and durability grounds (INFERENCE). The realistic RNA play is therefore sup-tRNA, and its gating issue is muscle delivery, not mechanism.",
+      "existing_agents": [
+        "No approved or clinical-stage RNA agent for DMD nonsense readthrough identified (ClinicalTrials.gov search for DMD + tRNA returned zero studies)",
+        "Chemically modified sup-tRNA + organ-tailored LNP, demonstrated preclinically for CFTR nonsense mutations in lung (PMID 42658930) — platform-stage, not DMD-specific",
+        "siRNA against UPF1/SMG1 exists only as research tool reagents"
+      ],
+      "disease_relevant_cells": [
+        "skeletal myofibers (Dp427m) — the primary target, and the hardest to reach",
+        "cardiomyocytes — required to address the dominant cause of death",
+        "diaphragm/intercostal myofibers",
+        "satellite cells — needed for durability in regenerating muscle",
+        "CNS neurons (Dp427c/Dp140) — not addressable by systemic LNP"
+      ],
+      "delivery_feasibility": {
+        "target_tissue": "Whole-body skeletal muscle (incl. diaphragm) plus myocardium",
+        "target_cell": "Post-mitotic multinucleated myofibers (cytoplasm/ribosome) and cardiomyocytes",
+        "expected_access": "Poor with current LNPs. Standard ionizable-lipid LNPs are hepatotropic after IV dosing; the CF proof-of-concept required bespoke pulmonary LNP engineering and local airway access (EVIDENCE, PMID 42658930). No equivalent validated muscle- or cardiomyocyte-tropic LNP for sup-tRNA cargo was retrieved (EVIDENCE, stance inconclusive — retrieval limited). Intramuscular injection could reach a single muscle for proof-of-mechanism but cannot treat a systemic myopathy (INFERENCE).",
+        "major_constraint": "There is no demonstrated systemic RNA delivery route that reaches a therapeutically meaningful fraction of myofibers and cardiomyocytes. Muscle is a high-mass, low-perfusion-per-gram, endosomally restrictive tissue; sarcolemmal fragility in DMD may transiently aid uptake but also means fibrotic/fat-replaced regions are unreachable."
+      },
+      "supporting_evidence": [
+        {
+          "statement": "LNP-delivered, site-specifically chemically modified suppressor tRNAs (N1-methyladenosine) improved PTC readthrough, aminoacylation, functional persistence and reduced innate immune activation, restoring CFTR function in patient-derived organoids and mouse lung.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID 42658930"
+        },
+        {
+          "statement": "Readthrough can produce dystrophin protein in nonsense-mutation DMD patients (ataluren Phase 2a biopsy study), establishing that the downstream biology — full-length Dp427m assembly once termination is bypassed — is sound; an RNA readthrough agent only has to deliver the same perturbation more efficiently.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID 24349052"
+        },
+        {
+          "statement": "Readthrough efficiency is dominated by stop-codon identity and immediate sequence context, so a sup-tRNA can be designed specifically against this patient's exon 55 codon context — a tunability advantage over a context-agnostic small molecule.",
+          "kind": "EVIDENCE",
+          "stance": "supportive",
+          "source": "PMID 40156864"
+        },
+        {
+          "statement": "A sup-tRNA restores the authentic full-length protein and, unlike exon skipping, needs no in-frame rescue around exon 55 — avoiding the unresolved multi-exon-skip question.",
+          "kind": "INFERENCE",
+          "stance": "supportive",
+          "source": ""
+        }
+      ],
+      "contradictory_evidence": [
+        {
+          "statement": "The only mature sup-tRNA/LNP demonstration is in lung epithelium via a cargo-tailored pulmonary LNP; muscle and heart were not addressed, and lung tropism does not transfer to myofibers.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "PMID 42658930"
+        },
+        {
+          "statement": "No DMD sup-tRNA clinical or trial-stage program was found on ClinicalTrials.gov, so there is no regulatory or human-safety precedent for this modality in this disease.",
+          "kind": "EVIDENCE",
+          "stance": "contradictory",
+          "source": "ClinicalTrials.gov search (DMD + tRNA), this session"
+        },
+        {
+          "statement": "tRNA is a short-lived, non-replicating cargo; in a lifelong, whole-body myopathy this implies chronic high-frequency redosing of LNPs with attendant innate-immune and tolerability limits — the opposite of the durability profile DMD requires.",
+          "kind": "INFERENCE",
+          "stance": "contradictory",
+          "source": ""
+        },
+        {
+          "statement": "If the exon 55 PTC is efficiently degraded by NMD, a sup-tRNA faces the same missing-template problem as ataluren; and partial NMD inhibition by siRNA against UPF1/SMG1 is a broadly pleiotropic, likely poorly tolerated systemic perturbation.",
+          "kind": "HYPOTHESIS",
+          "stance": "not_studied",
+          "source": ""
+        }
+      ],
+      "biggest_unknown": "Whether any LNP or conjugate formulation can deliver a sup-tRNA to a clinically meaningful fraction of skeletal myofibers and cardiomyocytes after systemic dosing. Secondarily, the same two measurements that gate the small-molecule route: mutant DMD transcript abundance (NMD efficiency) and readthrough permissiveness of this exact codon context in patient-derived myotubes.",
+      "biggest_failure_mode": "Delivery, not mechanism: the agent works in a dish on patient myotubes, reaches liver after IV dosing, produces dystrophin in a single intramuscularly injected muscle, and never achieves whole-body myofiber or cardiomyocyte exposure — so no functional benefit despite a correct mechanism.",
+      "conclusion": "NO PLAUSIBLE DELIVERY PATH",
+      "conclusion_note": "Mechanistically this is the most attractive readthrough modality for an exon 55 PTC (codon-context-tunable, restores authentic full-length dystrophin), and the CF sup-tRNA/LNP work (PMID 42658930) shows the platform is real. But systemic delivery to skeletal muscle and heart — the disease-driving cells — is unsolved, and the transient nature of tRNA cargo conflicts with a lifelong whole-body myopathy. Recommendation: do NOT fund this as a therapeutic route now; it is worth funding only as (a) a patient-myotube readthrough-permissiveness assay using the patient's exon 55 sequence, which also de-risks the small-molecule route, and (b) a watch item contingent on independent progress in muscle-tropic LNP delivery. Treat siRNA/NMD-inhibition as adjunct-only and low priority on tolerability grounds. mRNA protein replacement of dystrophin is not viable."
+    }
+  ]
+}
