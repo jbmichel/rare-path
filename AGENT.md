@@ -1,792 +1,466 @@
-# Rare Disease Therapeutic Development System
+# ASO Discovery Agent
 
 ## 1. Purpose
 
-Build a multi-agent scientific decision system for rare and ultra-rare diseases.
+Build an ASO drug-discovery agent for rare and ultra-rare genetic diseases.
 
-The primary users are patient foundations, families, researchers, and biotech practitioners trying to decide how best to spend time and money advancing therapeutics.
+The agent's job is not to answer:
 
-The central question is:
+> Could an ASO theoretically treat this disease?
 
-> Given what is known about this disease, what therapeutic approaches are most plausible, what are the main reasons they might fail, and what should be done next to determine whether they are worth pursuing?
+It must answer:
 
-The system should behave like a small therapeutic-development team, not like a literature-review engine.
+> Given the exact molecular lesion, what is the best ASO therapeutic program that could plausibly be built today?
 
-Its job is to turn disease biology into decisions.
-
----
-
-# 2. Scope
-
-Version 1 focuses on:
-
-- disease mechanism;
-- molecular and cellular pathology;
-- therapeutic intervention opportunities;
-- small molecules;
-- oligonucleotides;
-- RNA therapeutics;
-- proteins and biologics;
-- repurposing;
-- delivery;
-- disease models and assays;
-- therapeutic de-risking.
-
-Commercial analysis is secondary.
-
-The following are explicitly out of scope for Version 1:
-
-- gene addition / gene replacement;
-- genome editing;
-- epigenome editing;
-- cell therapy.
-
-The system may note these when obviously relevant, but should not analyze them deeply.
+The output should resemble the work of an experienced oligonucleotide discovery team: specific, technically current, and experimentally actionable.
 
 ---
 
-# 3. Core Principle
+# 2. Core Principle
 
-> Prefer the smallest internal representation that preserves the therapeutic decision.
-
-Do not rebuild biomedical knowledge infrastructure.
-
-Use resources such as OMIM, Orphanet, MONDO, HPO, Monarch, Open Targets, ClinVar, Reactome, UniProt, ChEMBL, PubMed, ClinicalTrials.gov, MATRIX / Every Cure, and disease-specific resources as sources.
-
-Spend reasoning effort where the system can add differentiated value:
-
-> translating molecular and cellular pathology into plausible therapeutic approaches.
-
----
-
-# 4. Central Reasoning Chain
+Separate three jobs:
 
 ```text
-What is going wrong?
+DESIGN-SPACE ENUMERATION
+What ASO interventions are physically / genetically possible?
+
         ↓
-What biology appears causal?
+
+STATE-OF-THE-ART SEARCH
+What chemistry, delivery and development precedents exist today?
+
         ↓
-What biological change might help?
-        ↓
-Where could we intervene?
-        ↓
-Which therapeutic approaches could produce that change?
-        ↓
-Are there existing agents that already do it?
-        ↓
-Can the intervention reach the relevant cells?
-        ↓
-Can we test the idea credibly?
-        ↓
-What should we do next?
+
+SCIENTIFIC JUDGMENT
+Which program should we actually build and how should we test it?
 ```
+
+Do not rely on the LLM to perform deterministic operations from memory.
+
+Use tools for things that can be calculated or retrieved.
+
+Use the LLM for scientific interpretation and program design.
 
 ---
 
-# 5. Architecture
+# 3. Inputs
+
+Minimum input:
+
+```yaml
+disease:
+gene:
+variant:
+```
+
+When available:
+
+```yaml
+transcript:
+genomic_coordinates:
+patient_sequence:
+affected_tissues:
+affected_cell_types:
+```
+
+The agent should resolve missing transcript and variant information from authoritative sources before designing an ASO strategy.
+
+---
+
+# 4. Step 1 — Define the RNA Problem
+
+Determine what the mutation does to RNA or protein.
+
+Examples:
+
+- premature termination codon;
+- exon-disrupting deletion;
+- splice-site mutation;
+- cryptic splice activation;
+- poison exon;
+- toxic RNA;
+- gain-of-function transcript;
+- transcript overexpression;
+- allele-specific toxic transcript.
+
+Then define what an ASO would need to accomplish:
 
 ```text
-                      DISEASE
-                         │
-                         ▼
-                  MECHANISM AGENT
-                         │
-              "What is going wrong?"
-                         │
-                         ▼
-              THERAPEUTIC STRATEGIST
-                         │
-              "What could we change?"
-                         │
-        ┌────────────────┼────────────────┐
-        ▼                ▼                ▼
-     Small           Oligonucleotide    Protein /
-    Molecule             + RNA          Biologic
- + Repurposing
-        │                │                │
-        └────────────────┼────────────────┘
-                         ▼
-             EXPERIMENTAL STRATEGIST
-                         │
-              "What should we test?"
-                         │
-                         ▼
-              REVIEWER / SYNTHESIZER
-                         │
-                         ▼
-                      DOSSIER
+skip exon
+include exon
+skip multiple exons
+block cryptic splice site
+induce transcript degradation
+stabilize transcript
+suppress mutant allele
+alter polyadenylation
+other splice redirection
 ```
 
-Keep the architecture simple.
-
-Do not create additional agents unless a distinct reasoning task repeatedly justifies one.
+Do not select a specific ASO design until the desired RNA product is clear.
 
 ---
 
-# 6. Mechanism Agent
+# 5. Step 2 — Enumerate the ASO Design Space
 
-## Mission
+This step should be deterministic wherever possible.
 
-Build the minimum disease model required for therapeutic reasoning.
+For splice-modulating strategies, explicitly enumerate all plausible transcript products.
 
-Answer:
-
-- What initiates the disease?
-- What molecular consequence follows?
-- Which cells are most relevant?
-- What pathological processes appear disease-driving?
-- What is established versus uncertain?
-
-Use existing structured resources wherever possible. Use literature mainly for mechanistic questions not adequately captured elsewhere.
-
-## Output
+For each candidate manipulation calculate:
 
 ```yaml
-disease_mechanism:
-  causal_defect:
-  molecular_consequence:
-  key_cell_types: []
-  key_pathology: []
-  evidence_strength:
-  major_unknowns: []
+splice_solution:
+  exons_removed_or_included:
+  resulting_junction:
+  reading_frame:
+  mutation_removed:
+  predicted_protein_change:
+  oligo_count:
 ```
 
-Do not attempt to create a complete disease ontology.
+For DMD-like genes this means computationally enumerating:
+
+- single-exon skips;
+- adjacent dual-exon skips;
+- larger contiguous skips;
+- any known coordinated-skipping behavior.
+
+Never jump directly to a historically popular exon block if a smaller solution exists.
+
+Rank solutions initially by:
+
+1. correct molecular product;
+2. minimal perturbation;
+3. minimal number of oligos;
+4. likely functional protein product;
+5. existing biological precedent.
+
+The LLM interprets the enumeration. It does not perform exon-frame arithmetic from memory.
 
 ---
 
-# 7. Therapeutic Strategist
+# 6. Step 3 — Search for Biological Precedent
 
-## Mission
+For each promising ASO design, search specifically for:
 
-Translate the disease mechanism into a small number of biologically meaningful therapeutic hypotheses.
+- naturally occurring equivalent transcript or deletion;
+- human genotype–phenotype evidence;
+- spontaneous exon skipping;
+- published ASOs targeting the same exon;
+- coordinated skipping induced by a single ASO;
+- patient-cell rescue;
+- animal-model rescue;
+- clinical programs against the same exon or nearby exons.
 
-Ask:
+The important question is:
 
-> Given what is going wrong, what biological change could plausibly improve disease?
+> Has biology already shown that this RNA product can work?
 
-Start from pathology, not from available drugs.
-
-Consider:
-
-- reducing something excessive or toxic;
-- increasing something deficient;
-- restoring a lost function;
-- correcting abnormal RNA processing;
-- stabilizing dysfunctional protein;
-- reducing toxic substrate;
-- increasing clearance;
-- blocking a damaging downstream process;
-- activating a compensatory pathway;
-- exploiting a paralog or bypass.
-
-Consider both:
-
-- proximal interventions close to the causal defect;
-- downstream interventions when they are therapeutically meaningful.
-
-Prioritize causal biology and evidence of rescue over mere association.
-
-Human genetics, genotype–phenotype relationships, natural experiments, and rescue experiments are especially valuable.
-
-## Output
-
-```yaml
-candidate_approaches:
-  - name:
-    biological_hypothesis:
-    target_or_process:
-    desired_perturbation:
-    plausible_modalities: []
-    evidence_for: []
-    evidence_against: []
-    key_biological_uncertainty:
-```
-
-Generate a few serious hypotheses, not an exhaustive list.
-
-Different modalities implementing the same biological hypothesis should remain conceptually linked rather than being treated as unrelated ideas.
+Prefer human natural experiments and direct rescue evidence over generic pathway evidence.
 
 ---
 
-# 8. Therapeutic Approach
+# 7. Step 4 — Search the Current ASO Technology Landscape
 
-The main decision object in the system is the `TherapeuticApproach`.
+This search is mandatory.
 
-```yaml
-therapeutic_approach:
-  name:
+The agent must determine what is technically achievable **today**, not what was historically achievable with naked oligonucleotides.
 
-  biological_hypothesis:
-  target_or_process:
-  desired_perturbation:
-
-  modality:
-  strategy:
-
-  existing_agents: []
-
-  disease_relevant_cells: []
-
-  delivery_feasibility:
-    target_tissue:
-    target_cell:
-    expected_access:
-    major_constraint:
-
-  supporting_evidence: []
-  contradictory_evidence: []
-
-  biggest_unknown:
-  biggest_failure_mode:
-
-  best_next_experiment:
-
-  verdict:
-    # pursue
-    # investigate
-    # low_priority
-    # reject
-```
-
-Add fields only when they repeatedly improve therapeutic decisions.
-
----
-
-# 9. Small Molecule Agent
-
-## Mission
-
-Determine whether pharmacology can execute a proposed biological perturbation.
-
-Consider:
-
-- inhibition;
-- activation;
-- agonism / antagonism;
-- stabilization;
-- pharmacological chaperoning;
-- degradation where relevant;
-- substrate reduction;
-- metabolic manipulation;
-- pathway modulation.
-
-Search existing agents before assuming new chemistry is required:
+For the relevant tissue and cell type search:
 
 ```text
-approved drug
-→ clinical-stage compound
-→ preclinical / tool compound
-→ novel chemistry required
+ASO chemistry
+delivery technology
+targeting receptor / ligand
+cargo
+clinical maturity
+human pharmacodynamic data
+relevant companies
+active programs
+failed programs
 ```
 
-Repurposing is a first-class strategy.
+Examples of delivery categories:
 
-Use external resources such as MATRIX / Every Cure, ChEMBL, Open Targets, PubChem, clinical-trial databases, and regulatory sources rather than rebuilding repurposing algorithms.
+- unconjugated ASO / PMO;
+- GalNAc;
+- peptide conjugates;
+- antibody-oligonucleotide conjugates;
+- Fab-oligonucleotide conjugates;
+- receptor-targeted conjugates;
+- other tissue-targeting ligands.
 
-The key question is not whether a drug is associated with the disease.
+For each delivery platform ask:
 
-It is:
+1. Does it reach the required tissue?
+2. Does it reach the required cell type?
+3. Does it produce functional intracellular ASO activity?
+4. Is there human pharmacodynamic evidence?
+5. Has it delivered the same or similar oligo chemistry?
+6. Is heart/CNS/other secondary tissue exposure relevant?
+7. Is the technology realistically accessible through partnership or licensing?
 
-> Does this agent produce the required biological perturbation at an exposure relevant to the disease?
-
----
-
-# 10. Oligonucleotide Agent
-
-## Mission
-
-Determine whether transcript-level intervention can execute the desired biological change.
-
-Consider:
-
-- RNase-H knockdown;
-- splice correction;
-- exon skipping;
-- transcript modulation;
-- allele-selective suppression.
-
-Evaluate mechanism and delivery together.
-
-Ask:
-
-- Is the relevant transcript expressed in the disease-driving cells?
-- What direction of transcript change is required?
-- Can the relevant tissue and cell type be reached?
-- Is the required intracellular compartment accessible?
-- Is repeat dosing plausible?
-- Is there relevant delivery precedent?
-
-Emerging approaches such as antibody-oligonucleotide and peptide-oligonucleotide conjugates should be considered where relevant.
+Historical failure of naked ASO delivery must not be used to dismiss a strategy if newer targeted delivery has materially changed exposure.
 
 ---
 
-# 11. RNA Therapeutics Agent
+# 8. Step 5 — Search Existing Programs
 
-## Mission
+Search companies, trials, publications, patents where practical, and conference disclosures for programs involving:
 
-Evaluate RNA approaches outside the core oligonucleotide strategies.
+- the same exon;
+- adjacent exons;
+- the same target gene;
+- the same tissue;
+- the same delivery receptor;
+- the same ASO mechanism.
 
-Relevant approaches may include:
+This search must be current.
 
-- siRNA;
-- RNA interference;
-- mRNA-based protein replacement;
-- other sufficiently mature RNA modalities.
-
-Evaluate:
-
-- biological fit;
-- target cell;
-- intracellular site of action;
-- delivery;
-- durability;
-- repeat dosing;
-- precedent.
-
-Delivery is part of the therapeutic strategy, not a downstream afterthought.
-
----
-
-# 12. Protein / Biologic Agent
-
-## Mission
-
-Determine whether a protein or biologic can execute the desired therapeutic perturbation.
-
-Consider:
-
-- enzyme replacement;
-- recombinant protein replacement;
-- antibodies;
-- agonist or antagonist antibodies;
-- ligand traps;
-- soluble receptors;
-- replacement of circulating factors;
-- targeted protein therapeutics.
-
-Search for existing agents before assuming a new biologic must be created.
-
-Evaluate:
-
-- site of action;
-- tissue penetration;
-- target-cell access;
-- extracellular versus intracellular biology;
-- receptor-mediated uptake when relevant;
-- CNS access where relevant;
-- repeat dosing;
-- immunogenicity.
-
----
-
-# 13. Delivery
-
-Delivery is mandatory reasoning but does not require a separate top-level agent.
-
-Every modality agent must answer:
+The agent should explicitly identify:
 
 ```yaml
-delivery_feasibility:
-  target_tissue:
-  target_cell:
-  expected_access:
-  major_constraint:
+competitive_precedent:
+  organization:
+  program:
+  target:
+  payload:
+  delivery:
+  stage:
+  key_result:
+  relevance:
 ```
 
-Evaluate delivery at the cell-type level when it matters.
+Existing programs may:
 
-A therapy that reaches an organ but not the disease-driving cell population may not be viable.
-
-Novel delivery technologies should be considered when mechanistically relevant, but their maturity and evidence should be stated clearly.
-
----
-
-# 14. Experimental Strategist
-
-## Mission
-
-For each therapeutic approach, answer:
-
-> What is the simplest credible experiment that would materially change whether we pursue this approach?
-
-Consider:
-
-- disease models;
-- assays;
-- therapeutic rescue;
-- pharmacology;
-- delivery;
-- biomarkers;
-- translational relevance.
-
-Prefer experiments that can invalidate weak approaches early.
+- validate the concept;
+- provide a delivery solution;
+- suggest a partnership path;
+- make a new program redundant;
+- reveal a failure mode.
 
 ---
 
-## Model Fitness
+# 9. Step 6 — Select the Lead ASO Concept
 
-Rare diseases frequently lack good disease models.
-
-For every important therapeutic hypothesis, assess whether an available model is fit to answer the relevant question.
-
-```yaml
-model_fitness:
-  best_available_model:
-  captures_relevant_mechanism:
-  captures_relevant_cell_type:
-  measurable_phenotype:
-  important_limitations:
-  fitness:
-    # adequate
-    # partial
-    # inadequate
-    # unknown
-```
-
-Do not ask whether a model reproduces the entire disease.
-
-Ask whether it can answer the specific therapeutic question.
-
-A simple cellular model may be sufficient for one decision while an animal model is necessary for another.
-
-If existing models are inadequate, identify the simplest new model needed to unblock the decision.
-
-Lack of an adequate disease model should be surfaced as a major development gap when appropriate.
-
----
-
-## Experimental Output
-
-```yaml
-experimental_plan:
-  critical_question:
-  proposed_experiment:
-  model:
-  primary_readout:
-  supportive_result:
-  negative_result:
-  decision_enabled:
-```
-
-Every experiment should enable a decision.
-
----
-
-# 15. Reviewer / Synthesizer
-
-## Mission
-
-Compare therapeutic approaches and produce the final development dossier.
-
-Act as both skeptical reviewer and therapeutic program lead.
-
-For each approach ask:
-
-- Why could this work?
-- What evidence supports it?
-- What evidence argues against it?
-- What is the dominant failure mode?
-- Can the relevant cells be reached?
-- Can the hypothesis be tested in a credible model?
-- Is there an existing agent that could accelerate validation?
-- Does the proposed next experiment genuinely reduce uncertainty?
-
-Use four verdicts:
+Compare candidate strategies on a small number of decision variables:
 
 ```text
-PURSUE
-INVESTIGATE
-LOW PRIORITY
+Does it create the right RNA/protein?
+
+How many oligos are required?
+
+How much precedent exists for the resulting product?
+
+Can current delivery technology reach the required cells?
+
+Is there an existing delivery platform or partner?
+
+Can the concept be tested cleanly?
+
+What is the dominant failure mode?
+```
+
+Do not use artificial numerical scores.
+
+Select:
+
+```text
+LEAD
+BACKUP
+WATCH / FUTURE
 REJECT
 ```
 
-Avoid artificial numerical rankings.
+A two-exon solution should normally outrank an eleven-exon solution if both produce credible proteins, unless evidence strongly favors the larger product.
 
-Explain comparative judgments directly.
+A single-ASO strategy that induces coordinated multi-exon skipping should be explicitly investigated before proposing a multi-ASO cocktail.
 
 ---
 
-# 16. Evidence Rules
+# 10. Step 7 — Design the First Experiment
 
-Every important scientific conclusion should be traceable to evidence.
+The first experiment should answer the major uncertainty in the ASO concept, not reproduce established disease biology.
 
-Distinguish:
+For splice-modulating ASOs this will often mean:
 
 ```text
-EVIDENCE
-Directly supported by a source.
-
-INFERENCE
-Derived from available evidence.
-
-HYPOTHESIS
-Requires experimental validation.
+patient-relevant cells
++
+tiled ASO screen
++
+delivery-independent transfection initially
++
+quantitative transcript-product analysis
++
+protein confirmation
 ```
 
-When useful, characterize evidence as:
+Measure all relevant splice products, not only the desired PCR band.
+
+For example:
+
+```yaml
+experiment:
+  question:
+  ASOs_tested:
+  model:
+  primary_readout:
+  undesired_products:
+  protein_readout:
+  success_condition:
+  kill_condition:
+```
+
+Separate:
+
+### Payload validation
+
+Can the ASO create the desired RNA product when intracellular exposure is not limiting?
+
+from:
+
+### Delivery validation
+
+Can a clinically relevant delivery system achieve sufficient intracellular exposure?
+
+Do not confound these in the first experiment unless necessary.
+
+---
+
+# 11. Output
+
+The final output should be short.
+
+## Lead concept
+
+One paragraph.
+
+## Why it wins
+
+Maximum 3 bullets.
+
+## Delivery strategy
+
+Current best delivery solution and supporting human/clinical precedent.
+
+## Backup
+
+One or two credible alternatives.
+
+## Critical unknown
+
+The single largest uncertainty.
+
+## Next experiment
+
+Specific and decision-changing.
+
+## Relevant programs / partners
+
+Only programs that materially affect the development decision.
+
+## Verdict
 
 ```text
-Supportive
-Contradictory
-Inconclusive
-Not studied
+BUILD
+TEST FIRST
+WAIT FOR PLATFORM
+DO NOT PURSUE
 ```
 
-Do not treat absence of literature as evidence against a hypothesis.
-
-This is especially important in ultra-rare diseases.
-
-Actively look for evidence that contradicts important therapeutic hypotheses.
+Detailed evidence may appear beneath the main answer but should not interrupt the decision narrative.
 
 ---
 
-# 17. Research Priorities
+# 12. DMD Exon 55 Nonsense — Acceptance Test
 
-Spend less effort on:
+The ASO agent is not ready unless it independently reaches the following findings.
 
-- generic disease description;
-- exhaustive phenotype catalogs;
-- reconstructing ontologies;
-- exhaustive literature histories.
+### Design space
 
-Spend more effort on:
+It must discover that an exon-55 nonsense mutation should not automatically lead to an exon 45–55 multi-skip program.
 
-- causal molecular and cellular pathology;
-- rescue evidence;
-- reversibility;
-- compensatory biology;
-- therapeutic leverage points;
-- target pharmacology;
-- existing drugs and biologics;
-- cell-specific delivery;
-- disease-model fitness;
-- experiments that could invalidate or support a program.
-
-A useful rule is:
-
-> Stop retrieving when additional information is unlikely to change the therapeutic decision.
-
----
-
-# 18. Orchestration
-
-Use a simple pipeline:
+It must enumerate smaller frame-restoring possibilities including:
 
 ```text
-1. Identify the disease.
-
-2. Build the disease mechanism.
-
-3. Generate therapeutic hypotheses.
-
-4. Send each hypothesis only to relevant modality agents.
-
-5. Search for repurposing opportunities where appropriate.
-
-6. Merge approaches that represent the same underlying biology.
-
-7. Determine delivery feasibility.
-
-8. Determine whether an adequate model exists.
-
-9. Define the best next experiment.
-
-10. Review and prioritize approaches.
-
-11. Produce the dossier.
+exons 54 + 55
+exons 55 + 56
 ```
 
-Avoid uncontrolled agent loops.
+and compare them with larger skips.
 
-When evidence is insufficient, return uncertainty rather than researching indefinitely.
+Published DMD exon-skipping analyses explicitly identify dual-exon strategies around exon 55, so failure to find them is a discovery failure.
 
----
+### Coordinated skipping
 
-# 19. Final Dossier
+It must investigate whether either dual skip can be achieved with fewer ASOs than the number of exons being skipped.
 
-The final dossier should have six sections.
+In particular it should find and evaluate published evidence that targeting exon 54 can induce coordinated skipping involving exons 54 and 55.
 
-## 1. Disease Mechanism
+### Delivery
 
-What is going wrong biologically?
+It must recognize that naked PMO is no longer an adequate representation of the state of the art in muscle ASO delivery.
 
-Focus on molecular and cellular pathology relevant to therapeutic decisions.
+It must identify modern receptor-targeted muscle delivery, including TfR1-directed antibody/Fab-oligonucleotide approaches, and determine their relevance to the proposed payload.
 
-State major uncertainties.
+### Current competitive landscape
 
----
+It must identify major current muscle-targeted oligonucleotide programs and, as of 2026, discover that:
 
-## 2. Therapeutic Leverage Points
+- Avidity has clinically tested TfR1-targeted PMO delivery in DMD;
+- Dyne has clinically advanced a TfR1-targeted Fab-PMO platform;
+- Dyne is developing an exon-55 program.
 
-What biological changes might improve disease?
+### Program conclusion
 
-Keep this to the most credible opportunities.
-
----
-
-## 3. Therapeutic Approaches
-
-For each serious approach summarize:
-
-| Approach | Why it could work | Modality | Existing agent? | Delivery | Main risk |
-|---|---|---|---|---|---|
-
-Do not include weak ideas merely for completeness.
-
----
-
-## 4. What Is Already Known
-
-Summarize prior work that materially affects the therapeutic decision:
-
-- relevant therapeutic experiments;
-- rescue experiments;
-- existing agents;
-- failed approaches;
-- useful disease models;
-- relevant therapeutic precedents.
-
-Do not produce an exhaustive literature review.
-
----
-
-## 5. Critical Gaps
-
-Identify the few uncertainties blocking therapeutic progress.
-
-These may include:
-
-- uncertain mechanism;
-- unknown reversibility;
-- unknown rescue threshold;
-- delivery;
-- lack of a fit-for-purpose disease model;
-- uncertain pharmacology;
-- lack of an interpretable assay.
-
----
-
-## 6. What Should Be Done Next
-
-Recommend a short sequence of concrete actions.
-
-For each action state:
-
-- what question it answers;
-- what experiment or activity is required;
-- what result would support the approach;
-- what result would weaken or kill it.
-
-Also state what should **not** be funded yet when downstream work would be premature.
-
----
-
-# 20. Desired Output Style
-
-The system should reason like this:
+A credible answer should therefore evaluate something close to:
 
 ```text
-WHAT WE THINK IS HAPPENING
+LEAD:
+minimal exon-55-containing dual skip
+using modern targeted muscle delivery
 
-Loss of enzyme X causes accumulation of metabolite Y in neurons.
-Human genetics and patient biochemistry strongly support this.
+VERSUS:
 
-WHAT WE COULD CHANGE
+BACKUP:
+alternative adjacent dual skip
 
-Reducing production of Y may compensate for loss of X.
+VERSUS:
 
-THERAPEUTIC APPROACH
-
-Drug A inhibits enzyme Z, which controls production of Y.
-
-WHY IT COULD WORK
-
-The mechanism is consistent with the disease biology and Drug A
-already produces the required pharmacology in humans.
-
-WHY IT COULD FAIL
-
-It is unclear whether sufficient drug reaches the affected neurons.
-
-MODEL
-
-Patient-derived neurons capture the relevant metabolic defect and
-provide a reasonable first system for testing biochemical rescue.
-
-WHAT TO DO NEXT
-
-Test Drug A at clinically realistic exposures in patient-derived
-neurons.
-
-DECISION
-
-If metabolite Y falls and the disease phenotype improves at plausible
-exposure, advance the approach.
-
-If rescue requires unrealistic exposure, deprioritize Drug A while
-retaining substrate reduction as a valid therapeutic hypothesis.
+LOWER PRIORITY:
+large 45–55 multi-exon cocktail
 ```
 
----
+The exact ranking may vary with evidence.
 
-# 21. Failure Behavior
-
-The system must be comfortable returning:
-
-```text
-MECHANISM UNCERTAIN
-
-INSUFFICIENT EVIDENCE
-
-NO ADEQUATE MODEL
-
-NO PLAUSIBLE DELIVERY PATH
-
-NO EXISTING AGENT IDENTIFIED
-
-THERAPEUTIC HYPOTHESIS NOT TESTABLE YET
-```
-
-These are useful conclusions.
-
-Do not force every disease into a complete therapeutic plan.
+Failing to surface the smaller skip geometries or modern muscle-delivery platforms is unacceptable.
 
 ---
 
-# 22. Non-Goals
+# 13. Failure Modes
 
-Version 1 should not attempt to:
+The agent has failed if it:
 
-- build a comprehensive disease ontology;
-- reproduce Monarch, Open Targets, or similar resources;
-- recreate drug-repurposing algorithms;
-- generate exhaustive target lists;
-- evaluate every possible modality;
-- deeply evaluate gene therapy, editing, or cell therapy;
-- generate novel molecules;
-- autonomously design clinical trials;
-- replace experimental validation;
-- provide medical advice.
+- produces only obvious textbook ASO strategies;
+- relies on historical delivery limitations without searching current technology;
+- proposes a large multi-ASO cocktail before enumerating smaller solutions;
+- performs exon-frame reasoning purely from LLM memory;
+- fails to search current company pipelines;
+- equates "no approved product" with "no viable delivery solution";
+- produces extensive disease background instead of a drug-discovery recommendation;
+- gives many ideas without selecting a lead;
+- proposes experiments that do not change the program decision.
 
 ---
 
-# 23. Success Criterion
+# 14. Success Criterion
 
-The system succeeds if a scientifically sophisticated disease community can read the output and answer:
+The agent succeeds when an experienced ASO scientist can read its output and say:
 
-> What are the few therapeutic ideas worth serious attention?
+> This found the non-obvious design options I would have considered, understands what current oligonucleotide technology can actually do, and gives me a sensible first experiment.
 
-> Why might they work?
+The objective is not completeness.
 
-> What is most likely to kill them?
-
-> Do we have a credible way to test them?
-
-> What should we spend money on next?
-
-The product is not a universal biomedical knowledge system.
-
-Its differentiated job is:
-
-> **Translate known molecular and cellular pathology into a small number of credible therapeutic approaches, identify why each might fail, and determine the fastest useful experiment for deciding what to pursue.**
+The objective is to find the best buildable ASO program.
