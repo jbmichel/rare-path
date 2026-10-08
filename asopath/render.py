@@ -46,15 +46,17 @@ def evidence(case: str, r: dict) -> str:
     d = r["decision"]
     L = [f"# Evidence — {case}", "", "## References for key precedents", references(r["answer"]), "## Candidates considered", "| Role | Concept | Reason |", "|---|---|---|"]
     L += [f"| {c.role} | {c.concept} | {c.reason} |" for c in d.all_candidates]
+    L += ["", "## Mechanisms considered", "| Mechanism | Fit | Alleles | Discovery burden | Requires |", "|---|---|---|---|---|"]
+    L += [f"| {m.name} | {m.fit} | {m.alleles} | {m.discovery_burden} | {m.requires} |" for m in r["mechanisms"].mechanisms]
     if r["enum"]:
         L += ["", "## Design space (computed)", "| Skip | Exons | bp | Deleted aa | Range |", "|---|---|---|---|---|"]
         L += [f"| {o['skip']} | {o['n_exons']} | {o['bp_removed']} | {o['aa_deleted']} | {o['deleted_aa_range']} |" for o in r["enum"]["viable_in_frame_skips"][:16]]
     L += ["", "## Products"]
     for p in r["3_product"].products:
-        L += [f"**{p.skip}** ({p.judgment}) — {p.why}  \nNatural: {p.natural_human_equivalent}  \nDomains: {p.domain_consequence}  \nRescue: {p.rescue_evidence}", ""]
+        L += [f"**{p.candidate}** ({p.judgment}) — {p.why}  \nNatural: {p.natural_human_equivalent}  \nDomains: {p.domain_consequence}  \nRescue: {p.rescue_evidence}", ""]
     L += [f"Ranking: {r['3_product'].ranking_rationale}", "", "## ASO design evidence"]
     for s in r["4_aso"].per_skip:
-        L += [f"**{s.skip}**  \nPublished: {s.published_asos}  \nCoordinated: {s.coordinated_skipping}  \nLinked: {s.linked_or_multitarget}  \nAmenability: {s.amenability}", ""]
+        L += [f"**{s.candidate}**  \nPublished: {s.published_asos}  \nTarget evidence: {s.target_evidence}  \nCoordinated: {s.coordinated_skipping}  \nLinked: {s.linked_or_multitarget}  \nAmenability: {s.amenability}", ""]
     L += [f"Non-transferable benchmarks: {r['4_aso'].benchmarks_not_transferable}", "", "Proposed designs:"] + [f"- {x}" for x in r["4_aso"].proposed_designs]
     L += ["", "## Delivery platforms"]
     for p in r["5_delivery"].platforms:

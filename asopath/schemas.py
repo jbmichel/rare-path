@@ -18,15 +18,31 @@ class RNADefect(BaseModel):
     tissues: list[str] = Field(description="Tissues and cell types that must be reached")
 
 
+class Mechanism(BaseModel):
+    name: str = Field(description="Short name of the ASO mechanism, e.g. 'skip exon 55', 'suppress a non-productive splicing event'")
+    how_it_works: str = Field(description="One sentence: what the oligo binds and what it changes in the RNA")
+    rna_product: str = Field(description="The RNA/protein outcome this mechanism would produce for this lesion")
+    requires: str = Field(description="What must already be true or exist for this to work (e.g. a splice site, an event, an element)")
+    alleles: Literal["both", "mutant only", "normal only", "depends"] = Field(description="Which allele(s) the oligo acts on")
+    discovery_burden: Literal["target known", "target must be located", "unknown whether a target exists"]
+    fit: Literal["strong", "possible", "poor", "not applicable"]
+    why: str = Field(description="One sentence on the fit for this lesion")
+
+
+class MechanismSet(BaseModel):
+    mechanisms: list[Mechanism] = Field(min_length=2)
+    exon_skipping_applies: bool = Field(description="True if exon skipping or inclusion is a candidate mechanism for this lesion")
+
+
 class Finding(BaseModel):
     claim: str = Field(description="One specific sourced statement, <=30 words")
     source: str = Field(description="URL, PMID or NCT id actually retrieved")
 
 
 class ProductEval(BaseModel):
-    skip: str
+    candidate: str = Field(description="The exon block or mechanism being evaluated")
     natural_human_equivalent: str = Field(description="Real deletions/carriers of this product and what is known of their phenotype; 'none found' if none")
-    domain_consequence: str = Field(description="Which protein domains/repeats/binding sites are lost or fused, using the deleted amino-acid range")
+    domain_consequence: str = Field(description="Which protein domains/repeats/binding sites are lost or fused, using the deleted amino-acid range; 'n/a' if the product is the unaltered protein")
     rescue_evidence: str = Field(description="Patient-cell, animal or clinical rescue of this product; 'none found' if none")
     judgment: Literal["likely functional", "plausible", "uncertain", "likely poor"]
     why: str = Field(description="One sentence")
@@ -39,12 +55,14 @@ class ProductReport(BaseModel):
 
 
 class ASOEvidence(BaseModel):
-    skip: str
+    candidate: str = Field(description="The exon block or mechanism being evaluated")
+    target_evidence: str = Field(description="For mechanisms that need a pre-existing event or element: whether it has been demonstrated, how much of the transcript uses it, and the source; "
+                                             "if not found, the searches tried. 'n/a' for exon skipping of a known exon")
     published_asos: str = Field(description="ASOs/PMOs published against these exons, with names/sequences/ids; 'none found' if none")
-    coordinated_skipping: str = Field(description="Direct evidence that ONE oligo yields skipping of >1 exon in this block, with the source; "
-                                                  "state which searches returned nothing if none found")
+    coordinated_skipping: str = Field(description="Exon-skipping blocks only: direct evidence that ONE oligo yields skipping of >1 exon in this block, with the source; "
+                                                  "state which searches returned nothing if none found. 'not applicable' for other mechanisms")
     linked_or_multitarget: str = Field(description="Precedent for linked/dual-arm or multi-target oligos relevant to this block; 'none found' if none")
-    amenability: str = Field(description="Target-specific splice amenability: endogenous skipping, splice-site strength, enhancer/silencer, exon definition")
+    amenability: str = Field(description="Target-specific amenability, e.g. endogenous skipping, splice-site strength, enhancer/silencer, exon definition, accessibility of the element")
     findings: list[Finding]
 
 
@@ -52,7 +70,7 @@ class ASODesignReport(BaseModel):
     per_skip: list[ASOEvidence]
     benchmarks_not_transferable: str = Field(
         description="Efficacy results from OTHER splice targets that a reader might wrongly use as expectations here, and why they do not transfer; '' if none")
-    proposed_designs: list[str] = Field(description="Concrete ASO designs (target regions/architecture/oligo count), <=25 words each")
+    proposed_designs: list[str] = Field(description="Concrete ASO designs (mechanism, target region, architecture, oligo count), <=25 words each")
 
 
 class Platform(BaseModel):
@@ -140,15 +158,15 @@ class Decision(BaseModel):
 
 class AnswerBackup(BaseModel):
     concept: str
-    bullets: list[str] = Field(min_length=1, max_length=2, description="Plain bullets: what it is, and when it would become preferable to the lead")
+    bullets: list[str] = Field(min_length=1, max_length=3, description="Plain bullets: what it is, and when it would become preferable to the lead")
 
 
 class AnswerExperiment(BaseModel):
-    model: list[str] = Field(min_length=1, max_length=1, description="What system, and why")
-    constructs: list[str] = Field(min_length=1, max_length=1, description="What is compared")
-    primary_readout: list[str] = Field(min_length=1, max_length=1, description="What measurement decides whether the payload works")
-    success_criterion: list[str] = Field(min_length=1, max_length=1)
-    kill_criterion: list[str] = Field(min_length=1, max_length=1)
+    model: list[str] = Field(min_length=1, max_length=3, description="What system, and why")
+    constructs: list[str] = Field(min_length=1, max_length=3, description="What is compared")
+    primary_readout: list[str] = Field(min_length=1, max_length=3, description="What measurement decides whether the payload works")
+    success_criterion: list[str] = Field(min_length=1, max_length=3)
+    kill_criterion: list[str] = Field(min_length=1, max_length=3)
 
 
 class AnswerPrecedent(BaseModel):
@@ -159,10 +177,10 @@ class AnswerPrecedent(BaseModel):
 class Answer(BaseModel):
     verdict: Literal["BUILD", "TEST FIRST", "WAIT FOR PLATFORM", "DO NOT PURSUE"]
     lead_line: str = Field(description="One plain sentence describing the program")
-    recommendation: list[str] = Field(min_length=2, max_length=4, description="Bullets: the product, how the ASO makes it, why it is preferred; background only if needed")
+    recommendation: list[str] = Field(min_length=2, max_length=5, description="Bullets: the product, how the ASO makes it, why it is preferred; background only if needed")
     why_this_design: list[str] = Field(min_length=1, max_length=3, description="Each bullet one argument plus its implication")
-    delivery: list[str] = Field(min_length=2, max_length=4, description="Bullets: preferred platform, why, best precedent, main limitation, and the follow-on delivery test")
+    delivery: list[str] = Field(min_length=2, max_length=6, description="Bullets: preferred platform, why, best precedent, main limitation, and the follow-on delivery test")
     backups: list[AnswerBackup] = Field(max_length=2)
-    critical_risk: list[str] = Field(min_length=1, max_length=3, description="Bullets: the issue most likely to kill the program and why")
+    critical_risk: list[str] = Field(min_length=1, max_length=4, description="Bullets: the issue most likely to kill the program and why")
     first_experiment: AnswerExperiment
     key_precedents: list[AnswerPrecedent] = Field(max_length=5)

@@ -9,7 +9,7 @@ from pathlib import Path
 from . import prompts as P
 from .exons import enumerate_skips
 from .render import hard_to_read, main_answer, words
-from .schemas import (ASODesignReport, Answer, Decision, DeliveryReport, ProductReport, ProgramsReport, RNADefect)
+from .schemas import (ASODesignReport, Answer, Decision, DeliveryReport, MechanismSet, ProductReport, ProgramsReport, RNADefect)
 
 
 
@@ -55,6 +55,9 @@ class Pipeline:
         space = _compact(enum) if enum else "No exon-based enumeration applicable."
         base = f"{case}\n\nRNA DEFECT:\n{rna.model_dump_json(indent=1)}\n\nDESIGN-SPACE ENUMERATION (computed from Ensembl):\n{space}"
 
+        mech = self._stage("2b_mechanisms", MechanismSet, lambda: self.run("mechanisms", sysp(P.MECHANISMS), base, MechanismSet))
+        base += "\n\nMECHANISM LIST (candidate ASO mechanisms for this lesion):\n" + mech.model_dump_json(indent=1)
+
         jobs = {
             "3_product": (ProductReport, P.PRODUCT, ["pubmed_search", "europepmc_search"]),
             "4_aso": (ASODesignReport, P.ASO, ["pubmed_search", "europepmc_search"]),
@@ -80,4 +83,4 @@ class Pipeline:
             answer = self.run("editor", P.EDITOR, f"{ins}\n\nCURRENT ANSWER:\n{answer.model_dump_json(indent=1)}", Answer)
             (self.out / "stages" / "8_answer_edited.json").write_text(answer.model_dump_json(indent=1))
             self.log(f"[main answer] after edit: {words(main_answer(answer))} words, {len(hard_to_read(answer))} hard-to-read bullets")
-        return {"rna": rna, "enum": enum, **res, "decision": decision, "answer": answer}
+        return {"rna": rna, "enum": enum, "mechanisms": mech, **res, "decision": decision, "answer": answer}

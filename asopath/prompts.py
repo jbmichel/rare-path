@@ -12,23 +12,38 @@ RNA_DEFECT = COMMON + """
 Define the RNA defect and the RNA outcome an ASO must achieve. State the desired RNA product only; do not choose chemistry or delivery.
 Resolve the canonical exon number(s) of the lesion for the gene."""
 
+MECHANISMS = COMMON + """
+JOB: list every ASO mechanism that could plausibly address this lesion, before anyone commits to one. Reason from what the lesion does to the gene's output to the mechanism, not from a favourite modality to a target.
+Consider at least these classes and say which do not apply and why:
+- splice switching (exon skipping, multi-exon skipping, exon inclusion, blocking a cryptic splice site, restoring a weakened site);
+- changing how much functional transcript is made from an existing pre-mRNA (e.g. suppressing a non-productive or NMD-coupled splicing event, polyadenylation or 3'UTR changes, 5'UTR or upstream-ORF changes);
+- increasing transcription (e.g. regulatory-RNA or enhancer-directed approaches);
+- reducing or degrading a transcript or one allele (steric block, RNase H gapmer);
+- anything else you can justify from the biology.
+For each: what the oligo binds, the RNA/protein product it would give for this lesion, what must already exist for it to work, which allele(s) it acts on, how hard the target is to find (known / must be located / unknown whether it exists), and fit.
+Rate fit 'poor' or 'not applicable' where the product would not be a therapeutic protein; a product that is only reading-frame-restored is not automatically therapeutic.
+Use the exon enumeration only for mechanisms that remove or include exons. Do not rank or choose; later stages research each plausible mechanism."""
+
 PRODUCT = COMMON + """
-JOB: evaluate the THERAPEUTIC PRODUCT of each candidate RNA outcome. You receive the deterministic enumeration (exons removed, deleted amino-acid range, junction).
-Evaluate at least the 6 smallest viable products plus 2 larger ones for comparison. For each: naturally occurring human equivalents and their phenotype
-(genotype-phenotype databases, case series, natural-history and genetic-modifier literature), which protein domains/repeats/binding sites the deleted range removes
-or fuses (retrieve domain boundaries from UniProt or literature, then map them against the deleted amino-acid range), and direct rescue evidence.
-Reading-frame restoration alone is not product quality. Human genotype-phenotype evidence outranks models. Rank the products."""
+JOB: evaluate the THERAPEUTIC PRODUCT of each plausible candidate in the MECHANISM LIST (fit strong or possible; also briefly note any 'poor' mechanism whose product is a truncated or altered protein).
+For each candidate: naturally occurring human equivalents and their phenotype (genotype-phenotype databases, case series, natural-history and genetic-modifier literature),
+direct rescue evidence, and whether the product is the unaltered protein or an altered one. Also say how large a change in RNA or protein is needed for benefit and how large a change is tolerated, if known.
+If exon skipping applies, you also receive the deterministic exon enumeration (exons removed, deleted amino-acid range, junction). Evaluate at least the 6 smallest viable products plus 2 larger ones,
+and for each map the deleted amino-acid range against protein domains/repeats/binding sites (retrieve boundaries from UniProt or literature).
+Reading-frame restoration alone is not product quality. Human genotype-phenotype evidence outranks models. Rank the candidates."""
 
 ASO = COMMON + """
-JOB: ASO design evidence for the candidate RNA products. For each of the 6 smallest viable products and the target exon, retrieve:
-1. Published ASOs/PMOs against each exon in the block (names, sequences, target regions, models, results).
-2. COORDINATED SKIPPING: whether a single oligo has been reported to skip more than one exon. This requires many specific searches: for every adjacent pair in the
+JOB: ASO design evidence for each plausible candidate in the MECHANISM LIST. For each, retrieve:
+1. Published ASOs against the relevant target (names, sequences, target regions, models, results), for this gene or any gene using the same mechanism.
+2. TARGET EVIDENCE: for any mechanism that needs a pre-existing event or element, whether it has been demonstrated, how much of the transcript uses it (quantify), and the source;
+   if you cannot find it, list the searches you tried.
+3. Linked/dual-arm or multi-target oligo architectures and their precedent (any gene).
+4. TARGET-SPECIFIC AMENABILITY: for splice targets, endogenous or natural skipping rate, splice-site strength, enhancer/silencer architecture, exon definition;
+   for other targets, accessibility of the element and how well published oligos worked on that specific target.
+5. If exon skipping applies, COORDINATED SKIPPING: whether a single oligo has been reported to skip more than one exon. This requires many specific searches: for every adjacent pair in the
    block search combinations such as "<gene> exon A antisense oligonucleotide induced skipping of exon B", "double exon skipping single antisense", "multiexon skipping
    one oligonucleotide", "co-skipping adjacent exons", "natural skipping exon A B", "exon skipping unexpected additional exon". Check PubMed AND Europe PMC AND the web.
    Read abstracts and results sections of exon-skipping screening papers; coordinated skipping is often a secondary finding rather than a title.
-3. Linked/dual-arm or multi-target oligo architectures and their precedent (any gene).
-4. TARGET-SPECIFIC AMENABILITY of each exon: endogenous or natural skipping rate, splice-site strength, enhancer/silencer architecture, exon definition,
-   and how well published oligos worked on that exon specifically.
 Flag efficacy results from other targets that a reader could misuse as expectations here. Finally propose 1-3 concrete ASO designs."""
 
 DELIVERY = COMMON + """
@@ -63,8 +78,6 @@ FORMAT
 - Use bullet points throughout. One idea per bullet.
 - A bullet is one plain sentence, rarely two. If a bullet needs a semicolon, a long parenthetical, or two separate numbers to make its point, split it.
 - Open each section with its conclusion, then give the supporting bullets. Where a fact matters, add the reason it matters in the same bullet ("..., so ...", "..., which means ...").
-- BUDGET: about 550-700 words in total. Clear is not long. Reach the budget by choosing what the colleague needs to decide, not by compressing sentences: keep only the facts that change
-  the program, give each fact once, and leave detail to the evidence file. Roughly: Recommendation 4 bullets, Why 3, Delivery 3-4, each Backup 2, Risk 2-3, each experiment item 1, Precedents 4-5.
 - Each bullet is at most about 25 words. A long bullet means two ideas: keep the more important one and drop the other unless the decision needs both.
 - Keep the connecting logic ("so", "which means") but cut the second and third supporting numbers, drug names and trial names that do not change the decision.
 
