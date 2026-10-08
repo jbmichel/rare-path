@@ -4,58 +4,72 @@
 
 ## Recommendation
 
-**LEAD — A mutation-agnostic antisense oligonucleotide that raises full-length CDKL5 protein from the patient's healthy allele, funded only through a six-month test that the required splicing event exists.**
+**LEAD — Build a splice-correcting antisense oligonucleotide for the CDKL5 patients whose variant disrupts splicing, and screen in parallel for a mutation-agnostic target.**
 
-- CDKL5 deficiency disorder is a severe childhood epilepsy and developmental disorder caused by loss-of-function variants that leave too little CDKL5 kinase per neuron.
-- The product is ordinary full-length CDKL5 protein, made from the patient's own non-mutant allele. The coding sequence is never altered, so a single drug serves all patients regardless of which variant they carry.
-- The mechanism is a steric-block oligonucleotide that suppresses a non-productive CDKL5 splicing event, shifting pre-mRNA processing toward the canonical protein-coding transcript.
-- Fund a six-month existence test in human neurons, not a program, because no such non-productive CDKL5 splicing event has been validated.
+- CDKL5 deficiency disorder is caused by loss of one working copy of the CDKL5 kinase, mostly in girls, and random X-inactivation silences the healthy copy in about half of neurons.
+- Lead product is a steric-block oligonucleotide that restores normal splicing of the patient's own allele, yielding the unaltered full-length kinase.
+- The archetype variant c.2376+5G>A makes neurons skip exon 16, which triggers transcript decay and roughly 80% protein loss.
+- The oligonucleotide masks the element driving that skipping, so the authentic splice sites are used and no coding sequence is engineered.
+- Fund a parallel screen for a non-productive CDKL5 splicing event, because no such target has been described and the broad program depends on finding one.
 
 ## Why this design
 
-- Raising the normal protein from a healthy allele costs no protein domains and works in both affected girls and hemizygous boys, so a single sequence covers the whole population.
-- Women with favourable X-inactivation are mild or unaffected, which means a modest increase of roughly 1.5 to 2-fold should be clinically meaningful.
-- Gene therapy competitors cannot be re-dosed or titrated, and one high-dose trial in Rett syndrome caused a hyperinflammatory serious adverse event, so a re-dosable spinal-fluid drug differentiates on safety.
+- Exon-16 skipping is the only CDKL5 disease mechanism with a mapped molecular target. A modified U1 small nuclear RNA already corrected that defect, so an oligonucleotide here is a modality upgrade rather than a discovery bet.
+- The product stays at the patient's own endogenous level, which matters because duplications spanning CDKL5 cause neurobehavioural problems, so overshooting is a real liability.
+- Intrathecal steric-block oligonucleotides are already approved in young children, so the program needs no new chemistry and no new delivery platform.
 
 ## Delivery
 
-- Use an unconjugated 2'-O-methoxyethyl phosphorothioate 18-20mer given as a lumbar intrathecal bolus, the only route buildable today.
-- Follow the pediatric schedule already run for zorevunersen in Dravet syndrome, two loading doses then maintenance every four months, which the field and regulators accept in children.
-- Accept the exposure gradient rather than engineering around it. Deep-brain oligonucleotide levels in monkeys are more than ten-fold below cortex and cord, so exposure in hippocampus, deep cerebellum and deep interneurons must be measured rather than assumed.
-- Transferrin-receptor antibody-oligonucleotide conjugates are the generation-two answer for deep brain. But no one has yet shown a conjugated steric-block oligonucleotide raising a brain protein, so the lead must not be built on them.
+- Preferred platform is an unconjugated 2'-O-methoxyethyl phosphorothioate oligonucleotide given as an intrathecal lumbar bolus, planning roughly 20 to 70 mg every 8 to 16 weeks.
+- Best precedent is nusinersen, an intrathecal splice-switching oligonucleotide dosed from birth, so the paediatric dose and safety envelope are already defined.
+- Main limitation is that deep brain nuclei see more than tenfold less drug than cortex, although primate single-cell data show every neuronal subtype there is engaged.
+- The retina is not reached from spinal fluid, so the visual-pathway requirement needs a separate intravitreal arm using the same chemistry at low added cost.
+- Follow-on delivery test is intrathecal dosing in monkeys for regional biodistribution and hippocampal vacuolation histology, since hippocampus is both required and the known site of oligonucleotide neurotoxicity.
+- Transferrin-receptor antibody conjugates would give broader coverage without lumbar punctures, but have no human brain data and are proprietary, so treat them as a later upgrade.
 
 ## Backup
 
-- **Variant-specific splice correction for CDKL5 donor-site +5 variants**
-  - Engineered U1 small nuclear RNA restored more than 70 percent of CDKL5 protein and kinase activity for these variants, the only quantitative CDKL5 rescue data available.
-  - This becomes the lead if the mutation-agnostic test fails, accepting that it serves a small named subgroup and that the modality shown was U1, not an oligonucleotide.
-- **Reactivating the healthy CDKL5 allele on the inactive X with an Xist-targeting oligonucleotide**
-  - Its proof of concept is human: girls whose X-inactivation favours the healthy allele are mild or unaffected, and a related approach raised MECP2 strongly from the inactive X.
-  - It becomes preferable if selective reactivation can be shown, but today it is genome-wide rather than gene-selective and it excludes boys entirely.
+- **Suppress a non-productive CDKL5 splicing event, meaning a decay-destined exon or a retained intron, to raise full-length transcript from the intact allele**
+  - This is the ideal mutation-agnostic product because it adds normal protein without touching the coding sequence.
+  - No one has shown that CDKL5 has such an event, so this becomes the lead only if a screen finds one carrying at least 10% of the gene's pre-mRNA flux.
+- **Block a destabilising element or the proximal polyadenylation signal in the 6.6 kilobase 3' untranslated region of the brain CDKL5 transcript**
+  - This is the largest accessible target surface in the gene and leaves the coding sequence intact.
+  - It becomes preferable only if no splicing handle exists, because masking the gene's own brake fights the need for a bounded increase.
 
 ## Critical risk
 
-- The decisive risk is whether the payload exists at all, not whether we can deliver it.
-- CDKL5 does not appear among the 12,014 candidate brain poison exons catalogued in a 2025 survey. The only claimed non-productive CDKL5 exon sits in a patent that provides no sequences and no expression data.
-- The CDKL5 alternative exons that are quantified are either productive or used by under 10 percent of brain transcripts, so even complete suppression may not add enough protein.
+- The lead treats only splice-region variants, which are about 15% of pathogenic CDKL5 variants, so it may stay a series of single patients rather than a registrable drug.
+- The mutation-agnostic arm may have no target at all, since the most careful transcript study found no decay route and a genome-wide screen did not nominate CDKL5.
+- Any increase must stay inside a narrow window, because duplications including CDKL5 are associated with neurobehavioural abnormalities.
+- The closest comparable approach, an oligonucleotide de-repressing the silenced allele in Angelman syndrome, missed its Phase 3 primary, so endpoint choice may decide this program.
 
 ## First experiment
 
 - **Model**
-  - Patient-derived induced pluripotent stem cell neurons, both cortical excitatory and inhibitory, including female and hemizygous male lines, because the splicing event must exist in human neurons to be druggable.
+  - Cells from a patient carrying c.2376+5G>A, both primary fibroblasts and induced pluripotent stem cell derived cortical neurons, with an isogenic corrected control.
+  - A transfected minigene spanning introns 15 and 16 for the first-pass tiling walk, because it is fast and cheap.
+  - No delivery vehicle, using nucleofection at matched intracellular concentrations so potency is measured independently of delivery.
 - **Constructs**
-  - About 40 oligonucleotides walking the candidate non-productive regions in five-nucleotide steps, plus a two-arm linked oligonucleotide and chemistry-matched controls.
+  - About 40 fully 2'-O-methoxyethyl phosphorothioate 18-mers tiling exon 16 and 150 nucleotides of each flanking intron at 5-nucleotide steps.
+  - Controls are a scrambled oligonucleotide and a no-oligonucleotide arm.
+  - Hazard controls are a degrading gapmer against CDKL5 as a wrong-direction arm and an oligonucleotide designed to force exon-16 skipping.
 - **Primary readout**
-  - Long-read sequencing of full-length CDKL5 transcripts to measure the productive fraction, paired with CDKL5 protein and its kinase-activity marker.
+  - Long-read sequencing of full-length CDKL5 messenger RNA, reporting each isoform as a fraction of total CDKL5 reads, with decay-inhibition arms to reveal the degraded pool.
+  - Western blot for the full-length CDKL5 protein band, because a splicing change without protein is not a hit.
+  - Phosphorylation of the substrate EB2 at serine 222 to confirm the restored kinase is catalytically active.
 - **Success criterion**
-  - At least a 1.5-fold rise in CDKL5 protein with matching kinase-activity and productive-transcript gains, and no new aberrant isoform above 5 percent.
+  - At least one oligonucleotide raises exon-16-included messenger RNA and CDKL5 protein to half of control level, with restored substrate phosphorylation, dose-dependently over a tenfold range.
+  - New aberrant species such as cryptic junctions or retained introns stay below 5% of CDKL5 reads.
+  - No oligonucleotide pushes CDKL5 above about twofold of control, and the same oligonucleotide leaves wild-type neurons unchanged.
 - **Kill criterion**
-  - Stop if no degradation-coupled CDKL5 isoform reaches 10 percent of baseline transcripts, or if the best oligonucleotide gives under 1.3-fold protein.
+  - No oligonucleotide reaches 20% of control CDKL5 protein at tolerated concentrations, or the best splicing hits bring no protein increase.
+  - Any hit induces skipping of a CDKL5 coding exon or generates more than 10% new aberrant isoforms.
+  - The mutation-agnostic arm is stopped if fractionated neuronal RNA sequencing shows no non-productive CDKL5 event carrying at least 10% of pre-mRNA flux.
 
 ## Key precedents
 
-- A 2025 survey of 12,014 candidate brain poison exons did not include CDKL5, which is why this program is gated rather than launched.
-- Engineered U1 restored over 70 percent of CDKL5 protein for donor +5 variants but failed for +1 variants, which both defines and limits the variant-specific backup.
-- Zorevunersen gives two intrathecal loading doses then maintenance every four months in children, setting our dosing and safety template but not our potency expectation.
-- Monkey and human autopsy data show intrathecal oligonucleotides reach deep brain poorly, so hippocampus and brainstem coverage must be measured in monkeys before committing.
-- A high-dose gene therapy cohort in Rett syndrome was halted for a hyperinflammatory serious adverse event, supporting a re-dosable spinal-fluid oligonucleotide instead.
+- The CDKL5 splice defect is already mapped: c.2376+5G>A causes exon-16 skipping and about 80% protein loss. An engineered U1 small nuclear RNA corrected it, which sets both the target population and the restoration bar.
+- An oligonucleotide that suppresses a decay-destined exon to raise a haploinsufficient brain gene is in Phase 3 in children, dosed intrathecally up to 70 mg. That settles chemistry, dosing and safety, but implies nothing about CDKL5 potency.
+- The nearest approach that de-repressed a silenced allele failed its registrational trial, which raises the bar for endpoint and biomarker choice in any CDKL5 upregulation program.
+- Switching on the silenced CDKL5 copy at its own promoter already rescues heterozygous female mice and patient organoids, which makes a genome-wide XIST oligonucleotide strategically obsolete rather than merely risky.
+- Chronic intrathecal individualised oligonucleotides are now routine in children with no drug-related serious adverse events across 50 patients, giving the lead a ready clinical route without a standalone application.

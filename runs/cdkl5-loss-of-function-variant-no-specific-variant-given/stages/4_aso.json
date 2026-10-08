@@ -1,125 +1,232 @@
 {
  "per_skip": [
   {
-   "skip": "P1 — Suppress inclusion of the intron-16 brain-specific alternative exon (Fichou 'exon 16b' = Williamson 'exon 17'; claimed by Stoke as 'exon 16x of CDKL5' in 'intron 16 of CDKL5'). Product: canonical hCDKL5_1 mRNA. NOT an exon-skipping/reframing block — there is no frame to restore; goal is productive-isoform share.",
-   "published_asos": "None found. PubMed 'CDKL5 antisense oligonucleotide' returns 6 records, none targeting a CDKL5 exon; 'CDKL5 poison exon antisense oligonucleotide' = 0 hits. Only patent-level claim: WO2019084050A1 names 'exon 16x of CDKL5' / 'intron 16 of CDKL5' with no CDKL5 SEQ IDs; sibling filings CA3079729A1 and CN111936163A do not mention CDKL5 at all. A web result asserting ASOs 'H16A(-12+19)/H16A(-06+25) induced CDKL5 exon 16 skipping' is a false conflation — those are DMD exon-16 PMOs from the Wilton exon-skipping patents; do not use.",
-   "coordinated_skipping": "No evidence for CDKL5. Searches run: PubMed 'CDKL5 antisense oligonucleotide', 'CDKL5 transcript isoforms alternative splicing brain exon', 'CDKL5 exon 16b isoform brain truncated', 'CDKL5 alternative splicing non-productive isoform exon 16 exon 17' (0 hits); web 'CDKL5 intron 16 pseudoexon/NMD exon/poison exon'; Europe PMC MCP returned HTTP 503 on all attempts (CDKL5 poison exon; CDKL5 splice switching) — that channel is unverified. Generic precedent only: one AO against DMD exon 17 also skipped exon 18, and co-skipping of a stretch is achievable by targeting the two outer exons.",
-   "linked_or_multitarget": "Yes, generic: NS-089/NCNP-02 (brogidirsen) is a single PMO built from two connected antisense sequences hitting two separate splicing regulators in DMD exon 44 — directly applicable architecture if one arm hits the 3'ss and one the ESE of the intron-16 exon. Also multi-cassette U7 snRNA vectors targeting >1 splicing event per AAV.",
-   "amenability": "Weak as a standalone. Exon-17(=16b)-containing transcripts are ~10% of whole-brain CDKL5 transcripts, so complete suppression redistributes at most ~10% — and Williamson assigns this exon +41 in-frame amino acids (hCDKL5_2/_4), i.e. productive, not NMD-coupled. Exon is extremely conserved and brain-restricted (suggesting function, and a cryptic-regulator risk). No CDKL5 poison exon was recovered by a 2025 transcriptome-wide brain poison-exon atlas (12,014 putative PEs; CDKL5 absent), so the patent's NIE designation is unvalidated.",
+   "candidate": "Suppress a non-productive / NMD-coupled CDKL5 splicing event (poison exon or AS-NMD exon)",
+   "target_evidence": "No validated CDKL5 poison exon found. Hector 2016 characterised the gene exhaustively and reported no NMD-coupled isoform; the only alternative internal event, exon 17, adds 123 nt (41 aa, in-frame) at ~10% of brain transcripts, so it is not a poison exon. A 2026 genome-wide screen of ~3,000 developmentally regulated AS-NMD exons nominating neurodevelopmental splice-switching targets (GRIA2, FOXP1, SNRPB, DLG4, SYNGAP1; 308 Gene4Epilepsy genes) does not mention CDKL5. Ensembl does annotate one NMD-biotype transcript, CDKL5-214/ENST00000977893 (14 exons), and one retained-intron transcript, CDKL5-206/ENST00000623610, but neither is quantified anywhere I could retrieve. Searches tried: PubMed 'CDKL5 poison exon antisense oligonucleotide upregulation', 'CDKL5 isoforms splice variants', 'CDKL5 alternative splicing isoforms exon 16 exon 21 brain'; Europe PMC 'CDKL5 poison exon antisense oligonucleotide' (503 error, could not complete); web 'CDKL5 poison exon OR nonsense-mediated decay non-productive splicing isoform', 'poison exon human brain atlas catalogue'; direct text query of the JCI AS-NMD paper and the Pigini poison-exon preprint (preprint PDF returned HTTP 429 twice, not read). Conclusion: this is a discovery project, not a design project — flux through any non-productive CDKL5 event is unquantified and may be near zero.",
+   "published_asos": "none found — no ASO of any kind published against CDKL5. The only CDKL5 splicing therapeutic retrieved is a modified U1 snRNA (not an ASO) correcting individual splice-site variants, including c.2376+5G>A which causes exon 16 skipping and NMD with ~80% protein loss in patient lymphocytes (PMC6747535). Searches: 'CDKL5 antisense oligonucleotide' (PubMed, HTTP 429 then re-run via web), web 'CDKL5 splice-switching oligonucleotide OR morpholino exon skipping rescue' — no CDKL5 hits.",
+   "coordinated_skipping": "not applicable",
+   "linked_or_multitarget": "none found specific to CDKL5. General precedent: divalent/branched oligonucleotide scaffolds in which two fully modified phosphorothioate arms are joined by a neutral linker give months-long, brain-wide activity after one CSF dose in mice and NHPs (divalent siRNA, HTT); US 11,896,669 'Branched oligonucleotides'. This is delivery/architecture precedent only, from siRNA not splice-switching ASO.",
+   "amenability": "Unknown and probably poor. Target evidence is missing, so there is no measurable non-productive flux to redirect. Note the genuine amenability features that do exist: five alternative first exons (1, 1a, 1b, 1c, 1d) over 18 kb all using the same ATG in exon 2, with 1/1a/1b brain-specific — so any 5'-region ASO must tolerate three leaders; and hCDKL5_1 is already ~90% of brain transcript, leaving only ~10% headroom from isoform redistribution even if a handle were found.",
    "findings": [
     {
-     "claim": "Patent names 'exon 16x of CDKL5' residing in 'intron 16 of CDKL5' as an NMD-inducing exon; no CDKL5 sequences given.",
-     "source": "https://patents.google.com/patent/WO2019084050A1/en"
+     "claim": "hCDKL5_1 — 18 exons, 9.7 kb, 6.6 kb 3'UTR in exon 19 — is ~90% of human brain CDKL5 transcripts.",
+     "source": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0157758"
     },
     {
-     "claim": "Exon-17-containing CDKL5 transcripts are ~10% of whole-brain transcripts and add 41 amino acids (in-frame, productive).",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4912119/ (PMID 27315173)"
+     "claim": "hCDKL5_2 differs only by inclusion of exon 17 (+123 nt, 41 aa, in-frame), ~10% of brain transcripts.",
+     "source": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0157758"
     },
     {
-     "claim": "Exon 16b is a novel, extremely conserved CDKL5 exon whose transcript is brain-specific.",
-     "source": "PMID 21124335"
+     "claim": "Hector 2016 reports no NMD pathway for CDKL5 isoforms despite frameshifts in rare variants.",
+     "source": "PMID 27315173"
     },
     {
-     "claim": "Brain poison-exon atlas found 12,014 putative poison exons; CDKL5 not among reported genes.",
-     "source": "https://www.biorxiv.org/content/10.1101/2025.06.26.661736v1.full"
+     "claim": "Genome-wide AS-NMD splice-switching screen nominates GRIA2, FOXP1, SNRPB, DLG4, SYNGAP1; CDKL5 is absent.",
+     "source": "https://www.jci.org/articles/view/197271"
     },
     {
-     "claim": "Sibling patent filings listing dozens of NMD-exon genes contain no CDKL5 entry.",
-     "source": "https://patents.google.com/patent/CA3079729A1/en"
+     "claim": "Ensembl annotates CDKL5-214/ENST00000977893 as nonsense_mediated_decay biotype; unquantified.",
+     "source": "https://rest.ensembl.org/lookup/symbol/homo_sapiens/CDKL5?expand=1"
+    },
+    {
+     "claim": "~15% of pathogenic CDKL5 mutations are candidates to affect splicing; U1snRNA rescued splicing, kinase activity.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6747535/"
     }
    ]
   },
   {
-   "skip": "P2 — Block the cryptic 5' splice donor inside exon 11 to abolish hCDKL5_3/_4 and restore full-length exon 11 coding sequence. Product: canonical hCDKL5_1.",
-   "published_asos": "None found (same search set as P1; no ASO reported against CDKL5 exon 11 or its cryptic donor).",
-   "coordinated_skipping": "Not applicable/none found — the event is an intra-exonic cryptic donor, not an adjacent-exon pair. Searches for CDKL5 multi-exon or co-skipping events (PubMed + web, listed in P1) returned nothing.",
-   "linked_or_multitarget": "Dual-sequence single-oligo precedent (brogidirsen) is the relevant architecture for simultaneously masking the cryptic donor and its enhancer; none reported for CDKL5.",
-   "amenability": "Very weak ceiling: alternative exon-11 splicing accounts for <5% of brain CDKL5 transcripts, so maximal recoverable productive mRNA is <5%. Cryptic-donor masking is mechanistically the easiest ASO action (direct steric block of U1), but the payoff is below plausible therapeutic relevance alone.",
+   "candidate": "Suppress constitutive intron retention in CDKL5 pre-mRNA",
+   "target_evidence": "Not demonstrated for CDKL5. Ensembl lists a single retained_intron transcript (CDKL5-206/ENST00000623610, 1 exon), which is an annotation fragment with no expression quantification I could retrieve. Hector 2016's experimental transcript profiling of human and mouse CDKL5 describes no constitutive retained intron. Background literature establishes that intron retention is widespread (detectable in up to three-quarters of multiexonic genes) and increases during neuronal differentiation, with 88.7% of differentially retained introns rising from ESC to mature neuron — so a CDKL5 retained intron is plausible a priori but has never been measured. Searches tried: web 'CDKL5 intron retention neurons RNA-seq retained intron transcript' (returned only generic IR literature, no CDKL5); PubMed 'CDKL5 isoforms splice variants'; Ensembl transcript table. No percent-intron-retention value for any CDKL5 intron in any human neuronal dataset was found.",
+   "published_asos": "none found for CDKL5. No intron-retention-directed ASO for this gene exists. Searches as above plus 'CDKL5 antisense oligonucleotide'.",
+   "coordinated_skipping": "not applicable",
+   "linked_or_multitarget": "none found for CDKL5 intron retention; divalent branched scaffold precedent as above (US 11,896,669; divalent siRNA CNS data) is architecture-only.",
+   "amenability": "Cannot be assessed without a candidate intron. Practical note: the readout differs from poison-exon work — it requires intron-level percent-retention from nuclear/cytoplasmic fractionated human neuronal RNA-seq, and a retained-intron pool only helps if it is nuclear-detained rather than already degraded. Confounder specific to CDKL5: the brain isoform terminates in what older papers call intron 18, so naive intron-retention callers will score the normal terminal-exon read-through of the dominant isoform as 'retention'.",
    "findings": [
     {
-     "claim": "hCDKL5_3/_4 use an alternative splice site in exon 11 and represent <5% of brain CDKL5 transcripts.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4912119/ (PMID 27315173)"
+     "claim": "Intron retention is detectable in transcripts of up to three-quarters of multiexonic mammalian genes.",
+     "source": "https://genome.cshlp.org/content/24/11/1774.full.html"
     },
     {
-     "claim": "CDKL5 isoforms can use cryptic splice donors, with transcripts lacking part of exon 11 coding sequence.",
+     "claim": "88.7% of differentially retained introns increase in retention from ES cells to mature neurons.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3371409"
+    },
+    {
+     "claim": "Ensembl annotates one retained-intron CDKL5 transcript (ENST00000623610); no expression level given.",
+     "source": "https://rest.ensembl.org/lookup/symbol/homo_sapiens/CDKL5?expand=1"
+    }
+   ]
+  },
+  {
+   "candidate": "Redirect isoform choice toward full-length hCDKL5_1 (alternative last exon / 3'-end switch)",
+   "target_evidence": "Demonstrated and quantified — but the direction assumed in the brief is wrong. The brain-predominant isoform hCDKL5_1 is the 18-exon transcript ending in exon 19 with a 6.6 kb 3'UTR (~90% of brain transcripts); the 115 kDa isoform that splices exon 19 onward to exons 20/21/22 with an 86-nt 3'UTR is hCDKL5_5, which is adult-testis-specific (also fetal brain). Williamson 2012 independently found this alternative-C-terminus 107 kDa isoform to be the major CDKL5 transcript in human brain and all tissues except testis. Clinically, missense, nonsense and splice variants in the final three exons are benign, so hCDKL5_5 'is likely to have little or no neurologic significance'. Therefore forcing splicing through to the long 21/22-exon form would convert the functional neuronal isoform into a neurologically irrelevant one. The only legitimate version of this mechanism in brain is suppressing exon 17 inclusion to convert hCDKL5_2 to hCDKL5_1 — maximum headroom ~10%, and exon 17 is in-frame so hCDKL5_2 is already productive, meaning total productive mRNA would not rise at all.",
+   "published_asos": "none found. No ASO against CDKL5 exon 17, exon 19, intron 18 or the exon19→20 junction. Searches: PubMed 'CDKL5 isoforms splice variants', 'Hector CDKL5 transcript isoforms nomenclature'; web 'CDKL5 splice-switching oligonucleotide OR morpholino'.",
+   "coordinated_skipping": "not applicable",
+   "linked_or_multitarget": "none found. A dual-arm oligo simultaneously masking the exon-17 acceptor and an exon-19 element is conceivable but has no precedent; only divalent branched siRNA CNS scaffolds (US 11,896,669) exist as architecture precedent.",
+   "amenability": "Mechanically the most locatable target in the gene — the alternative 3' end is experimentally mapped with two canonical AATAAA signals in exon 19 at 6.6 kb and 9.7 kb past the stop codon, giving 9.7 kb and 12.8 kb transcripts, the 12.8 kb XL form being less abundant. But the therapeutic headroom is the problem, not the target: the desired isoform is already dominant. Deprioritise.",
+   "findings": [
+    {
+     "claim": "hCDKL5_5 splices exon 19 to exons 20-22 with an 86-base 3'UTR and is expressed only in adult testis.",
+     "source": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0157758"
+    },
+    {
+     "claim": "The 107 kDa isoform with alternative C-terminus terminating in intron 18 is the major CDKL5 transcript in human brain.",
+     "source": "PMID 21748340"
+    },
+    {
+     "claim": "Benign splicing and nonsense variants in the final three exons suggest hCDKL5_5 has little or no neurologic significance.",
+     "source": "PMID 29264392"
+    },
+    {
+     "claim": "Two AATAAA signals in exon 19, 6.6 kb and 9.7 kb past the stop codon, give 9.7 and 12.8 kb transcripts.",
      "source": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0157758"
     }
    ]
   },
   {
-   "skip": "P3 — Suppress the hCDKL5_5 (CDKL5_115, testis-type) distal exon/3'-terminal configuration in favour of hCDKL5_1. Product: canonical brain mRNA.",
-   "published_asos": "None found (searches as P1; also PubMed 'CDKL5 exon 16b isoform brain truncated 107 amino acids' = 0 hits).",
-   "coordinated_skipping": "None found. No report of a single oligo altering more than one CDKL5 terminal-exon choice; searches listed in P1 plus web 'CDKL5 exon 16b hCDKL5_5 brain-specific isoform' returned no coordinated-skipping data.",
-   "linked_or_multitarget": "Terminal-exon switching generally needs combined polyA-signal + 3'ss masking → a two-arm single oligo (brogidirsen-type) or dual-cassette U7; no CDKL5 precedent.",
-   "amenability": "Essentially non-amenable in the target tissue: hCDKL5_5 is detected almost exclusively in adult testis (present in fetal brain). Post-natal CNS gain would be near zero. Deprioritise.",
+   "candidate": "Relieve 5'UTR / uORF or IRES-associated translational repression",
+   "target_evidence": "Partly demonstrated, but not as a uORF. A dedicated study of CDKL5 translational regulation found that two independent algorithms gave no significant prediction of upstream start sites in the CDKL5 transcript leaders — i.e. uORFs are probably not a CDKL5 regulatory feature. What was found instead is a complex leader built from exon 1 plus a 162-nt untranslated distal region of exon 2 (UTex2), evidence for cap-independent initiation, and a proposed CDKL5 IRES, supported by a loss-of-function C>T at position -189 in the 5'UTR in a patient with CDD-consistent symptoms. A -189 LoF variant means the element is translation-promoting, not repressive: masking it would lower, not raise, CDKL5. No repressive 5'UTR element has been mapped. Searches tried: web 'CDKL5 5'UTR upstream open reading frame translational regulation exon 1 1a 1b'; PMID 37964795 fetched (PubMed page returned only a cookie notice, abstract read via search snippets only — flag as partially retrieved); Hector 2016 full text for leader structure.",
+   "published_asos": "none found against the CDKL5 5'UTR or UTex2. No ASO publication for CDKL5 of any mechanism. Searches as listed above.",
+   "coordinated_skipping": "not applicable",
+   "linked_or_multitarget": "none found. A multi-oligo approach would in fact be forced here for a different reason: three brain leaders (exons 1, 1a, 1b) converge on the same ATG in exon 2, so a leader-specific oligo covers only part of the transcript pool, and only UTex2 is common to all.",
+   "amenability": "Weak as written. The only common, fully shared, accessible 5' element across brain leaders is UTex2 (162 nt), and the available genetic evidence points to it being required rather than inhibitory. Also note the brief's desired product is defined as mRNA abundance, which a translational-de-repression ASO does not change — the readout would have to be protein per transcript, not junction ratios.",
    "findings": [
     {
-     "claim": "hCDKL5_5 is detected almost exclusively in adult testis, though present in fetal brain; hCDKL5_1 is the most abundant CNS isoform.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4912119/ (PMID 27315173)"
+     "claim": "Two algorithms gave no significant upstream start-site prediction in CDKL5 transcript leaders, arguing against uORF control.",
+     "source": "https://www.frontiersin.org/journals/cellular-neuroscience/articles/10.3389/fncel.2023.1231493/full"
+    },
+    {
+     "claim": "A loss-of-function C>T at -189 in the CDKL5 5'UTR supports a proposed CDKL5 IRES and cap-independent initiation.",
+     "source": "PMID 37964795"
+    },
+    {
+     "claim": "CDKL5 5'UTR comprises exon 1 plus a 162-nt untranslated distal region of exon 2 (UTex2).",
+     "source": "https://www.frontiersin.org/journals/cellular-neuroscience/articles/10.3389/fncel.2023.1231493/full"
+    },
+    {
+     "claim": "Five initial exons (1, 1a, 1b, 1c, 1d) span 18 kb upstream and all use the same ATG in exon 2.",
+     "source": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0157758"
     }
    ]
   },
   {
-   "skip": "P4 — Redirect 5' end selection among alternative first exons 1a–1e / 5'UTR to the productive hCDKL5_1 5'UTR, or de-repress translation/transcription at the locus (regRNA/eRNA-antagonist ASO). Product: more productive full-length mRNA, coding sequence unchanged.",
-   "published_asos": "None found against CDKL5 5'UTR or its regulatory RNAs. No CAMP4 CDKL5 program retrieved: their disclosed clinical assets are CMP-002 (SYNGAP1, first-in-human cleared 2026) and CMP-CPS-001 (CPS1). A secondary conference-report claim that a CDKL5 ASO is in tox at CAMP4 could not be corroborated on company or investor pages.",
-   "coordinated_skipping": "Not applicable (no exon block). No CDKL5 coordinated-skipping report exists; searches listed in P1.",
-   "linked_or_multitarget": "regRNA-antagonist ASOs are single-site; the precedent that matters is platform-level (allele-agnostic upregulation ASO entering humans for a DEE gene), not architecture.",
-   "amenability": "Unquantified for CDKL5: five alternative 5'UTR exons (1a–1e) are annotated with no published usage fractions, and no CDKL5 regRNA map is published. Attractive because it is mutation-agnostic and does not touch the coding sequence, but it is the least de-risked option — requires a locus-level regRNA/TSS screen before design.",
+   "candidate": "3'UTR / alternative-polyadenylation stabilisation",
+   "target_evidence": "The element space is demonstrated and unusually large; no individual functional element is yet validated. The dominant brain isoform carries a >6.6 kb 3'UTR in exon 19, with two canonical AATAAA signals (at 6.6 kb and 9.7 kb past the stop codon) producing 9.7 kb and lower-abundance 12.8 kb transcripts — so a genuine competing-polyA choice exists and is measurable. Hector 2016 explicitly proposes the large 3'UTR as a previously unrecognised mode of CDKL5 regulation and a possible dendritic-trafficking determinant, and notes putative miRNA binding sites in the 3'UTR whose importance 'is not clearly established for CDKL5'. One specific miRNA interaction is experimentally supported outside neurons: miR-320b targets the CDKL5 3'UTR by dual-luciferase assay in breast cancer cells. Searches tried: PubMed 'CDKL5 microRNA'; web 'CDKL5 3'UTR long 6.6 kb regulatory element mRNA stability neurons polyadenylation'. No neuronal 3'UTR reporter dissection or half-life measurement for CDKL5 was found.",
+   "published_asos": "none found against the CDKL5 3'UTR. Closest mechanistic precedent in a related gene family is CDK5R1 (not CDKL5), where hnRNPA2/B1 and nELAV bind a U-rich 3'UTR element and oppositely regulate expression — do not confuse the two genes. Searches: 'CDKL5 microRNA', 'CDKL5 antisense oligonucleotide', 3'UTR query above.",
+   "coordinated_skipping": "not applicable",
+   "linked_or_multitarget": "none found for CDKL5. Relevant general point: a 6.6 kb UTR is large enough that a single steric oligo is unlikely to control stability, so a multi-site cocktail or a divalent construct with two arms against two separate destabilising elements is the realistic architecture — precedent only from divalent branched oligonucleotide CNS scaffolds (US 11,896,669).",
+   "amenability": "Best combination of 'element definitely exists' and 'target is accessible' of any mechanism here, and it leaves the coding sequence untouched. Two concrete handles: (i) steric block of the proximal AATAAA to force the distal site and the longer UTR, with direction of effect to be determined empirically; (ii) masking destabilising/miRNA elements identified by tiling. Main liability is the one the brief flags: CDKL5 is dosage-sensitive and masking the cell's own brake removes the self-limiting ceiling, so a bounded window must be engineered by dose, not by mechanism.",
    "findings": [
     {
-     "claim": "CDKL5 has alternative 5'UTR exons 1a–1e; hCDKL5_1 is the predominant 9.7 kb brain transcript with a 6.6 kb 3'UTR.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4912119/ (PMID 27315173)"
+     "claim": "Major brain CDKL5 isoforms carry a >6.6 kb 3'UTR, proposed as a previously unrecognised mode of regulation.",
+     "source": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0157758"
     },
     {
-     "claim": "CAMP4's regRNA-targeting ASO CMP-002 for SYNGAP1 received Australian clearance for first-in-human dosing (July 2026); no CDKL5 asset disclosed.",
-     "source": "https://investors.camp4tx.com/news-releases/news-release-details/camp4-therapeutics-secures-australian-regulatory-clearance"
+     "claim": "Putative miRNA binding sites exist in the CDKL5 3'UTR but their importance is not clearly established.",
+     "source": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0157758"
     },
     {
-     "claim": "CDD pipeline is dominated by AAV9 gene therapy (Ultragenyx UX055, pre-clinical; Elaaj ELJ-101, trial planned 2027), not ASOs.",
-     "source": "https://www.ultragenyx.com/our-research/pipeline/ux055-for-cdd/"
+     "claim": "miR-320b directly targets the CDKL5 3'UTR by dual-luciferase assay in docetaxel-resistant breast cancer cells.",
+     "source": "PMID 35667653"
+    },
+    {
+     "claim": "CDKL5 mRNA is present in adult brain dendrites, consistent with local synthesis and UTR-dependent trafficking.",
+     "source": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0157758"
+    },
+    {
+     "claim": "CDK5R1 (a different gene) 3'UTR U-rich element is bound by hnRNPA2/B1 and nELAV; not CDKL5 evidence.",
+     "source": "PMID 24792867"
     }
    ]
   },
   {
-   "skip": "P5 — Xist-targeting ASO (± DNMT inhibitor) to reactivate the wild-type CDKL5 allele on the inactive X in female patients. Product: additional full-length CDKL5 mRNA from Xi; no splicing change.",
-   "published_asos": "Xist ASO reported (Carrette et al.), combinatorial with 5-aza-2'-deoxycytidine; sequences not extracted here. No CDKL5-specific oligo. This is the only retrieved ASO precedent that explicitly names CDKL5 syndrome as an intended indication.",
-   "coordinated_skipping": "Not applicable — mechanism is chromatin/lncRNA, not splicing. No CDKL5 coordinated-skipping evidence exists (searches in P1).",
-   "linked_or_multitarget": "Precedent is 'mixed modality' (ASO + small molecule) rather than a linked oligo — a genuine multi-agent architecture with in vivo proof of concept.",
-   "amenability": "Mechanistically target-agnostic, so CDKL5-specific amenability is unknown; applies only to heterozygous females (not hemizygous males) and depends on XCI mosaicism per neuron. Chief liability is non-selectivity: genome-wide Xi reactivation plus DNMT inhibition. Reported as achieving selective Xi reactivation without evident toxicity in a brain-specific genetic Xist-ablation model.",
+   "candidate": "Transcriptional upregulation via a natural antisense transcript (antagoNAT) at the CDKL5 locus",
+   "target_evidence": "Not demonstrated. No cis-antisense or repressive regulatory RNA at the human CDKL5 locus (Xp22.13) was retrievable. What is established is a large (>1 kb) CpG island spanning the CDKL5 transcription start site, 53% methylated at baseline in the core promoter of a female neuronal line, and five promoters driving the five alternative first exons over 18 kb — so the promoter region is epigenetically regulated, but by DNA methylation rather than by any identified NAT. Searches tried: web 'CDKL5 natural antisense transcript lncRNA promoter upstream locus Xp22' (returned only generic NAT literature plus the CDKL5 methylation-editing paper); PubMed 'CDKL5 microRNA' (found LINC00680 acting as a miR-320b sponge on CDKL5 in breast cancer — a trans-acting lncRNA in a cancer line, not a cis NAT and not neuronal). Conclusion: no antagoNAT target exists on current evidence.",
+   "published_asos": "none found for CDKL5. The only de-repression experiment at this locus used dCas9-TET1CD epigenetic editing with three gRNAs at the CDKL5 promoter, not oligonucleotides: no antisense oligonucleotides were used. Searches as above.",
+   "coordinated_skipping": "not applicable",
+   "linked_or_multitarget": "none found at the CDKL5 locus. Note the methylation-editing precedent is itself multi-target (three gRNAs plus, in the synergistic arm, a second effector), which argues any promoter-directed de-repression here will need combinatorial rather than single-agent action.",
+   "amenability": "Promoter de-repression is achievable in principle at this locus — dCas9-TET1CD reached ~38% of the active allele, and adding VP64 exceeded 60%, with a 20.7-fold increase in silenced-allele expression by amplicon sequencing, in SH-SY5Y — but that was accomplished by demethylation, a modality ASOs do not provide. Without an identified RNA intermediate there is nothing for an oligonucleotide to bind. Treat as target-discovery (CAGE/nuclear RNA-seq strand-specific sequencing at Xp22.13 in human neurons) before any design.",
    "findings": [
     {
-     "claim": "Xist ASO plus a DNA-methylation inhibitor achieved 30,000-fold MECP2 upregulation from the inactive X in cultured cells; CDKL5 syndrome named as a target indication.",
+     "claim": "CDKL5 has a >1 kb CpG island spanning the TSS, 53% methylated at baseline in the core promoter.",
+     "source": "https://academic.oup.com/nar/article/48/5/2372/5700548"
+    },
+    {
+     "claim": "dCas9-TET1CD reactivated the silenced CDKL5 allele to ~38% of active allele; with VP64, >60%.",
+     "source": "https://academic.oup.com/nar/article/48/5/2372/5700548"
+    },
+    {
+     "claim": "No antisense oligonucleotides were used in the CDKL5 XCI-escape study; mechanism was epigenetic editing only.",
+     "source": "https://academic.oup.com/nar/article/48/5/2372/5700548"
+    },
+    {
+     "claim": "LINC00680 regulates CDKL5 in trans by sequestering miR-320b in breast cancer, not a cis NAT.",
+     "source": "PMID 35667653"
+    }
+   ]
+  },
+  {
+   "candidate": "Reactivate the silenced wild-type allele via XIST / X-inactivation machinery",
+   "target_evidence": "Demonstrated, with the clearest quantification of any mechanism here, and CDKL5 is explicitly named as an intended indication. An Xist ASO combined with a DNA-methylation inhibitor achieved 30,000-fold MECP2 upregulation from the inactive X in cultured cells; brain-specific genetic Xist ablation plus short-term 5-aza-2'-deoxycytidine modelled the synergy in vivo without evident toxicity, and the Xi was selectively reactivated. Independently, CDKL5 is confirmed subject to XCI with monoallelic expression and does not naturally escape, so there is a silenced wild-type allele to recover in roughly half of neurons. Postnatal maintenance dependence is supported by evidence that transcriptional repression on the inactive X is perturbed in mouse brain after Xist deletion.",
+   "published_asos": "Yes — an Xist-directed ASO is published and is the only ASO relevant to any mechanism on this list. Sequence and name are not given in the retrieved abstract; the compound is described only as 'an Xist antisense oligonucleotide' used with 5-aza-2'-deoxycytidine (PMID 29282321). Related IP: US 10,718,022 and US 11,268,150 'Compositions and methods for Xi chromosome reactivation'. In vivo work to date used genetic Xist ablation rather than the ASO, so no CNS ASO dose-response for Xist was retrieved.",
+   "coordinated_skipping": "not applicable",
+   "linked_or_multitarget": "Strong multi-target precedent, and it is intrinsic rather than optional: the published approach is explicitly a 'mixed modality' combination of an oligonucleotide with a small molecule, because neither alone reactivates efficiently. No single linked oligonucleotide construct for Xi reactivation was found; divalent branched scaffolds (US 11,896,669) remain the only linked-architecture precedent and are untested on XIST.",
+   "amenability": "XIST is an abundant, nuclear, chromatin-associated lncRNA — a favourable substrate for a nuclear-acting gapmer, and this is the only mechanism whose target is known rather than hypothetical. The disqualifying property is selectivity, not druggability: reactivation is not allele-directed, so in the ~half of neurons whose active X carries the mutant allele it de-represses the mutant copy, and it releases hundreds of unrelated X-linked genes. The companion observation that CDKL5 varies ~2.5-fold between healthy individuals and has a median detection rate of ~69% across adult brain regions suggests the required reactivation may be modest, which argues for the lowest effective exposure rather than maximal reactivation.",
+   "findings": [
+    {
+     "claim": "Xist ASO plus a DNA-methylation inhibitor gave 30,000-fold MECP2 upregulation from the inactive X in cultured cells.",
      "source": "PMID 29282321"
+    },
+    {
+     "claim": "Brain-specific Xist ablation plus short-term Aza modelled the synergy in vivo without evident toxicity; Xi selectively reactivated.",
+     "source": "PMID 29282321"
+    },
+    {
+     "claim": "CDKL5 does not naturally escape XCI and shows monoallelic expression from the active X.",
+     "source": "https://academic.oup.com/nar/article/48/5/2372/5700548"
+    },
+    {
+     "claim": "Transcriptional repression on the inactive X is perturbed in mouse brain after Xist deletion.",
+     "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6118007/"
+    },
+    {
+     "claim": "CDKL5 expression varies ~2.5-fold between healthy individuals; median detection ~69% across brain regions.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10907246"
+    },
+    {
+     "claim": "Patients with duplications containing CDKL5 show neurobehavioural alterations, so increased CDKL5 may be pathogenic.",
+     "source": "https://www.cell.com/molecular-therapy-family/molecular-therapy/fulltext/S1525-0016(24)00467-2"
     }
    ]
   },
   {
-   "skip": "P6 — Variant-dependent fallback: splice-correcting oligo for CDKL5 +5 splice-site variants (c.99+5G>A exon 3 GC-donor; c.2376+5G>A exon 16 donor). Product: restored correctly spliced full-length mRNA from the mutant allele. Requires a named variant — none supplied in this brief.",
-   "published_asos": "No ASOs found. Equivalent correction demonstrated with engineered U1 snRNA (ExSpeU1), not oligonucleotides: >70% CDKL5 protein rescue for c.99+5G>A, dose-dependent, with restored subcellular distribution, TEY phosphorylation and dendritic morphology in primary neurons. ExSpeU1 rescued +5 variants but failed at +1 variants.",
-   "coordinated_skipping": "Not applicable. Note the inverse phenomenon is documented: c.2376+5G>A causes exon 16 skipping → frameshift → premature stop in exon 18 → NMD, i.e. this exon block must NOT be skipped.",
-   "linked_or_multitarget": "Combined engineered-U1 + ASO treatment of a single splice-site lesion has precedent in BBS1; relevant if one arm must mask a cryptic site while the other strengthens the weakened donor.",
-   "amenability": "Exon 16's donor is demonstrably fragile — a +5 substitution alone removes ~80% of correctly spliced transcript and ~80% of CDKL5 protein in patient lymphocytes, and exon 3 uses a non-canonical GC 5'ss. That fragility is a warning for P1: an ASO walking intron 16 risks destabilising exon 16 definition and producing the NMD-coupled exon-16-skipped species.",
+   "candidate": "Exon skipping / multi-exon skipping of CDKL5 coding exons",
+   "target_evidence": "n/a — no variant and no target exon were supplied, and the enumeration returned no exon-based design space, so there is nothing to skip. Included only to record the negative. Note the one circumstance where CDKL5 exon-level work is real: endogenous skipping of exon 16 is pathogenic (caused by c.2376+5G>A, leading to NMD and ~80% protein loss), i.e. skipping in this gene destroys rather than restores function.",
+   "published_asos": "none found. No exon-skipping ASO or PMO has been published for CDKL5. Searches: web 'CDKL5 splice-switching oligonucleotide OR morpholino OR antisense oligonucleotide exon skipping rescue splicing mutation'; PubMed 'CDKL5 antisense oligonucleotide', 'CDKL5 isoforms splice variants'.",
+   "coordinated_skipping": "Not applicable, and not assessable: with no block of adjacent target exons defined there is no adjacent pair to test. No CDKL5 coordinated- or double-skipping report exists; searches run were 'CDKL5 splice-switching oligonucleotide OR morpholino OR antisense oligonucleotide exon skipping', 'CDKL5 isoforms splice variants', 'CDKL5 alternative splicing isoforms exon 16 exon 21 brain' (0 hits), and the web poison-exon/splicing queries above. The only naturally occurring multi-element skip documented in CDKL5 is the cryptic splice site within exon 11 used by hCDKL5_3/_4 that removes 51 bases (17 aa) in <5% of brain transcripts — a partial-exon event, not oligonucleotide-induced.",
+   "linked_or_multitarget": "none found for CDKL5. Multi-oligo cocktail precedent exists in DMD but is irrelevant here because no exon is being removed.",
+   "amenability": "Not applicable. CDKL5 encodes a kinase whose catalytic domain is conserved across all isoforms and whose pathogenic missense variants cluster in that catalytic domain, so internal coding deletions are expected to destroy function; and exon skipping would do nothing about mosaic X-inactivation, which is what drives the deficit. Actively design away from inducing skipping of CDKL5 coding exons as an off-mechanism hazard when screening any intronic oligo.",
    "findings": [
     {
-     "claim": "c.2376+5G>A causes exon 16 skipping, frameshift and a premature stop in exon 18 leading to NMD; ~80% loss of correct transcript and protein.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6747535/ (doi 10.3390/ijms20174130)"
-    },
-    {
-     "claim": "ExSpeU1 rescued >70% of CDKL5 protein for c.99+5G>A and restored kinase activity and neuronal dendritic morphology; +1 variants were not rescuable.",
+     "claim": "c.2376+5G>A causes CDKL5 exon 16 skipping and NMD, with ~80% protein reduction in patient lymphocytes.",
      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6747535/"
     },
     {
-     "claim": "CDKL5 exon 3 uses a non-canonical GC 5' splice site.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6747535/"
+     "claim": "Pathogenic CDKL5 missense variants cluster in the catalytic domain; kinase domain conserved across all isoforms.",
+     "source": "PMID 29264392"
+    },
+    {
+     "claim": "hCDKL5_3/_4 use a cryptic site in exon 11 removing 51 bases (17 aa); <5% of brain transcripts.",
+     "source": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0157758"
     }
    ]
   }
  ],
- "benchmarks_not_transferable": "(1) STK-001/zorevunersen (SCN1A poison exon 20x): seizure reduction plus cognition/behaviour gains in Ph1/2a. Non-transferable — SCN1A has a validated, highly included NMD exon; CDKL5 has no validated poison exon (absent from a 2025 transcriptome-wide brain PE atlas), and its only quantified alternative exon is in-frame/productive at ~10% usage. The SCN1A productive-mRNA headroom simply does not exist here. (2) SYNGAP1 poison-exon SSO (NMD transcript down, protein up in patient neurons) and CAMP4 CMP-002 — platform/clinical-feasibility precedent for allele-agnostic CNS upregulation only, no CDKL5 potency implication. (3) Carrette's 30,000-fold MECP2 upregulation from Xi — a cultured-cell, mixed-modality (ASO + 5-aza) number; it is not an in vivo CDKL5 expression expectation. (4) Brogidirsen/NS-089 exon-44 skipping percentages in DMD muscle and monkey — architecture precedent for a two-arm single oligo only; DMD skipping efficiency says nothing about CDKL5 isoform redistribution or CNS exposure. (5) ExSpeU1 '>70% rescue' for CDKL5 c.99+5G>A is AAV/U1-delivered and variant-specific; it is not an ASO benchmark and does not apply to the mutation-agnostic products. (6) Nusinersen-class intrathecal CNS potency should be read as delivery/dosing precedent, not payload potency, since SMN2 exon 7 inclusion has an exceptionally favourable baseline.",
+ "benchmarks_not_transferable": "Three results will be misread as expectations for CDKL5. (1) Zorevunersen/STK-001 for Dravet: a poison-exon ASO that raises productive SCN1A and Nav1.1, now with NEJM-published clinical data (March 2026, PMID 41780062) across 81 patients at 10-70 mg and FDA Breakthrough designation. Its efficacy rests on a validated, highly-used SCN1A non-productive exon; CDKL5 has no demonstrated poison exon at all (absent from a genome-wide AS-NMD screen that nominated GRIA2, FOXP1, SNRPB, DLG4, SYNGAP1), so zorevunersen gives CDKL5 only chemistry, intrathecal dosing, safety and regulatory precedent — zero expectation of fold-upregulation. (2) The GRIA2 exon-14N ASO result (up to 3.8-fold increase in non-NMD isoform) is a per-target number set by that exon's inclusion rate; it is not a CDKL5 ceiling. (3) The 30,000-fold MECP2 reactivation from Xist ASO plus Aza is a cultured-cell, allele-of-origin measurement starting from near-zero baseline on the inactive X, and it required a co-administered small molecule; it is not a CNS fold-change and cannot be quoted as expected CDKL5 protein gain. Also: divalent/branched oligonucleotide CNS durability data come from siRNA knockdown of HTT, and knockdown potency does not predict splice-switching or steric-block upregulation potency. Finally, the dCas9-TET1CD figures at the CDKL5 promoter (~38%, >60% with VP64, 20.7-fold) are the only CDKL5-specific upregulation numbers retrieved, but they were produced by epigenetic editing in SH-SY5Y, not by an oligonucleotide, and must not be presented as an ASO-achievable target. Dose ceiling to respect regardless of mechanism: duplications spanning CDKL5 are associated with neurobehavioural alterations, so a bounded upregulation window is required, with the ~2.5-fold inter-individual range in healthy human brain as the practical reference band.",
  "proposed_designs": [
-  "Prerequisite screen (not a molecule): long-read + NMD-inhibition RNA-seq of human neurons across CDKL5 introns to test whether patent-claimed intron-16 'exon 16x' is PTC-introducing; no design without it.",
-  "P1 lead: 2'-MOE PS 18-20mers tiling the intron-16 alternative exon 3'ss, branch point and internal ESE; ~40 oligos at 5-nt steps; readout productive/total CDKL5 by ddPCR.",
-  "P1 optimisation: single two-arm PMO/MOE oligo (brogidirsen architecture) joining the best 3'ss-blocking and best ESE-blocking sequences, to exceed the ~10% redistribution ceiling.",
-  "Counter-screen in every design: RT-PCR for exon-16-skipped NMD species, since exon 16's donor loses ~80% of correct splicing to a single +5 change."
+  "Discovery-first (prerequisite): fractionated nuclear/cytoplasmic RNA-seq ± NMD inhibition in human CDD and control iPSC neurons to quantify any non-productive CDKL5 event before committing.",
+  "Lead: 2'-MOE PS 18-mer steric-block tiling walk across the exon-19 proximal AATAAA (6.6 kb) and 1 kb flanks to force distal polyadenylation; ~60 oligos, 10-nt step.",
+  "Parallel arm: tiling screen of conserved destabilising/miRNA elements across the 6.6 kb exon-19 3'UTR (incl. miR-320b site); ~150 oligos, hCDKL5_1-specific.",
+  "Backstop only: nuclear-acting XIST gapmer dose-titrated with a DNMT inhibitor, read out allele-specifically for CDKL5; accept non-allele-selective reactivation as the known liability.",
+  "Design-away control: confirm no candidate oligo induces skipping of CDKL5 coding exons (especially exon 16) or loss of UTex2."
  ]
 }

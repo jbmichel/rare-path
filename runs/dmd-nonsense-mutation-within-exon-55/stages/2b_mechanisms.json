@@ -1,0 +1,125 @@
+{
+ "mechanisms": [
+  {
+   "name": "Single exon 55 skip (the brief's stated goal)",
+   "how_it_works": "ASO binds exon 55 exonic splicing enhancers and/or its 3'/5' splice sites to exclude exon 55 and splice exon 54 directly to exon 56.",
+   "rna_product": "mRNA with a 54|56 junction that deletes the PTC but shifts the reading frame (exon 55 = 190 bp, frame remainder 1), giving a frameshifted transcript that terminates prematurely downstream and is itself an NMD substrate; no cysteine-rich or C-terminal domain, so no functional dystrophin.",
+   "requires": "Nothing beyond intact exon 55 splice sites, which do exist here; but it additionally requires exon 55 to be frame-neutral, which the enumeration shows it is not.",
+   "alleles": "both",
+   "discovery_burden": "target known",
+   "fit": "not applicable",
+   "why": "The enumeration is decisive: 190 bp with frame remainder 1 means the 54-56 junction is out of frame, so this product is a frameshifted NMD substrate, not a Becker-type protein — the brief's own fallback condition is triggered."
+  },
+  {
+   "name": "Double skip of exons 54-55 (smallest in-frame block containing the lesion)",
+   "how_it_works": "One or two ASOs bind splicing enhancers/splice sites of exons 54 and 55 to exclude both, joining exon 53 to exon 56.",
+   "rna_product": "In-frame mRNA, 345 bp removed, junction ACAGAAACCAAG|GACCTCCAAGGT, deleting aa 2625-2739 (-115) from the central rod domain; translation continues through exons 56-79, giving internally deleted Becker-type dystrophin with intact N-terminal actin-binding, remaining rod/hinge repeats, and intact cysteine-rich plus C-terminal domains that anchor the dystrophin-glycoprotein complex.",
+   "requires": "Intact exons 53 and 56 with usable splice sites (present); and the del54-55 protein must actually be functional — must be checked against reported Becker genotypes and rod-domain spectrin-repeat phasing, not assumed from frame alone.",
+   "alleles": "both",
+   "discovery_burden": "target must be located",
+   "fit": "strong",
+   "why": "Fewest exons and fewest amino acids deleted (-115) of any in-frame block containing exon 55, it removes the PTC and the NMD trigger, and it keeps every domain known to be required for sarcolemmal anchoring; the open questions are ASO walk design and whether one oligo can drive coordinated 54+55 skipping or two are needed."
+  },
+  {
+   "name": "Double skip of exons 55-56",
+   "how_it_works": "One or two ASOs bind splicing enhancers/splice sites of exons 55 and 56 to exclude both, joining exon 54 to exon 57.",
+   "rna_product": "In-frame mRNA, 363 bp removed, junction CATTCATAAAAG|GTCCCATTTGGA, deleting aa 2676-2796 (-121) of the central rod domain, with full downstream translation through exon 79 and intact cysteine-rich and C-terminal domains.",
+   "requires": "Intact exons 54 and 57 splice sites (present); functional tolerance of the del55-56 rod deletion, to be checked against Becker genotype reports; and an exon-56 ASO walk, since exon-56 skipping efficiency is not known from this enumeration.",
+   "alleles": "both",
+   "discovery_burden": "target must be located",
+   "fit": "strong",
+   "why": "The co-equal minimal in-frame option (-121 aa, only 6 aa more deleted than 54-55), giving the same domain-complete Becker-type product; worth carrying in parallel with 54-55 because relative ASO skipping efficiency, not frame, will decide between them."
+  },
+  {
+   "name": "Larger in-frame multi-exon skips containing exon 55 (52-55, 54-57, 50-55, 52-57, 53-58, 54-59 and 25 further blocks)",
+   "how_it_works": "A cocktail of ASOs tiles the splicing enhancers/splice sites of each exon in a contiguous block so the whole block is excluded and a single in-frame junction forms.",
+   "rna_product": "In-frame mRNA deleting 225-485 aa of central rod/hinge sequence (e.g. 52-55 deletes aa 2515-2739; 54-57 deletes aa 2625-2849; 47-55 deletes aa 2255-2485-range residues 2255-2739), still preserving actin-binding, cysteine-rich and C-terminal domains and giving a shorter Becker-type dystrophin.",
+   "requires": "Efficient simultaneous skipping of 4-9 exons in the same transcript in the same nucleus, plus evidence that a rod domain shortened by this much still confers mechanical protection; coordinated multi-exon skipping from fewer oligos is explicitly a literature question, not computed here.",
+   "alleles": "both",
+   "discovery_burden": "target must be located",
+   "fit": "possible",
+   "why": "Frame-legal per the enumeration and a genuine fallback if exon 54 or 56 proves hard to skip, but each added oligo multiplies CMC, dosing and safety burden while deleting more rod domain, so these are backups rather than lead designs."
+  },
+  {
+   "name": "Partial exon 55 removal by activating an exon-internal cryptic splice site",
+   "how_it_works": "ASO masks the natural exon 55 3' or 5' splice site or an internal silencer so the spliceosome uses a cryptic acceptor/donor inside exon 55, excising only the PTC-containing segment.",
+   "rna_product": "mRNA retaining part of exon 55 with the PTC removed; therapeutic only if the retained fragment length makes the junction in frame and no new stop is created — otherwise a frameshift.",
+   "requires": "A cryptic splice site must actually exist inside exon 55 at a position whose spacing from the PTC is frame-compatible; nothing in the supplied enumeration addresses intra-exonic sites.",
+   "alleles": "both",
+   "discovery_burden": "unknown whether a target exists",
+   "fit": "poor",
+   "why": "Elegant because it would need only one oligo and delete the least protein, but it is contingent on an unverified cryptic site at a frame-compatible position, and induced cryptic splicing is exactly the off-target readout the brief wants excluded."
+  },
+  {
+   "name": "Exon inclusion / restoring a weakened splice site / blocking a cryptic splice site",
+   "how_it_works": "ASO would bind an intronic or exonic silencer to force inclusion of a skipped exon, or mask a cryptic site competing with the authentic one.",
+   "rna_product": "No change relevant to this lesion: the mRNA already contains every canonical exon in the correct order, and would still carry the exon-55 PTC.",
+   "requires": "A pre-existing mis-splicing event — a skipped exon, a weakened or disrupted splice site, or an activated cryptic site.",
+   "alleles": "both",
+   "discovery_burden": "unknown whether a target exists",
+   "fit": "not applicable",
+   "why": "The defect is explicitly a single-nucleotide coding change with splice sites and exon structure intact, so there is no mis-splicing event to correct or cryptic site to block."
+  },
+  {
+   "name": "Suppress a non-productive or NMD-coupled splicing event to raise functional DMD output",
+   "how_it_works": "ASO blocks a poison-exon or non-productive alternative splice event in DMD pre-mRNA to redirect flux into the productive isoform.",
+   "rna_product": "More full-length-structured DMD mRNA, every copy of which still contains the exon-55 PTC and still terminates upstream of the cysteine-rich domain, so only more non-functional truncate.",
+   "requires": "A documented non-productive or NMD-coupled splicing event in DMD pre-mRNA that constrains productive output, and a lesion that does not itself destroy the coding sequence.",
+   "alleles": "both",
+   "discovery_burden": "unknown whether a target exists",
+   "fit": "not applicable",
+   "why": "Output-raising mechanisms are futile against a PTC: the limiting problem is the stop codon in the message, not the amount of message, so increasing productive-isoform flux cannot produce dystrophin."
+  },
+  {
+   "name": "NMD evasion / stabilising the PTC-bearing mutant transcript",
+   "how_it_works": "ASO masks a downstream exon-junction or NMD-determinant region to protect the exon-55 PTC transcript from nonsense-mediated decay.",
+   "rna_product": "Abundant mutant mRNA translated to a dystrophin fragment ending in the central rod domain, lacking the cysteine-rich and C-terminal domains needed to bind beta-dystroglycan and anchor the dystrophin-glycoprotein complex.",
+   "requires": "An NMD determinant that can be masked without disrupting splicing, plus the premise that the truncated protein is useful.",
+   "alleles": "both",
+   "discovery_burden": "target must be located",
+   "fit": "not applicable",
+   "why": "Rated not applicable by the brief's own rule: the product is a non-anchoring fragment, so this would at best raise a dominant-negative or inert truncate, and ASOs cannot induce translational readthrough (that is a small-molecule mechanism, not an oligo one)."
+  },
+  {
+   "name": "5'UTR / upstream-ORF or polyadenylation / 3'UTR modulation of DMD",
+   "how_it_works": "ASO blocks an inhibitory uORF or 5'UTR structure to raise translation initiation, or shifts polyA site choice / masks destabilising 3'UTR elements to raise transcript stability.",
+   "rna_product": "Increased translation or stability of the same PTC-bearing mRNA, yielding more of the same non-functional rod-domain truncate.",
+   "requires": "A repressive uORF, 5'UTR element, alternative polyA site or destabilising 3'UTR element in DMD, none of which is established from the supplied material.",
+   "alleles": "both",
+   "discovery_burden": "unknown whether a target exists",
+   "fit": "not applicable",
+   "why": "Same logic as NMD evasion — the lesion truncates the protein, so amplifying expression of the truncated message gives no therapeutic protein; could only ever be an adjunct to a frame-restoring skip, not a standalone mechanism."
+  },
+  {
+   "name": "Transcriptional upregulation of DMD (antagoNAT against a natural antisense transcript, or enhancer/promoter-directed oligo)",
+   "how_it_works": "ASO degrades or blocks a repressive natural antisense transcript or regulatory RNA at the DMD locus to increase transcription from the DMD promoter.",
+   "rna_product": "More Dp427m pre-mRNA and mRNA, all of it still carrying the exon-55 PTC.",
+   "requires": "A repressive antisense or regulatory RNA at the DMD locus, plus a coding sequence capable of making functional protein once transcribed.",
+   "alleles": "both",
+   "discovery_burden": "unknown whether a target exists",
+   "fit": "not applicable",
+   "why": "Transcriptional upregulation cannot overcome a stop codon; it is the wrong axis for a nonsense lesion, though the same chemistry class is the right axis for a surrogate gene such as UTRN."
+  },
+  {
+   "name": "Transcript or allele knockdown (RNase H gapmer or steric block, allele-selective against the nonsense SNV)",
+   "how_it_works": "Gapmer recruits RNase H1 to cleave DMD mRNA, optionally with the mismatch at the nonsense SNV to discriminate mutant from normal.",
+   "rna_product": "Less DMD mRNA; in a hemizygous male with one mutant X, less of the only transcript present — no dystrophin gained, and loss of any residual truncate.",
+   "requires": "A gain-of-function, dominant-negative or toxic-RNA lesion, and for allele selectivity a second normal allele to spare.",
+   "alleles": "depends",
+   "discovery_burden": "target known",
+   "fit": "not applicable",
+   "why": "DMD here is a loss-of-function X-linked lesion with no second allele to preserve in affected males, so degradation removes rather than restores function; allele-selective block would only ever be relevant to a manifesting female carrier, and still gives no dystrophin."
+  },
+  {
+   "name": "Surrogate-gene upregulation: utrophin (UTRN) or modifier transcripts, by ASO",
+   "how_it_works": "ASO targets a repressive element in the UTRN transcript (uORF, 3'UTR miRNA site, destabilising element) or a repressive antisense/regulatory RNA at the UTRN locus to raise utrophin protein, or knocks down a disease modifier such as MSTN, LTBP4-pathway or fibrotic/inflammatory transcripts.",
+   "rna_product": "No change to DMD mRNA; increased full-length utrophin, a dystrophin paralogue that can localise to the sarcolemma and partially substitute in the dystrophin-glycoprotein complex, or reduced modifier output slowing fibrosis/atrophy.",
+   "requires": "A druggable repressive element in UTRN (or a validated modifier target), and evidence that the achievable fold-increase in utrophin translates into mechanical protection of muscle, diaphragm and heart.",
+   "alleles": "normal only",
+   "discovery_burden": "unknown whether a target exists",
+   "fit": "possible",
+   "why": "Mutation-agnostic and genuinely independent of the exon-55 PTC, which makes it a legitimate parallel or combination strategy, but it does not address the lesion, the specific repressive element has not been located here, and the magnitude of benefit is unestablished — it must not be assumed from exon-skipping precedent."
+  }
+ ],
+ "exon_skipping_applies": true
+}

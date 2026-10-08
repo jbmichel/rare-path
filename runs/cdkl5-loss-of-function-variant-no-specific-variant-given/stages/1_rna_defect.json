@@ -1,18 +1,20 @@
 {
  "gene": "CDKL5",
- "transcript": "NM_003159.3 (ENST00000379996; MANE Select — not re-verified, no retrieval tool available this session)",
- "defect": "Heterozygous (females, with X-inactivation mosaicism) or hemizygous (males) loss-of-function allele — nonsense, frameshift, canonical-splice or intragenic deletion — distributed across CDKL5 coding exons; no specific variant supplied. Net effect is reduced productive full-length CDKL5 mRNA and insufficient kinase-competent CDKL5 protein per neuron (haploinsufficiency/dosage deficit), not a single correctable mis-splicing event.",
- "desired_rna_product": "Increased abundance of productive, correctly spliced, full-length protein-coding CDKL5 mRNA per cell, generated from the patient's non-mutant allele by redirecting CDKL5 pre-mRNA processing away from non-productive/NMD-coupled isoforms toward the canonical coding isoform. Mutation-agnostic; no change to the canonical coding sequence. (Alternative, variant-dependent product held open: selective loss of mutant-allele transcript with wild-type spared, only if a dominant-negative allele is named.)",
- "goal": "stabilize_transcript",
+ "transcript": "NM_003159.3 (presumed MANE Select, isoform hCDKL5_1) — UNVERIFIED in this session; no retrieval tool was available. Must be confirmed, along with exon count and alternative-first-exon (1/1a/1b) naming, before any exon-level work.",
+ "defect": "An unspecified loss-of-function allele in X-linked CDKL5 removes functional CDKL5 kinase from one allele; because CDD is overwhelmingly a heterozygous-female disease with X inactivation, roughly half of neurons also silence the healthy allele, so the net defect is mosaic haploinsufficiency of full-length CDKL5 protein rather than a single aberrant transcript. There is no defined splice lesion, no shared mutant mRNA species, and no single canonical exon carrying the lesion.",
+ "desired_rna_product": "Increased absolute abundance of full-length, productive, protein-coding CDKL5 mRNA with the unaltered MANE coding sequence, produced from the intact wild-type allele in neurons — no engineered exon deletion, no frame change, no truncated or chimeric product. Achieved either by redirecting non-productive CDKL5 transcripts (poison-exon inclusion / intron retention / NMD-destined isoforms) into the productive mRNA, or by relieving X-inactivation silencing of the wild-type allele. Target an upregulation window with a bounded upper limit, since CDKL5 overexpression is itself a liability; mutant-allele transcripts are left untouched.",
+ "goal": "other",
  "target_exons": [],
  "tissues": [
-  "CNS neurons broadly (CSF-accessible)",
+  "CNS neurons broadly (postnatal, mutation-agnostic requirement)",
   "cortical excitatory neurons",
+  "cortical and hippocampal GABAergic interneurons",
   "hippocampal neurons",
-  "GABAergic interneurons",
-  "cerebellar neurons (granule, Purkinje)",
+  "cerebellar granule cells",
+  "cerebellar Purkinje neurons",
+  "striatal neurons",
   "brainstem",
   "spinal cord",
-  "retina"
+  "retina and visual pathway neurons"
  ]
 }

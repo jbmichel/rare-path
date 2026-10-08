@@ -1,177 +1,174 @@
 {
  "per_skip": [
   {
-   "skip": "exons 54-55 (2 exons, 345 bp, del aa 2625-2739, junction ACAGAAACCAAG|GACCTCCAAGGT)",
-   "published_asos": "Exon 55: Ex55_Ac0_30-mer PMO TCTTCCAAAGCAGCCTCTCGCTCACTCACC (acceptor-spanning) and hEx55_Ac83_25-mer GCAGTTGTTTCAGCTTCTGTAAGCC (Echigoya 2019, PMID 31416775/PMC6838919); Nippon Shinyaku/NCNP patent US20180142245A1 oligomers H55_8-28, H55_11-31, H55_14-34 (nt 1-34 from exon-55 5' end), 2'OMe-PS/morpholino ~21-mers, reported high-efficiency exon 55 skipping. Exon 54: Ex54_Ac42_30-mer GAGAAGTTTCAGGGCCAAGTCATTTGCCAC and hEx54_Ac22_25-mer GCCACATCTACATTTGTCTGCCACT (same paper). Wilton 2007 (PMID 17285139) built a panel covering every internal exon incl. 54 and 55; all targeted exons were removable though efficiencies differed.",
-   "coordinated_skipping": "POSITIVE and unique to this block: 'directing an AO to human dystrophin exon 54 led to removal of both exons 54 + 55' (Wilton-group rational-design paper, PMC2835229). Stated in Discussion with no AO name, sequence, cell type or efficiency given; an earlier secondary web summary of the same claim said exon-54-only and 54+55 products arose in roughly equal amounts, which I could not confirm in the retrieved text. Supporting mechanism from the same paper: H53A(+39+69) gave both exon-53 and a substantial exon-53+54 skipped species in mouse cells. Searches returning nothing: PubMed 'single antisense oligonucleotide induced skipping of two adjacent exons dystrophin unexpected co-skipping' (0), 'dystrophin exon skipping ASO induced skipping of the adjacent exon in addition to the target exon' (0), 'dystrophin exon 53 exon 54 ASO skipping both exons cocktail screening' (0); Europe PMC HTTP 503 on all queries.",
-   "linked_or_multitarget": "Brogidirsen / NS-089/NCNP-02: single PMO with a 'connected-sequence' (dual-targeting) design joining two separate target sequences inside exon 44 to block two splicing regulators at once; highest skipping of the series, active in patient cells and in cynomolgus skeletal and cardiac muscle; in clinical phase 1/2 (NCT05996003). Aartsma-Rus 2006 (PMID 16753346): double targeting within one exon improved efficiency and rescued the previously 'unskippable' exons 47 and 57.",
-   "amenability": "Exon 54 is the amenable member of the pair: one AO against it reportedly removes 54+55 (PMC2835229), and Ex54_Ac42_30-mer scored 62.0% predicted skipping. Exon 55 falls in the '5'Fast-3'Fast' flanking-intron class, and exons with a fast 5'-flanking intron are significantly less skippable; targeting nearer the exon 5'-end is more efficient (PMC10481881) - consistent with both independent exon-55 lead sets (H55 nt 1-34; Ex55_Ac0 acceptor-spanning) sitting at the 5' end. Endogenous multiple-exon-skipping in normal muscle uses donors at the 3' ends of exons 41/44/47/49 and acceptors at the 5' ends of exons 56/58/60/61 only (PMC5085753); neither an exon-54 donor nor an exon-55 acceptor is a natural re-join point, so there is no natural 54-55 bypass to recruit. No natural/endogenous exon-55 skipping rate was found. Critical frame risk: exon-54-only or exon-55-only products are both out of frame, so partial skipping yields no protein, not less protein.",
+   "candidate": "Single exon 55 skip (brief's stated goal; frame-invalid per enumeration)",
+   "target_evidence": "n/a (canonical exon, splice sites intact). Enumeration is decisive: exon 55 = 190 bp, frame remainder 1, so the 54|56 junction is out of frame.",
+   "published_asos": "Yes. Wilton et al. 2007 built AOs against every human DMD exon except the first and last, and every targeted exon could be removed (PMID 17285139). Specific exon-55 oligos retrieved: H55A(-10+20), a 2'-O-methyl AO annealing to the last 10 nt of intron 54 + first 20 nt of exon 55, reported to give dose-dependent exon 55 skipping (US9758783B2); and the PMO Ex55_Ac0 30-mer TCTTCCAAAGCAGCCTCTCGCTCACTCACC, sitting on the exon 55 acceptor, used in the Yokota-lab 45-55 cocktails (PMC6838919, PMC5957359).",
+   "coordinated_skipping": "Relevant in reverse: an AO directed to exon 54 removes exons 54+55 together, so a 54-directed oligo is a better route to the in-frame product than an exon-55 oligo. No report found of an exon-55-directed oligo also removing 54 or 56. Searches: PubMed 'DMD exon 55 antisense oligonucleotide skipping', 'double exon skipping single antisense oligonucleotide dystrophin two adjacent exons' (0 hits); web 'single antisense oligonucleotide induced skipping of two adjacent dystrophin exons'; Europe PMC unavailable (HTTP 503 on three attempts).",
+   "linked_or_multitarget": "Brogidirsen (NS-089/NCNP-02) is a single PMO molecule containing two linked sequences against two separate sites in exon 44 — direct precedent for putting two binding arms in one oligo (PMID 40725431, NCT05996003).",
+   "amenability": "Exon 55 is amenable at the acceptor site (H55A(-10+20) and Ex55_Ac0 both target -10/0 relative to the 3' splice site). Algorithmic skipping-efficiency score for Ex55_Ac0 was 120.4% — a software prediction, not a measurement; the measured cell-based readout reported was simply >20% individual skipping at 5-10 uM. No endogenous single exon-55 skipping was detected in the one study that systematically looked for endogenous skipping around this hotspot (PMC5085753).",
    "findings": [
     {
-     "claim": "'Directing an AO to human dystrophin exon 54 led to removal of both exons 54 + 55.'",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2835229/"
-    },
-    {
-     "claim": "H53A(+39+69) in mouse cells gave exon-53 and a substantial exon-53+54 skipped transcript; dual-skip never seen in human cells with it.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2835229/"
-    },
-    {
-     "claim": "Exon 55 PMO Ex55_Ac0_30-mer TCTTCCAAAGCAGCCTCTCGCTCACTCACC, predicted skipping 120.4%; exon 54 Ex54_Ac42_30-mer 62.0%.",
-     "source": "PMID 31416775 / https://pmc.ncbi.nlm.nih.gov/articles/PMC6838919/"
-    },
-    {
-     "claim": "Patent claims exon-55-skipping oligomers targeting nt 1-21, 11-31, 14-34 from the exon 55 5' end (H55_8-28, H55_11-31, H55_14-34).",
-     "source": "https://patents.google.com/patent/US20180142245A1/en"
-    },
-    {
-     "claim": "Exon 55 is classified 5'Fast-3'Fast; fast 5'-flanking introns correlate with lower skipping efficiency; 5'-end targeting beats 3'-end.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10481881/"
-    },
-    {
-     "claim": "Brogidirsen is a single ASO combining two targeting sequences within exon 44, the highest-skipping oligomer of its screen.",
-     "source": "https://www.cell.com/molecular-therapy-family/nucleic-acids/fulltext/S2162-2531(23)00252-4"
-    }
-   ]
-  },
-  {
-   "skip": "exons 55-56 (2 exons, 363 bp, del aa 2676-2796, junction CATTCATAAAAG|GTCCCATTTGGA)",
-   "published_asos": "Exon 55: as above (Ex55_Ac0_30-mer, hEx55_Ac83_25-mer, H55_8-28/11-31/14-34). Exon 56: no human exon-56 ASO sequence or efficiency found. Wilton 2007 (PMID 17285139) states a panel was designed against every internal exon and every targeted exon could be removed, which implies an exon-56 AO exists in that panel, but I could not retrieve its name, sequence or efficiency (cell.com and ScienceDirect both returned 403). Li/Wilton 2020 (PMC7516190) skipped exons 56+57 in vivo, but in the mouse Dmd transcript and with one PMO per exon; sequences are supplementary-only and were not retrieved.",
-   "coordinated_skipping": "None found. No report of one oligo skipping 55+56. Searches tried: web 'single antisense oligonucleotide induced skipping of exons 54 and 55 OR exons 55 and 56 dystrophin double skipping one oligo' (returned only cocktail/dual-targeting-within-one-exon work); web/PubMed '\"exon 56\" DMD antisense oligonucleotide skipping morpholino design nonsense exon 55'; PubMed '\"double exon skipping\" dystrophin antisense single oligonucleotide in-frame' (1 hit, theoretical applicability only); Europe PMC 503. Negative control from the closest paper: Li/Wilton 2020's exons 56+57 and 58+59 double skips each required a separate PMO per exon - 'No single PMO successfully skipped two exons simultaneously.'",
-   "linked_or_multitarget": "Same precedents as the 54-55 block: brogidirsen connected-sequence single ASO (two arms, one exon) and Aartsma-Rus double-targeting-within-one-exon. No precedent found for one linked molecule with arms in two different exons.",
-   "amenability": "Exon 56 is the strongest natural re-join acceptor in this whole region: the 5' end of exon 56 is one of only four acceptor sites used in endogenous multiple-exon skipping of normal human muscle, and the exon 44-56 junction is the headline natural product (PMC5085753) - so the splicing machinery demonstrably tolerates exon 56 as the downstream partner of a long skip. Counterpoint: endogenous MES products run ~600-fold below full-length mRNA, so this is permissiveness, not a usable baseline. Exon 56 amenability to an ASO in the human transcript is unmeasured in what I retrieved. Genotype-phenotype correlation downstream of exon 55 is explicitly described as lacking because such deletions are rare, so the functional quality of a del55-56 dystrophin is less well anchored than del54-55 (PMC7516190). Exon 55 amenability as in the 54-55 block.",
-   "findings": [
-    {
-     "claim": "Only four acceptor sites participate in endogenous multi-exon skipping: the 5' ends of exons 56, 58, 60 and 61.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5085753/"
-    },
-    {
-     "claim": "Endogenous MES products sit ~600-fold below full-length DMD mRNA (~12 extra PCR cycles to detect).",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5085753/"
-    },
-    {
-     "claim": "Exons 56+57 and 58+59 double skips in vivo each used one PPMO per exon; no single PMO skipped two exons.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7516190/"
-    },
-    {
-     "claim": "Genotype-phenotype correlations downstream of DMD exon 55 are lacking; amenability of this region is stated to be unknown.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7516190/"
-    },
-    {
-     "claim": "Wilton 2007 designed AOs to induce skipping of every exon except the first and last; all targeted exons were removable, efficiencies varied.",
+     "claim": "AO panel covering every human DMD exon except first and last; every targeted exon could be removed, some more efficiently than others.",
      "source": "PMID 17285139"
+    },
+    {
+     "claim": "H55A(-10+20) anneals to last 10 bases of intron 54 and first 20 of exon 55 and induced dose-dependent exon 55 skipping.",
+     "source": "https://patents.google.com/patent/US9758783B2/en"
+    },
+    {
+     "claim": "PMO Ex55_Ac0 (TCTTCCAAAGCAGCCTCTCGCTCACTCACC) targets the exon 55 acceptor; predicted efficiency 120.4%.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6838919/"
+    },
+    {
+     "claim": "Single exon 55 skipping is theoretically applicable to 1.8% of all DMD mutations, 3.7% of deletions.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11593839/"
     }
    ]
   },
   {
-   "skip": "exons 52-55 (4 exons, 675 bp, del aa 2515-2739, junction ATCAAGCAGAAG|GACCTCCAAGGT)",
-   "published_asos": "All four exons have validated PMOs from the 45-55 cocktail work (PMID 31416775): Ex52_Ac24_30-mer GGTAATGAGTTCTTCCAACTGGGGACGCCT (90.1% predicted); Ex53_Ac9_30-mer GTTCTTGTACTTCATCCCACTGATTCTGAA (73.9%), Ex53_Ac26_30-mer CCTCCGGTTCTGAAGGTGTTCTTGTACTTC (75.2%), hEx53_Ac43_25-mer ATTCAACTGTTGCCTCCGGTTCTGA (7.3%); Ex54_Ac42_30-mer (62.0%); Ex55_Ac0_30-mer (120.4%). Exon 53 also has two approved clinical ASOs (golodirsen, viltolarsen) - chemistry/delivery precedent only, not an efficiency expectation for a 4-exon block.",
-   "coordinated_skipping": "None found for any single oligo spanning this block. Relevant partial precedent only: Aartsma-Rus 2006 achieved multi-exon skipping across exons 45-51 with just TWO AONs aimed at the outer exons (45 and 51), but attempts to extend outer-exon-only targeting to longer stretches including exons 42-55 and 45-59 failed (PMID 16753346). The exon-54 single-AO 54+55 co-skip (PMC2835229) is the only intra-block coordinated event found and it covers 2 of the 4 exons. Searches tried: PubMed 'dystrophin exon 52 exon 55 two antisense oligonucleotides skip intervening exons 52-55 in-frame' (0); 'multiexon skipping targeting outer exons two antisense oligonucleotides dystrophin exons 45-51 intervening exons removed' (0); Europe PMC 503.",
-   "linked_or_multitarget": "Outer-exon-only two-AON multi-exon skipping (exons 45-51) is the only architecture precedent for covering intervening exons without targeting them (PMID 16753346); it broke down for longer stretches. Cocktail architecture is the established alternative: 10-11 PMOs for exons 45-55 in immortalized patient cells and in hDMD mice (PMID 31416775), and systemic Vivo-PMO cocktails in mdx52 (PMID 22869723, PMID 30171548). Brogidirsen shows a single molecule can carry two linked antisense arms.",
-   "amenability": "Best-in-region per-exon numbers: exon 52 (90.1%) and exon 53 (75.2%) are the two most efficiently skipped exons of the block, exon 54 mid (62.0%), exon 55 the kinetically unfavourable one (fast 5' intron). Exon 52's 3' end is NOT one of the four endogenous MES donors (41/44/47/49) and exon 55's 5' end is not an endogenous acceptor, so this specific junction has no natural precedent (PMC5085753). Practical risk flagged by the cocktail papers themselves: PMO cocktails generate a ladder of intermediate transcripts, in-frame and out-of-frame, so a 4-exon block needs the full block to dominate to be productive.",
+   "candidate": "Double skip of exons 54-55 (lead: 345 bp, -115 aa, 53|56 junction)",
+   "target_evidence": "n/a — both exons canonical with intact splice sites. Protein-level validation is the gap: the UMD-DMD analysis lists '54 & 55' as a double-skip strategy but supplies no phenotype data for patients carrying that in-frame deletion (PMC11593839). I found no del54-55 Becker case report. Searches: web 'DMD in-frame deletion exons 54-55 Becker phenotype', 'dystrophin deletion exons 54-55 patient Becker mild phenotype Leiden DMD database'. Nearest proxies: ~90% of del45-55 patients (75/83) are BMD not DMD (PMC6313462), and a CRISPR Dmd del52-55 mouse made near-normal muscle/heart when young but was not protected against exercise damage at 52 weeks (PMC12519546).",
+   "published_asos": "Exon 54: H54A(+67+97), reported to give strong and consistent exon 54 skipping (US9758783B2); PMO Ex54_Ac42 30-mer GAGAAGTTTCAGGGCCAAGTCATTTGCCAC, 42 nt into the exon from the acceptor, predicted 62.0% (PMC6838919, PMC5957359). Exon 55: H55A(-10+20) and Ex55_Ac0 (see above). All four are off-the-shelf starting sequences; no published oligo or cocktail has been reported as deliberately aimed at a del54-55 product.",
+   "coordinated_skipping": "YES — the strongest finding in this report. Adams/Fletcher/Wilton: 'Targeting human or canine dystrophin exon 8 always leads to transcripts missing exons 8 and 9, whereas directing AOs to human exons 17, 34 or 54 induces transcripts missing the targeted exon as well as 17+18, 34+35 and 54+55 respectively' (PMC1933433). Independently restated by Mitrpant et al.: 'directing an AO to human dystrophin exon 54 led to removal of both exons 54 + 55', citing Wilton 2007 (PMC2835229, PMID 17285139). A web snippet of the primary source describes exon-54 targeting giving exon-54-only and exon-54+55 transcripts in roughly equal amounts; I could not open Wilton 2007 full text (Cell Press 403) to confirm that quantification, so treat the ratio as unverified. Caveat: the same patent that lists H54A(+67+97) describes it only as 'strong and consistent exon 54 skipping' with no mention of exon 55, so co-skipping may be oligo- or site-dependent and must be re-measured per candidate oligo.",
+   "linked_or_multitarget": "Brogidirsen: one PMO with two linked sequences to two sites in exon 44; mean dystrophin 20.55% of normal (24.47% in cohort 2) in Phase 1/2, 4.5-year extension data presented at MDA 2026 (PMID 40725431, NCT05996003). Yokota-lab cocktails routinely co-administer 2-11 separate PMOs (PMC6838919). Exon 48 needed two different PMOs to skip well in that screen — precedent that one exon may demand two arms.",
+   "amenability": "Both exons are reachable at their 3' splice sites/early exonic ESEs; published oligos exist for each. Mechanistically exons 54 and 55 behave as a coupled splicing unit in human pre-mRNA (exon-54 targeting pulls exon 55 out with it), which is exactly what this block needs and makes it the most 'exon-definition-friendly' of the in-frame options. No endogenous 54+55 skipping was reported: the only systematic endogenous study found eight multi-exon-skipped species around the hotspot, the ideal exon44-56 (i.e. 45-55 skipped) species at ~600-fold lower abundance than full-length mRNA, and it could not resolve short/single skips (PMC5085753). So there is no meaningful baseline to build on — the event must be driven.",
    "findings": [
     {
-     "claim": "Two AONs against the outer exons 45 and 51 sufficed for exons 45-51 multi-skipping; extension to 42-55 and 45-59 did not work.",
-     "source": "PMID 16753346"
+     "claim": "AOs to human exon 54 induce transcripts missing exon 54 as well as exons 54+55.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1933433/"
     },
     {
-     "claim": "Exon 52 PMO Ex52_Ac24_30-mer predicted 90.1%; exon 53 Ex53_Ac26_30-mer 75.2%.",
-     "source": "PMID 31416775 / https://pmc.ncbi.nlm.nih.gov/articles/PMC6838919/"
+     "claim": "'directing an AO to human dystrophin exon 54 led to removal of both exons 54 + 55'.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2835229/"
     },
     {
-     "claim": "PMO cocktails produced various intermediate transcripts including in-frame and out-of-frame species.",
+     "claim": "H54A(+67+97) gave strong and consistent exon 54 skipping; H56A(+92+121) strong consistent exon 56 skipping.",
+     "source": "https://patents.google.com/patent/US9758783B2/en"
+    },
+    {
+     "claim": "PMO Ex54_Ac42 = GAGAAGTTTCAGGGCCAAGTCATTTGCCAC, predicted efficiency 62.0%; individual skipping exceeded 20% at 5-10 uM.",
      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6838919/"
     },
     {
-     "claim": "Endogenous MES donors are restricted to the 3' ends of exons 41, 44, 47 and 49.",
+     "claim": "Exon 54&55 double skipping is applicable to 0.7% of all mutations / 2.0% of deletions; no phenotype data given for the resulting in-frame deletion.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11593839/"
+    },
+    {
+     "claim": "~90% of patients with a del45-55 in-frame deletion (75/83) have BMD rather than DMD.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6313462/"
+    }
+   ]
+  },
+  {
+   "candidate": "Double skip of exons 55-56 (co-lead: 363 bp, -121 aa, 54|57 junction)",
+   "target_evidence": "n/a — canonical exons. Protein validation equally absent: UMD-DMD lists '55 & 56' at 0.6% of all mutations / 2.0% of deletions with no phenotype data for the in-frame del55-56 genotype (PMC11593839). Searches as above found no del55-56 Becker case report.",
+   "published_asos": "Exon 55: H55A(-10+20) (US9758783B2) and Ex55_Ac0 PMO (PMC6838919). Exon 56: H56A(+92+121), reported to give strong and consistent exon 56 skipping (US9758783B2). Exon 56 is outside the 45-55 hotspot, so it is absent from the Yokota PMO cocktail tables — fewer validated starting sequences than for exon 54.",
+   "coordinated_skipping": "None found. The published coupling reports in human DMD are 8+9, 17+18, 34+35 and 54+55 (PMC1933433); exon 55/56 is not among them, and nothing indicates an exon-55 oligo pulls exon 56 out or vice versa. Searches: PubMed 'dystrophin exon 54 exon 56 antisense oligonucleotide skipping efficiency' (0 hits), 'double exon skipping single antisense oligonucleotide dystrophin two adjacent exons' (0 hits); web '\"exon 56\" dystrophin antisense oligonucleotide skipping efficiency \"exon 55\" cocktail PMO', 'single antisense oligonucleotide induced skipping of two adjacent dystrophin exons'; Europe PMC down (503). Assume two oligos are required.",
+   "linked_or_multitarget": "Same precedent as above (brogidirsen dual-arm single molecule; multi-PMO cocktails). A two-arm linked oligo carrying an exon-55 and an exon-56 sequence is architecturally supported by brogidirsen but has no DMD multi-exon precedent.",
+   "amenability": "Exon 55 acceptor-site targeting is documented; exon 56 has a working exonic-ESE oligo at +92+121. Neither exon shows reported endogenous skipping. Because exon 56 is not part of any coupled pair in the literature, 55-56 inherits the full multiplicative penalty of needing two independent skips in the same transcript, whereas 54-55 does not. That asymmetry, not the 6-aa difference in deleted protein, should decide the lead.",
+   "findings": [
+    {
+     "claim": "Exon 55&56 double skipping: 0.6% of all mutations, 2.0% of deletions; no phenotype data supplied.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11593839/"
+    },
+    {
+     "claim": "Documented human DMD coupled exon pairs from single AOs are 8+9, 17+18, 34+35 and 54+55 — 55+56 is not listed.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1933433/"
+    },
+    {
+     "claim": "H56A(+92+121) is a validated exon 56 skipping oligo.",
+     "source": "https://patents.google.com/patent/US9758783B2/en"
+    }
+   ]
+  },
+  {
+   "candidate": "Larger in-frame blocks containing exon 55 (52-55, 54-57, 50-55, 52-57, 53-58, 54-59, up to 45-55)",
+   "target_evidence": "Endogenous multi-exon skipping at this hotspot exists but is negligible: eight MES species detected, the exon44-56 (45-55-skipped) species ~600-fold less abundant than full-length DMD mRNA (~12 extra PCR cycles) (PMC5085753). Protein validation is best for the widest block: ~90% of del45-55 patients are BMD (75/83) (PMC6313462). For 52-55 specifically, a CRISPR Dmd del52-55 mouse had wild-type-like muscle and heart histology/function when young but the truncated protein was insufficient to protect against exercise-induced damage by 52 weeks (PMC12519546).",
+   "published_asos": "Richest precedent of any candidate here. Yokota-lab mutation-tailored PMO cocktails for 45-55 include Ex53_Ac9 (GTTCTTGTACTTCATCCCACTGATTCTGAA, 73.9% predicted), Ex54_Ac42 and Ex55_Ac0 (PMC6838919, PMC5957359). In patient-derived myotubes, 45-55-skipped mRNA reached 61%, 43% and 27% with cocktails at 10 uM each PMO (PMC5957359). Bodywide 45-55 skipping was achieved in mdx52 mice with systemic antisense delivery (PMID 22869723), and in vivo single- and multi-exon skipping protocols in mdx52 are published (PMID 30171548, 40720023).",
+   "coordinated_skipping": "Only the 54+55 coupling is documented (PMC1933433, PMC2835229). Beyond that, the field's own verdict is negative: 'a technical problem in AO-mediated multiple exon skipping is the difficulty in excluding all targeted exons from a pre-mRNA at the same time', and the authors advocate cocktails rather than single-oligo coordinated skipping (PMC6313462). A 52-55 block could in principle be 3 oligos rather than 4 if the 54-directed oligo carries exon 55 along.",
+   "linked_or_multitarget": "Cocktails of 2-11 PMOs are the established architecture (PMC6838919, PMID 22869723). DG9 cell-penetrating-peptide conjugation improved exon 51 skipping and muscle function in hDMDdel52;mdx mice, and a minimized 45-55 DG9-PMO mixture restored dystrophin locally — the only route found for making a many-oligo cocktail deliverable.",
+   "amenability": "Individual exon amenability in 50-55 is good (published PMOs with measured >20% single-exon skipping at 5-10 uM); exon 53 was the weak member in one screen (only a faint band) and exon 48 needed two PMOs. Each added exon multiplies CMC, dosing and safety burden and deletes 110-485 aa more of the rod domain. Keep as fallback only if neither 54-55 nor 55-56 skips cleanly.",
+   "findings": [
+    {
+     "claim": "Cocktail PMOs at 10 uM each gave 45-55-skipped mRNA up to 61%, 43% and 27% in transdifferentiated DMD patient myotubes.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5957359/"
+    },
+    {
+     "claim": "Endogenous exon44-56 (45-55-skipped) transcript is present at ~600-fold lower level than full-length DMD mRNA.",
      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5085753/"
     },
     {
-     "claim": "Systemic antisense cocktail delivery achieved bodywide exons 45-55 skipping in mdx52 mice.",
+     "claim": "Dmd del52-55 mouse: truncated dystrophin maintained young muscle/heart function but did not protect against exercise damage at 52 weeks.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12519546/"
+    },
+    {
+     "claim": "Bodywide skipping of exons 45-55 achieved in dystrophic mdx52 mice by systemic antisense delivery.",
      "source": "PMID 22869723"
-    }
-   ]
-  },
-  {
-   "skip": "exons 54-57 (4 exons, 675 bp, del aa 2625-2849, junction ACAGAAACCAAG|GCCTTCAAGAGG)",
-   "published_asos": "Exon 54 and 55 PMOs as above (Ex54_Ac42_30-mer; Ex55_Ac0_30-mer, H55_8-28/11-31/14-34). Exon 56 and 57: no human ASO sequences retrieved. Exon 57 is explicitly documented as having been 'thus far unskippable' until rescued by double targeting of two sites within the exon with 2'-O-methyl phosphorothioate AONs (PMID 16753346); that paper's exon-57 AON identifiers were not retrieved. Mouse-transcript PPMOs skipping exons 56+57 exist (PMC7516190, sequences supplementary, not retrieved).",
-   "coordinated_skipping": "Partial positives at both ends but nothing spanning the block. (a) one AO to exon 54 removed 54+55 (PMC2835229); (b) exons 56+57 were skipped together in vivo but with one PPMO per exon (PMC7516190). No report of a single oligo producing 54-57. Searches tried: web '\"Morpholino Oligomer-Induced Dystrophin Isoforms to Map the Functional Domains\" exons 56 57 skipping single PMO' (confirmed cocktail, not single); PubMed co-skipping/double-skipping queries listed above (0 hits); Europe PMC 503.",
-   "linked_or_multitarget": "Exon 57 is the clearest case in the DMD literature where a two-arm/double-target approach converted an unskippable exon into a skippable one - the mechanistic rationale for the brogidirsen connected-sequence single molecule. If exon 57 must be included, a two-site strategy for exon 57 is near-mandatory.",
-   "amenability": "Mixed-to-poor. Exon 54 good; exon 55 kinetically unfavourable; exon 56 unmeasured but a natural acceptor (PMC5085753); exon 57 is a documented hard exon needing double targeting (PMID 16753346) and is also in the '5'Fast-3'Slow' flanking-intron class, with 5'-fast introns predicting low skippability (PMC10481881). There is no endogenous donor at exon 53/3' and no endogenous acceptor at exon 58... (the natural acceptors nearest this junction are exons 56 and 58, not 58's neighbour), so the 54|58 junction has no natural precedent. Functional quality of a del54-57 protein is poorly anchored because deletions downstream of exon 55 are rare (PMC7516190), though the related in-frame del56-57 isoform stabilized beta-dystroglycan and gave milder pathology in vivo.",
-   "findings": [
-    {
-     "claim": "Double targeting of two sites within one exon was effective for the 'thus far unskippable' exons 47 and 57.",
-     "source": "PMID 16753346"
     },
     {
-     "claim": "The del56+57 dystrophin isoform showed higher expression, stabilized beta-dystroglycan and less severe pathology than del58+59.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7516190/"
-    },
-    {
-     "claim": "Exon 57 is in the 5'Fast-3'Slow intron class; exons with slow 5'-introns are the more skippable ones.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10481881/"
-    },
-    {
-     "claim": "Genomic DMD deletions downstream of exon 55 account for only ~7% of mutations (16% including intra-exonic).",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7516190/"
-    }
-   ]
-  },
-  {
-   "skip": "exons 52-57 (6 exons, 1005 bp, del aa 2515-2849, junction ATCAAGCAGAAG|GCCTTCAAGAGG)",
-   "published_asos": "Exons 52-55 covered by validated PMOs (Ex52_Ac24 90.1%, Ex53_Ac26 75.2%, Ex54_Ac42 62.0%, Ex55_Ac0 120.4%; PMID 31416775). Exons 56 and 57: no human ASO sequence/efficiency retrieved; exon 57 documented as requiring double targeting (PMID 16753346).",
-   "coordinated_skipping": "None found. Only the sub-block events already cited (54+55 from one exon-54 AO; 56+57 from two PPMOs). Outer-exon-only targeting is specifically reported to fail at this length scale: attempts at exons 42-55 and 45-59 multi-skipping did not work (PMID 16753346). Searches as listed in the 52-55 and 54-57 blocks; Europe PMC 503 throughout.",
-   "linked_or_multitarget": "Cocktail precedent at this scale is real but is 10-11 separate oligos, not one linked molecule: mutation-tailored PMO sets removed 3, 8 or 10 exons in patient cells and skipped all 11 exons 45-55 in a humanized DMD mouse (PMID 31416775); long-term systemic Vivo-PMO cocktails in mdx52 (PMID 22869723; PMID 30171548). No linked multi-arm molecule spanning 6 exons found in any gene in my searches.",
-   "amenability": "This block contains both the best (52, 53, 55-lead-dependent) and the worst (57) exons of the region plus one unmeasured exon (56). Six simultaneous 100%-penetrant skips per transcript is the governing problem: the published cocktails were explicitly described as yielding mixed in-frame and out-of-frame intermediate species, and partial skipping here is non-productive because single-exon intermediates are out of frame. Endogenous precedent is adjacent but not identical: natural MES joins exon 49 to exon 56, i.e. nature skips 50-55 (a block in your enumeration), not 52-57 (PMC5085753).",
-   "findings": [
-    {
-     "claim": "Mutation-tailored PMO cocktails induced exons 45-55 skipping removing 3, 8 or 10 exons in immortalized DMD cells with dystrophin restoration by western blot.",
-     "source": "PMID 31416775"
-    },
-    {
-     "claim": "In vivo skipping of the maximum 11 human DMD exons was demonstrated with the best cocktail set.",
-     "source": "PMID 31416775"
-    },
-    {
-     "claim": "The exon 44-56-connected transcript is the natural counterpart of exons 45-55 skipping therapy; donors 41/44/47/49, acceptors 56/58/60/61.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5085753/"
-    },
-    {
-     "claim": "Attempts to induce larger multiexon-skipping stretches such as exons 17-51, 42-55 and 45-59 were unsuccessful.",
-     "source": "PMID 16753346"
-    }
-   ]
-  },
-  {
-   "skip": "exons 53-58 (6 exons, 1008 bp, del aa 2554-2889, junction TTACGGATCGAA|AGCTGCCTCCTG)",
-   "published_asos": "Exons 53-55 have validated PMOs (Ex53_Ac9/Ac26, hEx53_Ac43; Ex54_Ac42; Ex55_Ac0, hEx55_Ac83 - PMID 31416775) plus clinical exon-53 ASOs golodirsen and viltolarsen (chemistry/delivery precedent only). Exon 53 ASO chemistry has also been explored as LNA/2'OMe and FRNA variants in human myoblasts (PMC10698779). Exons 56, 57, 58: no human ASO sequences retrieved; mouse PPMOs for 56+57 and 58+59 exist (PMC7516190).",
-   "coordinated_skipping": "None found for a single oligo over this block. Sub-block positives: exon-54 AO giving 54+55 (PMC2835229); 56+57 and 58+59 as PPMO pairs in mouse (PMC7516190). Searches: all queries listed in the preceding blocks plus 'U7 snRNA multiple exon skipping dystrophin single vector tandem antisense sequences' (PubMed 0 hits); Europe PMC 503 on every attempt.",
-   "linked_or_multitarget": "Same as above: 10-11-oligo cocktails for 45-55; two-AON outer-exon targeting works only up to ~7 exons (45-51) and failed beyond; brogidirsen is the only clinical single-molecule two-arm ASO and both arms sit in one exon.",
-   "amenability": "Attractive on natural-junction grounds: the 5' end of exon 58 is one of the four endogenous MES acceptors, so an exon-53-donor-to-exon-58-acceptor join uses a naturally used acceptor (PMC5085753) - but the matching endogenous donors are exons 41/44/47/49, not exon 53, so the exact 53|58 junction is still unprecedented naturally. Exon 53 is efficiently skipped and clinically de-risked as a target; exon 57 is the documented hard exon; exon 58 skipping in mouse produced a del58+59 isoform that performed worse functionally than del56+57 (PMC7516190), a caution for including 58. Six-exon penetrance problem identical to 52-57.",
-   "findings": [
-    {
-     "claim": "The 5' end of exon 58 is one of four acceptor sites used in endogenous multi-exon skipping in normal human muscle.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5085753/"
-    },
-    {
-     "claim": "The del58+59 dystrophin isoform was less functional than del56+57 by expression, beta-dystroglycan stabilization and pathology.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7516190/"
-    },
-    {
-     "claim": "Exon 53 skipping of the human DMD transcript has been assessed with LNA-modified, FRNA and LNA-2'OMe AONs in human myoblasts.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10698779/"
-    },
-    {
-     "claim": "Exon 53 PMO Ex53_Ac9_30-mer GTTCTTGTACTTCATCCCACTGATTCTGAA, predicted 73.9%.",
+     "claim": "Exon 53 gave only a faint skipping band while exon 48 required two different PMOs; 45-55 cocktail design was mutation-tailored.",
      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6838919/"
+    }
+   ]
+  },
+  {
+   "candidate": "Partial exon 55 removal via an exon-internal cryptic splice site",
+   "target_evidence": "Not demonstrated. No report found of a cryptic acceptor or donor inside DMD exon 55, let alone one at a frame-compatible distance from the PTC. Searches: web 'DMD exon 55 splice site strength exonic splicing enhancer ... cryptic', 'exon 55 DMD nonsense mutation exon skipping strategy'; PubMed 'DMD exon 55 antisense oligonucleotide skipping'; Europe PMC unavailable (503). The one systematic analysis retrieved shows cryptic-site activation is a real competing outcome in DMD but is governed by splice-site strength and ESE density rather than being individually catalogued per exon, and it is the failure mode of splice-site-masking oligos, not a designable target.",
+   "published_asos": "None found against an exon-55 internal cryptic site. The nearest analogous published work is base-editor-mediated ESE disruption for exon skipping, which reports that exons with a strong 3' splice site and high ESE density tend to show cryptic-site activation instead of clean skipping — a warning, not a precedent.",
+   "coordinated_skipping": "not applicable",
+   "linked_or_multitarget": "none found",
+   "amenability": "Unassessable without a mapped cryptic site. Note the published exon-55 oligos (H55A(-10+20), Ex55_Ac0) both sit on the 3' splice site, which is precisely the configuration that can provoke cryptic acceptor use — so this outcome should be monitored as an off-target readout (the brief explicitly requires its absence) rather than pursued as a mechanism.",
+   "findings": [
+    {
+     "claim": "Exons showing predominantly cryptic-site activation had a strong 3' splice site and higher mean ESE motif density than exons showing clean skipping.",
+     "source": "https://www.sciencedirect.com/science/article/pii/S2211124723013529"
+    },
+    {
+     "claim": "Interplay between DMD point mutations and splicing signals determines skipping vs cryptic-site outcomes.",
+     "source": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0059916"
+    }
+   ]
+  },
+  {
+   "candidate": "Non-frame-restoring mechanisms: NMD evasion, output-raising/poison-exon block, uORF/3'UTR or transcriptional upregulation, allele knockdown",
+   "target_evidence": "No target element retrieved for any of these in DMD, and none would help: every one of them changes the amount, stability or translation of a message that still carries the exon-55 PTC. No DMD poison exon, repressive uORF or repressive natural antisense transcript was found in the searches run ('DMD exon 55 ... skipping', 'exon skipping for nonsense mutations in DMD', UMD-DMD applicability review, endogenous MES study). The endogenous-splicing survey of this locus reported only multi-exon-skipped and back-spliced circRNA by-products, not an NMD-coupled poison exon that throttles productive output (PMC5085753).",
+   "published_asos": "None found for any of these mechanisms in DMD. Note also that no ASO mechanism induces translational readthrough of a PTC; that is small-molecule territory, so stabilising the exon-55 transcript yields only more rod-domain truncate lacking the cysteine-rich and C-terminal domains.",
+   "coordinated_skipping": "not applicable",
+   "linked_or_multitarget": "not applicable",
+   "amenability": "Not applicable. Knockdown is actively harmful: in a hemizygous male there is no second allele to spare. These should be dropped from the program rather than carried as backups.",
+   "findings": [
+    {
+     "claim": "Endogenous survey of the DMD hotspot detected multi-exon-skipped transcripts and circRNA by-products, with no poison-exon/NMD-coupled regulator reported.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5085753/"
+    },
+    {
+     "claim": "60% of dystrophinopathy patients in a 1,111-mutation series would be candidates for mutation-specific approaches; 294 nonsense mutations catalogued, confirming nonsense lesions need frame restoration not output increase.",
+     "source": "PMID 19937601"
+    }
+   ]
+  },
+  {
+   "candidate": "Surrogate-gene upregulation by ASO (UTRN or modifier transcripts)",
+   "target_evidence": "No specific druggable repressive element in UTRN was located in the searches run here (the retrieval budget went to the splice candidates: searches were DMD/exon-skipping focused — 'DMD exon 55 ...', 'exon skipping applicability UMD-DMD', 'multiple exon skipping hot spots'; no dedicated UTRN uORF/3'UTR/antisense search was completed). Treat the UTRN element as unlocated, not as absent.",
+   "published_asos": "none found in this retrieval",
+   "coordinated_skipping": "not applicable",
+   "linked_or_multitarget": "not applicable",
+   "amenability": "Unknown here. It is mutation-agnostic and therefore genuinely independent of the exon-55 PTC, but it does not address the lesion and its achievable fold-change in utrophin and mechanical benefit are not established by anything retrieved. Park it as a possible combination arm; do not let it compete for the lead.",
+   "findings": [
+    {
+     "claim": "No UTRN-directed ASO element evidence was retrieved in this search set; the mechanism remains unlocated rather than excluded.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11593839/"
     }
    ]
   }
  ],
- "benchmarks_not_transferable": "(1) Eteplirsen/golodirsen/viltolarsen/casimersen clinical dystrophin and skipping percentages are single-exon, single-oligo, naked-PMO numbers for exons 51/53/45; they say nothing about the yield of a 2-6 exon coordinated skip where every intermediate species is out of frame. (2) Brogidirsen's exon-44 skipping and dystrophin results are for a dual-arm oligo whose two arms sit inside ONE exon; it is architecture precedent only, not an efficiency expectation for arms placed in two different exons. (3) The 120.4% 'predicted skipping' for Ex55_Ac0_30-mer and all other numbers from the 45-55 cocktail paper are predictive-tool/in-vitro screen values, not protein-level efficacy. (4) Exons 45-55 cocktail efficacy in mdx52 and hDMD mice reflects a different, naturally-permissive junction (endogenous exon 44-56 joining) and does not transfer to 54-55, 55-56, 52-55, 54-57, 52-57 or 53-58. (5) mdx exon-23 PPMO potency, and the mouse 56+57 / 58+59 in vivo results, are mouse-transcript data at mouse splice sites; exon numbering coincidence does not imply human exon 56/57 amenability. (6) Endogenous MES abundance (~600-fold below full-length) is a permissiveness signal, not a therapeutic baseline.",
+ "benchmarks_not_transferable": "Three numbers will be misread as expectations for this program. (1) Clinical single-skip dystrophin levels: brogidirsen mean 20.55% of normal (24.47% cohort 2) for exon 44 (PMID 40725431, NCT05996003) and DYNE-251 8.72% mean absolute muscle-adjusted dystrophin at 20 mg/kg Q4W (Dyne DELIVER release). Both are SINGLE-exon skips of exons with validated Becker genotypes, delivered by a dual-arm PMO or an Fc-TfR1 conjugate; they are chemistry, dosing, safety and delivery precedent only. A 54-55 or 55-56 product needs TWO exons out of the SAME transcript, so yield is multiplicative unless the 54+55 coupling does the work — the honest prior is a fraction of a single-skip number, not equal to it. (2) The 45-55 cocktail in vitro figures (61%/43%/27% skipped mRNA, PMC5957359) are transfection of immortalized or transdifferentiated patient cells with 10 uM of each of 5-6 PMOs — not a systemic-dose expectation, and measured as mRNA not protein. (3) Ex55_Ac0's '120.4%' and Ex54_Ac42's '62.0%' are outputs of the authors' predictive algorithm (PMC6838919), not measured skipping; the measured statement for those oligos is only '>20% at 5-10 uM'. Separately, the del45-55 Becker phenotype data (~90% BMD, 75/83) must not be transferred to del54-55 or del55-56: those two in-frame genotypes have NO retrieved patient phenotype data, and the del52-55 mouse shows a truncated rod-domain protein can look normal young yet fail under exercise stress at 52 weeks (PMC12519546).",
  "proposed_designs": [
-  "Lead: 2-PMO/PPMO cocktail for exons 54-55 - exon-54 arm at Ex54_Ac42 region, exon-55 arm at nt 11-31 (H55_11-31 / Ex55_Ac0), fewest exons, fewest aa lost.",
-  "Single-oligo probe: re-test an exon-54-only AO (Ex54_Ac42 region, 25-31mer) for the reported 54+55 co-skip; accept only if 54-alone out-of-frame product is minor.",
-  "Dual-arm connected-sequence single molecule (brogidirsen architecture): one PMO linking an exon-54 acceptor-region arm to an exon-55 5'-end arm.",
-  "Fallback if exon 54 resists: 2-oligo exons 55-56 cocktail, exploiting exon 56's natural MES acceptor; needs de novo exon-56 ASO walk."
+  "Lead: single PMO on exon 54 (H54A(+67+97) and Ex54_Ac42 as starting sequences) exploiting documented 54+55 coupling; one oligo, in-frame 53|56 junction.",
+  "Lead backstop: two-PMO cocktail, exon-54 ESE oligo + exon-55 acceptor oligo (Ex55_Ac0 / H55A(-10+20)), to force the del54-55 product if coupling is partial.",
+  "Parallel: dual-arm single molecule, brogidirsen-style, with linked exon-54 and exon-55 arms; one drug substance, two binding sites.",
+  "Fallback: two-PMO exon 55 + exon 56 cocktail (Ex55_Ac0 + H56A(+92+121)) for the 54|57 in-frame junction if exon 54 skips poorly.",
+  "Rescue: 3-4 PMO cocktail for the 52-55 block (Ex53_Ac9, Ex54_Ac42, Ex55_Ac0 + exon-52 oligo), DG9-peptide conjugated."
  ]
 }

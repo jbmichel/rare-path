@@ -1,17 +1,17 @@
 {
  "gene": "DMD",
- "transcript": "NM_004006.3",
- "defect": "A nonsense substitution in exon 55 introduces a premature termination codon into a structurally normal pre-mRNA; splice sites are intact so the exon is included, and the mature mRNA is largely degraded by NMD. Any residual protein terminates before the cysteine-rich and C-terminal domains, so it cannot bind beta-dystroglycan or assemble the DAPC - a functional null for Dp427 and for Dp260/Dp140, with Dp116/Dp71 spared.",
- "desired_rna_product": "A mature, NMD-stable DMD mRNA from which the PTC-bearing exon 55 has been excised together with the minimal set of adjacent exons (if any) required to keep the reading frame, yielding a clean exon 54-56 junction when exon 55 alone is frame-neutral; translation must proceed to the native stop codon with no cryptic-site activation or intron retention, giving an internally deleted BMD-like dystrophin. Frame-neutrality of the chosen exon set must be taken from the exon enumeration, not assumed.",
+ "transcript": "NM_004006.3 (MANE Select; Dp427m, 79 exons)",
+ "defect": "A nonsense (single-nucleotide) mutation in canonical exon 55 creates a premature termination codon in the central rod-domain coding region, so translation stops far upstream of the natural stop and the mutant mRNA is additionally a nonsense-mediated decay substrate; the result is loss of functional full-length dystrophin, including the cysteine-rich and C-terminal domains required to anchor the dystrophin-glycoprotein complex at the sarcolemma. The lesion is a point change only — splice sites, exon structure and all other exons are intact, so the sole problem to remove is the exon-55 stop codon itself.",
+ "desired_rna_product": "Mature DMD mRNA in which exon 55 is excluded and exon 54 is spliced directly to exon 56, eliminating the premature termination codon and its NMD trigger. Required property, to be verified against the exon enumeration rather than assumed: the exon 54–56 junction must preserve the downstream reading frame so translation continues through exons 56–79, yielding an internally deleted Becker-type dystrophin with intact N-terminal actin-binding domain, remaining rod/hinge repeats, and intact cysteine-rich plus C-terminal domains. Readouts: RT-PCR/RNA-seq showing exon-54–56 junction reads as the dominant species, dose-dependent loss of exon-55-containing transcript, no induced cryptic splicing or adjacent exon (54 or 56) skipping, and no frameshifted or truncating junction. If the enumeration shows exon 55 skipping is out-of-frame, this product is invalid and the goal becomes a frame-restoring multi-exon skip instead.",
  "goal": "skip_exon",
  "target_exons": [
   55
  ],
  "tissues": [
-  "skeletal muscle myofibers",
-  "diaphragm and intercostal muscle",
-  "cardiomyocytes (left ventricle)",
-  "vascular and GI smooth muscle",
-  "satellite cells (muscle stem cells, for durability)"
+  "Skeletal muscle — all groups, including limb/appendicular muscle (ambulatory and upper-limb endpoints)",
+  "Diaphragm and intercostal/respiratory muscle (respiratory decline endpoint)",
+  "Cardiac muscle — cardiomyocytes (DMD-associated cardiomyopathy; same Dp427m transcript, dominant late mortality driver)",
+  "Myogenic progenitors/satellite cells (duration of correction in regenerating fibres; not a primary endpoint tissue)",
+  "CNS neurons (desirable reach only, pending confirmation that exon 55 lies downstream of the Dp427c/Dp427p first exons and so disrupts brain isoforms; no delivery assumption attached)"
  ]
 }

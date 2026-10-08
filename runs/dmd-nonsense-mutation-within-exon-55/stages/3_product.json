@@ -1,173 +1,223 @@
 {
  "products": [
   {
-   "skip": "exons 54-55 (2 exons, 345 bp, deletes aa 2625-2739)",
-   "natural_human_equivalent": "No published Δ54-55 carrier found (searches: PubMed/EuropePMC/web for \"exons 54-55 deletion\", \"del 54-55\" dystrophin Becker; EuropePMC 503). Indirect: Kaspar group of deletions confined to exons 50-55 had median DCM onset 43 y (n=11) vs 29.5 y for exon 45-49 deletions; Fortunato review found mild/asymptomatic in-frame deletions never extend past exon 55, placing this 3' endpoint in the permissive zone.",
-   "domain_consequence": "Deleted range 2625-2739 removes the C-terminal 62 aa of spectrin repeat 21 (UniProt 2580-2686) and the N-terminal 51 aa of repeat 22 (2689-2802). Junction fuses R21 aa 2580-2624 (45 aa) to R22 aa 2740-2802 (63 aa) = 108-aa hybrid repeat, matching the 103-114 aa native repeat length, i.e. an in-phase hybrid repeat rather than a fractional repeat. No hinge removed (H3 is exons 50/51); cysteine-rich, WW (3055-3088), and C-terminal domains and all of Dp71 untouched; actin-binding ABD1/ABD2 untouched.",
-   "rescue_evidence": "None found for Δ54-55 specifically. Closest: Dmd Δ52-55 mouse (overlapping, same 3' endpoint) shows WT-level truncated dystrophin, correct sarcolemmal localisation and normal DGC assembly; Wilton/Fletcher panel showed every internal DMD exon including 54 and 55 can be skipped in vitro, efficiency variable.",
-   "judgment": "likely functional",
-   "why": "Smallest frame-restoring product, only 115 aa lost, generates an in-phase hybrid spectrin repeat with a 3' endpoint inside the empirically mild exon <=55 zone, and needs the fewest oligos (2).",
+   "candidate": "Single exon 55 skip (54|56 junction) — brief's stated goal, mechanism 'not applicable'",
+   "natural_human_equivalent": "None found as a benign allele. Single-exon out-of-frame deletions in the distal rod are DMD-type; no asymptomatic carrier of an exon-55-only deletion was found in the mild-deletion review (Fortunato 2023) or in BMD natural-history cohorts. Searches: 'exon 55 deletion DMD phenotype', 'mild dystrophinopathy deletion clusters', BMD natural history 225 patients.",
+   "domain_consequence": "Enumeration: exon 55 = 190 bp, frame remainder 1, so the 54|56 junction is out of frame. Product is not an internally deleted protein at all — translation frameshifts just after aa ~2675 (within spectrin repeat 21, UniProt 2580-2686) and stops downstream, losing repeats 22-24, WW (3055-3088), ZZ (3308-3364), the dystroglycan-binding cysteine-rich region and the syntrophin-binding C-terminus (3466-3518).",
+   "rescue_evidence": "None found, and none possible in principle: a frameshifted transcript is itself an NMD substrate. No paper was found reporting dystrophin rescue by exon-55-only skipping.",
+   "judgment": "likely poor",
+   "why": "Frame arithmetic from the enumeration is decisive — the product is a rod-domain truncate with no sarcolemmal anchor, not a Becker protein.",
    "findings": [
     {
-     "claim": "Spectrin repeat 21 spans aa 2580-2686 and repeat 22 aa 2689-2802; WW domain 3055-3088.",
+     "claim": "Dystrophin spectrin repeat 21 spans aa 2580-2686 and repeat 22 aa 2689-2802; WW 3055-3088, ZZ 3308-3364, syntrophin-binding 3466-3518.",
      "source": "https://rest.uniprot.org/uniprotkb/P11532.txt"
     },
     {
-     "claim": "BMD deletions affecting exons 50-55 had median dilated-cardiomyopathy onset 43 y (n=11) vs 29.5 y for exon 45-49 deletions, p<0.001.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2826810/"
-    },
-    {
-     "claim": "Spectrin-repeat phasing predicts cardiac severity: out-of-phase junctions median DCM onset 26 y vs 36 y in-phase (p=0.003).",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2826810/"
-    },
-    {
-     "claim": "In 81 males with absent/very mild phenotypes all deleted intervals lay within exons 2-55; asymptomatic in-frame deletions do not occur beyond exon 55.",
-     "source": "PMID 38288333 / https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2023.1288721/full"
-    },
-    {
-     "claim": "Double-exon skipping of 54-55 is applicable to only 0.7% of UMD-DMD mutations; single exon 55 skipping 1.8%.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11593839/"
+     "claim": "Mild/asymptomatic in-frame DMD deletion clusters are 45-55, 48-51, 50-51 and 51-52; no exon-55-only benign allele is listed.",
+     "source": "https://www.frontiersin.org/articles/10.3389/fneur.2023.1288721/full"
     }
    ]
   },
   {
-   "skip": "exons 55-56 (2 exons, 363 bp, deletes aa 2676-2796)",
-   "natural_human_equivalent": "No published Δ55-56 carrier found (same searches as above, plus \"exons 55-56 deletion in-frame Becker\"). Penalised by the Fortunato finding that no asymptomatic/very-mild in-frame deletion extends beyond exon 55, i.e. exon 56 falls outside the empirically permissive interval.",
-   "domain_consequence": "Deleted 2676-2796 removes the last 11 aa of repeat 21 and 108 of the 114 aa of repeat 22. Junction leaves R21 aa 2580-2675 (96 aa) spliced to a 6-aa R22 stub (2797-2802) then repeat 23 (2808-2930): effectively a whole-repeat deletion with the break inside R21 helix C, giving a 102-aa truncated/hybrid repeat. Hinges, cysteine-rich, WW, C-term intact.",
-   "rescue_evidence": "None found. No animal or patient-cell data for a Δ55-56 product.",
+   "candidate": "Double skip exons 54-55 (2 exons, 345 bp, Δaa 2625-2739, -115; junction ACAGAAACCAAG|GACCTCCAAGGT)",
+   "natural_human_equivalent": "None found. No reported human del54-55 genomic deletion with phenotype was retrieved. Searches run: 'deletion of exons 54-55 Becker patient' (extended), '\"exon 54\" \"exon 55\" DMD deletion in-frame cohort' (extended), Fortunato mild-deletion review, BMD natural-history cohort, Europe PMC (503 error, retried). Closest human anchors are deletions that end at exon 55: del48-55 (asymptomatic 35-year-old male, normal CK) and del45-55 (asymptomatic to mild BMD).",
+   "domain_consequence": "Δ2625-2739 removes the C-terminal ~62 aa of spectrin repeat 21 (2580-2686) and the N-terminal 51 aa of repeat 22 (2689-2802). The junction fuses R21 aa 2580-2624 (45 aa) to R22 aa 2740-2802 (63 aa) = 108 aa, i.e. the length of one canonical repeat (R21 = 107 aa, R22 = 114 aa) — the structurally favourable 'hybrid repeat' configuration rather than a fractional repeat. Everything else is untouched: actin-binding CH1/CH2 (15-240), nNOSμ-binding repeats 16-17 (1992-2208), hinge 3, repeats 23-24, WW, ZZ, cysteine-rich and C-terminal syntrophin/dystrobrevin region. Deletion stays entirely upstream of exon 56, the boundary beyond which no asymptomatic in-frame deletion has been observed.",
+   "rescue_evidence": "No direct del54-55 rescue data found. Indirect: PMO cocktails covering exons 45-55 (which include exon-54 and exon-55 oligos) skip multiple exons and restore dystrophin in DMD patient-derived myotubes; and multi-exon 45-55 skipping cocktails work systemically in mdx52 mice. Exon-54 and exon-55 skipping efficiencies in that work are tool-predicted (62.0% and 120.4%), not measured for a 54+55-only pair.",
+   "judgment": "likely functional",
+   "why": "Smallest in-frame product, loses only ~1 repeat's worth of distal rod, keeps nNOS-binding repeats and the whole exon 56-79 region, and the junction length predicts a foldable hybrid repeat — but the human genotype evidence is indirect.",
+   "findings": [
+    {
+     "claim": "Spectrin repeat 21 = aa 2580-2686, repeat 22 = aa 2689-2802 in dystrophin isoform 1 (3685 aa).",
+     "source": "https://rest.uniprot.org/uniprotkb/P11532.txt"
+    },
+    {
+     "claim": "In-frame deletions modelled as retaining a hybrid repeat (Δ45-48, Δ45-51) behaved better clinically than those producing a fractional repeat (Δ45-47, Δ45-49), with DCM onset delayed 11-14 years.",
+     "source": "https://www.institut-myologie.org/en/?p=639"
+    },
+    {
+     "claim": "In the mild-dystrophinopathy review all asymptomatic deleted intervals lay within exons 2-55, with no downstream exons involved (apart from one exon-78 case).",
+     "source": "https://www.frontiersin.org/articles/10.3389/fneur.2023.1288721/full"
+    },
+    {
+     "claim": "PMO cocktails skipping exons within 45-55 (3, 8 or 10 exons removed) restored dystrophin in immortalised/transdifferentiated DMD patient cells; predicted per-exon efficiencies included exon 54 = 62.0%, exon 55 = 120.4%.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5957359/"
+    },
+    {
+     "claim": "A cocktail of ASOs skipping exons 45-55 was delivered systemically and evaluated in vivo in mdx52 mice.",
+     "source": "PMID 30171548"
+    }
+   ]
+  },
+  {
+   "candidate": "Double skip exons 55-56 (2 exons, 363 bp, Δaa 2676-2796, -121; junction CATTCATAAAAG|GTCCCATTTGGA)",
+   "natural_human_equivalent": "None found. Searches: '\"exon 55-56\" in-frame deletion phenotype Becker' (extended), Fortunato review, BMD natural-history cohort. Relevant negative evidence: no asymptomatic in-frame deletion in the mild-deletion review extended beyond exon 55, and the authors argue the exon 56-79 territory is the functionally conserved core.",
+   "domain_consequence": "Δ2676-2796 clips only the last 11 aa of repeat 21 but removes 108 of the 114 aa of repeat 22, leaving a 6-aa R22 stub; the fused element is ~102 aa, short of a canonical repeat — a fractional/frayed junction rather than a clean hybrid repeat. Repeats 23-24, CR and C-terminus intact; nNOS-binding R16-17 intact. Crosses the exon-55/56 boundary.",
+   "rescue_evidence": "None found specific to del55-56. Exon-56 ASO skipping efficiency was not retrieved in any dataset (the 45-55 cocktail work stops at exon 55), so this block has no oligo precedent at all for one of its two exons.",
+   "judgment": "uncertain",
+   "why": "Equal on frame and nearly equal on size, but it eats a whole repeat without an equal-length replacement and is the only two-exon option that breaches the exon-56 boundary where human benign deletions stop.",
+   "findings": [
+    {
+     "claim": "Repeat 22 spans aa 2689-2802, so Δ2676-2796 deletes essentially the entire repeat and leaves a 6-residue remnant.",
+     "source": "https://rest.uniprot.org/uniprotkb/P11532.txt"
+    },
+    {
+     "claim": "Asymptomatic deleted intervals were confined to exons 2-55; the 56-79 region is argued to correspond to the ancestral, function-critical striated-muscle part of the gene.",
+     "source": "https://www.frontiersin.org/articles/10.3389/fneur.2023.1288721/full"
+    }
+   ]
+  },
+  {
+   "candidate": "Four-exon skip 52-55 (675 bp, Δaa 2515-2739, -225; junction ATCAAGCAGAAG|GACCTCCAAGGT)",
+   "natural_human_equivalent": "No individually phenotyped human del52-55 case retrieved, but it sits in the exon 45-55 hotspot whose deletions are the classic mild/BMD cluster, and the equivalent mouse allele was made deliberately as a BMD model. Searches: 'deletion exons 52-55 Becker patient' (extended), Fortunato review, MLPA genotype-phenotype cohort.",
+   "domain_consequence": "Δ2515-2739 removes the C-terminal 63 aa of repeat 20 (2475-2577), all of repeat 21, and the N-terminal half of repeat 22. Junction fuses R20 aa 2475-2514 (40 aa) to R22 aa 2740-2802 (63 aa) = 103 aa, close to one repeat length (near-hybrid). Hinge 3 (between R19 and R20, ~2424-2474), nNOS-binding R16-17, CH1/CH2, R23-R24, WW, ZZ, cysteine-rich and C-terminus all preserved; stops at the exon-55 boundary.",
+   "rescue_evidence": "Strongest animal evidence of any candidate here: a CRISPR Dmd Δ52-55 mouse expresses WT-like levels of truncated dystrophin with normal DGC localisation at the sarcolemma, normal grip strength, <1% central nuclei, no fibrosis and no Evans-blue uptake after exercise at 12 weeks; by 52 weeks exercised mice show reduced grip strength and lower contractile force at 75-125 Hz, with cardiac structure/function largely preserved through 52 weeks. No ASO-induced 52-55 skipping dataset found; exon 52 and 53 PMOs exist within the 45-55 cocktails.",
+   "judgment": "likely functional",
+   "why": "This is the only candidate product with a purpose-built in vivo model showing full-level, correctly localised protein and near-normal muscle, with only a late exercise-stress decrement.",
+   "findings": [
+    {
+     "claim": "Dmd Δ52-55 mice show WT-like levels of truncated dystrophin with normal DGC localisation to the sarcolemma and normal muscle histology/function at 12 weeks.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12519546/"
+    },
+    {
+     "claim": "At 52 weeks exercised Δ52-55 mice show reduced forelimb grip strength and reduced contractile force at 75, 100 and 125 Hz versus wildtype; cardiac structure and function remain mostly normal.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12519546/"
+    },
+    {
+     "claim": "Spectrin repeat 20 = aa 2475-2577, so the 52-55 junction joins a 40-aa R20 segment to a 63-aa R22 segment.",
+     "source": "https://rest.uniprot.org/uniprotkb/P11532.txt"
+    }
+   ]
+  },
+  {
+   "candidate": "Four-exon skip 54-57 (675 bp, Δaa 2625-2849, -225; junction ACAGAAACCAAG|GCCTTCAAGAGG)",
+   "natural_human_equivalent": "None found; no benign human deletion extending past exon 55 was identified in the mild-deletion review (only an exon-78 outlier). Searches as above plus 'deletion exons 54-57 DMD'.",
+   "domain_consequence": "Δ2625-2849 removes the C-terminal half of repeat 21, all of repeat 22 and the N-terminal 42 aa of repeat 23 (2808-2930); the fused element is R21 aa 2580-2624 (45 aa) + R23 aa 2850-2930 (81 aa) = 126 aa, oversized relative to a canonical repeat. CR/C-terminal domains and nNOS-binding repeats intact.",
+   "rescue_evidence": "None found for this block; no exon-56 or exon-57 ASO efficiency data retrieved.",
+   "judgment": "uncertain",
+   "why": "Frame-legal and domain-sparing on paper, but it deletes 225 aa including two exons of the exon 56-79 region where no human benign deletion exists, for no size advantage over 52-55.",
+   "findings": [
+    {
+     "claim": "Spectrin repeat 23 spans aa 2808-2930, so Δ2625-2849 truncates its N-terminal 42 residues.",
+     "source": "https://rest.uniprot.org/uniprotkb/P11532.txt"
+    },
+    {
+     "claim": "Benign/asymptomatic in-frame deletions were confined to exons 2-55 in a 81-patient literature review.",
+     "source": "https://www.frontiersin.org/articles/10.3389/fneur.2023.1288721/full"
+    }
+   ]
+  },
+  {
+   "candidate": "Six-exon skip 50-55 (1017 bp, Δaa 2401-2739, -339; junction CAGCCAGTGAAG|GACCTCCAAGGT)",
+   "natural_human_equivalent": "No isolated del50-55 case retrieved, but it is a sub-interval of the del45-55 and del48-55 alleles that are documented asymptomatic/mild, and it removes hinge 3 exactly as those do. Searches: 'deletion exons 50-55 Becker phenotype' (extended), Fortunato review.",
+   "domain_consequence": "Δ2401-2739 removes the C-terminal 23 aa of repeat 19 (2319-2423), the entire inter-repeat/hinge-3 linker (~2424-2474), all of repeat 20, all of repeat 21 and the N-half of repeat 22; junction fuses R19 aa 2319-2400 (82 aa) to R22 aa 2740-2802 (63 aa) = 145 aa, an oversized non-canonical element. nNOS-binding R16-17 (1992-2208), actin-binding CH domains, R23-24, CR and C-terminus preserved.",
+   "rescue_evidence": "No del50-55-specific rescue found. Indirect: hinge-3-removing rod deletions are the latest-onset cardiomyopathy group in BMD (mid-40s versus mid-20s for N-terminal deletions), and exon-50 PMOs are part of validated 45-55 cocktails.",
    "judgment": "plausible",
-   "why": "Equally small (121 aa) and roughly repeat-length-matched, but the junction breaks R21 helix C and the 3' endpoint crosses exon 55 into the zone where no asymptomatic human deletions are observed.",
+   "why": "Human-anchored by containment within the benign 45-55/48-55 intervals and by the late-cardiomyopathy signature of hinge-3 rod deletions, but it costs up to 6 oligos and gives an awkward 145-aa junction element.",
    "findings": [
     {
-     "claim": "Repeat 22 spans 2689-2802 and repeat 23 begins at 2808, so this deletion removes essentially all of R22.",
+     "claim": "BMD deletions removing part of the rod domain plus hinge 3 are associated with late-onset dilated cardiomyopathy (mid-40s), versus mid-20s for amino-terminal deletions.",
+     "source": "PMID 20031633"
+    },
+    {
+     "claim": "Repeat 19 = aa 2319-2423 and repeat 20 begins at 2475, placing hinge 3 within the Δ2401-2739 interval.",
      "source": "https://rest.uniprot.org/uniprotkb/P11532.txt"
-    },
-    {
-     "claim": "Mild/asymptomatic in-frame DMD deletions were never found to extend beyond exon 55 across 81 males.",
-     "source": "PMID 38288333 / https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2023.1288721/full"
     }
    ]
   },
   {
-   "skip": "exons 52-55 (4 exons, 675 bp, deletes aa 2515-2739)",
-   "natural_human_equivalent": "No human Δ52-55 case series found; the mouse-model authors state \"little is known about variants in... exons 53-55\". Region-level support: exon 45-55 deletion is the best-characterised mild genotype (asymptomatic to Becker; ~90% dystrophin reported) and exons 48-51, 48-53, 49-51, 50-51, 51-52 deletions appear in fully asymptomatic adults >43 y.",
-   "domain_consequence": "Deleted 2515-2739 removes the C-terminal 63 aa of repeat 20 (2475-2577), all of repeat 21, and the N-terminal 51 aa of repeat 22. Junction fuses R20 aa 2475-2514 (40 aa) to R22 aa 2740-2802 (63 aa) = 103-aa hybrid repeat, exactly the native R20 length - in-phase. Hinge 3 (exons 50/51) preserved; cysteine-rich/WW/C-terminal and Dp71 intact.",
-   "rescue_evidence": "Dmd Δ52-55 CRISPR mouse: WT-like truncated dystrophin levels, normal sarcolemmal DGC, normal histology/echo and protection from exercise damage at 12 weeks; at 52 weeks reduced post-exercise grip strength and lower tetanic force at 75-125 Hz - i.e. functional but not fully normal with age.",
-   "judgment": "likely functional",
-   "why": "Only in-frame product in this window with a direct, published in-vivo model showing near-normal muscle and cardiac phenotype plus a perfectly in-phase 103-aa hybrid repeat.",
-   "findings": [
-    {
-     "claim": "Dmd Δ52-55 mice express WT-like levels of truncated dystrophin with proper sarcolemmal localisation and normal DGC assembly, normal histology and cardiac parameters at 12 weeks.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12519546/"
-    },
-    {
-     "claim": "At 52 weeks Δ52-55 mice showed lower post-treadmill forelimb grip strength and decreased contractile force at 75-125 Hz than WT.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12519546/"
-    },
-    {
-     "claim": "Deletions of exons 48-51, 48-53, 49-51, 50-51, 51-52 and 45-55 are recorded in fully asymptomatic males aged >43 y.",
-     "source": "https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2023.1288721/full"
-    }
-   ]
-  },
-  {
-   "skip": "exons 54-57 (4 exons, 675 bp, deletes aa 2625-2849)",
-   "natural_human_equivalent": "None found (searches for in-frame deletions spanning exons 54-57 / 56-57 returned no carrier reports). Exon 56-57 involvement lies outside the exon <=55 interval that contains all reported asymptomatic in-frame deletions.",
-   "domain_consequence": "Deleted 2625-2849 removes the C-terminal half of repeat 21, all of repeat 22, and the N-terminal 42 aa of repeat 23 (2808-2930). Junction fuses R21 aa 2580-2624 (45 aa) to R23 aa 2850-2930 (81 aa) = 126-aa chimera, longer than any native repeat here (103-123) and ~108% of a repeat in relative phase - borderline out-of-phase/fractional. C-terminal domains intact.",
+   "candidate": "Six-exon skip 52-57 (1005 bp, Δaa 2515-2849, -335)",
+   "natural_human_equivalent": "None found; extends two exons past the exon-55 boundary beyond which no asymptomatic deletion was observed.",
+   "domain_consequence": "Removes R20 C-half, all R21, all R22 and the N-terminal 42 aa of R23; junction fuses 40 aa of R20 to 81 aa of R23 = 121 aa. CR/C-terminus and nNOS-binding repeats intact.",
    "rescue_evidence": "None found.",
    "judgment": "uncertain",
-   "why": "No human equivalent, 3' endpoint past exon 55, and a 126-aa oversized chimeric repeat that fits the out-of-phase category associated with earlier cardiomyopathy.",
+   "why": "Strictly worse than 52-55 — same upstream breakpoint, 110 more residues deleted, and it enters the exon 56-79 region.",
    "findings": [
     {
-     "claim": "Out-of-phase spectrin-repeat junctions were associated with median DCM onset 26 y vs 36 y for in-phase (p=0.003).",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2826810/"
-    },
-    {
-     "claim": "Repeat 23 spans aa 2808-2930.",
-     "source": "https://rest.uniprot.org/uniprotkb/P11532.txt"
+     "claim": "No asymptomatic in-frame deletion in the reviewed mild-dystrophinopathy cohort extended beyond exon 55.",
+     "source": "https://www.frontiersin.org/articles/10.3389/fneur.2023.1288721/full"
     }
    ]
   },
   {
-   "skip": "exons 52-57 (6 exons, 1005 bp, deletes aa 2515-2849)",
-   "natural_human_equivalent": "None found. Same exon >55 penalty.",
-   "domain_consequence": "Removes C-terminal 63 aa of repeat 20, all of repeats 21 and 22, N-terminal 42 aa of repeat 23. Junction fuses R20 aa 2475-2514 (40 aa) to R23 aa 2850-2930 (81 aa) = 121-aa hybrid, close to R22/R23 lengths, so phasing is acceptable, but three repeats are lost and the rod is shortened by 335 aa. Hinge 3, cysteine-rich, WW, C-terminal intact.",
+   "candidate": "Six-exon skip 53-58 (1008 bp, Δaa 2554-2889, -336) and seven/eight-exon skip 54-59 (Δaa 2625-2979, -355)",
+   "natural_human_equivalent": "None found for either; both breach exon 56 and reach exons 58-59.",
+   "domain_consequence": "53-58: removes the C-terminal 24 aa of R20, all R21-R22 and most of R23, fusing R20 aa 2475-2553 (79 aa) to R23 aa 2890-2930 (41 aa) = 120 aa. 54-59: removes R21 C-half, all R22, all R23 and the N-terminal 45 aa of R24 (2935-3040), fusing 45 aa of R21 to R24 aa 2980-3040 (61 aa) = 106 aa, i.e. hybrid-length but at the cost of ~3 repeats and the loss of most of the distal rod immediately preceding WW/CR.",
    "rescue_evidence": "None found.",
-   "judgment": "uncertain",
-   "why": "Acceptable junction phasing but no human or animal precedent, 6 oligos required, and the product crosses the exon-55 boundary beyond which no benign deletions are documented.",
+   "judgment": "likely poor",
+   "why": "They delete three of the four repeats that sit immediately upstream of the WW/cysteine-rich anchor and lie wholly inside the exon 56-79 interval that human genetics flags as intolerant.",
    "findings": [
     {
-     "claim": "Repeat 20 spans 2475-2577, repeat 21 2580-2686, repeat 22 2689-2802.",
+     "claim": "Repeat 24 spans aa 2935-3040 and the WW domain begins at 3055, so Δ2625-2979 leaves only a 75-aa stub of rod before the WW/CR module.",
      "source": "https://rest.uniprot.org/uniprotkb/P11532.txt"
     },
     {
-     "claim": "Mild/asymptomatic in-frame deletions in 81 males never involved exons downstream of 55 (single exon 78 excepted).",
-     "source": "PMID 38288333"
+     "claim": "Mild/asymptomatic deletion intervals in the literature review stopped at exon 55; the 56-79 region is argued to be the function-critical core.",
+     "source": "https://www.frontiersin.org/articles/10.3389/fneur.2023.1288721/full"
     }
    ]
   },
   {
-   "skip": "exons 53-58 (6 exons, 1008 bp, deletes aa 2554-2889)",
-   "natural_human_equivalent": "None found. Extends two exons beyond the empirically permissive 3' limit.",
-   "domain_consequence": "Deleted 2554-2889 removes the C-terminal 24 aa of repeat 20, all of repeats 21 and 22, and the N-terminal 82 aa of repeat 23. Junction fuses R20 aa 2475-2553 (79 aa) to R23 aa 2890-2930 (41 aa) = 120-aa chimera; relative phase ~111%, borderline. C-terminal/WW/Dp71 intact.",
-   "rescue_evidence": "None found.",
-   "judgment": "uncertain",
-   "why": "Largest exon-count penalty among the small set with no human equivalent and a borderline-phased junction well past exon 55.",
-   "findings": [
-    {
-     "claim": "Repeat 23 spans 2808-2930, so resumption at aa 2890 leaves only its last 41 residues.",
-     "source": "https://rest.uniprot.org/uniprotkb/P11532.txt"
-    }
-   ]
-  },
-  {
-   "skip": "exons 50-55 (6 exons, 1017 bp, deletes aa 2401-2739) - larger comparator",
-   "natural_human_equivalent": "No exact Δ50-55 series found, but it sits inside the exon 45-55 interval that is the best-documented mild genotype: del45-55 appears in asymptomatic men, isolated hyperCKaemia and mild weakness (6/22 asymptomatic cases; 18.6% of CK/WCK), with ~90% dystrophin reported, and deletions of exons 50-51 and 51-52 are asymptomatic. Caveat: in a 57-subject del45-55 cohort 28% had Becker phenotype, 19% isolated cardiomyopathy, and cognitive impairment in 90% of children - the latter tracks genomic breakpoints affecting the Dp140 promoter and is not expected from exon-level ASO skipping.",
-   "domain_consequence": "Deleted 2401-2739 removes the C-terminal 23 aa of repeat 19 (2319-2423), the entire R19-R20 linker containing hinge 3 (~2424-2474, encoded by exons 50/51), all of repeats 20 and 21, and the N-terminal 51 aa of repeat 22. Junction fuses R19 aa 2319-2400 (82 aa) to R22 aa 2740-2802 (63 aa) = 145 aa, far longer than a native repeat, so no clean hybrid repeat; the loss of hinge 3 changes rod flexibility. Cysteine-rich, WW, C-terminal, Dp71 intact.",
-   "rescue_evidence": "Product class validated clinically: PBGENE-DMD (dual ARCUS nuclease, single AAV) excises exons 45-55 to restore near-full-length dystrophin; first patient dosed August 2026 in Phase 1/2 FUNCTION-DMD in ambulatory boys aged 2-7 with exon 45-55 mutations. Multi-exon 45-55 ASO/PMO cocktails restore in-frame transcript and dystrophin in immortalised DMD patient myotubes.",
+   "candidate": "Eight-exon skip 48-55 (1305 bp, Δaa 2305-2739, -435; junction CAGTGGATAAAG|GACCTCCAAGGT)",
+   "natural_human_equivalent": "Best single human anchor in the whole set: a 35-year-old male carrying a DMD exons 48-55 deletion was completely asymptomatic — normal muscle strength, no pseudohypertrophy, normal serum CK at 198 IU/L (ref 20-270) — found incidentally during prenatal testing of his daughter. Caveat: a single case at 35 years, with the authors noting follow-up is needed.",
+   "domain_consequence": "Δ2305-2739 removes the C-terminal ~14 aa of repeat 18 (2211-2318), all of repeat 19, hinge 3, all of repeat 20, all of repeat 21 and the N-half of repeat 22; the junction fuses R18 aa 2211-2304 (94 aa) to R22 aa 2740-2802 (63 aa) = 157 aa. Critically it stops short of repeats 16-17 (1992-2208), which carry the nNOSμ-binding site, so unlike del45-55 the nNOS site is retained; CH1/CH2, R23-24, WW, ZZ, CR and C-terminus intact.",
+   "rescue_evidence": "No ASO-induced 48-55 skipping dataset found. Exon-48 through exon-55 PMOs individually exist within published 45-55 cocktails, which restored dystrophin in DMD patient-derived myotubes.",
    "judgment": "likely functional",
-   "why": "Hinge-3-deleting products in the 45-55 class have the strongest human mild-phenotype and clinical-development support, and the latest cardiomyopathy onset, despite an un-phased 145-aa rod junction.",
+   "why": "It is the only product in this set with a documented, genuinely asymptomatic adult human carrier, and it keeps the nNOS-binding repeats that del45-55 loses — the problem is purely buildability (up to 8 oligos).",
    "findings": [
     {
-     "claim": "Hinge 3 corresponds to exons 50 and/or 51; deletions removing it (exons 50-55 group) had median DCM onset 43 y with no patient younger than 30.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2826810/"
+     "claim": "A 35-year-old male with a DMD exons 48-55 deletion was asymptomatic with normal muscle strength and normal CK (198 IU/L), detected incidentally at prenatal diagnosis.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12043877/"
     },
     {
-     "claim": "PBGENE-DMD uses two ARCUS nucleases in one AAV to excise DMD exons 45-55; first patient dosed August 2026 in Phase 1/2 FUNCTION-DMD (ages 2-7, exon 45-55 mutations).",
-     "source": "https://investor.precisionbiosciences.com/node/12251/html"
+     "claim": "nNOSμ binds spectrin-like repeats 16 and 17 of dystrophin, encoded by exons 42-45.",
+     "source": "PMID 22589245"
     },
     {
-     "claim": "In a 57-subject DMD del45-55 cohort, 28% had Becker phenotype, 19% isolated cardiopathy, 53% were asymptomatic, and 90% of children had cognitive impairment; breakpoint impact on the Dp140 promoter was assessed.",
-     "source": "PMID 35897138"
-    },
-    {
-     "claim": "Exons 45-55 skipping is theoretically applicable to ~47% of DMD patients and is the most broadly applicable strategy in UMD-DMD.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11593839/"
+     "claim": "Repeat 18 spans aa 2211-2318, so Δ2305-2739 clips only its last ~14 residues and leaves repeats 16-17 intact.",
+     "source": "https://rest.uniprot.org/uniprotkb/P11532.txt"
     }
    ]
   },
   {
-   "skip": "exons 49-55 (7 exons, 1119 bp, deletes aa 2367-2739) - larger comparator",
-   "natural_human_equivalent": "No exact Δ49-55 series found; nested within the del45-55 mild genotype and adjacent to asymptomatic del48-53 and del49-51. Deletion of exon 48 alone is subclinical/very mild in 17 males from 9 families, and in-frame deletions around exon 48 are reported as attenuated, supporting tolerance of this rod segment.",
-   "domain_consequence": "Deleted 2367-2739 removes the C-terminal 57 aa of repeat 19, hinge 3 (~2424-2474), all of repeats 20 and 21, and the N-terminal 51 aa of repeat 22. Junction fuses R19 aa 2319-2366 (48 aa) to R22 aa 2740-2802 (63 aa) = 111-aa hybrid repeat, within native range - in-phase, and hinge 3 removed. Cysteine-rich, WW, C-terminal, Dp71 intact.",
-   "rescue_evidence": "Same class-level evidence as Δ50-55: PBGENE-DMD exon 45-55 excision in Phase 1/2 (first patient dosed Aug 2026) and 45-55 PMO cocktail restoration in patient-derived myotubes. No Δ49-55-specific rescue data.",
+   "candidate": "Eleven-exon skip 45-55 (the published multi-exon hotspot block; in-frame per literature — exact aa range not in the supplied enumeration, which lists only the 16 smallest of 31 blocks)",
+   "natural_human_equivalent": "The best-characterised human equivalent of any DMD skipping product: del45-55 carriers range from asymptomatic (including a 69-year-old asymptomatic grandfather and two further asymptomatic boys in one family) to mild late-onset BMD; it was the most frequent asymptomatic in-frame deletion (N=6) in the mild-deletion review and the most frequent deletion (17/68) in one cohort; in a 225-patient BMD natural-history study, del45-55 patients did not require ventilation. But phenotype is variable: in 12 biopsied del45-55 BMD patients nNOSμ expression/localisation varied widely and strictly cytosolic nNOSμ tracked with the more severe phenotypes.",
+   "domain_consequence": "Removes the nNOSμ-binding spectrin repeats 16-17 region (aa 1992-2208; nNOS site encoded by exons 42-45) together with R18-R22 proximal sequence and hinge 3. Actin-binding CH1/CH2, R23-R24, WW, ZZ, cysteine-rich and C-terminal syntrophin/dystrobrevin domains intact. This is the one candidate that sacrifices the nNOS site that all the smaller blocks keep.",
+   "rescue_evidence": "The most developed ASO precedent: PMO cocktails (5-6 oligos, mutation-tailored) skip exons 45-55 and restore dystrophin in DMD patient fibroblast-derived myotubes and in immortalised DMD muscle cells; a 45-55 cocktail has been delivered systemically and evaluated in mdx52 mice. No clinical-stage 45-55 cocktail program was found.",
    "judgment": "likely functional",
-   "why": "Best structural profile of any product - in-phase 111-aa hybrid repeat plus hinge-3 removal (latest DCM onset) - inside the clinically validated 45-55 window, but 373 aa lost and 7 oligos needed.",
+   "why": "Human genotype-phenotype evidence is unmatched and ASO feasibility is published, but it deletes the most protein, loses nNOS anchoring and needs 5-6 oligos — all unnecessary when the lesion is a single exon-55 PTC.",
    "findings": [
     {
-     "claim": "A single exon 48 deletion produced very mild or subclinical BMD in 17 males from nine families.",
-     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5509810/"
+     "claim": "A family with an in-frame del45-55 included a 69-year-old asymptomatic grandfather and two further asymptomatic boys alongside an affected 5-year-old.",
+     "source": "https://www.frontiersin.org/articles/10.3389/fneur.2023.1288721/full"
     },
     {
-     "claim": "Repeat 19 spans 2319-2423 and repeat 20 starts at 2475, leaving the 2424-2474 inter-repeat linker (hinge 3 region) between them.",
+     "claim": "In 12 BMD patients with spontaneous del45-55, nNOSμ expression/localisation varied widely and strictly cytosolic mislocalisation was associated with more severe phenotype.",
+     "source": "PMID 22589245"
+    },
+    {
+     "claim": "In a 225-patient BMD natural-history cohort, patients with exon 45-47 and exon 45-55 deletions did not require ventilator use.",
+     "source": "PMID 37882106"
+    },
+    {
+     "claim": "Mutation-tailored PMO cocktails of 5-6 oligos induced exons 45-55 skipping and dystrophin restoration in DMD patient-derived myotubes.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5957359/"
+    }
+   ]
+  },
+  {
+   "candidate": "Non-skipping mechanisms whose product is a truncated/altered protein: NMD evasion (stabilising the exon-55 PTC transcript), 5'UTR/3'UTR or transcriptional upregulation, and intra-exonic cryptic-site partial exon 55 removal",
+   "natural_human_equivalent": "For NMD evasion/upregulation the product equals the natural rod-domain truncate seen in DMD nonsense patients — uniformly severe DMD, not Becker; no benign human equivalent found. For partial-exon-55 removal, no human allele with an intra-exon-55 internal deletion was retrieved.",
+   "domain_consequence": "NMD evasion/upregulation: protein stops within repeat 21 (2580-2686), losing repeats 22-24, WW (3055-3088), ZZ (3308-3364), the β-dystroglycan-binding cysteine-rich region and the syntrophin-binding C-terminus (3466-3518) — no DGC anchoring. Cryptic-site partial exon 55 removal: would delete an unknown sub-segment of repeat 21/22; therapeutic only if the retained fragment keeps the frame, which is unverified.",
+   "rescue_evidence": "None found. No ASO-mediated readthrough or NMD-evasion rescue of a DMD nonsense allele producing functional dystrophin was retrieved; readthrough is a small-molecule mechanism, not an oligo one.",
+   "judgment": "likely poor",
+   "why": "More of a protein that cannot bind β-dystroglycan is not therapy, and the cryptic-site route depends on a site nobody has shown exists at a frame-compatible position.",
+   "findings": [
+    {
+     "claim": "The β-dystroglycan-anchoring WW/cysteine-rich module (3055-3364) and syntrophin-binding C-terminus (3466-3518) lie far downstream of exon 55 and are absent from any exon-55 PTC truncate.",
      "source": "https://rest.uniprot.org/uniprotkb/P11532.txt"
-    },
-    {
-     "claim": "Deletion 45-55 was the most frequent multi-exon deletion among mild dystrophinopathies and is associated with ~90% dystrophin and a mild phenotype.",
-     "source": "https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2023.1288721/full"
     }
    ]
   }
  ],
- "ranking_rationale": "Rank: Δ54-55 > Δ52-55 > Δ49-55 > Δ50-55 > Δ55-56 > Δ52-57 > Δ54-57 ≈ Δ53-58. Δ54-55 wins on buildability (2 oligos; no coordinated 54/55 skipping reported, so assume 2) plus an in-phase 108-aa hybrid repeat and a 3' endpoint inside the exon ≤55 mild zone. Δ52-55 is the only product with in-vivo rescue data. Δ49-55/Δ50-55 have the strongest human and clinical precedent but need 6-7 oligos."
+ "ranking_rationale": "Rank: 54-55 > 52-55 > 48-55 > 50-55 > 45-55 > 55-56 ≈ 54-57 > 52-57 > 53-58/54-59; single exon-55 skip and NMD/upregulation routes are dead. 54-55 is smallest, keeps nNOS repeats and all of exons 56-79, and its 108-aa junction predicts a foldable hybrid repeat; 52-55 adds a BMD mouse showing WT-level, correctly localised dystrophin; 48-55 has the one asymptomatic human carrier."
 }

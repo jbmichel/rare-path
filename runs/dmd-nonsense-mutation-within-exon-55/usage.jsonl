@@ -1,8 +1,9 @@
-{"t": "18:48:29", "agent": "rna_defect", "turns": 3, "tokens": 13194, "notional_usd": 0.1294}
-{"t": "19:53:41", "agent": "6_programs", "turns": 31, "tokens": 580073, "notional_usd": 1.7099}
-{"t": "19:54:43", "agent": "4_aso", "turns": 52, "tokens": 860446, "notional_usd": 2.0651}
-{"t": "19:54:49", "agent": "5_delivery", "turns": 30, "tokens": 380427, "notional_usd": 1.741}
-{"t": "19:55:00", "agent": "3_product", "turns": 35, "tokens": 733512, "notional_usd": 1.8747}
-{"t": "19:57:24", "agent": "decision", "turns": 4, "tokens": 132644, "notional_usd": 1.2969}
-{"t": "19:58:59", "agent": "editor", "turns": 3, "tokens": 30724, "notional_usd": 0.3587}
-{"t": "20:00:43", "agent": "editor", "turns": 3, "tokens": 30995, "notional_usd": 0.3224}
+{"t": "11:53:42", "agent": "rna_defect", "turns": 3, "tokens": 12815, "notional_usd": 0.1107}
+{"t": "11:55:32", "agent": "mechanisms", "turns": 3, "tokens": 24337, "notional_usd": 0.2878}
+{"t": "12:02:14", "agent": "6_programs", "turns": 32, "tokens": 486066, "notional_usd": 1.9231}
+{"t": "12:02:45", "agent": "4_aso", "turns": 49, "tokens": 799266, "notional_usd": 2.4165}
+{"t": "12:02:49", "agent": "5_delivery", "turns": 28, "tokens": 555509, "notional_usd": 1.8318}
+{"t": "12:03:39", "agent": "3_product", "turns": 27, "tokens": 442092, "notional_usd": 1.6494}
+{"t": "12:06:54", "agent": "decision", "turns": 4, "tokens": 166832, "notional_usd": 1.6247}
+{"t": "12:08:15", "agent": "writer", "turns": 4, "tokens": 173294, "notional_usd": 1.542}
+{"t": "12:08:47", "agent": "editor", "turns": 3, "tokens": 19706, "notional_usd": 0.1155}

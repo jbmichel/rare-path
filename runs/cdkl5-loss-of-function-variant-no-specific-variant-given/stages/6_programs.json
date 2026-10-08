@@ -1,155 +1,175 @@
 {
  "programs": [
   {
-   "organization": "Elaaj Bio (wholly owned subsidiary of Loulou Foundation)",
-   "program": "ELJ-101 — AAV CDKL5 gene replacement",
-   "target": "CDKL5 transgene (coding replacement, mutation-agnostic)",
-   "delivery": "AAV, single dose into cisterna magna (CSF)",
-   "stage": "Preclinical/manufacturing scale-up with Viralgen; first-in-human planned early 2027; 1-yr main trial + 4-yr extension",
-   "key_result": "No efficacy data disclosed; CMC/scale-up partnership announced 5 May 2026",
-   "changes_decision_because": "Disease foundation now owns the lead asset — partnership and patient access run through Loulou.",
-   "source": "https://www.prnewswire.com/news-releases/viralgen-partners-with-elaaj-bio-to-advance-gene-therapy-program-for-cdkl5-deciency-disorder-302761295.html ; https://cdkl5.com/wp-content/uploads/2026/03/webinar_CDD_gene_therapy_EN.pdf"
-  },
-  {
-   "organization": "Ultragenyx (REGENXBIO NAV license)",
-   "program": "UX055 — AAV9 CDKL5, neuron-specific promoter",
-   "target": "CDKL5 coding replacement",
-   "delivery": "Intra-CSF AAV9",
-   "stage": "Preclinical; IND delayed since 2023; no timeline given at 2025 CDKL5 Forum; ~zero public progress in 2026",
-   "key_result": "Mouse motor/cognitive improvement and correction of hyperexcitability in patient iPSC organoids; stalled on dose/study design optimization",
-   "changes_decision_because": "Best-funded CDD AAV has stalled on dosing — AAV-dose window is the field's bottleneck, not vector availability.",
-   "source": "http://www.draccon.com/dracaena-report/2025forum ; https://cdkl5.com/news/ux055-program-update-re-delayed-ind-filing"
-  },
-  {
-   "organization": "UC Davis (Fink lab; CIRM-funded; UC case 2026-355-0)",
-   "program": "Split-dCas9–TET1/activator epigenetic reactivation of silenced CDKL5 allele",
-   "target": "CDKL5 promoter CGI on inactive X (mutation-agnostic, females)",
-   "delivery": "Dual-AAV9, ICV/CSF; miniaturized single-vector version in development",
-   "stage": "Preclinical; manufacturing initiated, tox upcoming (2025 Forum); 2025 preprint",
-   "key_result": "ICV delivery in Cdkl5 E6del het mice restored protein, re-engaged downstream signaling, rescued motor/cognitive deficits; normalized network activity in patient NSCs/organoids. Earlier work: CDKL5 reactivated to ~60% of active-X level in human neuronal cells",
-   "changes_decision_because": "Directly validates our target product profile — raise CDKL5 from the patient's non-mutant allele — via a rival modality.",
-   "source": "https://www.researchsquare.com/article/rs-7095603/v1 ; https://techtransfer.universityofcalifornia.edu/NCD/34759.html ; https://pmc.ncbi.nlm.nih.gov/articles/PMC7049732/"
-  },
-  {
-   "organization": "Stoke Therapeutics / Acadia Pharmaceuticals",
-   "program": "MECP2 TANGO ASO (Rett) — DISCONTINUED",
-   "target": "MECP2 non-productive splicing (upregulation)",
-   "delivery": "Intrathecal ASO (intended)",
-   "stage": "Discontinued; Rett no longer a Stoke disease area as of 2026 (secondary source — verify in Stoke 10-K/Acadia filings before relying on it)",
-   "key_result": "No preclinical potency data ever published; Acadia moved Rett effort to ACP-2591 (small molecule)",
-   "changes_decision_because": "Only ASO-upregulation attempt in an X-linked NDD was dropped — do not assume TANGO transfers to CDKL5.",
-   "source": "https://synapse.patsnap.com/drug/cc6148de7d5749458065a930752e54db ; https://acadia.com/en-us/pipeline"
-  },
-  {
-   "organization": "Stoke Therapeutics",
-   "program": "Zorevunersen (STK-001) — SCN1A TANGO ASO, Dravet",
-   "target": "SCN1A poison exon (different gene — chemistry/delivery precedent only)",
-   "delivery": "Intrathecal 2'-MOE ASO, ages 2–<18",
-   "stage": "Phase 3 EMPEROR fully enrolled (162 pts, Jun 2026); readout Q3 2027; pre-NDA H2 2026; rolling NDA Q1 2027",
-   "key_result": "No discontinuations in EMPEROR; elevated CSF protein the main safety finding; 4-yr OLE support",
-   "changes_decision_because": "Sets the intrathecal pediatric ASO dosing/safety/regulatory template; potency is not transferable.",
-   "source": "https://www.businesswire.com/news/home/20260111172978/en/Stoke-Therapeutics-Announces-Updates-to-Timelines-for-the-Completion-of-Enrollment-and-a-Phase-3-Data-Readout-from-the-EMPEROR-Study-of-Zorevunersen-for-the-Treatment-of-Dravet-Syndrome ; https://www.biospace.com/press-releases/stoke-therapeutics-announces-second-quarter-2026-financial-results-and-provides-business-updates"
+   "organization": "Ultragenyx (ex-GeneTx)",
+   "program": "apazunersen / GTX-102, ASO suppressing UBE3A-AS to de-repress the silenced paternal UBE3A allele",
+   "target": "UBE3A-AS lncRNA (Angelman syndrome) — different gene, same mechanism class as our antagoNAT/allele-de-repression options and same 'relieve silencing of the intact allele' logic",
+   "delivery": "Intrathecal bolus, children 4–17",
+   "stage": "Phase 3 Aspire (~129 patients) read out 2026-09-02: MISSED primary (Bayley-4 cognitive raw score) and key secondary (MDRI)",
+   "key_result": "Failed registrational trial despite earlier open-label developmental gains; the most mature clinical test of ASO-mediated de-repression of a silenced allele in a pediatric neurodevelopmental disorder",
+   "changes_decision_because": "Nearest-analogue allele-de-repression ASO failed Phase 3; raises endpoint, age-window and biomarker bar for CDD.",
+   "source": "https://ir.ultragenyx.com/news-releases/news-release-details/ultragenyx-announces-phase-3-aspire-results-angelman-syndrome ; NCT06617429"
   },
   {
    "organization": "Ionis Pharmaceuticals",
-   "program": "Obudanersen (ION582) — UBE3A-ATS ASO, Angelman",
-   "target": "Antisense transcript knockdown to upregulate UBE3A (different gene; mechanism-class precedent)",
-   "delivery": "Intrathecal ASO, ages 2–<18",
-   "stage": "Phase 3 REVEAL pivotal cohort fully enrolled (136 pts); topline 2H 2027; FDA Breakthrough",
-   "key_result": "Advanced to Ph3 on protein-upregulation mechanism in a pediatric NDD; endpoints = cognition/communication/sleep domains",
-   "changes_decision_because": "Proves FDA will take ASO-mediated upregulation in pediatric NDD with non-seizure endpoints.",
-   "source": "https://clinicaltrials.gov/study/NCT06914609 ; https://ir.ionis.com/node/34841"
+   "program": "ION582, ASO targeting UBE3A-AS",
+   "target": "UBE3A-AS (Angelman) — same de-repression mechanism class",
+   "delivery": "Intrathecal, pediatric",
+   "stage": "Phase 3 REVEAL ongoing (~200 participants), no Phase 3 readout found",
+   "key_result": "Still running after the competing GTX-102 Phase 3 failure; expressive communication chosen as primary endpoint rather than a cognitive raw score",
+   "changes_decision_because": "Endpoint choice, not mechanism, may have sunk Aspire; informs CDD outcome-measure selection before committing.",
+   "source": "https://www.neurologylive.com/view/details-surrounding-phase-3-study-ion582-angelman-syndrome-announced ; https://ir.ionis.com/static-files/ddb9cd9b-a3f1-4e96-99bd-575429f24681"
+  },
+  {
+   "organization": "Stoke Therapeutics / Biogen",
+   "program": "zorevunersen (STK-001), TANGO ASO suppressing an SCN1A poison exon to raise productive SCN1A mRNA",
+   "target": "SCN1A non-productive splicing event (Dravet) — exactly the mechanism-1 payload class proposed for CDKL5, different gene",
+   "delivery": "Intrathecal, children 2 to <18; doses up to 70 mg; repeat dosing",
+   "stage": "Phase 3 EMPEROR fully enrolled (162 patients, Jun 2026); Phase 3 data expected Q3 2027; Phase 1/2a showed ~85% median seizure reduction at 3 months",
+   "key_result": "Only clinically advanced proof that poison-exon suppression can raise a haploinsufficient CNS gene; tolerability limited mainly to CSF protein elevation and procedural vomiting",
+   "changes_decision_because": "Validates chemistry, intrathecal pediatric dosing and safety envelope — payload potency is SCN1A-specific, not transferable to CDKL5.",
+   "source": "https://www.businesswire.com/news/home/20260630626667/en/ ; https://www.stoketherapeutics.com/wp-content/uploads/IEC-2025-Phase-3-Study-Design.pdf ; https://www.stoketherapeutics.com/pipeline/"
+  },
+  {
+   "organization": "Stoke Therapeutics",
+   "program": "Published TANGO pipeline — Dravet and ADOA/OPA1 only",
+   "target": "SCN1A, OPA1; CDKL5 is NOT on the disclosed pipeline",
+   "delivery": "Intrathecal / ocular",
+   "stage": "Clinical (Dravet), earlier (ADOA)",
+   "key_result": "No CDKL5 TANGO program disclosed by the originator of the non-productive-splicing platform, despite CDD being a high-profile haploinsufficient CNS epilepsy",
+   "changes_decision_because": "Either CDKL5 lacks a usable non-productive event, or the lane is genuinely open — must resolve before committing.",
+   "source": "https://www.stoketherapeutics.com/pipeline/ (fetched 2026-10-08; CDKL5 absent)"
+  },
+  {
+   "organization": "UC Davis (Kyle Fink, Julian Halmai, David Cameron) — CIRM-funded, Loulou-affiliated",
+   "program": "Dual-effector split-dCas9 epigenome editing (transcriptional activation + DNA demethylation) at the CDKL5 promoter to reactivate the silenced allele",
+   "target": "CDKL5 locus itself on the inactive X — same gene, same tissue, same 'relieve X-silencing' biology as our XIST mechanism",
+   "delivery": "Dual AAV9, CSF/intrathecal administration",
+   "stage": "Preclinical; preprint Aug 2025; dose-finding done, patient organoid validation done, manufacturing started, NHP toxicology beginning per 2025 CDKL5 Forum",
+   "key_result": "Restored CDKL5 protein and downstream signalling, rescued motor/cognitive deficits in Cdkl5 E6del heterozygous mice and normalised network activity in patient-derived NSCs and cortical organoids",
+   "changes_decision_because": "Proves locus-specific reactivation works and beats genome-wide XIST knockdown; makes XIST-ASO mechanism strategically obsolete.",
+   "source": "https://www.researchsquare.com/article/rs-7095603/v1 ; https://www.mxwbio.com/resources/research-25-epigenetic-reactivation-cdkl5 ; http://www.draccon.com/dracaena-report/2025forum"
+  },
+  {
+   "organization": "Academic (MGH/Lee lab lineage) and reviews 2025–2026",
+   "program": "XIST-ASO plus DNA-demethylation combination to reactivate Xi-linked MECP2",
+   "target": "XIST RNA — the exact target of our mechanism-7, in a comparable X-linked neurodevelopmental disease",
+   "delivery": "Cell-based only; no in vivo CNS program or company program found",
+   "stage": "Preclinical/cellular; no clinical or disclosed industry program retrieved",
+   "key_result": "XIST ASO alone is insufficient — robust reactivation required co-inhibition of DNA methylation; reactivation is reversible on drug withdrawal and de-represses many X-linked genes",
+   "changes_decision_because": "Single-agent XIST ASO will not deliver CDKL5; combination requirement and off-gene de-repression kill the monotherapy case.",
+   "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13516522/ ; https://pmc.ncbi.nlm.nih.gov/articles/PMC9915138/ ; https://www.sciencedirect.com/science/article/pii/S2352304225004532"
+  },
+  {
+   "organization": "Elaaj Bio (wholly owned subsidiary of Loulou Foundation) with Viralgen (CDMO) and Jim Wilson/Penn",
+   "program": "ELJ-101, AAV9-based CDKL5 gene replacement",
+   "target": "CDKL5 — same gene, same tissue, mutation-agnostic",
+   "delivery": "AAV9 into CSF (intrathecal/ICV)",
+   "stage": "Manufacturing scale-up underway; CTA targeted ~end 2026; first clinical trial planned early 2027",
+   "key_result": "Disease foundation is funding and manufacturing its own AAV program; partnership announced 2026-05-05 with initial process development complete",
+   "changes_decision_because": "The key CDD foundation is committed to AAV first; an ASO program needs a differentiated niche and separate funding.",
+   "source": "https://www.prnewswire.com/news-releases/viralgen-partners-with-elaaj-bio-to-advance-gene-therapy-program-for-cdkl5-deciency-disorder-302761295.html ; http://www.draccon.com/dracaena-report/2025forum ; https://cdkl5.com/wp-content/uploads/2026/03/webinar_CDD_gene_therapy_EN.pdf"
   },
   {
    "organization": "Ultragenyx",
-   "program": "GTX-102 — UBE3A-ATS ASO, Angelman",
-   "target": "Same mechanism as ION582, different sequence/chemistry",
-   "delivery": "Intrathecal ASO",
-   "stage": "Late-stage clinical",
-   "key_result": "Reported safe with rapid improvements in cognition, communication, sleep vs natural history",
-   "changes_decision_because": "Second entrant on one ASO mechanism is viable — being behind Elaaj/Ultragenyx on CDD is not fatal.",
-   "source": "https://www.clinicaltrialsarena.com/news/ionis-phase-iii-angelman-syndrome/"
+   "program": "UX055, AAV9 CDKL5 gene replacement with neuron-specific promoter",
+   "target": "CDKL5 — same gene, same CSF delivery route",
+   "delivery": "AAV9 into CSF",
+   "stage": "Still preclinical as of 2025–26; IND filing publicly delayed beyond Q4 2023 and not yet filed; no discontinuation announcement found",
+   "key_result": "Multi-year IND slip for a well-resourced CDKL5 AAV program; supporting NHP expression work and mouse efficacy reported, but no clinical entry",
+   "changes_decision_because": "CDKL5 AAV dosing/expression control is evidently hard; a dose-titratable ASO has a real differentiation argument.",
+   "source": "https://www.cdkl5.com/news/ux055-program-update-re-delayed-ind-filing ; https://www.ultragenyx.com/our-research/pipeline/ux055-for-cdd/ (pipeline page returned 403 on direct fetch) ; http://www.draccon.com/dracaena-report/2025forum"
   },
   {
-   "organization": "Taysha Gene Therapies",
-   "program": "TSHA-102 — intrathecal AAV9 MECP2 (miRARE), Rett",
-   "target": "X-linked NDD gene replacement (comparator disease)",
-   "delivery": "Single intrathecal AAV9, 1x10^15 vg",
-   "stage": "Pivotal REVEAL dosing complete (17 pts plateau population; N=33 total across trials), Aug 2026 cutoff",
-   "key_result": "No severe treatment-related SAEs/DLTs across N=33; multi-domain functional gains deepening through ≥12 months",
-   "changes_decision_because": "An X-linked NDD IT-AAV will likely read out and file first — sets the efficacy bar our ASO must clear.",
-   "source": "https://www.barchart.com/story/news/36903523/taysha-gene-therapies-announces-progress-across-tsha-102-pivotal-gene-therapy-program-in-rett-syndrome ; https://tayshagtx.gcs-web.com/news-releases/news-release-details/taysha-gene-therapies-reports-full-year-2025-financial-results"
+   "organization": "Biogen",
+   "program": "CDKL5 AAV gene therapy (and all AAV gene therapy work)",
+   "target": "CDKL5 — same gene",
+   "delivery": "AAV, CSF",
+   "stage": "DISCONTINUED; Biogen exited all AAV gene therapy work company-wide",
+   "key_result": "A third large-pharma CDKL5 AAV effort was terminated; EEG-in-mouse efficacy methodology was its main residual contribution",
+   "changes_decision_because": "Third AAV exit signals portfolio-level, not purely scientific, risk; EEG biomarker precedent is reusable for an ASO.",
+   "source": "http://www.draccon.com/dracaena-report/2025forum ; https://www.fiercebiotech.com/biotech/biogen-officially-ends-all-aav-gene-therapy-work-prompting-team-restructure"
   },
   {
-   "organization": "Neurogene",
-   "program": "NGN-401 — AAV9 MECP2 (EXACT regulation), Rett",
-   "target": "X-linked NDD gene replacement (safety precedent)",
-   "delivery": "ICV AAV9; high dose 3E15 vg",
-   "stage": "High-dose cohort halted by FDA after SAE; trial continues at 1E15 vg",
-   "key_result": "Treatment-related hyperinflammatory syndrome (HLH-like) at 3E15 vg; low-dose AEs mild and steroid-responsive",
-   "changes_decision_because": "Hard AAV dose ceiling in this patient population — a redosable CSF ASO has a real safety-differentiation claim.",
-   "source": "https://ir.neurogene.com/news-releases/news-release-details/neurogene-provides-update-ngn-401-gene-therapy-clinical-trial ; https://www.pharmamanufacturing.com/industry-news/news/55243638/neurogene-halts-high-dose-rett-syndrome-therapy-after-adverse-event"
+   "organization": "Chinese University of Hong Kong (Ip lab) et al.",
+   "program": "Adenine base editing correcting CDKL5 R550* in patient iPSC-derived neurons",
+   "target": "CDKL5 coding variant — same gene, variant-specific",
+   "delivery": "In vitro iPSC editing only; no in vivo CNS delivery demonstrated",
+   "stage": "Published Scientific Reports, April 2026",
+   "key_result": "Restored CDKL5 protein and downstream signalling to isogenic-control levels and normalised neuronal morphology and transcriptome",
+   "changes_decision_because": "Sets the efficacy ceiling: endogenous-level, unaltered CDKL5. Our bounded-window upregulation must be benchmarked against it.",
+   "source": "https://www.nature.com/articles/s41598-026-48097-y (direct fetch blocked by Nature IDP redirect; details from indexed abstract)"
   },
   {
-   "organization": "Apertura Gene Therapy (capsid licensor; 2025 CDKL5 Forum listed Apertura as IV-delivery route for CDD)",
-   "program": "TfR1 CapX — engineered hTfR1-binding AAV capsid",
-   "target": "Receptor-mediated BBB crossing (TfR1) for IV CNS delivery",
-   "delivery": "Intravenous AAV",
-   "stage": "Preclinical/clinic-ready; partner programs entering clinic 2026–2027; non-exclusive academic MTA program open",
-   "key_result": "Broad brain/spinal-cord distribution at doses ~40-fold below current CNS-targeted AAV",
-   "changes_decision_because": "TfR1 is now a licensable CNS route — IV competitors may escape the intrathecal-only distribution limit.",
-   "source": "https://aperturagtx.com/science-tfr1-capx-cns-targeted-capsids/ ; https://www.prnewswire.com/news-releases/apertura-gene-therapy-launches-open-aperture-a-material-transfer-agreement-program-to-facilitate-non-commercial-access-to-tfr1-capx-for-academic-researchers-302686400.html ; http://www.draccon.com/dracaena-report/2025forum"
-  },
-  {
-   "organization": "University of Bologna / Ciani-Giustetto groups (academic)",
-   "program": "Igk-TATk-CDKL5 — secretable TAT-fused CDKL5 protein replacement",
-   "target": "CDKL5 protein (bypasses RNA entirely)",
-   "delivery": "AAV-encoded secreted TATk-CDKL5, mosaic Cdkl5 +/- mouse",
-   "stage": "Preclinical, published 2025 (Neurotherapeutics)",
-   "key_result": "Efficacy in mosaic het model; no adverse effects in brain or peripheral organs and no apoptosis in high-CDKL5-mRNA cells — i.e., CDKL5 overexpression well tolerated in the het condition",
-   "changes_decision_because": "Loosens the upregulation ceiling: modest ASO-driven CDKL5 overshoot looks tolerable, countering duplication-based dosage fears.",
-   "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12664459/ ; https://www.nature.com/articles/ejhg2014217"
-  },
-  {
-   "organization": "University of Ferrara / Pinotti–Landsberger (academic)",
-   "program": "Engineered U1snRNA rescue of CDKL5 splice mutations",
-   "target": "CDKL5 canonical splice-site variants (~15% of pathogenic alleles)",
-   "delivery": "Vector-expressed modified U1snRNA (not an oligo)",
-   "stage": "Proof-of-concept in cells (transgene context); no in vivo or clinical follow-up found 2025-2026",
-   "key_result": "Full restoration of CDKL5 protein, localization and kinase activity for +5 splice-site variants; failed for +1 variants",
-   "changes_decision_because": "Defines the splice-correctable CDKL5 subset and that +1 variants resist splice-based rescue — bounds a variant-specific ASO.",
-   "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6747535/"
+   "organization": "University of Ferrara / Italian academic groups",
+   "program": "Engineered U1 snRNA (ExSpeU1) rescue of CDKL5 splicing variants",
+   "target": "CDKL5 splice-region variants (e.g., partial intron retention, exon 16 skipping with c.2376+5G>A)",
+   "delivery": "Vector-expressed U1 snRNA, in vitro",
+   "stage": "Published preclinical (IJMS 2019); no clinical follow-on found",
+   "key_result": "Confirms a real, mapped splice-defective CDKL5 patient subset with correctable aberrant splicing — the population where a splice-switching ASO is mechanistically strongest",
+   "changes_decision_because": "Defines a tractable splice-variant CDD subgroup — a competing modality already exists there, and an ASO alternative is credible.",
+   "source": "https://doi.org/10.3390/ijms20174130"
   },
   {
    "organization": "n-Lorem Foundation",
-   "program": "Personalized (n-of-1) intrathecal ASOs; no CDKL5 patient program found",
-   "target": "Patient-private variants, incl. splice-altering",
-   "delivery": "Intrathecal ASO, chronic redosing",
-   "stage": "100+ patients advanced, >10 dosed in clinic; >260 doses with no ASO-related SAEs",
-   "key_result": "Open regulatory/charitable path for variant-specific ASOs; no CDKL5 program disclosed as of the searches run",
-   "changes_decision_because": "Gives a cheap first-in-human route for a CDKL5 splice-variant ASO and shows that lane is unclaimed.",
-   "source": "https://www.nlorem.org/n-lorem-foundation-announces-the-50th-nano-rare-patient-receives-personalized-aso-medicine/ ; clinicaltrials.gov n-Lorem single-patient INDs (e.g. NCT07197268, NCT07221760)"
+   "program": "Individualized (n-of-1) CNS ASOs for nano-rare variants",
+   "target": "Mechanism- and gene-agnostic; splice-variant CDD patients are in scope",
+   "delivery": "Intrathecal, chronic, including pediatric; >3 years of continuous dosing in one patient",
+   "stage": "50th nano-rare patient dosed (announced 2026-04-21)",
+   "key_result": "No ASO-related serious adverse events across the treated cohort; FDA has specific guidance enabling this pathway",
+   "changes_decision_because": "Cheapest route to first-in-human CDKL5 ASO data via a splice-variant patient; gives chronic CNS safety precedent.",
+   "source": "https://www.businesswire.com/news/home/20260421766112/en/n-Lorem-Foundation-Announces-the-50th-Nano-rare-Patient-Receives-Personalized-ASO-Medicine ; https://www.nlorem.org/drug-discovery-platforms/"
   },
   {
-   "organization": "UCB / Lundbeck / Praxis / Immedica (symptomatic standard of care)",
-   "program": "Fenfluramine Ph3 (NCT05064878, positive, AES Dec 2025); bexicaserin DEEp OCEAN Ph3; relutrigine EMERALD Ph3; ganaxolone Ph3 in 6 mo–<2 yr (NCT05249556)",
-   "target": "Seizure frequency (not CDKL5)",
-   "delivery": "Oral small molecules",
-   "stage": "Approved (ganaxolone) + multiple Ph3 recruiting/positive 2025-2026",
-   "key_result": "Seizure endpoint is becoming crowded and background therapy is intensifying; infant trials now enrolling from 6 months",
-   "changes_decision_because": "Forces a non-seizure primary endpoint and a developmental/early-treatment design, and shifts dosing to infants.",
-   "source": "https://clinicaltrials.gov/study/NCT05064878 ; https://clinicaltrials.gov/study/NCT05249556 ; http://www.draccon.com/dracaena-report/2025forum"
+   "organization": "EveryONE Medicines Inc.",
+   "program": "Phase 1/2 open-label within-participant dose escalation of individualized ASOs for severe genetic CNS conditions",
+   "target": "Any variant amenable to ASO correction, age ≥1 year — CDKL5 splice variants eligible in principle",
+   "delivery": "Intrathecal; 48-week treatment period",
+   "stage": "Phase 1/2 started 2026-01-13; estimated completion 2026-10-31",
+   "key_result": "A registered, multicentre regulatory framework for n-of-1 ASOs now exists, rather than ad hoc expanded access",
+   "changes_decision_because": "A ready clinical vehicle for a variant-specific CDKL5 ASO without building a standalone IND.",
+   "source": "https://clinicaltrials.gov/study/NCT07410143 ; https://www.hra.nhs.uk/planning-and-improving-research/application-summaries/research-summaries/investigation-of-individualised-asos-in-people-with-unique-severe-genetic-cns-conditions"
   },
   {
-   "organization": "Biogen; Amicus; PTC Therapeutics",
-   "program": "CDKL5 gene therapy programs — all discontinued pre-clinical-trial",
-   "target": "CDKL5 coding replacement",
-   "delivery": "AAV (details undisclosed)",
-   "stage": "Terminated (reported at 2025 CDKL5 Forum)",
-   "key_result": "Three pharma entrants exited CDD gene therapy before dosing a patient; no technical cause disclosed",
-   "changes_decision_because": "Pharma has repeatedly failed to make AAV-CDKL5 work — diligence the reason before copying that architecture.",
+   "organization": "UCB",
+   "program": "Fenfluramine (Fintepla) in CDD — GEMZ Phase 3",
+   "target": "5-HT/5HT2C symptomatic seizure control — not CDKL5 RNA; defines the control arm",
+   "delivery": "Oral",
+   "stage": "Positive Phase 3 (AES, Dec 2025); regulatory submission for CDD planned",
+   "key_result": "47.6% vs 2.8% median reduction in countable motor seizures; 45.2% vs 4.5% ≥50% responders; CGI-I significant",
+   "changes_decision_because": "Standard of care is rising fast; a disease-modifying ASO cannot be positioned on seizure count alone.",
+   "source": "https://www.ucb.com/newsroom/press-releases/article/ucb-presents-positive-results-from-gemz-phase-3-study-at-aes-showing-fenfluramine-significantly-reduces-countable-motor-seizure-frequency-in-cdkl5-deficiency-disorder ; NCT05064878"
+  },
+  {
+   "organization": "Lundbeck; Praxis Precision Medicines",
+   "program": "Bexicaserin (DEEp OCEAN Ph3) and relutrigine (EMERALD Ph3) in DEE/CDD",
+   "target": "5HT2C agonism; next-generation sodium channel blockade — symptomatic comparators in the same patient population",
+   "delivery": "Oral, once-daily (relutrigine), home administration",
+   "stage": "Phase 3 ongoing",
+   "key_result": "Two further Phase 3 symptomatic agents competing for the same small CDD trial population, with oral home dosing",
+   "changes_decision_because": "Enrolment competition plus oral convenience versus repeat intrathecal dosing weakens an ASO's recruitment and value case.",
    "source": "http://www.draccon.com/dracaena-report/2025forum"
+  },
+  {
+   "organization": "Apertura Gene Therapy",
+   "program": "Receptor-mediated BBB-crossing capsid for IV CNS delivery, flagged for future CDD use",
+   "target": "Delivery receptor at the BBB (capsid, not oligonucleotide conjugate)",
+   "delivery": "Intravenous, BBB-crossing",
+   "stage": "Preclinical; presented at 2025 CDKL5 Forum",
+   "key_result": "Active work to replace intrathecal CSF dosing with systemic BBB-crossing delivery for CDD specifically",
+   "changes_decision_because": "Signals the field expects CSF dosing to be superseded; non-intrathecal CNS exposure assumptions should be revisited.",
+   "source": "http://www.draccon.com/dracaena-report/2025forum"
+  },
+  {
+   "organization": "Academic transcript annotation (Hector et al., PLoS ONE)",
+   "program": "Characterisation of CDKL5 transcript isoforms in human and mouse",
+   "target": "CDKL5 isoform architecture — prerequisite for every mechanism in our list",
+   "delivery": "n/a",
+   "stage": "Published reference",
+   "key_result": "hCDKL5_1 is the dominant CNS isoform: 9.7 kb, 18 exons, terminal exon 19, with a very large ~6.6 kb 3'UTR; exon 21 belongs to testis-restricted hCDKL5_5",
+   "changes_decision_because": "Resolves the flagged annotation gap: alternative-last-exon switching targets testis isoform, so the 6.6 kb 3'UTR is the real handle.",
+   "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4912119/ ; https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0157758"
   }
  ],
- "as_of": "2026-09-14 (latest ClinicalTrials.gov record updates; latest company/foundation disclosures Aug–Sep 2026: Taysha Aug 2026 data cutoff, Stoke Q2 2026 update, Elaaj/Viralgen 5 May 2026)"
+ "as_of": "2026-10-08 (most recent disclosure retrieved: Ultragenyx Phase 3 Aspire topline, 2026-09-02; Viralgen/Elaaj partnership, 2026-05-05)"
 }

@@ -1,130 +1,130 @@
 {
- "recommendation_line": "CDKL5-UP: mutation-agnostic 2'-MOE PS steric-block ASO raising productive full-length hCDKL5_1 from the patient's non-mutant allele by suppressing a CDKL5 non-productive splicing event (candidates: intron-16 \"exon 16x\", exon-20 3'-terminal isoform), intrathecal bolus on a pediatric loading/q4-month schedule — funded only through a payload-existence gate.",
- "recommendation_text": "The target product is the best available: unmodified canonical 960-aa CDKL5 from a healthy allele, no coding change, one ASO, mutation-agnostic, titratable and redosable. The route is solved to the standard the field already accepts — plain intrathecal 2'-MOE in children. What is not solved is the payload: no validated CDKL5 non-productive or NMD-coupled splicing event was retrieved, so we fund a six-month existence-and-magnitude experiment in human neurons, not a program.",
+ "recommendation_line": "Build a variant-directed steric-block splice-correction ASO (uniform 2'-MOE PS, intrathecal lumbar bolus, with an intravitreal companion arm) that restores exon-16 inclusion and unaltered full-length CDKL5 from the patient's own allele in the mapped splice-variant CDD subgroup, archetype c.2376+5G>A — and run a discovery screen for a CDKL5 non-productive splicing event before committing any mutation-agnostic upregulation program.",
+ "recommendation_text": "For the mutation-agnostic lesion as written there is currently no retrievable ASO target: no CDKL5 poison exon or AS-NMD exon has been described (Hector 2016 found no NMD route; CDKL5 is absent from a genome-wide AS-NMD splice-switching screen), no cis natural antisense transcript exists, the 5'UTR element that carries human genetic evidence is translation-promoting rather than repressive, and the alternative-last-exon switch points at a testis-restricted isoform with only ~10% headroom. The one place in this gene where an ASO has a defined target, an unaltered MANE coding product and strong human precedent is the mapped splice-defective patient subset, where c.2376+5G>A causes exon-16 skipping, NMD and ~80% protein loss and has already been corrected by engineered U1 snRNA — an ASO is the superior modality there, and the n-of-1/basket regulatory vehicles to dose it already exist. Run that as the lead and fund the non-productive-splicing discovery screen in parallel, so the broad mutation-agnostic program is only started if a real flux-bearing event is found.",
  "why_this_design": [
-  "Only option giving the true canonical brain protein from the patient's own allele: zero domain cost, covers males and females, single oligo.",
-  "Redosable CSF oligo differentiates on safety: AAV-CDKL5 stalled on dosing at Ultragenyx, and high-dose AAV in Rett produced an HLH-like SAE.",
-  "Chemistry, pediatric intrathecal schedule and FDA acceptance of ASO-mediated upregulation with non-seizure endpoints are all already precedented."
+  "Only CDKL5 mechanism with a real mapped target: c.2376+5G>A exon-16 skipping, NMD, ~80% protein loss, already splice-corrected by engineered U1 snRNA.",
+  "Product is the unaltered 960-aa kinase from the patient's own allele — no engineered deletion, no frame change, no dosage overshoot in a duplication-sensitive gene.",
+  "Steric-block 2'-MOE PS splice correction given intrathecally is the best-precedented ASO action in paediatric CNS: nusinersen, zorevunersen, zilganersen."
  ],
- "delivery": "Naked 2'-MOE PS 18-20mer, lumbar intrathecal bolus; dosing template is two loading doses then maintenance every four months, as run for zorevunersen in ages 2 to under 18. Accept the quantified exposure gradient rather than designing around it: NHP deep-brain ASO accumulation is more than ten-fold below cortex and cord, and human nusinersen autopsy shows a caudal-to-rostral gradient with little drug in brainstem or deep cortex. Hippocampus, cerebellar deep layers and deep-structure GABAergic interneurons are therefore the under-dosed compartments and must be measured in NHP, not assumed. Retina is not reached intrathecally; drop it as an endpoint unless a visual readout becomes pivotal, in which case it is a separate intravitreal arm. TfR1 antibody- or VHH-oligo conjugates are the generation-2 answer to deep brain, but no retrieved data show an antibody-conjugated steric-block ASO raising a protein in brain, and all leading assets are captive — do not build the lead on them.",
+ "delivery": "Delivery is the solved half of this problem: an unconjugated uniform 2'-MOE phosphorothioate steric-block oligo given as an intrathecal lumbar bolus is approved or late-stage in children at 12–70 mg every 8–16 weeks (nusinersen from newborn; zilganersen 25–50 mg q12w, approved 3 Sep 2026; zorevunersen 70 mg then 45 mg in children 2–<18), needs no licence and no new platform. Coverage matches the CDD tissue list imperfectly but adequately — cortex, hippocampus, cerebellum, brainstem and spinal cord are well exposed and deep nuclei run >10-fold lower in drug concentration, yet single-cell NHP data show every neuronal subtype in thalamus, caudate and putamen engaged as deeply as or deeper than bulk tissue, so this is an exposure gradient rather than neuron exclusion. Retina and visual-pathway neurons are not reached from CSF and need a separate intravitreal arm, which is the same chemistry and manufacturing at low incremental cost (sepofarsen and STK-002 precedent). TfR1 antibody conjugates would give broader, less invasive coverage but have no human CNS PD yet, add cardiac and erythroid safety surfaces, and are all proprietary — a second-generation upgrade and a business-development conversation, not a dependency. Keep the arithmetic straight: the 37–90% engagement figures in the literature are knockdown of other targets and are not a CDKL5 splice-correction expectation.",
  "backups": [
   {
-   "concept": "Variant-specific splice-correcting ASO for CDKL5 +5 donor alleles (c.2376+5G>A exon 16; c.99+5G>A exon 3), restoring canonical exon inclusion from the mutant allele",
-   "one_sentence": "Carries the only quantitative CDKL5 rescue data of any option (engineered U1 restored >70% protein, kinase activity and dendritic morphology, with +1 variants unrescuable) and has an unclaimed first-in-human route through n-Lorem individualised intrathecal ASOs, but serves a small named-variant subgroup and the demonstrated modality was U1 snRNA, not an oligo."
+   "concept": "Suppress a CDKL5 non-productive / NMD-coupled splicing event or constitutive retained intron (TANGO-type upregulation) — gated on discovery",
+   "one_sentence": "This is the ideal mutation-agnostic product, raising unaltered full-length CDKL5 from the intact allele with no coding change, but it may have no target at all — the gene's definitive transcript characterisation reported no NMD route, CDKL5 is absent from a genome-wide AS-NMD splice-switching screen, and the only anchors are two unquantified Ensembl entries (NMD-biotype ENST00000977893, retained-intron ENST00000623610) — so fund fractionated nuclear/cytoplasmic ±NMD-inhibition RNA-seq in human CDD and control neurons first and design oligos only if an event carries ≥10% of CDKL5 pre-mRNA flux."
   },
   {
-   "concept": "Xist-targeting ASO (with or without a DNA-methylation inhibitor) to reactivate the wild-type CDKL5 allele on the inactive X in heterozygous females",
-   "one_sentence": "Its natural proof of concept is exact — favourably skewed females are mild or unaffected — and a CDD epigenetic-reactivation preprint plus dual-AAV dCas9-TET1 work both validate this product, but genome-wide Xi reactivation is non-selective, the CDKL5-specific evidence was unretrievable, and hemizygous males are excluded."
+   "concept": "3'UTR / alternative-polyadenylation steric block in the 6.6 kb exon-19 3'UTR of hCDKL5_1",
+   "one_sentence": "It has the largest accessible, coding-sequence-preserving element surface in the gene — two mapped AATAAA signals 6.6 and 9.7 kb past the stop codon plus a luciferase-validated miR-320b site — but no element is shown to be rate-limiting in neurons, a 6.6 kb UTR probably needs several oligos, and masking the gene's own brake is the mechanism least compatible with the bounded upregulation window that CDKL5 duplication phenotypes demand."
   }
  ],
- "critical_risk": "The binding risk is payload existence, not delivery. CDKL5 does not appear in a 2025 transcriptome-wide brain poison-exon atlas; the only CDKL5 \"exon 16x\" claim sits in a patent with no sequences and no expression data, and sibling filings omit CDKL5 entirely. The one quantified CDKL5 alternative exon (16b/17) is in-frame and productive at roughly 10% of brain transcripts, and the exon-11 cryptic-donor isoforms are under 5% — so even complete suppression caps the recoverable productive mRNA far below what SCN1A offered, and zorevunersen's efficacy must not be read as headroom here. A second, specific hazard: exon 16's donor loses about 80% of correct splicing to a single +5 change, so an ASO walking intron 16 can itself create the exon-16-skipped, NMD-coupled species. Stoke's MECP2 TANGO program, the only ASO-upregulation attempt in an X-linked NDD, was discontinued without published potency.",
+ "critical_risk": "The lead is deliberately narrow: it serves only the splice-region subset (~15% of pathogenic CDKL5 variants are splicing candidates, and only a fraction share one correctable event), so it is a credible first-in-human CDKL5 ASO and a mechanism proof but not the mutation-agnostic drug the brief asked for. The mutation-agnostic arm carries the existential risk — the non-productive event it needs may simply not exist, since the gene's most careful transcript characterisation reported no NMD route and a genome-wide AS-NMD screen did not nominate CDKL5, leaving only two unquantified annotation entries. Any successful upregulation must also stay inside a bounded window, because duplications spanning CDKL5 are associated with neurobehavioural abnormalities, which specifically disfavours 3'UTR brake-masking. Commercially the lane is crowded by three CDKL5 AAV efforts and three Phase 3 symptomatic drugs, and the nearest allele-de-repression analogue, apazunersen in Angelman, missed its Phase 3 primary on 2 September 2026 — so endpoint and biomarker choice, not molecule potency, may decide the program. Finally, hippocampus is both a required tissue and the documented site of PS-ASO neuronal vacuolation in primates, making sequence-dependent neurotoxicity screening non-optional.",
  "experiment": {
-  "payload_model": "CDD patient-derived iPSC neurons differentiated to cortical excitatory and GABAergic interneuron fates, including at least two heterozygous female lines and one hemizygous male line plus isogenic controls; free-uptake (gymnotic) dosing at three concentrations, each arm run with and without NMD inhibition (SMG1 inhibitor) to expose degraded isoforms. No delivery vehicle, no transfection reagent.",
-  "payload_constructs": "Approximately 40 fully 2'-MOE PS 18-20mers at 5-nt steps across the intron-16 candidate exon (3' splice site, branch point, internal enhancers) and the exon-20 3'-terminal region including its polyA signal; plus a two-arm linked single oligo (brogidirsen-type architecture) joining the best site-blocking and best enhancer-blocking sequences; scrambled and non-CDKL5 chemistry-matched controls.",
-  "primary_readout": "Targeted long-read sequencing of full-length CDKL5 transcripts giving the absolute fraction of productive hCDKL5_1 and the complete distribution of every alternative species, paired with CDKL5 protein by capillary immunoassay and the pEB2-Ser222 kinase-activity surrogate; ddPCR productive/total only as a confirmatory secondary. No conclusion from a gel band.",
-  "success": "At least 1.5-fold increase in CDKL5 protein with a concordant rise in pEB2-Ser222 in heterozygous female neurons at 5 micromolar or below, a matching rise in productive hCDKL5_1 share by long read, no new or off-target CDKL5 isoform above 5% of transcripts, and specifically no increase in the exon-16-skipped NMD species over vehicle.",
-  "kill": "If NMD-inhibition long-read sequencing shows no PTC-containing or NMD-coupled CDKL5 isoform used at 10% or more of baseline transcripts in human neurons, or if the best oligo gives under 1.3-fold protein, stop the mutation-agnostic track and move the budget to the +5 variant-specific backup.",
-  "delivery_experiment": "Single intrathecal bolus of the winning human-cross-reactive sequence in NHP, measuring productive CDKL5 isoform share and CDKL5 protein separately in cortex, hippocampus, cerebellum, brainstem and spinal cord at 4 and 12 weeks, with CSF protein and histopathology."
+  "payload_model": "Patient-derived cells carrying a defined CDKL5 splice-region variant — primary lymphoblastoid/fibroblast lines plus iPSC-derived cortical neurons from a c.2376+5G>A (exon-16-skipping) patient — run alongside an isogenic corrected control and a transfected human CDKL5 minigene spanning introns 15–16 for first-pass tiling. No delivery vehicle: free uptake or nucleofection at matched intracellular concentrations, so payload potency is measured independently of delivery.",
+  "payload_constructs": "Uniformly modified 2'-MOE phosphorothioate steric-block 18-mers tiling the aberrant splice region at 5-nt steps: ~40 oligos across exon 16 and 150 nt of each flanking intron, covering the variant-disrupted intron-16 5' splice site, the exon-16 acceptor and candidate intronic silencers, plus a 20-oligo extension over the activated cryptic sites. Controls: scrambled MOE oligo, no-oligo arm, an RNase H gapmer against CDKL5 as a wrong-direction control, and an oligo deliberately designed to force exon-16 skipping as the off-mechanism hazard control.",
+  "primary_readout": "Targeted long-read full-length amplicon sequencing of CDKL5 mRNA from exon 1 to the terminal exon, reporting the complete isoform distribution as a fraction of total CDKL5 reads — exon-16-included productive mRNA, exon-16-skipped NMD species, any new cryptic junctions, partial intron retention, exon-17 inclusion status and UTex2 integrity — with ±NMD-inhibition (SMG1i or puromycin) arms to reveal the degraded pool; paired with capillary-sized junction RT-PCR for quantitation, allele-resolved read counting over the exon-16 SNP rs35478150 where phasing allows, CDKL5 western blot for the full-length ~115 kDa band, and a catalytic-function readout (phospho-EB2 Ser222, MAP1S). Protein plus isoform fraction define a hit; a PCR band alone never does.",
+  "success": "At least one oligo raises productive exon-16-included CDKL5 mRNA to ≥50% of isogenic-control level and CDKL5 protein to ≥50% of control with restored phospho-EB2, dose-dependently across at least a 10-fold concentration range; total new aberrant species (cryptic junctions, intron retention, coding-exon skipping) stay <5% of CDKL5 reads; no oligo pushes CDKL5 above ~2-fold of control, the inter-individual band in healthy human brain; and the same oligo leaves the CDKL5 isoform distribution unperturbed in wild-type control neurons.",
+  "kill": "No oligo reaches ≥20% of control CDKL5 protein at tolerated concentrations; or the best splicing hits are not accompanied by a protein increase; or any hit induces skipping of a coding exon, loss of UTex2, or >10% new aberrant isoforms. Separately, the mutation-agnostic arm is killed if fractionated nuclear/cytoplasmic ±NMD-inhibition RNA-seq in human CDD and control neurons shows no CDKL5 non-productive event — poison exon, AS-NMD exon or retained intron — carrying ≥10% of CDKL5 pre-mRNA flux, in which case no broad upregulation ASO is started at all.",
+  "delivery_experiment": "Separately, once a payload is locked: intrathecal lumbar bolus of the lead 2'-MOE PS oligo in non-human primates for CNS biodistribution and neuronal-subtype engagement across cortex, hippocampus, cerebellum, striatum, brainstem and spinal cord, with a human-sequence CDKL5 minigene or humanised-locus mouse for on-target splice-correction PD, hippocampal vacuolation histopathology, and an independent intravitreal arm for the retinal and visual-pathway requirement."
  },
  "precedents": [
   {
-   "entry": "CDKL5 absent from 12,014 putative brain poison exons — the mutation-agnostic payload has no validated handle, so the program must be gated, not launched.",
-   "source": "https://www.biorxiv.org/content/10.1101/2025.06.26.661736v1.full"
+   "entry": "Poison-exon splice-switching upregulation is clinically real in a paediatric DEE at intrathecal doses up to 70 mg — chemistry, dosing and safety precedent only, not a CDKL5 potency expectation.",
+   "source": "Zorevunersen Phase 3 EMPEROR, 162 children 2–<18, 70 mg then 45 mg IT, readout Q3 2027 — https://clinicaltrials.gov/study/NCT06872125"
   },
   {
-   "entry": "Engineered U1 restored >70% CDKL5 protein and kinase activity for +5 donor variants but failed at +1 — defines and bounds the variant-specific backup.",
-   "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6747535/"
+   "entry": "A mapped, correctable CDKL5 splice lesion exists and has been rescued, defining the lead's target population and its restoration bar.",
+   "source": "c.2376+5G>A exon-16 skipping, NMD, ~80% protein loss, U1 snRNA rescue — https://pmc.ncbi.nlm.nih.gov/articles/PMC6747535/ and https://doi.org/10.3390/ijms20174130"
   },
   {
-   "entry": "Zorevunersen: two 70 mg intrathecal loads then 45 mg q4mo, Phase 3 fully enrolled, CSF protein elevation main finding — sets our dosing and safety template only.",
-   "source": "https://www.biospace.com/press-releases/stoke-therapeutics-announces-second-quarter-2026-financial-results-and-provides-business-updates"
+   "entry": "The nearest allele-de-repression ASO analogue failed registration, raising the endpoint and biomarker bar for any CDD upregulation program.",
+   "source": "Apazunersen/GTX-102 Phase 3 Aspire missed primary, 2026-09-02 — https://ir.ultragenyx.com/news-releases/news-release-details/ultragenyx-announces-phase-3-aspire-results-angelman-syndrome ; NCT06617429"
   },
   {
-   "entry": "NHP deep-brain ASO accumulation >10-fold below cortex/cord and nusinersen autopsy caudal-to-rostral gradient — hippocampus and brainstem coverage must be measured.",
-   "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11444189/"
+   "entry": "Locus-specific CDKL5 reactivation already rescues heterozygous female mice and patient organoids, which makes a genome-wide XIST ASO strategically obsolete rather than merely risky.",
+   "source": "Dual-effector split-dCas9 epigenome editor, ICV, Cdkl5 E6del het — https://www.researchsquare.com/article/rs-7095603/v1 ; https://academic.oup.com/nar/article/48/5/2372/5700548"
   },
   {
-   "entry": "Neurogene NGN-401 high-dose cohort halted for HLH-like SAE in Rett; UX055 IND delayed on dosing — a redosable CSF ASO has a real differentiation claim.",
-   "source": "https://ir.neurogene.com/news-releases/news-release-details/neurogene-provides-update-ngn-401-gene-therapy-clinical-trial"
+   "entry": "Chronic paediatric intrathecal individualised ASOs are routine with no ASO-related serious adverse events across 50 patients, giving the lead a ready clinical vehicle without a standalone IND.",
+   "source": "n-Lorem 50th nano-rare patient, 2026-04-21 — https://www.businesswire.com/news/home/20260421766112/en/n-Lorem-Foundation-Announces-the-50th-Nano-rare-Patient-Receives-Personalized-ASO-Medicine ; EveryONE Phase 1/2 NCT07410143"
   }
  ],
  "lead": {
-  "therapeutic_product": "Increased per-neuron abundance of productive, correctly spliced, full-length hCDKL5_1 mRNA and unmodified canonical 960-aa CDKL5 protein from the patient's non-mutant allele. No change to the coding sequence: kinase domain 13-297, ATP site, catalytic D135 and the entire C-terminal NLS/NES region intact. Mutation-agnostic; applies to females and hemizygous males. Target a modest 1.5-2-fold protein rise, well below the duplication-carrier ceiling.",
-  "aso_design": "Single fully 2'-MOE phosphorothioate 18-20mer steric blocker, no RNase H recruitment, selected by tiling walk at 5-nt steps over the chosen non-productive element. Candidate elements in priority order: the exon-20-containing 3'-terminal non-productive configuration (documented in human brain 3'-end RNA-seq), then the patent-claimed intron-16 exon 16x. If no single site clears the gate, escalate to one two-arm linked oligo joining a splice-site blocker and an enhancer blocker — not a cocktail. Every design is counter-screened for the exon-16-skipped NMD species. Exon 11 cryptic donor (<5% ceiling) and the in-frame exon 16b cassette are excluded by design.",
-  "delivery_strategy": "Unconjugated intrathecal bolus by lumbar puncture; two loading doses then every four months, the pediatric standard. Build internally; the real access constraint is Stoke IP on non-productive-splicing claims if the final design reads on an NMD-exon mechanism, which is a freedom-to-operate question to answer before lead nomination, not a biology question. Retina excluded. TfR1-conjugate deep-brain version held as generation 2.",
-  "reason_it_wins": "It is the only candidate whose product has no domain cost, needs no named variant, serves both sexes, and uses a delivery route with pediatric CNS precedent at an accepted dosing interval. Against the two AAV-CDKL5 programs it offers titration and reversibility in a population where AAV dose-finding has repeatedly stalled or been halted. Every alternative either reshuffles isoforms without adding output, serves a small variant subgroup, excludes males, or produces a truncated disease protein.",
-  "dominant_risk": "The enabling splicing event may not exist at therapeutically useful usage in human neurons; if it does not, there is no ASO-actionable handle at this locus today and the mutation-agnostic track dies at the gate."
+  "therapeutic_product": "Unaltered full-length hCDKL5_1 mRNA and the 960-aa kinase, restored from the patient's own splice-defective allele by forcing use of the authentic splice sites — no engineered exon deletion, no frame change, no truncated or chimeric product, and no increase above endogenous wild-type level, which keeps the program inside the bounded upregulation window that CDKL5 dosage sensitivity demands.",
+  "aso_design": "One oligo per shared splice lesion. Uniformly modified 2'-MOE phosphorothioate 18-mer steric block, no RNase H gap, selected from a 5-nt-step tiling walk over exon 16 and 150 nt of each flanking intron, chosen to mask the variant-activated cryptic site or the intronic silencer driving exon-16 skipping while leaving the authentic 5' splice site accessible. Hard design-away constraints: must not induce skipping of any CDKL5 coding exon, must not overlap UTex2 or the shared exon-2 ATG region, and must be inert in wild-type control neurons.",
+  "delivery_strategy": "Unconjugated oligo, intrathecal lumbar bolus, paediatric dose and interval by analogy to zorevunersen and zilganersen (plan 20–70 mg q8–16 weeks under sedation), entered clinically through an existing individualised-ASO vehicle — n-Lorem, or the registered EveryONE Phase 1/2 within-participant dose-escalation framework open from age 1 — rather than a standalone IND, then expanded into a small variant-defined basket. Separate intravitreal arm, identical chemistry, for the retinal and visual-pathway requirement.",
+  "reason_it_wins": "It is the only CDKL5 ASO concept here with a target that actually exists, a product that is exactly the unaltered MANE coding sequence, a single oligo, and human precedent for the precise molecular action — 2'-MOE steric-block splice correction delivered intrathecally to infants. Every mutation-agnostic alternative is still target discovery: no poison exon described, no cis NAT found, the 5'UTR element is required rather than repressive, and the alternative-last-exon target is the testis isoform. It also buys the two things the broad program most needs: the first human CDKL5 splice-ASO safety and PD data, and a titratable, reversible counter-position to the one-shot non-titratable AAV programs that have already slipped (UX055) or been discontinued (Biogen).",
+  "dominant_risk": "Population size and shared-lesion frequency — if no single splice variant is carried by enough patients this stays an n-of-1 series rather than a registrable program, and it leaves the majority of CDD, the missense and frameshift carriers whose deficit is mosaic haploinsufficiency, untreated. It must therefore be run alongside the non-productive-splicing discovery screen, not instead of it."
  },
  "all_candidates": [
   {
-   "concept": "P2/exon-20 3'-terminal non-productive isoform suppression, redirecting to hCDKL5_1",
+   "concept": "Variant-directed steric-block splice correction of a mapped CDKL5 splice lesion (archetype c.2376+5G>A exon-16 skipping)",
    "role": "LEAD",
-   "reason": "Ideal canonical product and the non-productive event is at least documented in real human brain 3'-end RNA-seq rather than only in a patent; usage fraction unquantified, which is exactly what the gate experiment measures."
+   "reason": "Only concept with a real mapped target, an unaltered MANE coding product, one oligo, and direct human precedent for the molecular action; already rescued by engineered U1 snRNA, so an ASO is a modality upgrade rather than a discovery bet. The limitation is population size, not mechanism."
   },
   {
-   "concept": "P1/intron-16 'exon 16x' NMD-exon exclusion",
-   "role": "LEAD",
-   "reason": "Same perfect product and tested in the same screen, but ranked second within the lead concept: asserted only in a data-free patent, absent from the 2025 brain poison-exon atlas, and intron-16 walking risks inducing the exon-16-skipped NMD species."
-  },
-  {
-   "concept": "Variant-specific splice correction for CDKL5 +5 donor alleles (c.2376+5G>A, c.99+5G>A)",
+   "concept": "Suppress a non-productive / NMD-coupled CDKL5 splicing event (poison-exon type, e.g. ENST00000977893)",
    "role": "BACKUP",
-   "reason": "Only quantitative CDKL5 rescue evidence exists here and the n-Lorem individualised intrathecal route is open and unclaimed; limited to a named small subgroup, +1 variants unrescuable, and the demonstrated modality was U1 snRNA not an ASO."
+   "reason": "Ideal mutation-agnostic product and strongest cross-target architecture precedent, but existence is unestablished: no NMD route in the gene's definitive transcript characterisation, absent from a genome-wide AS-NMD screen, and the Ensembl NMD-biotype entry is unquantified. Gate on a flux-quantification screen before any design."
   },
   {
-   "concept": "Xist-targeting ASO with or without DNMT inhibitor for Xi reactivation of wild-type CDKL5",
+   "concept": "3'UTR / alternative-polyadenylation steric stabilisation (6.6 kb exon-19 UTR, proximal AATAAA, miR-320b site)",
    "role": "BACKUP",
-   "reason": "Exact natural human proof of concept in skewed females and converging validation from dCas9-TET1 reactivation work; non-selective genome-wide reactivation, unretrievable CDKL5-specific preprint, excludes hemizygous males."
+   "reason": "Largest accessible coding-sequence-preserving element surface with two experimentally mapped polyA signals, but no rate-limiting element demonstrated in neurons, likely needs multiple oligos, and removing the gene's own brake fights the bounded-window requirement in a duplication-sensitive gene."
   },
   {
-   "concept": "5'UTR / alternative first exon 1a-1e redirection or regRNA-antagonist ASO at the CDKL5 locus",
+   "concept": "Suppress constitutive intron retention in CDKL5 pre-mRNA (ENST00000623610 anchor)",
    "role": "WATCH",
-   "reason": "Mutation-agnostic and does not touch coding sequence, and CAMP4's SYNGAP1 regRNA ASO shows the class can reach humans; no published CDKL5 regRNA map or 5'UTR usage fractions, so there is no design handle without a locus-level screen."
+   "reason": "No percent-intron-retention value exists for any CDKL5 intron in any human neuronal dataset, and the dominant brain isoform's terminal read-through will generate false retention calls. Same discovery screen as the poison-exon arm, so it costs nothing extra to measure but cannot be designed today."
   },
   {
-   "concept": "3'UTR / uORF-directed ASO to raise translation or stability of existing canonical mRNA",
+   "concept": "Transcriptional upregulation via a cis natural antisense transcript (antagoNAT) at the CDKL5 locus",
    "role": "WATCH",
-   "reason": "6.6 kb 3'UTR is a large regulatory surface and pathogenic variants in a 170-nt noncoding 3' region prove it is functional, but no repressor element has been mapped to an ASO-actionable site."
+   "reason": "Would give exactly the desired product and acts upstream of all splicing uncertainty, but no cis NAT at Xp22.13 was retrievable; the locus is regulated by DNA methylation across a >1 kb CpG island, which ASOs cannot address. Needs strand-specific nuclear RNA-seq/CAGE before design."
   },
   {
-   "concept": "Exon-11 cryptic donor blockade to abolish hCDKL5_3/_4",
+   "concept": "Relieve 5'UTR translational repression (uORF or structured element)",
    "role": "REJECT",
-   "reason": "Mechanistically the easiest steric block, but these isoforms are under 5% of brain CDKL5 transcripts so the maximum recoverable productive mRNA is below plausible therapeutic relevance."
+   "reason": "Direction of effect is wrong: two algorithms predicted no significant uORF, and the human -189 C>T variant is loss-of-function, so the element is translation-promoting and masking it would lower CDKL5. Three brain leaders also converge on one ATG, forcing multiple oligos, and the mechanism changes protein per transcript, not mRNA abundance."
   },
   {
-   "concept": "P3/exon-16b (exon 17) in-frame cassette modulation",
+   "concept": "Redirect isoform choice to full-length hCDKL5_1 via alternative last exon / 3'-end switch",
    "role": "REJECT",
-   "reason": "Exon is in-frame and productive at roughly 10% of brain transcripts and not NMD-coupled, so redirecting it reshuffles isoform identity without increasing total productive output; high conservation also flags functional risk."
+   "reason": "The assumed direction is inverted — hCDKL5_1 is already ~90% of brain transcript and the long 20/21/22-exon form is adult-testis-specific with benign variants, so forcing it would convert the functional neuronal isoform into a neurologically irrelevant one. The only legitimate version, blocking in-frame exon 17 (~10%), adds no productive mRNA at all."
   },
   {
-   "concept": "hCDKL5_5 / CDKL5_115 testis-type terminal-exon suppression",
+   "concept": "Reactivate the silenced wild-type allele with an XIST ASO (± DNMT inhibitor)",
    "role": "REJECT",
-   "reason": "Isoform is detected almost exclusively in adult testis, so post-natal CNS gain is near zero."
+   "reason": "Target is known and druggable but single-agent XIST knockdown is insufficient — robust reactivation required co-inhibition of DNA methylation, i.e. chronic paediatric nucleoside exposure — and it is not allele-selective, reactivating the mutant allele in half of neurons while de-repressing hundreds of X-linked genes. A locus-specific epigenome editor already achieves the goal in heterozygous female mice and patient organoids."
   },
   {
-   "concept": "Allele-selective gapmer knockdown of mutant CDKL5 transcript",
+   "concept": "Stabilise the mutant transcript by blocking NMD / EJC deposition",
    "role": "REJECT",
-   "reason": "No dominant-negative CDKL5 allele named or documented; silencing a non-functional transcript adds no protein and cannot correct a dosage deficit."
+   "reason": "Product is a truncated kinase the brief excludes; only the latest C-terminal truncations have any human evidence of mildness and even those span mild to severe, while any PTC before residue ~297 destroys the catalytic domain, ATP site and Ser135. Also risks dominant-negative interference with wild-type protein in the other half of neurons."
   },
   {
-   "concept": "P7 comparator: late C-terminal truncation after aa781 as an ASO-yielded product",
+   "concept": "Exon skipping / multi-exon skipping of CDKL5 coding exons",
    "role": "REJECT",
-   "reason": "Human natural history shows a measurably milder motor and communication course, but these individuals still have CDD with refractory epilepsy and one retrieved source argues the opposite severity direction — a partial disease protein, not a therapeutic product."
+   "reason": "No variant, no shared mutant transcript, no target exon, and the enumeration returned exon_skipping_applies = false. Endogenous exon-16 skipping is itself pathogenic here and pathogenic missense cluster in the catalytic domain, so internal deletion destroys function — treat induced coding-exon skipping as an off-mechanism hazard to screen against."
   },
   {
-   "concept": "P8 comparator: kinase-domain-only product truncated between aa172 and aa781",
+   "concept": "RNase H gapmer or allele-selective knockdown of CDKL5",
    "role": "REJECT",
-   "reason": "This configuration is the severe disease state itself, with reduced likelihood of independent sitting and walking; frame restoration here is not product quality."
+   "reason": "Moves a haploinsufficiency disease in the wrong direction and adds no functional protein by removing a null or already-NMD-degraded transcript. Useful only as a wrong-direction control in the payload screen and as a hazard to design away from."
   },
   {
-   "concept": "TfR1 antibody/Fab/VHH-oligo conjugate systemic delivery of the same payload",
+   "concept": "Modulate a downstream effector instead of CDKL5 (e.g. KCC2 activation)",
    "role": "WATCH",
-   "reason": "Best current answer to the deep-brain and interneuron exposure gap, but steric-block upregulation has never been demonstrated with a conjugated ASO in brain, assets are captive, and systemic TfR1 brings hematologic risk — generation 2 only."
+   "reason": "Abandons the restorative goal and is symptomatic, but it has the only in vivo pharmacological rescue among the non-CDKL5 options and is the rational fallback if no CDKL5 cis handle survives the discovery screen. Note three Phase 3 symptomatic agents, including positive fenfluramine data, already compete for this population."
   },
   {
-   "concept": "AAV-delivered engineered U1 snRNA or AAV CDKL5 gene replacement",
+   "concept": "TfR1 antibody/Fab–oligonucleotide conjugate, intravenous (delivery alternative)",
+   "role": "WATCH",
+   "reason": "More uniform CNS coverage than intrathecal naked ASO in mice and macaques, splice-switching-compatible in human muscle (AOC 1044), and avoids repeat lumbar punctures — but no human CNS PD yet, new cardiac and erythroid safety surfaces, no paediatric data, and all platforms proprietary. Second-generation upgrade, not a dependency."
+  },
+  {
+   "concept": "Divalent/branched or lipid-conjugated siRNA, intrathecal (delivery alternative)",
    "role": "REJECT",
-   "reason": "Out of modality for this program and already occupied by Elaaj and Ultragenyx; relevant only as the competitive bar and as the non-titratable architecture our redosable ASO is meant to differentiate against."
+   "reason": "Best documented deep-brain reach and durability of any clinical CNS oligo class, but mechanism-mismatched: RNAi cannot perform splice correction, poison-exon suppression or steric 3'UTR masking. Would only apply if strategy shifted to degrading a NAT that does not appear to exist."
   }
  ],
  "verdict": "TEST FIRST"

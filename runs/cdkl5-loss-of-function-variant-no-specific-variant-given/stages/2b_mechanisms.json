@@ -1,0 +1,125 @@
+{
+ "mechanisms": [
+  {
+   "name": "Suppress a non-productive / NMD-coupled CDKL5 splicing event (poison-exon or similar)",
+   "how_it_works": "ASO binds the splice sites or splicing enhancers of a non-productive CDKL5 exon (or the branchpoint/3' splice site feeding it) in the pre-mRNA, so the spliceosome bypasses that event and routes more pre-mRNA into the full-length productive mRNA with unaltered MANE coding sequence.",
+   "rna_product": "More full-length, correctly spliced CDKL5 mRNA with no engineered change to the coding sequence; from the wild-type allele this yields additional normal CDKL5 kinase. No truncated or chimeric product from the intended event.",
+   "requires": "A real, reasonably-used non-productive splicing event in CDKL5 pre-mRNA in human neurons, with enough flux through it that diverting it raises productive mRNA meaningfully; plus verified transcript/exon annotation.",
+   "alleles": "both",
+   "discovery_burden": "unknown whether a target exists",
+   "fit": "possible",
+   "why": "This is the only class that is both mutation-agnostic and leaves the coding sequence untouched, which is exactly what the desired product specifies — but whether CDKL5 has a usable non-productive event at all is unretrieved and may simply be false, and because it acts on both alleles it would also raise mutant-allele transcript (benign for a null, but a liability if that allele makes a truncated or dominant-negative protein)."
+  },
+  {
+   "name": "Suppress constitutive intron retention in CDKL5 pre-mRNA",
+   "how_it_works": "ASO binds a retained intron's weak splice sites or an intronic silencer element, promoting its removal so nuclear-detained or degraded intron-retaining transcripts are converted into exported, translatable full-length mRNA.",
+   "rna_product": "Increased fully-spliced CDKL5 mRNA with unaltered coding sequence; normal protein from the wild-type allele.",
+   "requires": "A measurable, non-trivial fraction of CDKL5 transcripts retaining a specific intron in human neurons, and that those transcripts are a recoverable reservoir rather than already-degraded; verified intron coordinates.",
+   "alleles": "both",
+   "discovery_burden": "unknown whether a target exists",
+   "fit": "possible",
+   "why": "Mechanistically clean and coding-sequence-preserving like poison-exon suppression, and worth enumerating separately because the ASO target chemistry and screening readout differ (intron-level RNA-seq rather than junction ratios); but existence and magnitude in CDKL5 neurons is entirely unretrieved."
+  },
+  {
+   "name": "Redirect isoform choice toward full-length hCDKL5_1 (alternative last exon / 3'-end isoform switch)",
+   "how_it_works": "ASO blocks the splice acceptor or enhancer of an alternative terminal exon used by shorter CDKL5 isoforms, so transcripts that would have terminated early instead splice through to the canonical final exon and encode the full-length protein.",
+   "rna_product": "A shift in isoform ratio toward full-length MANE CDKL5 mRNA at the expense of a shorter C-terminally divergent isoform; total CDKL5 transcript roughly unchanged, functional full-length protein increased.",
+   "requires": "Documented alternative-last-exon or alternative-3'-end usage in CDKL5 in the relevant human neurons, and evidence the short isoform is dispensable (not itself required).",
+   "alleles": "both",
+   "discovery_burden": "target must be located",
+   "fit": "possible",
+   "why": "Fits the goal of raising full-length output without altering the canonical coding sequence, and multiple CDKL5 isoforms are named in the brief which makes the target locatable rather than hypothetical; the specific liability is that the displaced short isoform may have its own neuronal function, so the net benefit is not predictable from frame logic alone."
+  },
+  {
+   "name": "Relieve 5'UTR / upstream-ORF translational repression",
+   "how_it_works": "ASO binds a repressive upstream ORF, its start codon, or a structured inhibitory element in the CDKL5 5'UTR, so ribosomes initiate preferentially at the authentic CDKL5 start codon and more protein is made per existing mRNA.",
+   "rna_product": "No change in mRNA sequence or abundance; increased translation of unaltered full-length CDKL5 protein from transcripts already present.",
+   "requires": "A genuinely repressive uORF or structural element in the CDKL5 5'UTR, and resolution of which alternative first exon (1/1a/1b) supplies the 5'UTR in target neurons, since the element may exist in only one.",
+   "alleles": "both",
+   "discovery_burden": "unknown whether a target exists",
+   "fit": "possible",
+   "why": "Attractive because it raises protein without touching splicing or coding sequence and is intrinsically self-limited in fold-change, which suits a bounded upregulation window; but it is the mechanism most exposed to the unverified first-exon annotation flagged in the input, and the brief's desired product is specified as mRNA abundance, which this mechanism does not change."
+  },
+  {
+   "name": "3'UTR / alternative polyadenylation stabilisation",
+   "how_it_works": "ASO blocks a proximal polyadenylation signal (forcing use of a distal site, or vice versa) or masks a destabilising element or miRNA seed match in the CDKL5 3'UTR, increasing the half-life or translatability of the productive mRNA.",
+   "rna_product": "Increased steady-state full-length CDKL5 mRNA with unaltered coding sequence and an altered 3'UTR length or occupancy; normal protein.",
+   "requires": "A functional destabilising element, miRNA site, or competing polyA site in the CDKL5 3'UTR that is rate-limiting for CDKL5 abundance in neurons.",
+   "alleles": "both",
+   "discovery_burden": "unknown whether a target exists",
+   "fit": "possible",
+   "why": "Coding-sequence-preserving and mutation-agnostic, so it satisfies the product specification; however masking a regulatory element in a gene whose overexpression is a stated liability removes the cell's own brake, which makes the bounded-window requirement harder to meet than with splicing-based approaches."
+  },
+  {
+   "name": "Transcriptional upregulation via a natural antisense transcript (antagoNAT) or other regulatory RNA at the CDKL5 locus",
+   "how_it_works": "ASO degrades or sterically blocks a cis-acting repressive antisense/regulatory RNA overlapping the CDKL5 promoter or gene body, de-repressing transcription of the locus.",
+   "rna_product": "Increased transcription of the normal CDKL5 gene, giving more full-length mRNA and protein with no sequence change.",
+   "requires": "Existence of a repressive cis-antisense or regulatory RNA at the human CDKL5 locus that is expressed in neurons and whose removal raises CDKL5; a nuclear-acting ASO.",
+   "alleles": "both",
+   "discovery_burden": "unknown whether a target exists",
+   "fit": "possible",
+   "why": "Would deliver exactly the desired product if such a regulator exists, and acts upstream of all splicing uncertainty; but no CDKL5-specific NAT was retrievable in this session, so this is a discovery project rather than a design project, and cis-acting de-repression would raise the mutant allele too."
+  },
+  {
+   "name": "Reactivate the silenced wild-type allele by targeting XIST / X-inactivation machinery",
+   "how_it_works": "ASO degrades or blocks XIST RNA (or an XIST-dependent silencing factor) so the inactive X is partially reactivated, allowing the wild-type CDKL5 allele to be expressed in the ~half of neurons that had silenced it.",
+   "rna_product": "Expression of normal full-length CDKL5 mRNA and protein in cells that previously expressed only the mutant allele; unaltered coding sequence.",
+   "requires": "Ongoing XIST-dependent maintenance of silencing in postnatal human neurons, and skewing that is not already favourable; a nuclear ASO reaching broad CNS.",
+   "alleles": "depends",
+   "discovery_burden": "target known",
+   "fit": "poor",
+   "why": "It is the only mechanism that directly addresses the stated mosaic X-inactivation defect and the target itself is known, but it is not allele-selective: in the other half of neurons it reactivates the mutant allele, and it de-represses hundreds of unrelated X-linked genes, so the product in a given cell is unpredictable and the safety surface is genome-scale rather than gene-scale."
+  },
+  {
+   "name": "Exon skipping / multi-exon skipping",
+   "how_it_works": "ASO binds a splice site or exonic enhancer to force exclusion of one or more CDKL5 exons from the mature mRNA.",
+   "rna_product": "An internally deleted CDKL5 mRNA encoding a protein missing part of the kinase or C-terminal region — not the unaltered MANE sequence the brief requires.",
+   "requires": "A defined exonic lesion whose removal restores reading frame, plus evidence the shortened kinase retains catalytic and localisation function.",
+   "alleles": "mutant only",
+   "discovery_burden": "unknown whether a target exists",
+   "fit": "not applicable",
+   "why": "There is no specified variant, no shared mutant transcript and no target exon in this lesion, so there is nothing to skip; and even with a variant, deleting coding exons from a kinase that must be full-length would give a frame-restored but not therapeutic product, while doing nothing for the mosaic silencing that drives the deficit."
+  },
+  {
+   "name": "Exon inclusion / blocking a cryptic splice site / restoring a weakened splice site",
+   "how_it_works": "ASO masks a cryptic splice site or an intronic silencer created by a variant, forcing use of the authentic site and restoring normal splicing.",
+   "rna_product": "Normal full-length CDKL5 mRNA from the mutant allele — but only in patients whose variant is specifically a splice-disrupting one.",
+   "requires": "A specific splice-altering variant with a mapped cryptic site or disrupted element in that individual's allele.",
+   "alleles": "mutant only",
+   "discovery_burden": "target must be located",
+   "fit": "not applicable",
+   "why": "As written, this lesion has explicitly no splice defect, so there is no cryptic site or weakened site to act on; this class is listed because it would become the strongest mechanism for the subset of CDD patients carrying a splice-region variant, which is a different, variant-specific program from the mutation-agnostic one specified here."
+  },
+  {
+   "name": "RNase H gapmer or steric knockdown of CDKL5 transcript (including allele-selective mutant knockdown)",
+   "how_it_works": "ASO recruits RNase H1 to cleave CDKL5 mRNA, or sterically blocks it, reducing transcript level — optionally directed at a mutant-specific sequence or linked SNP.",
+   "rna_product": "Less CDKL5 mRNA and protein; with allele selectivity, loss of the mutant transcript while the wild-type is spared.",
+   "requires": "For allele selectivity, a mutant-specific sequence or phased heterozygous SNP; for any version, that lowering CDKL5 or its mutant product is beneficial.",
+   "alleles": "depends",
+   "discovery_burden": "target known",
+   "fit": "not applicable",
+   "why": "CDD is a loss-of-function, haploinsufficiency disease, so degrading CDKL5 moves the phenotype in the wrong direction, and removing a null or NMD-degraded mutant transcript adds no functional protein; the only legitimate role for this mechanism here is as a control arm and as a hazard to design away from."
+  },
+  {
+   "name": "Stabilise the mutant transcript by blocking NMD or exon-junction-complex deposition",
+   "how_it_works": "ASO binds near a premature termination codon or an EJC deposition site to shield the mutant mRNA from nonsense-mediated decay, raising its abundance.",
+   "rna_product": "More mutant CDKL5 mRNA encoding a truncated kinase; no increase in full-length protein.",
+   "requires": "A variant that generates a PTC in a defined position, and a truncated protein with residual therapeutic activity.",
+   "alleles": "mutant only",
+   "discovery_burden": "target must be located",
+   "fit": "poor",
+   "why": "Even where a PTC exists, the product is a truncated CDKL5 that the brief explicitly excludes, and stabilising a truncated kinase risks dominant-negative interference with the wild-type protein made in the other half of neurons; it is also variant-specific, so it cannot serve the mutation-agnostic requirement."
+  },
+  {
+   "name": "Modulate a downstream effector or a repressor of CDKL5 pathway output (non-CDKL5 target)",
+   "how_it_works": "ASO knocks down or splice-modulates a different gene — a kinase substrate's regulator, an ion channel, or a transcriptional repressor acting on the CDKL5 pathway — to compensate for reduced CDKL5 signalling.",
+   "rna_product": "No change to CDKL5 RNA or protein; an altered transcript of a second gene intended to offset the deficit.",
+   "requires": "A validated, druggable downstream node whose modulation corrects CDD-relevant neuronal phenotypes, with human genetic or pharmacological support.",
+   "alleles": "normal only",
+   "discovery_burden": "unknown whether a target exists",
+   "fit": "poor",
+   "why": "It abandons the stated goal of increasing full-length CDKL5 mRNA and is a symptomatic rather than restorative strategy, so it does not address the lesion; it is listed only because it is the fallback if CDKL5 itself proves to have no usable non-productive event, uORF, NAT or 3'UTR handle."
+  }
+ ],
+ "exon_skipping_applies": false
+}
