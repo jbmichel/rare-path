@@ -134,3 +134,35 @@ class Decision(BaseModel):
     lead: Lead
     all_candidates: list[Candidate] = Field(description="Every candidate considered with LEAD/BACKUP/WATCH/REJECT (goes to the evidence file, not the main answer)")
     verdict: Literal["BUILD", "TEST FIRST", "WAIT FOR PLATFORM", "DO NOT PURSUE"]
+
+
+# ---- final prose, bullet form (AGENT.md section 12 structure) ----
+
+class AnswerBackup(BaseModel):
+    concept: str
+    bullets: list[str] = Field(min_length=1, max_length=2, description="Plain bullets: what it is, and when it would become preferable to the lead")
+
+
+class AnswerExperiment(BaseModel):
+    model: list[str] = Field(min_length=1, max_length=1, description="What system, and why")
+    constructs: list[str] = Field(min_length=1, max_length=1, description="What is compared")
+    primary_readout: list[str] = Field(min_length=1, max_length=1, description="What measurement decides whether the payload works")
+    success_criterion: list[str] = Field(min_length=1, max_length=1)
+    kill_criterion: list[str] = Field(min_length=1, max_length=1)
+
+
+class AnswerPrecedent(BaseModel):
+    bullet: str = Field(description="What was demonstrated and why it changes this program; one plain sentence, rarely two")
+    source: str
+
+
+class Answer(BaseModel):
+    verdict: Literal["BUILD", "TEST FIRST", "WAIT FOR PLATFORM", "DO NOT PURSUE"]
+    lead_line: str = Field(description="One plain sentence describing the program")
+    recommendation: list[str] = Field(min_length=2, max_length=4, description="Bullets: the product, how the ASO makes it, why it is preferred; background only if needed")
+    why_this_design: list[str] = Field(min_length=1, max_length=3, description="Each bullet one argument plus its implication")
+    delivery: list[str] = Field(min_length=2, max_length=4, description="Bullets: preferred platform, why, best precedent, main limitation, and the follow-on delivery test")
+    backups: list[AnswerBackup] = Field(max_length=2)
+    critical_risk: list[str] = Field(min_length=1, max_length=3, description="Bullets: the issue most likely to kill the program and why")
+    first_experiment: AnswerExperiment
+    key_precedents: list[AnswerPrecedent] = Field(max_length=5)

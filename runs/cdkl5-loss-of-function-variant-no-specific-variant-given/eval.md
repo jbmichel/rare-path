@@ -1,0 +1,39 @@
+# Eval result: 12/16 — FAIL
+
+| Dimension | Score | Evidence |
+|---|---|---|
+| A_framing_product | 1 | "too little CDKL5 kinase per neuron"; "coding sequence is never altered"; P7/P8 reject truncated products as "the disease state, not a rescue". But main answer sets "At least a 1.5-fold rise" with no ceiling; duplication bound appears only in appendix as "(search snippet, full text not verified)". |
+| B_design_space | 2 | Appendix enumerates non-productive splicing (P1/P2), 5'UTR/first-exon/regRNA-antagonist (P4 WATCH), Xist reactivation (P5), +5 variant correction, 3'UTR/uORF, exon-11 cryptic donor, terminal exon, allele-selective knockdown — compared on usage fraction, selectivity and discovery burden. Main answer drops regRNA entirely; flux-redistribution vs flux-increase distinction never articulated. |
+| C_existence_risk | 2 | "Verdict: TEST FIRST"; "Fund a six-month existence test... not a program"; quantifies ~10% in-frame productive exon and <5% exon-11 ceiling; kill criterion "no degradation-coupled CDKL5 isoform reaches 10 percent"; appendix flags intron-16 +5 hazard (~80% loss) and mandates exon-16-skip counter-screen. Gate tests only the splicing handle, not the parallel handles. |
+| D_transferability | 2 | "setting our dosing and safety template but not our potency expectation"; appendix: "SCN1A has a validated, highly included NMD exon; CDKL5 has no validated poison exon... The SCN1A productive-mRNA headroom simply does not exist here"; "Payload vs delivery" separates amenability from vehicle. |
+| E_currentness | 1 | Excellent AAV/CRISPR landscape (NGN-401 halt, UX055 stall, split-dCas9-TET1 rescue, Elaaj). But CAMP4 appears only as "CMP-002 (SYNGAP1, first-in-human cleared 2026)" — the ~1.5-fold SYNGAP1 NHP brain protein rise, mouse ICV rescue, urea-cycle Phase 1 safety and honest regRNA costs (contested eRNA function, multi-gene enhancers, incumbent claim position) are all absent. |
+| F_delivery | 2 | "Deep-brain oligonucleotide levels in monkeys are more than ten-fold below cortex and cord, so exposure in hippocampus, deep cerebellum and deep interneurons must be measured rather than assumed"; human nusinersen brainstem gradient cited; TfR conjugates benched as generation-two. |
+| G_experiment | 1 | iPSC neurons, excitatory and inhibitory, female and hemizygous male; long-read productive fraction plus kinase-activity readout; quantitative kill criterion. But the first experiment omits the NMD-inhibited arm (buried in appendix as a "prerequisite screen"), omits gymnotic delivery and isogenic controls, specificity criterion is generic "no new aberrant isoform above 5 percent" without naming the exon-16-skipped species, and the gate does not distinguish the other handles. |
+| H_concision_evidence | 1 | 824 words, crisp and scannable; appendix hygiene is genuinely good ("could not be corroborated", "no numbers are claimed", catches the DMD exon-16 PMO "false conflation"). But the absence is read as proof-adjacent — no discussion that conservation/expression filters could have excluded CDKL5; duplication ceiling used while flagged unverified; P2 means two different things in two appendix sections. |
+
+## Unacceptable failures
+- [ok] proposes reading-frame restoration or exon skipping as the therapeutic strategy — Explicitly rejected: P7/P8 comparators conclude truncated CDKL5 is "a partial disease protein, not a therapeutic product".
+- [ok] proposes poison-exon suppression as the only mechanism considered — Nine-plus mechanisms enumerated and ranked in the appendix.
+- [ok] misses regulatory-RNA / enhancer-directed upregulation entirely — P4 names regRNA/eRNA-antagonist ASO and CAMP4 CMP-002, though only as WATCH and absent from the main answer.
+- [ok] nominates a lead ASO against a non-productive element without establishing that one exists — Borderline: labels a LEAD concept but commits no site or sequence and funds only the gate. The LEAD label blurs a TEST FIRST verdict.
+- [ok] transfers SCN1A / zorevunersen efficacy figures to CDKL5 — Zorevunersen figures quoted only as dosing/delivery precedent, with explicit disclaimer of potency transfer.
+- [ok] proposes tiling across intron 16 without flagging the +5 donor hazard — Appendix flags ~80% loss of correct splicing and mandates an exon-16-skip counter-screen; main answer omits it.
+- [ok] aims to maximize CDKL5 expression, or omits the duplication-carrier ceiling — Ceiling present but only as an unverified appendix snippet; main answer's "at least a 1.5-fold rise" states no upper bound.
+- [TRIGGERED] claims mutation-agnosticism without addressing mutant-allele upregulation — "a single drug serves all patients regardless of which variant they carry". Never notes that every mechanism but Xist/+5 also raises the mutant allele; no NMD-vs-stable-protein stratification.
+- [ok] treats intrathecal delivery as solved and omits the deep-brain gradient — Gradient quantified and primate measurement required before commitment.
+- [ok] claims the competitive space is unoccupied, or misses the AAV safety context — NGN-401 hyperinflammatory SAE, UX055 stall, three pharma exits and epigenome editing all captured.
+- [ok] asserts an unverified count or absence as a load-bearing fact — 12,014 count cited to the preprint full text; but the absence is not interrogated for pipeline filter artefacts.
+- [ok] claims a sequence model resolves the existence question — No in silico prediction proposed; resolution is empirical (long-read plus NMD inhibition).
+- [ok] produces a long literature review instead of a program recommendation — 824-word decision document with verdict, gate, kill criterion.
+
+## Required discoveries missed
+- Allele non-selectivity (section 6): never states that non-Xist mechanisms raise output from the mutant allele too, nor that mutation-agnosticism is cleaner in claim than in biology; no genotype stratification by NMD-degraded vs stable truncated protein
+- CAMP4 ~1.5-fold SYNGAP1 protein rise in NHP brain on biweekly intrathecal dosing — the strongest mechanism-independent evidence that the magnitude goal is reachable by the intended route — plus mouse ICV rescue, urea-cycle Phase 1 safety, GLP tox and the GSK partnership
+- Honest costs of the regulatory-RNA mechanism: contested eRNA function, no approved drug of this class, multi-gene enhancers interacting with a narrow dose ceiling, incumbent catalog/claim position in CNS haploinsufficiency
+- The decision-relevant distinction that poison-exon suppression redistributes existing pre-mRNA flux whereas transcriptional upregulation increases it, so only the former needs a pre-existing splicing event
+- Correct reading of the published absence: "absent from a candidate list" may reflect the discovery pipeline's conservation and expression filters rather than non-existence
+- Parallel handle test in a single gate — the proposed experiment interrogates only the splicing handle, leaving regRNA and 5'UTR/TSS redirection untested and unscheduled
+- First-experiment elements: NMD-inhibited arm inside the actual first experiment, gymnotic (reagent-free) delivery, isogenic controls, and a named specificity criterion against the exon-16-skipped degraded species
+- Bounded-rise framing in the recommendation itself — an explicit upper limit rather than "at least a 1.5-fold rise"
+
+Score 12/16 — fails the 14/16 bar, though no zeros in the three critical dimensions. Genuinely strong where it counts most: dosage framing, TEST FIRST gating with real arithmetic, clean SCN1A decomposition, measured delivery, rich AAV/epigenome-editing landscape. Sunk by three things: mutation-agnosticism asserted without confronting mutant-allele upregulation (triggered failure), the CAMP4/SYNGAP1 NHP magnitude evidence missed, and a first experiment whose NMD arm is relegated to the appendix.

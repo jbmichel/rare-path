@@ -1,32 +1,50 @@
 """Main answer (AGENT.md section 12 structure) and a separate evidence appendix."""
-import re
-
-
 def words(text: str) -> int:
-    return len(re.findall(r"\S+", re.sub(r"[#*|`>-]", " ", text)))
+    return len(text.split())   # plain whitespace count, same as `wc -w`
 
 
-def main_answer(d) -> str:
-    e = d.experiment
-    L = [f"**Verdict: {d.verdict}**", "", "## Recommendation", "", f"**LEAD — {d.recommendation_line}**", "", d.recommendation_text, "", "## Why this design", ""]
-    L += [f"- {x}" for x in d.why_this_design]
-    L += ["", "## Delivery", "", d.delivery, "", "## Backup", ""]
-    L += [f"- **{b.concept}.** {b.one_sentence}" for b in d.backups]
-    L += ["", "## Critical risk", "", d.critical_risk, "", "## First experiment", "",
-          f"- **Model:** {e.payload_model}", f"- **Constructs:** {e.payload_constructs}", f"- **Primary readout:** {e.primary_readout}",
-          f"- **Success:** {e.success}", f"- **Kill:** {e.kill}", f"- **Then, delivery:** {e.delivery_experiment}",
-          "", "## Key precedents", ""]
-    L += [f"- {p.entry}" for p in d.precedents]
+def _b(items, ind=""):
+    return [f"{ind}- {x}" for x in items]
+
+
+def main_answer(a) -> str:
+    e = a.first_experiment
+    L = [f"**Verdict: {a.verdict}**", "", "## Recommendation", "", f"**LEAD — {a.lead_line}**", ""] + _b(a.recommendation)
+    L += ["", "## Why this design", ""] + _b(a.why_this_design)
+    L += ["", "## Delivery", ""] + _b(a.delivery)
+    L += ["", "## Backup", ""]
+    for b in a.backups:
+        L += [f"- **{b.concept}**"] + _b(b.bullets, "  ")
+    L += ["", "## Critical risk", ""] + _b(a.critical_risk) + ["", "## First experiment", ""]
+    for name, items in (("Model", e.model), ("Constructs", e.constructs), ("Primary readout", e.primary_readout),
+                        ("Success criterion", e.success_criterion), ("Kill criterion", e.kill_criterion)):
+        L += [f"- **{name}**"] + _b(items, "  ")
+    L += ["", "## Key precedents", ""] + _b([p.bullet for p in a.key_precedents])
     return "\n".join(L) + "\n"
 
 
-def references(d) -> str:
-    return "\n".join(f"- {p.entry} — {p.source}" for p in d.precedents) + "\n"
+def bullets(a) -> list[str]:
+    """Texts of all content bullets (not the bold group labels), for the readability check."""
+    e = a.first_experiment
+    out = list(a.recommendation) + list(a.why_this_design) + list(a.delivery) + list(a.critical_risk)
+    for b in a.backups:
+        out += b.bullets
+    for items in (e.model, e.constructs, e.primary_readout, e.success_criterion, e.kill_criterion):
+        out += items
+    return out + [p.bullet for p in a.key_precedents]
+
+
+def hard_to_read(a, max_words: int = 30) -> list[str]:
+    return [b for b in bullets(a) if len(b.split()) > max_words or ";" in b]
+
+
+def references(a) -> str:
+    return "\n".join(f"- {p.source}" for p in a.key_precedents) + "\n"
 
 
 def evidence(case: str, r: dict) -> str:
     d = r["decision"]
-    L = [f"# Evidence — {case}", "", "## Candidates considered", "| Role | Concept | Reason |", "|---|---|---|"]
+    L = [f"# Evidence — {case}", "", "## References for key precedents", references(r["answer"]), "## Candidates considered", "| Role | Concept | Reason |", "|---|---|---|"]
     L += [f"| {c.role} | {c.concept} | {c.reason} |" for c in d.all_candidates]
     if r["enum"]:
         L += ["", "## Design space (computed)", "| Skip | Exons | bp | Deleted aa | Range |", "|---|---|---|---|---|"]

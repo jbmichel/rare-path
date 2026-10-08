@@ -268,37 +268,39 @@ Do not make payload-selection experiments unnecessarily dependent on delivery.
 
 # 12. Output Format
 
-Target: **400–700 words maximum**, excluding references.
+The reader is a scientifically sophisticated drug-discovery colleague who has not seen the research. They understand ASOs, splicing, delivery and trial design. They do not know this disease, this gene's isoforms, or the shorthand of the research notes. They will read the answer once, quickly, before a meeting.
+
+There is no word limit. Length comes from the content the decision needs, not from a target. Clarity and readability do not mean longer, and they do not mean shorter: do not compress sentences to save words, and do not add material to fill space.
 
 Do not narrate the research process.
 
-Use this structure:
+Use bullet points throughout, under this structure:
 
 ## Recommendation
 
 **LEAD — [one-line program]**
 
-2–3 sentences.
+Bullets: the disease defect in plain words, the RNA product wanted, the molecule, and the target level of effect.
 
 ## Why this design
 
-Maximum 3 bullets.
+Bullets, each a reason with the evidence that supports it.
 
 ## Delivery
 
-One short paragraph.
+Bullets: the route and platform, the best precedent and what it does and does not tell us, the main limitation, and the follow-on delivery test.
 
 ## Backup
 
-Maximum 2 alternatives, one sentence each.
+Maximum 2 alternatives. Each is one bold line followed by bullets: what it is, the evidence for it, and when it becomes preferable.
 
 ## Critical risk
 
-One short paragraph.
+Bullets: the main way the program fails, and any secondary hazard.
 
 ## First experiment
 
-Maximum 5 bullets:
+One bullet group per item, each with bullets:
 
 - model;
 - constructs;
@@ -308,28 +310,43 @@ Maximum 5 bullets:
 
 ## Key precedents
 
-Maximum 5 entries.
-
-Only precedents that materially change the decision.
+Only precedents that materially change the decision. Each states what it shows and why it matters here.
 
 ---
 
 # 13. Writing Rules
 
-Write like an experienced discovery-team lead preparing for a program meeting.
+Write for the colleague described in section 12, not for the research team.
 
-### Hard rules
+### Format
 
-- No section may repeat information from another section.
-- No paragraph longer than 5 sentences.
-- No evidence dump in the main body.
-- No generic disease background unless it changes the ASO design.
+- One idea per bullet.
+- A bullet is one plain sentence, rarely two. If a bullet needs a semicolon, a long parenthetical, or two separate numbers to make its point, split it.
+- Aim for about 25 words per bullet and do not exceed 30. A long bullet usually holds two ideas: keep the one the decision needs.
+- Open each section with its conclusion, then the supporting bullets.
+- Where a fact matters, say why in the same bullet ("..., so ...", "..., which means ...").
+
+### Language
+
+- Plain words and full sentences. No telegraphic fragments, arrows, slashes standing in for logic, stacked noun phrases, or undefined abbreviations.
+- Spell out every abbreviation on first use.
+- Name the molecule, exon or program instead of pointing at it ("the exon-20 variant", not "it" or "the former").
+- Give a number only when a decision depends on it, and say what it measures.
+- Give disease, gene or biology background where the reader needs it to follow the argument: one or two bullets, where it is first needed.
+- State uncertainty directly in one sentence ("No one has shown X yet, so we test it first.") instead of hedging every claim.
+
+### Content
+
+- Give each fact once. No section repeats another.
+- No evidence dump in the main body; supporting references go after the decision.
+- Omit any detail that does not change payload, delivery, experiment, or verdict.
 - No more than 3 lead/backup concepts in the main answer.
-- Do not explain obvious ASO concepts to an expert audience.
-- Put supporting references after the decision, not inside every sentence.
-- If a detail does not change payload, delivery, experiment, or verdict, omit it.
-- Prefer short sentences and bullets over compressed dense prose.
-- Be decisive when the evidence supports a decision; state uncertainty explicitly when it does not.
+- Be decisive when the evidence supports a decision.
+- Use only facts present in the research. Do not add claims or sources.
+
+### Self-check
+
+Read each bullet as the colleague would. If it needs a second read, rewrite it as two plainer bullets. If two bullets say the same thing, delete one.
 
 ---
 
@@ -347,6 +364,7 @@ The agent has failed if it:
 - conflates sequence potency with delivery potency;
 - produces extensive disease background instead of a drug-discovery recommendation;
 - gives many ideas without selecting a lead;
+- writes in shorthand: fragments, undefined abbreviations, or bullets that need a second read;
 - proposes experiments that do not change the program decision.
 
 ---

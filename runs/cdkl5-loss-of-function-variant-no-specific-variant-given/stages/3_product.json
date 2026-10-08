@@ -1,0 +1,187 @@
+{
+ "products": [
+  {
+   "skip": "P1 — no exon skipped; ASO-mediated EXCLUSION of the putative NMD-inducing exon ('exon 16x') in CDKL5 intron 16, from the patient's non-mutant allele",
+   "natural_human_equivalent": "Product is the wild-type 960-aa brain isoform, so the human equivalent is any healthy CDKL5 allele. Dose-level equivalent: females with favourably skewed X-inactivation and post-zygotic mosaics, who are mild or unaffected — natural proof that raising canonical CDKL5 per neuron is sufficient. Upper bound exists: CDKL5 duplication carriers show autism, DD, macrocephaly without epilepsy (search snippet, full text not verified).",
+   "domain_consequence": "None. No coding sequence altered: kinase domain 13-297, ATP site 19-27/42, catalytic D135 and the entire C-terminal regulatory/NLS-NES region are intact; output is the canonical brain isoform.",
+   "rescue_evidence": "No CDKL5-specific ASO data found, published or in a pipeline. The only CDKL5 citation for this event is a Stoke patent naming 'exon 16x' in intron 16 with no supporting expression data. Indirect: adult re-expression of Cdkl5 at the endogenous locus in mice reverses most behavioural and NMDAR deficits (working memory not reversible). Searches tried: PubMed 'CDKL5 ASO poison exon', 'CDKL5 NMD exon', EuropePMC 'CDKL5 antisense oligonucleotide' (503), web 'CDKL5 TANGO 2025', 'Stoke CDKL5 pipeline'.",
+   "judgment": "plausible",
+   "why": "The product itself is perfect — unmodified canonical protein from the healthy allele — but the enabling non-productive splicing event is asserted only in a data-free patent, so existence and magnitude in human neurons are unverified.",
+   "findings": [
+    {
+     "claim": "CDKL5 kinase domain spans aa 13-297; ATP binding 19-27 and 42; active site D135; 960-aa sequence with a brain-predominant alternative C-terminus (905-960).",
+     "source": "https://rest.uniprot.org/uniprotkb/O76039.txt"
+    },
+    {
+     "claim": "Patent WO2019084050A1 names an NMD-inducing exon 'exon 16x' within CDKL5 intron 16 and ASO targeting regions, but presents no CDKL5 expression data.",
+     "source": "https://patents.google.com/patent/WO2019084050A1/en"
+    },
+    {
+     "claim": "Favourable X-inactivation skewing or post-zygotic mosaicism can yield mild or unaffected CDKL5 carriers.",
+     "source": "https://ncbi.nlm.nih.gov/sites/books/NBK602610/"
+    },
+    {
+     "claim": "Adult restoration of CDKL5 in mice improved hyperactivity, anxiety and motor deficits and normalised EB2 Ser222 phosphorylation; working memory deficits were not reversible.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8516470/"
+    }
+   ]
+  },
+  {
+   "skip": "P2 — no exon skipped; ASO redirection away from 3'-terminal non-productive CDKL5 isoforms (exon-20-containing transcripts whose frame stops near the end of exon 20) toward hCDKL5_1",
+   "natural_human_equivalent": "Same as P1 — the product is the canonical 960-aa hCDKL5_1 brain protein. The non-productive isoform being suppressed is itself a normal constituent of human brain RNA, so its reduction has no truncated-protein equivalent to phenotype.",
+   "domain_consequence": "None. Coding sequence unchanged; shifting isoform usage toward hCDKL5_1 (18 exons, 6.6 kb 3'UTR), the predominant human brain transcript.",
+   "rescue_evidence": "None found for CDKL5. Event is described in human/mouse transcript characterisation: exon 20 inclusion terminates the frame near the end of exon 20 with splicing detected downstream. No ASO has been applied to it. Same search set as P1.",
+   "judgment": "plausible",
+   "why": "Identical ideal product to P1 but the non-productive splicing event is at least documented in real human brain transcript data rather than only in a patent.",
+   "findings": [
+    {
+     "claim": "The predominant human brain CDKL5 transcript hCDKL5_1 is a 9.7 kb, 18-exon mRNA with a 6.6 kb 3'UTR; multiple novel splice and UTR isoforms exist with tissue- and developmental-stage-specific expression.",
+     "source": "PMID 27315173"
+    },
+    {
+     "claim": "Inclusion of CDKL5 exon 20 gives a frame terminating near the end of exon 20, with splicing detected after that exon (3'-end RNA-seq reads in brain and testis).",
+     "source": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0157758"
+    }
+   ]
+  },
+  {
+   "skip": "P9 — no exon skipped; ASO targeting the 6.6 kb CDKL5 3'UTR / uORF to raise translation or stability of the existing canonical mRNA",
+   "natural_human_equivalent": "Product is canonical 960-aa protein; equivalent is the normal allele. Dosage equivalent again the mildly-affected skewed-XCI females; ceiling set by duplication carriers.",
+   "domain_consequence": "None — no change to the coding sequence or to any domain.",
+   "rescue_evidence": "None found for CDKL5. GeneReviews notes pathogenic variants in a 170-nt noncoding 3' region of the brain transcript, confirming the 3' end is functionally regulatory, but no ASO upregulation data exist. Searches: web 'CDKL5 3'UTR ASO upregulation', PubMed CDKL5 isoform/3'UTR.",
+   "judgment": "uncertain",
+   "why": "Perfect product, but no CDKL5 3'UTR regulatory element has been mapped to an ASO-actionable repressor, so there is currently no design handle.",
+   "findings": [
+    {
+     "claim": "Pathogenic CDKL5 variants occur in a 170-nucleotide noncoding 3' region of the predominant brain transcript, historically missed by clinical labs.",
+     "source": "https://ncbi.nlm.nih.gov/sites/books/NBK602610/"
+    },
+    {
+     "claim": "hCDKL5_1 carries a 6.6 kb 3'UTR, a large regulatory surface.",
+     "source": "PMID 27315173"
+    }
+   ]
+  },
+  {
+   "skip": "P4 — no exon skipped as therapy; ASO/ExSpeU1 restoration of canonical exon inclusion for a splice-site allele (e.g. c.2376+5G>A, which causes exon 16 skipping and NMD)",
+   "natural_human_equivalent": "Product is the canonical full-length protein restored from the patient's own mutant allele. Untreated equivalent: carriers of c.2376+1/+5 variants, who have classic CDD with ~80% reduction in CDKL5 protein in lymphocytes.",
+   "domain_consequence": "None in the rescued transcript — exon 16 inclusion is restored, avoiding the frameshift and premature stop in exon 18; kinase domain 13-297 and C-terminal region intact.",
+   "rescue_evidence": "Direct and quantitative: ExSpeU1 constructs restored >70% CDKL5 protein for the +5 model with dose-dependent recovery of kinase activity, in HEK293T, SH-SY5Y, patient lymphoblastoid cells (c.2376+5G>A) and Cdkl5-null hippocampal neurons. Critically, only +5 variants were rescuable; +1 canonical-site variants were not.",
+   "judgment": "likely functional",
+   "why": "Strongest direct CDKL5 rescue data of any option and restores the true canonical protein, but it only serves the small splice-variant subgroup and the modality demonstrated was U1 snRNA, not an ASO.",
+   "findings": [
+    {
+     "claim": "CDKL5 c.2376+5G>A causes exon 16 skipping, frameshift and a premature stop in exon 18 leading to NMD; patient lymphocytes showed ~80% reduction in CDKL5 protein.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6747535/"
+    },
+    {
+     "claim": "ExSpeU1 restored >70% of CDKL5 protein and dose-dependent kinase activity for +5 splice variants, but failed to rescue +1 canonical splice-site variants.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6747535/"
+    }
+   ]
+  },
+  {
+   "skip": "P5 — no exon skipped; Xist-targeting ASO (± DNMT inhibitor) to reactivate the wild-type CDKL5 allele on the inactive X in females",
+   "natural_human_equivalent": "Product is canonical CDKL5 from the silenced wild-type allele. Human equivalent is precisely the favourably-skewed heterozygous female, who may be mildly affected or unaffected — the best natural evidence that partial canonical restoration is clinically meaningful. Not applicable to hemizygous males.",
+   "domain_consequence": "None — wild-type coding sequence, all domains intact.",
+   "rescue_evidence": "CDKL5-specific: an unreviewed 2025 preprint titled 'Epigenetic Reactivation of CDKL5 Rescues CDKL5 Deficiency Disorder' exists; full text could not be retrieved, so no numbers are claimed. Cross-target precedent only: an Xist ASO plus a DNA-methylation inhibitor achieved 30,000-fold MECP2 upregulation from Xi in cultured cells with selective Xi reactivation in vivo.",
+   "judgment": "uncertain",
+   "why": "Ideal product and an exact natural-human proof of concept in skewed females, but genome-wide Xi reactivation is non-selective, the CDKL5-specific evidence is an unretrievable preprint, and it excludes males.",
+   "findings": [
+    {
+     "claim": "An Xist ASO combined with a DNA methyltransferase inhibitor achieved 30,000-fold MECP2 upregulation from the inactive X in cultured cells; CDKL5 syndrome is named as a target class for this strategy.",
+     "source": "PMID 29282321"
+    },
+    {
+     "claim": "A 2025 preprint reports epigenetic reactivation of CDKL5 rescuing CDD; content not retrievable.",
+     "source": "https://www.researchsquare.com/article/rs-7095603/v1"
+    },
+    {
+     "claim": "Hemizygous males are most likely severely affected, limiting any Xi-directed product to females.",
+     "source": "https://ncbi.nlm.nih.gov/sites/books/NBK602610/"
+    }
+   ]
+  },
+  {
+   "skip": "P3 — modulation of the in-frame 41-aa cassette exon 16b/exon 17 (hCDKL5_2, ~10% of brain transcripts)",
+   "natural_human_equivalent": "Both resulting proteins occur naturally in human brain: the canonical 960-aa form and the exon-16b-containing form with 41 extra in-frame residues in the C-terminal half. Both are present in unaffected individuals; no phenotype is attached to the isoform ratio.",
+   "domain_consequence": "Insertion/removal of 41 in-frame residues in the C-terminal regulatory half, downstream of the kinase domain (13-297). No domain is destroyed or fused out of frame.",
+   "rescue_evidence": "None found. No study has modulated exon 16b with an oligonucleotide or shown that the ratio affects CDKL5 activity. Searches: PubMed 'CDKL5 exon 16b', web '\"CDKL5\" \"exon 16b\" splicing isoform'.",
+   "judgment": "likely poor",
+   "why": "The exon is in-frame and not NMD-coupled, so redirecting it reshuffles isoform identity without increasing total productive CDKL5 output — it does not address the dosage deficit.",
+   "findings": [
+    {
+     "claim": "CDKL5 exon 16b (exon 17 in alternate nomenclature) inserts 41 in-frame residues in the C-terminal half, is brain-specific and highly conserved, and comprises roughly 10% of brain transcripts.",
+     "source": "https://www.nature.com/articles/jhg2010143"
+    },
+    {
+     "claim": "hCDKL5_2, containing this alternative exon, is expressed only at low levels in developing and adult brain.",
+     "source": "PMID 27315173"
+    }
+   ]
+  },
+  {
+   "skip": "P7 — COMPARATOR (larger change): a protein truncated in the distal C-terminus, i.e. terminating after aa 781, the product an ASO would yield if it bypassed a late premature stop",
+   "natural_human_equivalent": "Directly observed and well characterised: the 'late truncating (after aa781)' CDD variant group. These individuals retain kinase activity and most of the C-terminal region and attain milestones more often — HR 1.72 (95% CI 1.00-2.95) for independent sitting and HR 2.73 (95% CI 1.17-6.35) for independent walking versus other groups. p.Arg970* in the last exon has been reported with late-onset, milder seizure disorder, and variation beyond codon 938 has been argued to be of minor or no significance.",
+   "domain_consequence": "Kinase domain 13-297, ATP site and catalytic D135 fully retained; the distal C-terminus (roughly aa 782 to the 960-aa brain terminus) is lost, removing the C-terminal nuclear localisation/export region that controls CDKL5 subcellular distribution.",
+   "rescue_evidence": "No engineered or therapeutic rescue with this product found. Evidence is human natural-history only (milestone hazard ratios above). Searches: PubMed 'CDKL5 C-terminal deletion kinase activity localization' (0 hits), web late-truncating genotype-phenotype.",
+   "judgment": "uncertain",
+   "why": "Human data show this truncated protein confers a measurably milder motor/communication course, but these individuals still have CDD with refractory epilepsy — it is a partial product, not a normal one, and one retrieved source argues the opposite severity direction.",
+   "findings": [
+    {
+     "claim": "Late truncating CDKL5 variants after aa781 'maintain the kinase activity and a large portion of the C-terminal region'; late truncation gave HR 1.72 for independent sitting and HR 2.73 for walking by age 6.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9905550/"
+    },
+    {
+     "claim": "Females with truncating mutations after aa781 attained gross motor, hand function and communication milestones more often than other variant groups; a conflicting report claims C-terminal truncations are more severe.",
+     "source": "https://onlinelibrary.wiley.com/doi/10.1002/ajmg.a.37851"
+    },
+    {
+     "claim": "A p.Arg970X variant in the last CDKL5 exon was associated with a late-onset seizure disorder.",
+     "source": "https://www.sciencedirect.com/science/article/abs/pii/S1090379809000622"
+    },
+    {
+     "claim": "GeneReviews states nonsense alterations throughout the protein appear equally severe, with only terminal-region truncations possibly less severe.",
+     "source": "https://ncbi.nlm.nih.gov/sites/books/NBK602610/"
+    }
+   ]
+  },
+  {
+   "skip": "P8 — COMPARATOR (largest change): a kinase-domain-only product truncated between aa 172 and aa 781, losing the whole C-terminal region",
+   "natural_human_equivalent": "Observed as the aa172-781 truncating variant group: nonsense/frameshift alleles that preserve kinase activity but delete the C-terminal region. This group is associated with reduced likelihood of independent sitting and walking — i.e. classic severe CDD.",
+   "domain_consequence": "Kinase domain 13-297 retained but the entire C-terminal regulatory region (~aa 298/782 onward to 960), including the NLS/NES sequences governing nuclear-cytoplasmic distribution, is removed.",
+   "rescue_evidence": "None — this is the disease state, not a rescue. No study shows benefit of expressing a C-terminally truncated CDKL5.",
+   "judgment": "likely poor",
+   "why": "Catalytic competence without the C-terminal regulatory region is exactly the configuration seen in severely affected patients, so frame restoration here would not be product quality.",
+   "findings": [
+    {
+     "claim": "Truncating variants between aa172 and aa781 cause loss of the C-terminal region while maintaining kinase activity, and reduced the likelihood of achieving independent sitting and walking.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9905550/"
+    },
+    {
+     "claim": "The CDKL5 C-terminus contains the NLS and NES sequences controlling localisation; the N-terminal kinase domain carries the ATP site, active site and TEY motif.",
+     "source": "https://rest.uniprot.org/uniprotkb/O76039.txt"
+    }
+   ]
+  },
+  {
+   "skip": "P6 — no exon skipped; allele-selective gapmer knockdown of a mutant CDKL5 transcript, wild-type spared",
+   "natural_human_equivalent": "None found. CDD is established as a loss-of-function/haploinsufficiency disorder; no dominant-negative CDKL5 allele was named in this brief, and no retrieved source documents a truncated CDKL5 protein poisoning wild-type function. GeneReviews notes gain-of-function missense and duplications give a different, often milder presentation — not a degradation target.",
+   "domain_consequence": "Not applicable — no protein product is generated by this strategy; the therapeutic output is simply unchanged wild-type protein from the other allele.",
+   "rescue_evidence": "None found. Searches: PubMed/web CDKL5 dominant negative, allele-selective knockdown. No CDKL5 allele-selective ASO reported.",
+   "judgment": "likely poor",
+   "why": "With no named dominant-negative allele, silencing an already non-functional transcript adds no CDKL5 protein and cannot correct a dosage deficit.",
+   "findings": [
+    {
+     "claim": "Loss of function is the primary disease mechanism in CDKL5 deficiency disorder; duplications and gain-of-function missense variants cause a different, often milder phenotype.",
+     "source": "https://ncbi.nlm.nih.gov/sites/books/NBK602610/"
+    },
+    {
+     "claim": "CDKL5 duplication carriers (7 families) showed autism, developmental delay, hyperactivity and macrocephaly without epilepsy — an overexpression ceiling for any upregulation product.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4463505"
+    }
+   ]
+  }
+ ],
+ "ranking_rationale": "P2 > P1 > P4 > P5 > P9 > P7 > P3 > P8 > P6. P1/P2 yield the unmodified canonical 960-aa brain protein from a healthy allele — the only outcomes with no domain cost — and P2's non-productive event is documented in human brain RNA-seq, not just a data-free patent. P4 has the only quantitative CDKL5 rescue but serves one variant subgroup. Truncated products (P7/P8) remain disease proteins."
+}

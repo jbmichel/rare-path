@@ -1,0 +1,150 @@
+{
+ "platforms": [
+  {
+   "name": "Unconjugated 2'-MOE phosphorothioate steric-block ASO, intrathecal bolus (baseline platform for a CDKL5 upregulator)",
+   "architecture": "Fully 2'-MOE PS, 18-20mer, no RNase H recruitment (splice-switching/TANGO-type); no ligand. Free uptake into CSF-exposed cells; dosed by lumbar puncture, pediatric-feasible.",
+   "reaches_cell": "Yes for CSF-adjacent CNS, with a steep gradient. Human autopsy/imaging: caudal-to-rostral gradient, highest lumbar cord, most intense at cortical surface with little diffusion into deeper brain; NHP Malat1 ASO accumulation >1 order of magnitude lower in deep brain than cortex/cord. Brainstem, hippocampus, cerebellar deep layers and GABAergic interneuron populations in deep structures are the weak compartments. Retina is NOT reliably reached intrathecally (separate intravitreal route needed). Heart/periphery exposure low after IT (safety advantage).",
+   "functional_activity": "Proven in human neurons for steric-block splice redirection: nusinersen is a 2'-MOE 18-mer that forces SMN2 exon 7 inclusion; human autopsy tissue showed exon-7-containing SMN2 mRNA and SMN protein in thoracic cord motor neurons. TANGO non-productive-splicing redirection is clinically active for SCN1A (zorevunersen) and being tested for OPA1.",
+   "human_pd": "Molecular CNS PD for upregulation ASOs is indirect (no CSF protein assay). Zorevunersen (SCN1A TANGO, intrathecal): OLE median major-motor-seizure reduction ≥50% at all timepoints, 87% median at 8 months (n=9, 70 mg x2-3 then 45 mg); Vineland-3 expressive +7.56, receptive +6.06 points over 2 yr; ~95% rated improved at 36 mo. ION582/obudanersen (UBE3A-ATS, intrathecal, n=51): ~65% improved on Bayley-4 motor at 6 mo. Mechanistic/RNase H benchmark for CNS oligo exposure: intrathecal mivelsiran (siRNA) 75 mg single dose, CSF sAPPβ −90% max, −39% at 10 mo.",
+   "dose_frequency": "Loading then every 4 months intrathecal (zorevunersen: two 70 mg loading doses, 45 mg maintenance q4mo). Nusinersen-type schedule q4mo is the accepted pediatric standard.",
+   "toxicity": "Class: post-LP syndrome, CSF protein elevation (zorevunersen ~94% of patients with elevated CSF protein, 59% logged as TEAE; no hydrocephalus, no serious clinical sequelae reported), thrombocytopenia/proteinuria monitoring, tofersen-class myelitis/radiculitis. No serious safety events reported for STK-002 to date; ION582 'safe and well tolerated at all doses'.",
+   "access": "Fully buildable internally. Chemistry is generic/off-patent-adjacent; the constraint is IP on TANGO-style non-productive-splicing claims (Stoke) if the design reads on a poison/NMD-exon mechanism. Stoke's own disclosed CNS pipeline is SCN1A and SYNGAP1 — no CDKL5 program found. Routes: internal build; partner Stoke/Ionis; or the individualised-ASO platform trial route (NCT07410143) for variant-specific cases.",
+   "findings": [
+    {
+     "claim": "Zorevunersen: two 70 mg intrathecal loading doses, maintenance every four months; Phase 3 EMPEROR readout Q3 2027.",
+     "source": "https://www.biospace.com/press-releases/stoke-therapeutics-announces-second-quarter-2026-financial-results-and-provides-business-updates"
+    },
+    {
+     "claim": "OLE patients given initial 70 mg doses sustained median seizure reduction ≥50% at every timepoint, reaching 87% at eight months (n=9, 45 mg maintenance).",
+     "source": "https://www.stoketherapeutics.com/wp-content/uploads/Presentation-Zorevunersen-continues-to-demonstrate-potential-as-a-disease-modifying-therapy-in-long-term-OLE-studies.pdf"
+    },
+    {
+     "claim": "Elevated CSF protein occurred in ~94% of zorevunersen patients, 59% classed as TEAE; no hydrocephalus.",
+     "source": "https://dravetfoundation.org/zorevunersen-stk-001-faq-spotlight-on-the-upcoming-phase-3-studies/"
+    },
+    {
+     "claim": "ION582/obudanersen is intrathecal; HALOS n=51; ~65% improved on Bayley-4 fine/gross motor at 6 months; Phase 3 REVEAL topline 2H 2027.",
+     "source": "https://ir.ionis.com/node/34841"
+    },
+    {
+     "claim": "Intrathecal ASOs are poorly distributed to deep brain; NHP accumulation >10-fold lower in deep brain than cortex/spinal cord; nusinersen autopsy showed caudal-to-rostral gradient with little drug in brainstem/cortex.",
+     "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11444189/"
+    },
+    {
+     "claim": "Tofersen distribution in human CNS autopsy tissue from 8 SOD1-ALS donors gave first estimates of SOD1 reduction in human motor-system tissue.",
+     "source": "PMID 42406382"
+    },
+    {
+     "claim": "Radiolabeled tofersen: brain activity ~4-10% of injected dose (NHP), highest radioactivity in lumbar/lower thoracic cord; human brain uptake peaks 4-24 h.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12766861/"
+    }
+   ]
+  },
+  {
+   "name": "Unconjugated intravitreal ASO (retinal compartment)",
+   "architecture": "Same 2'-MOE steric-block chemistry, intravitreal injection into one/both eyes; separate dosing compartment from intrathecal.",
+   "reaches_cell": "Retinal ganglion cells and inner retina after IVT; does not require BBB crossing. Does not address brain — a CDKL5 program needing retina would run IT + IVT as two routes.",
+   "functional_activity": "STK-002 (OPA1 TANGO ASO) is the direct precedent that the same upregulation chemistry is deployable intravitreally.",
+   "human_pd": "None quantitative retrieved. OSPREY Phase 1/2 first cohort dosed, second cohort from Aug 2026; safety/efficacy readout H1 2027; no serious or severe safety events reported so far.",
+   "dose_frequency": "Intravitreal, one eye, intermittent (interval not disclosed in retrieved sources).",
+   "toxicity": "No serious or severe safety events reported to date in STK-002 studies; class risk is IVT procedure (endophthalmitis, IOP) plus ASO-class intraocular inflammation.",
+   "access": "Internal build straightforward; same IP caveat as above. Retina should be treated as optional/secondary for CDD — deprioritize unless visual phenotype is the endpoint.",
+   "findings": [
+    {
+     "claim": "STK-002 is a TANGO ASO given by intravitreal injection in one eye in the Phase 1/2 OSPREY study in ADOA.",
+     "source": "https://www.clinicaltrialsarena.com/news/stoke-therapeutics-adoa-therapy/"
+    },
+    {
+     "claim": "OSPREY cohort 1 dosing complete, cohort 2 begins Aug 2026, readout H1 2027, no serious or severe safety events.",
+     "source": "https://www.biospace.com/press-releases/stoke-therapeutics-announces-second-quarter-2026-financial-results-and-provides-business-updates"
+    }
+   ]
+  },
+  {
+   "name": "TfR1 antibody/Fab-oligonucleotide conjugates (Denali OTV, Roche Brainshuttle-ASO, Dyne FORCE, Avidity/Novartis AOC)",
+   "architecture": "Anti-TfR1 antibody or Fab/VHH conjugated to oligo (e.g. maleimide-C6 linker to oligo 5' at engineered Ser239 in Denali OTV); IV/SC dosing, receptor-mediated transcytosis.",
+   "reaches_cell": "Best current answer to the deep-brain/interneuron gap: preclinical OTV gives sustained knockdown across multiple CNS regions and all major cell types (neurons, astrocytes, microglia, oligodendrocytes, endothelium). Dyne TfR1-Fab-siMAPT ~75% brain MAPT knockdown in mice and NHP including deep brain; TfR1 VHH-siRNA 50-80% durable knockdown in mice/NHP. Systemic route means heart/liver/muscle exposure and TfR1-mediated reticulocyte/ hematologic risk must be managed.",
+   "functional_activity": "Demonstrated for RNase H ASO and siRNA (knockdown). NOT demonstrated for steric-block splice redirection/upregulation — which is what CDKL5 needs. This is the critical gap: nuclear splice-switching requires sustained nuclear concentration, and no retrieved data show an antibody-conjugated steric-block ASO raising a target protein in brain.",
+   "human_pd": "None found for CNS. DNL628 (OTV:MAPT) first patient dosed March 2026 in Phase 1b Alzheimer's; initial clinical biomarker data expected H1 2027. DNL422 (OTV:SNCA) IND-enabling. Human AOC PD exists only for muscle (del-siran DM1, Phase 3 readout Sept 2026).",
+   "dose_frequency": "IV/SC, expected monthly-to-quarterly; not yet defined in humans for CNS.",
+   "toxicity": "Unknown in human CNS. Class concerns: TfR1-driven anemia/reticulocyte loss, infusion reactions, systemic oligo exposure (liver/kidney), plus ADA. Published mAb work explicitly frames the brain-exposure/PK/safety tradeoff for TfR antibodies.",
+   "access": "Not internally buildable at credible speed. All leading TfR-oligo assets are captive (Denali, Roche, Dyne, Novartis post-Avidity). Realistic paths: license a TfR shuttle from a tools/biotech provider (VHH-based academic/biotech constructs are the most licensable), or partner. Treat as generation-2 for CDD, not the lead.",
+   "findings": [
+    {
+     "claim": "DNL628 (OTV:MAPT) CTA approved Jan 2026; first patient dosed March 2026 in Phase 1b AD; initial biomarker data H1 2027; DNL422 (OTV:SNCA) IND-enabling.",
+     "source": "https://investors.denalitherapeutics.com/news-releases/news-release-details/denali-therapeutics-reports-second-quarter-2026-financial"
+    },
+    {
+     "claim": "OTV uses a maleimide-C6 linker joining the oligo 5' end to Ser239 of a transferrin receptor antibody; IV dosing gave sustained knockdown across CNS regions and all major cell types.",
+     "source": "https://www.fiercebiotech.com/research/denali-reports-new-method-get-antisense-oligonucleotides-across-blood-brain-barrier"
+    },
+    {
+     "claim": "Dyne FORCE TfR1-Fab conjugated MAPT siRNA achieved ~75% MAPT RNA knockdown in mice and NHP with delivery to deep brain.",
+     "source": "https://investors.dyne-tx.com/news-releases/news-release-details/dyne-therapeutics-announces-upcoming-presentation-highlighting"
+    },
+    {
+     "claim": "TfR1-targeting single-domain antibody-siRNA conjugates gave durable 50-80% mRNA and protein knockdown in mice and NHP after systemic dosing.",
+     "source": "https://www.biorxiv.org/content/10.64898/2026.05.20.726486v1.full"
+    },
+    {
+     "claim": "Roche evaluated TfR- and CD98hc-targeting Brainshuttle variants for ASO transcytosis across the BBB.",
+     "source": "https://www.tandfonline.com/doi/full/10.1080/19420862.2026.2691351"
+    }
+   ]
+  },
+  {
+   "name": "Peptide-conjugated oligonucleotides for systemic CNS delivery (ApoB11/LDLR, ApoE-derived, CPP/EEV classes)",
+   "architecture": "Short receptor-binding peptide (e.g. 11-aa ApoB-derived LDLR ligand) covalently conjugated to ASO; systemic (IP/IV) dosing.",
+   "reaches_cell": "Rodent-only evidence of brain penetration with sustained retention; no NHP or human regional/cell-type mapping retrieved. Cell-type coverage in interneurons/cerebellum unknown.",
+   "functional_activity": "Knockdown only: ApoB11:ASO reduced alpha-synuclein ~50% in brain of a synucleinopathy mouse model. No steric-block upregulation precedent found.",
+   "human_pd": "None found. No clinical-stage CNS peptide-oligo conjugate retrieved; PepGen/Entrada EEV CNS data did not surface in searches (searches run: 'peptide conjugated oligonucleotide brain delivery 2026 PepGen Entrada EEV CNS antisense').",
+   "dose_frequency": "Not established; rodent single-dose PK only (ApoB11:ASO brain Cmax 1.5 h, high levels to 96 h).",
+   "toxicity": "Rodent tolerability reported; historic CPP class liabilities are renal tubular toxicity and complement/infusion effects at efficacious systemic doses. No human data.",
+   "access": "Academic/early-biotech licensing is feasible and cheap, but the platform is too immature to carry a CDD lead. Use as an option-value side bet only.",
+   "findings": [
+    {
+     "claim": "Systemically delivered ApoB11-conjugated ASO crossed the BBB with sustained CNS retention and ~50% alpha-synuclein reduction in a transgenic mouse model.",
+     "source": "PMID 42172871"
+    },
+    {
+     "claim": "ApoB11 is an 11-aa LDLR-binding ApoB peptide; after single IP injection brain concentrations peaked at 1.5 h and persisted 96 h in mice.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10584037/"
+    }
+   ]
+  },
+  {
+   "name": "Adjacent/newer classes relevant as precedent or competition (intrathecal conjugated siRNA; AAV gene replacement; AAV-U1 snRNA)",
+   "architecture": "C16-conjugated siRNA intrathecal (mivelsiran); AAV9 CDKL5 gene replacement (ICV/IT); engineered U1 snRNA delivered by vector.",
+   "reaches_cell": "Intrathecal C16-siRNA achieves durable human CNS target engagement (same compartment limits as IT ASO). AAV9 ICV in neonatal Cdkl5-KO mice reduced pathology and aberrant behavior; NHP data indicate CDKL5-expressing neurons tolerate added CDKL5 — but AAV9 CNS coverage in humans is patchy and one-shot, non-titratable.",
+   "functional_activity": "siRNA cannot raise CDKL5 — mechanistically excluded for this lesion; it is a CNS exposure/dosing precedent only. AAV and U1 snRNA can raise CDKL5 protein but are not ASOs; U1 snRNA rescue in CDKL5 is published only for specific splice variants (c.2376+5G>A, exon 3/16).",
+   "human_pd": "Mivelsiran 75 mg single intrathecal dose: CSF sAPPα −84%, sAPPβ −90% max; −33%/−39% at 10 months; first RNAi gene silencing demonstrated in human brain. AAV CDKL5: no human data — UX055 remains preclinical with no timelines; Elaaj Bio (Loulou subsidiary) partnered with Viralgen for manufacturing.",
+   "dose_frequency": "Mivelsiran: single IT dose with ~12-month durability (supports very infrequent CNS oligo dosing). AAV: single dose, irreversible.",
+   "toxicity": "Mivelsiran: mostly mild/moderate AEs, no significant CSF-biomarker or NfL abnormality. AAV: immunogenicity, no redosing, dose-finding unresolved (explicit reason for UX055 delay).",
+   "access": "Mivelsiran chemistry (lipid-conjugated IT oligo, Alnylam) is licensing-only. AAV route is already occupied in CDD by Ultragenyx and Elaaj Bio — relevant as competition, and as the reason an ASO must offer titratability/reversibility to differentiate.",
+   "findings": [
+    {
+     "claim": "Single 75 mg intrathecal mivelsiran reduced CSF sAPPα 84% and sAPPβ 90% at max, with 33%/39% mean reductions at 10 months; first RNAi silencing in human brain.",
+     "source": "https://investors.alnylam.com/press-release?id=27441"
+    },
+    {
+     "claim": "UX055 AAV9 gene therapy for CDD remains preclinical; Ultragenyx gave no trial timeline at the 2025 CDKL5 Forum; NHP data suggest CDKL5-expressing neurons can make more CDKL5.",
+     "source": "https://www.draccon.com/dracaena-report/2025forum"
+    },
+    {
+     "claim": "Elaaj Bio, a wholly owned Loulou Foundation subsidiary, partnered with Viralgen to advance an AAV gene therapy for CDD.",
+     "source": "https://www.prnewswire.com/news-releases/viralgen-partners-with-elaaj-bio-to-advance-gene-therapy-program-for-cdkl5-deciency-disorder-302761295.html"
+    },
+    {
+     "claim": "Engineered U1 snRNAs rescued CDKL5 splicing variants (exon 3 and exon 16 inclusion), including c.2376+5G>A which causes exon 16 skipping, PTC in exon 18 and NMD.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6747535/"
+    },
+    {
+     "claim": "ICV AAV9.Syn.hCDKL5 in neonatal male Cdkl5-KO mice reduced pathology and aberrant behavior.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11489525/"
+    }
+   ]
+  }
+ ],
+ "naked_baseline": "Unconjugated 2'-MOE PS steric-block ASO, intrathecal bolus, is the only buildable route today for a CDKL5-upregulating ASO. Dosing template: two 70 mg loading doses then 45 mg every 4 months by LP (zorevunersen); nusinersen-type loading+q4mo is the accepted pediatric schedule. Delivered performance in CSF-accessible CNS: clinically meaningful, e.g. zorevunersen OLE median major-motor-seizure reduction 87% at 8 months (n=9) with Vineland-3 expressive +7.56/receptive +6.06 over 2 years; ION582 ~65% of 51 patients improved on Bayley-4 motor at 6 months. Exposure limits are quantified and material: NHP deep-brain ASO accumulation >10-fold below cortex/cord; human nusinersen autopsy shows a caudal-to-rostral gradient with little drug in brainstem/cortex; tofersen imaging shows cortical-surface-dominant signal, brain ~4-10% of injected dose. Tolerability at this exposure is manageable but not clean: CSF protein elevation in ~94% of zorevunersen patients (59% TEAE), no hydrocephalus; no serious events reported for ION582 or STK-002. Retina needs a second, intravitreal route (STK-002 precedent). No approved or clinical unconjugated oligo reaches CNS after systemic dosing.",
+ "payload_vs_delivery": "Zorevunersen's 87% seizure drop and ION582's Bayley gains reflect target amenability — a validated SCN1A poison exon, a UBE3A-ATS switch — plus open-label design, not superior delivery; the delivery vehicle is identical plain IT 2'-MOE. For CDKL5 the binding risk is payload: no validated CDKL5 non-productive/NMD-coupled splicing event was retrieved, and no CDKL5 ASO program exists. Deep-brain/interneuron exposure is the delivery-side deficit."
+}

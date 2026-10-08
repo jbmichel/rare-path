@@ -1,0 +1,18 @@
+{
+ "gene": "CDKL5",
+ "transcript": "NM_003159.3 (ENST00000379996; MANE Select — not re-verified, no retrieval tool available this session)",
+ "defect": "Heterozygous (females, with X-inactivation mosaicism) or hemizygous (males) loss-of-function allele — nonsense, frameshift, canonical-splice or intragenic deletion — distributed across CDKL5 coding exons; no specific variant supplied. Net effect is reduced productive full-length CDKL5 mRNA and insufficient kinase-competent CDKL5 protein per neuron (haploinsufficiency/dosage deficit), not a single correctable mis-splicing event.",
+ "desired_rna_product": "Increased abundance of productive, correctly spliced, full-length protein-coding CDKL5 mRNA per cell, generated from the patient's non-mutant allele by redirecting CDKL5 pre-mRNA processing away from non-productive/NMD-coupled isoforms toward the canonical coding isoform. Mutation-agnostic; no change to the canonical coding sequence. (Alternative, variant-dependent product held open: selective loss of mutant-allele transcript with wild-type spared, only if a dominant-negative allele is named.)",
+ "goal": "stabilize_transcript",
+ "target_exons": [],
+ "tissues": [
+  "CNS neurons broadly (CSF-accessible)",
+  "cortical excitatory neurons",
+  "hippocampal neurons",
+  "GABAergic interneurons",
+  "cerebellar neurons (granule, Purkinje)",
+  "brainstem",
+  "spinal cord",
+  "retina"
+ ]
+}

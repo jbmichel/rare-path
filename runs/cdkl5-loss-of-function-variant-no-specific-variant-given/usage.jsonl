@@ -1,0 +1,12 @@
+{"t": "08:44:36", "agent": "rna_defect", "turns": 4, "tokens": 20267, "notional_usd": 0.1965}
+{"t": "08:49:35", "agent": "6_programs", "turns": 35, "tokens": 284408, "notional_usd": 1.6837}
+{"t": "08:50:35", "agent": "3_product", "turns": 37, "tokens": 371129, "notional_usd": 1.5644}
+{"t": "08:50:59", "agent": "4_aso", "turns": 45, "tokens": 475147, "notional_usd": 2.0573}
+{"t": "08:51:14", "agent": "5_delivery", "turns": 35, "tokens": 477153, "notional_usd": 1.7453}
+{"t": "08:54:31", "agent": "decision", "turns": 4, "tokens": 112215, "notional_usd": 1.1764}
+{"t": "08:56:36", "agent": "editor", "turns": 4, "tokens": 47538, "notional_usd": 0.5538}
+{"t": "08:58:54", "agent": "editor", "turns": 4, "tokens": 55319, "notional_usd": 0.6675}
+{"t": "10:20:46", "agent": "writer", "turns": 4, "tokens": 121036, "notional_usd": 1.1371}
+{"t": "10:21:39", "agent": "editor", "turns": 3, "tokens": 19163, "notional_usd": 0.1966}
+{"t": "10:22:37", "agent": "writer", "turns": 3, "tokens": 81417, "notional_usd": 0.6207}
+{"t": "10:23:13", "agent": "editor", "turns": 3, "tokens": 19698, "notional_usd": 0.1186}

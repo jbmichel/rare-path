@@ -8,10 +8,9 @@ from pathlib import Path
 
 from . import prompts as P
 from .exons import enumerate_skips
-from .render import main_answer, words
-from .schemas import (ASODesignReport, Decision, DeliveryReport, ProductReport, ProgramsReport, RNADefect)
+from .render import hard_to_read, main_answer, words
+from .schemas import (ASODesignReport, Answer, Decision, DeliveryReport, ProductReport, ProgramsReport, RNADefect)
 
-WORD_LIMIT = 700
 
 
 def _compact(enum: dict, n: int = 16) -> str:
@@ -71,13 +70,14 @@ class Pipeline:
         decision = self._stage("7_decision", Decision, lambda: self.run(
             "decision", sysp(P.DECISION), f"{base}\n\nRESEARCH REPORTS:\n{reports}", Decision))
 
-        for attempt in range(2):   # AGENT.md section 12: 400-700 words, enforced here rather than hoped for
-            n = words(main_answer(decision))
-            self.log(f"[main answer] {n} words")
-            if n <= WORD_LIMIT:
-                break
-            self.log("  over limit; editor pass")
-            decision = self.run("editor", P.EDITOR.format(limit=WORD_LIMIT - 40),
-                                f"Current word count: {n}.\n\n{decision.model_dump_json(indent=1)}", Decision)
-            (self.out / "stages" / "7_decision_edited.json").write_text(decision.model_dump_json(indent=1))
-        return {"rna": rna, "enum": enum, **res, "decision": decision}
+        notes = f"{base}\n\nWORKING NOTES (judgment):\n{decision.model_dump_json(indent=1)}\n\nRESEARCH REPORTS:\n{reports}"
+        answer = self._stage("8_answer", Answer, lambda: self.run("writer", sysp(P.WRITER), notes, Answer))
+
+        bad = hard_to_read(answer)   # readability guard: bullets that are long or chain ideas with semicolons
+        self.log(f"[main answer] {words(main_answer(answer))} words, {len(bad)} hard-to-read bullets")
+        if bad:
+            ins = "Hard-to-read bullets:\n" + "\n".join(f"- {b}" for b in bad)
+            answer = self.run("editor", P.EDITOR, f"{ins}\n\nCURRENT ANSWER:\n{answer.model_dump_json(indent=1)}", Answer)
+            (self.out / "stages" / "8_answer_edited.json").write_text(answer.model_dump_json(indent=1))
+            self.log(f"[main answer] after edit: {words(main_answer(answer))} words, {len(hard_to_read(answer))} hard-to-read bullets")
+        return {"rna": rna, "enum": enum, **res, "decision": decision, "answer": answer}

@@ -1,0 +1,125 @@
+{
+ "per_skip": [
+  {
+   "skip": "P1 — Suppress inclusion of the intron-16 brain-specific alternative exon (Fichou 'exon 16b' = Williamson 'exon 17'; claimed by Stoke as 'exon 16x of CDKL5' in 'intron 16 of CDKL5'). Product: canonical hCDKL5_1 mRNA. NOT an exon-skipping/reframing block — there is no frame to restore; goal is productive-isoform share.",
+   "published_asos": "None found. PubMed 'CDKL5 antisense oligonucleotide' returns 6 records, none targeting a CDKL5 exon; 'CDKL5 poison exon antisense oligonucleotide' = 0 hits. Only patent-level claim: WO2019084050A1 names 'exon 16x of CDKL5' / 'intron 16 of CDKL5' with no CDKL5 SEQ IDs; sibling filings CA3079729A1 and CN111936163A do not mention CDKL5 at all. A web result asserting ASOs 'H16A(-12+19)/H16A(-06+25) induced CDKL5 exon 16 skipping' is a false conflation — those are DMD exon-16 PMOs from the Wilton exon-skipping patents; do not use.",
+   "coordinated_skipping": "No evidence for CDKL5. Searches run: PubMed 'CDKL5 antisense oligonucleotide', 'CDKL5 transcript isoforms alternative splicing brain exon', 'CDKL5 exon 16b isoform brain truncated', 'CDKL5 alternative splicing non-productive isoform exon 16 exon 17' (0 hits); web 'CDKL5 intron 16 pseudoexon/NMD exon/poison exon'; Europe PMC MCP returned HTTP 503 on all attempts (CDKL5 poison exon; CDKL5 splice switching) — that channel is unverified. Generic precedent only: one AO against DMD exon 17 also skipped exon 18, and co-skipping of a stretch is achievable by targeting the two outer exons.",
+   "linked_or_multitarget": "Yes, generic: NS-089/NCNP-02 (brogidirsen) is a single PMO built from two connected antisense sequences hitting two separate splicing regulators in DMD exon 44 — directly applicable architecture if one arm hits the 3'ss and one the ESE of the intron-16 exon. Also multi-cassette U7 snRNA vectors targeting >1 splicing event per AAV.",
+   "amenability": "Weak as a standalone. Exon-17(=16b)-containing transcripts are ~10% of whole-brain CDKL5 transcripts, so complete suppression redistributes at most ~10% — and Williamson assigns this exon +41 in-frame amino acids (hCDKL5_2/_4), i.e. productive, not NMD-coupled. Exon is extremely conserved and brain-restricted (suggesting function, and a cryptic-regulator risk). No CDKL5 poison exon was recovered by a 2025 transcriptome-wide brain poison-exon atlas (12,014 putative PEs; CDKL5 absent), so the patent's NIE designation is unvalidated.",
+   "findings": [
+    {
+     "claim": "Patent names 'exon 16x of CDKL5' residing in 'intron 16 of CDKL5' as an NMD-inducing exon; no CDKL5 sequences given.",
+     "source": "https://patents.google.com/patent/WO2019084050A1/en"
+    },
+    {
+     "claim": "Exon-17-containing CDKL5 transcripts are ~10% of whole-brain transcripts and add 41 amino acids (in-frame, productive).",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4912119/ (PMID 27315173)"
+    },
+    {
+     "claim": "Exon 16b is a novel, extremely conserved CDKL5 exon whose transcript is brain-specific.",
+     "source": "PMID 21124335"
+    },
+    {
+     "claim": "Brain poison-exon atlas found 12,014 putative poison exons; CDKL5 not among reported genes.",
+     "source": "https://www.biorxiv.org/content/10.1101/2025.06.26.661736v1.full"
+    },
+    {
+     "claim": "Sibling patent filings listing dozens of NMD-exon genes contain no CDKL5 entry.",
+     "source": "https://patents.google.com/patent/CA3079729A1/en"
+    }
+   ]
+  },
+  {
+   "skip": "P2 — Block the cryptic 5' splice donor inside exon 11 to abolish hCDKL5_3/_4 and restore full-length exon 11 coding sequence. Product: canonical hCDKL5_1.",
+   "published_asos": "None found (same search set as P1; no ASO reported against CDKL5 exon 11 or its cryptic donor).",
+   "coordinated_skipping": "Not applicable/none found — the event is an intra-exonic cryptic donor, not an adjacent-exon pair. Searches for CDKL5 multi-exon or co-skipping events (PubMed + web, listed in P1) returned nothing.",
+   "linked_or_multitarget": "Dual-sequence single-oligo precedent (brogidirsen) is the relevant architecture for simultaneously masking the cryptic donor and its enhancer; none reported for CDKL5.",
+   "amenability": "Very weak ceiling: alternative exon-11 splicing accounts for <5% of brain CDKL5 transcripts, so maximal recoverable productive mRNA is <5%. Cryptic-donor masking is mechanistically the easiest ASO action (direct steric block of U1), but the payoff is below plausible therapeutic relevance alone.",
+   "findings": [
+    {
+     "claim": "hCDKL5_3/_4 use an alternative splice site in exon 11 and represent <5% of brain CDKL5 transcripts.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4912119/ (PMID 27315173)"
+    },
+    {
+     "claim": "CDKL5 isoforms can use cryptic splice donors, with transcripts lacking part of exon 11 coding sequence.",
+     "source": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0157758"
+    }
+   ]
+  },
+  {
+   "skip": "P3 — Suppress the hCDKL5_5 (CDKL5_115, testis-type) distal exon/3'-terminal configuration in favour of hCDKL5_1. Product: canonical brain mRNA.",
+   "published_asos": "None found (searches as P1; also PubMed 'CDKL5 exon 16b isoform brain truncated 107 amino acids' = 0 hits).",
+   "coordinated_skipping": "None found. No report of a single oligo altering more than one CDKL5 terminal-exon choice; searches listed in P1 plus web 'CDKL5 exon 16b hCDKL5_5 brain-specific isoform' returned no coordinated-skipping data.",
+   "linked_or_multitarget": "Terminal-exon switching generally needs combined polyA-signal + 3'ss masking → a two-arm single oligo (brogidirsen-type) or dual-cassette U7; no CDKL5 precedent.",
+   "amenability": "Essentially non-amenable in the target tissue: hCDKL5_5 is detected almost exclusively in adult testis (present in fetal brain). Post-natal CNS gain would be near zero. Deprioritise.",
+   "findings": [
+    {
+     "claim": "hCDKL5_5 is detected almost exclusively in adult testis, though present in fetal brain; hCDKL5_1 is the most abundant CNS isoform.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4912119/ (PMID 27315173)"
+    }
+   ]
+  },
+  {
+   "skip": "P4 — Redirect 5' end selection among alternative first exons 1a–1e / 5'UTR to the productive hCDKL5_1 5'UTR, or de-repress translation/transcription at the locus (regRNA/eRNA-antagonist ASO). Product: more productive full-length mRNA, coding sequence unchanged.",
+   "published_asos": "None found against CDKL5 5'UTR or its regulatory RNAs. No CAMP4 CDKL5 program retrieved: their disclosed clinical assets are CMP-002 (SYNGAP1, first-in-human cleared 2026) and CMP-CPS-001 (CPS1). A secondary conference-report claim that a CDKL5 ASO is in tox at CAMP4 could not be corroborated on company or investor pages.",
+   "coordinated_skipping": "Not applicable (no exon block). No CDKL5 coordinated-skipping report exists; searches listed in P1.",
+   "linked_or_multitarget": "regRNA-antagonist ASOs are single-site; the precedent that matters is platform-level (allele-agnostic upregulation ASO entering humans for a DEE gene), not architecture.",
+   "amenability": "Unquantified for CDKL5: five alternative 5'UTR exons (1a–1e) are annotated with no published usage fractions, and no CDKL5 regRNA map is published. Attractive because it is mutation-agnostic and does not touch the coding sequence, but it is the least de-risked option — requires a locus-level regRNA/TSS screen before design.",
+   "findings": [
+    {
+     "claim": "CDKL5 has alternative 5'UTR exons 1a–1e; hCDKL5_1 is the predominant 9.7 kb brain transcript with a 6.6 kb 3'UTR.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4912119/ (PMID 27315173)"
+    },
+    {
+     "claim": "CAMP4's regRNA-targeting ASO CMP-002 for SYNGAP1 received Australian clearance for first-in-human dosing (July 2026); no CDKL5 asset disclosed.",
+     "source": "https://investors.camp4tx.com/news-releases/news-release-details/camp4-therapeutics-secures-australian-regulatory-clearance"
+    },
+    {
+     "claim": "CDD pipeline is dominated by AAV9 gene therapy (Ultragenyx UX055, pre-clinical; Elaaj ELJ-101, trial planned 2027), not ASOs.",
+     "source": "https://www.ultragenyx.com/our-research/pipeline/ux055-for-cdd/"
+    }
+   ]
+  },
+  {
+   "skip": "P5 — Xist-targeting ASO (± DNMT inhibitor) to reactivate the wild-type CDKL5 allele on the inactive X in female patients. Product: additional full-length CDKL5 mRNA from Xi; no splicing change.",
+   "published_asos": "Xist ASO reported (Carrette et al.), combinatorial with 5-aza-2'-deoxycytidine; sequences not extracted here. No CDKL5-specific oligo. This is the only retrieved ASO precedent that explicitly names CDKL5 syndrome as an intended indication.",
+   "coordinated_skipping": "Not applicable — mechanism is chromatin/lncRNA, not splicing. No CDKL5 coordinated-skipping evidence exists (searches in P1).",
+   "linked_or_multitarget": "Precedent is 'mixed modality' (ASO + small molecule) rather than a linked oligo — a genuine multi-agent architecture with in vivo proof of concept.",
+   "amenability": "Mechanistically target-agnostic, so CDKL5-specific amenability is unknown; applies only to heterozygous females (not hemizygous males) and depends on XCI mosaicism per neuron. Chief liability is non-selectivity: genome-wide Xi reactivation plus DNMT inhibition. Reported as achieving selective Xi reactivation without evident toxicity in a brain-specific genetic Xist-ablation model.",
+   "findings": [
+    {
+     "claim": "Xist ASO plus a DNA-methylation inhibitor achieved 30,000-fold MECP2 upregulation from the inactive X in cultured cells; CDKL5 syndrome named as a target indication.",
+     "source": "PMID 29282321"
+    }
+   ]
+  },
+  {
+   "skip": "P6 — Variant-dependent fallback: splice-correcting oligo for CDKL5 +5 splice-site variants (c.99+5G>A exon 3 GC-donor; c.2376+5G>A exon 16 donor). Product: restored correctly spliced full-length mRNA from the mutant allele. Requires a named variant — none supplied in this brief.",
+   "published_asos": "No ASOs found. Equivalent correction demonstrated with engineered U1 snRNA (ExSpeU1), not oligonucleotides: >70% CDKL5 protein rescue for c.99+5G>A, dose-dependent, with restored subcellular distribution, TEY phosphorylation and dendritic morphology in primary neurons. ExSpeU1 rescued +5 variants but failed at +1 variants.",
+   "coordinated_skipping": "Not applicable. Note the inverse phenomenon is documented: c.2376+5G>A causes exon 16 skipping → frameshift → premature stop in exon 18 → NMD, i.e. this exon block must NOT be skipped.",
+   "linked_or_multitarget": "Combined engineered-U1 + ASO treatment of a single splice-site lesion has precedent in BBS1; relevant if one arm must mask a cryptic site while the other strengthens the weakened donor.",
+   "amenability": "Exon 16's donor is demonstrably fragile — a +5 substitution alone removes ~80% of correctly spliced transcript and ~80% of CDKL5 protein in patient lymphocytes, and exon 3 uses a non-canonical GC 5'ss. That fragility is a warning for P1: an ASO walking intron 16 risks destabilising exon 16 definition and producing the NMD-coupled exon-16-skipped species.",
+   "findings": [
+    {
+     "claim": "c.2376+5G>A causes exon 16 skipping, frameshift and a premature stop in exon 18 leading to NMD; ~80% loss of correct transcript and protein.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6747535/ (doi 10.3390/ijms20174130)"
+    },
+    {
+     "claim": "ExSpeU1 rescued >70% of CDKL5 protein for c.99+5G>A and restored kinase activity and neuronal dendritic morphology; +1 variants were not rescuable.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6747535/"
+    },
+    {
+     "claim": "CDKL5 exon 3 uses a non-canonical GC 5' splice site.",
+     "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6747535/"
+    }
+   ]
+  }
+ ],
+ "benchmarks_not_transferable": "(1) STK-001/zorevunersen (SCN1A poison exon 20x): seizure reduction plus cognition/behaviour gains in Ph1/2a. Non-transferable — SCN1A has a validated, highly included NMD exon; CDKL5 has no validated poison exon (absent from a 2025 transcriptome-wide brain PE atlas), and its only quantified alternative exon is in-frame/productive at ~10% usage. The SCN1A productive-mRNA headroom simply does not exist here. (2) SYNGAP1 poison-exon SSO (NMD transcript down, protein up in patient neurons) and CAMP4 CMP-002 — platform/clinical-feasibility precedent for allele-agnostic CNS upregulation only, no CDKL5 potency implication. (3) Carrette's 30,000-fold MECP2 upregulation from Xi — a cultured-cell, mixed-modality (ASO + 5-aza) number; it is not an in vivo CDKL5 expression expectation. (4) Brogidirsen/NS-089 exon-44 skipping percentages in DMD muscle and monkey — architecture precedent for a two-arm single oligo only; DMD skipping efficiency says nothing about CDKL5 isoform redistribution or CNS exposure. (5) ExSpeU1 '>70% rescue' for CDKL5 c.99+5G>A is AAV/U1-delivered and variant-specific; it is not an ASO benchmark and does not apply to the mutation-agnostic products. (6) Nusinersen-class intrathecal CNS potency should be read as delivery/dosing precedent, not payload potency, since SMN2 exon 7 inclusion has an exceptionally favourable baseline.",
+ "proposed_designs": [
+  "Prerequisite screen (not a molecule): long-read + NMD-inhibition RNA-seq of human neurons across CDKL5 introns to test whether patent-claimed intron-16 'exon 16x' is PTC-introducing; no design without it.",
+  "P1 lead: 2'-MOE PS 18-20mers tiling the intron-16 alternative exon 3'ss, branch point and internal ESE; ~40 oligos at 5-nt steps; readout productive/total CDKL5 by ddPCR.",
+  "P1 optimisation: single two-arm PMO/MOE oligo (brogidirsen architecture) joining the best 3'ss-blocking and best ESE-blocking sequences, to exceed the ~10% redistribution ceiling.",
+  "Counter-screen in every design: RT-PCR for exon-16-skipped NMD species, since exon 16's donor loses ~80% of correct splicing to a single +5 change."
+ ]
+}

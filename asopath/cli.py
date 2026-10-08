@@ -23,9 +23,9 @@ def main():
     runner = Runner(a.model, a.effort, a.max_turns, usage_path=out / "usage.jsonl", log=lambda s: print(s, flush=True))
     r = Pipeline(runner, out, a.fresh, log=lambda s: print(s, flush=True))(a.disease, a.gene, a.variant, a.transcript)
     case = f"{a.gene} {a.variant}"
-    (out / "answer.md").write_text(f"# {case}\n\n" + main_answer(r["decision"]))
+    (out / "answer.md").write_text(f"# {case}\n\n" + main_answer(r["answer"]))
     (out / "evidence.md").write_text(evidence(case, r))
-    print(f"\nanswer: {words(main_answer(r['decision']))} words\nusage: {runner.total}\nwrote {out}/answer.md, evidence.md", flush=True)
+    print(f"\nanswer: {words(main_answer(r['answer']))} words\nusage: {runner.total}\nwrote {out}/answer.md, evidence.md", flush=True)
 
 
 if __name__ == "__main__":
