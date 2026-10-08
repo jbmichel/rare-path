@@ -2,465 +2,367 @@
 
 ## 1. Purpose
 
-Build an ASO drug-discovery agent for rare and ultra-rare genetic diseases.
+Design the best buildable ASO program for an exact rare-disease molecular lesion.
 
-The agent's job is not to answer:
+The agent must answer:
 
-> Could an ASO theoretically treat this disease?
+> What ASO should we build, why is it the best design, can we deliver it, and what experiment should we run first?
 
-It must answer:
-
-> Given the exact molecular lesion, what is the best ASO therapeutic program that could plausibly be built today?
-
-The output should resemble the work of an experienced oligonucleotide discovery team: specific, technically current, and experimentally actionable.
+It is a drug-discovery agent, not a disease-review agent.
 
 ---
 
-# 2. Core Principle
-
-Separate three jobs:
+# 2. Core Workflow
 
 ```text
-DESIGN-SPACE ENUMERATION
-What ASO interventions are physically / genetically possible?
-
-        ↓
-
-STATE-OF-THE-ART SEARCH
-What chemistry, delivery and development precedents exist today?
-
-        ↓
-
-SCIENTIFIC JUDGMENT
-Which program should we actually build and how should we test it?
+1. Define the RNA defect
+2. Enumerate possible RNA products
+3. Select the best therapeutic product
+4. Design ASOs that could produce it
+5. Evaluate current delivery technology
+6. Search direct technical and competitive precedent
+7. Choose lead + backup
+8. Design the first decision experiment
 ```
 
-Do not rely on the LLM to perform deterministic operations from memory.
+Separate:
 
-Use tools for things that can be calculated or retrieved.
+- **deterministic enumeration** — what designs are possible;
+- **retrieval** — what has been demonstrated;
+- **judgment** — what should be built.
 
-Use the LLM for scientific interpretation and program design.
+Never rely on LLM memory for calculations or current pipeline information.
 
 ---
 
 # 3. Inputs
 
-Minimum input:
-
 ```yaml
 disease:
 gene:
 variant:
-```
-
-When available:
-
-```yaml
 transcript:
-genomic_coordinates:
-patient_sequence:
-affected_tissues:
-affected_cell_types:
 ```
 
-The agent should resolve missing transcript and variant information from authoritative sources before designing an ASO strategy.
+Resolve missing transcript or variant information before designing the program.
 
 ---
 
-# 4. Step 1 — Define the RNA Problem
+# 4. Define the RNA Intervention
 
-Determine what the mutation does to RNA or protein.
+Determine the molecular defect and the desired RNA outcome.
 
 Examples:
 
-- premature termination codon;
-- exon-disrupting deletion;
-- splice-site mutation;
-- cryptic splice activation;
-- poison exon;
-- toxic RNA;
-- gain-of-function transcript;
-- transcript overexpression;
-- allele-specific toxic transcript.
+- exon skipping;
+- exon inclusion;
+- multi-exon skipping;
+- cryptic splice-site blocking;
+- transcript knockdown;
+- allele-selective knockdown;
+- transcript stabilization.
 
-Then define what an ASO would need to accomplish:
-
-```text
-skip exon
-include exon
-skip multiple exons
-block cryptic splice site
-induce transcript degradation
-stabilize transcript
-suppress mutant allele
-alter polyadenylation
-other splice redirection
-```
-
-Do not select a specific ASO design until the desired RNA product is clear.
+State the desired RNA product before selecting chemistry or delivery.
 
 ---
 
-# 5. Step 2 — Enumerate the ASO Design Space
+# 5. Enumerate the Design Space
 
-This step should be deterministic wherever possible.
+For splice-modulating programs, computationally enumerate plausible products.
 
-For splice-modulating strategies, explicitly enumerate all plausible transcript products.
-
-For each candidate manipulation calculate:
+For each:
 
 ```yaml
-splice_solution:
-  exons_removed_or_included:
+design:
+  exons_changed:
   resulting_junction:
-  reading_frame:
+  in_frame:
   mutation_removed:
-  predicted_protein_change:
+  predicted_protein:
   oligo_count:
 ```
 
-For DMD-like genes this means computationally enumerating:
+Prefer, all else equal:
 
-- single-exon skips;
-- adjacent dual-exon skips;
-- larger contiguous skips;
-- any known coordinated-skipping behavior.
+1. correct functional product;
+2. smallest molecular perturbation;
+3. fewest ASOs;
+4. strongest human biological precedent.
 
-Never jump directly to a historically popular exon block if a smaller solution exists.
+Always investigate whether coordinated multi-exon skipping can be achieved with fewer ASOs than exons removed.
 
-Rank solutions initially by:
-
-1. correct molecular product;
-2. minimal perturbation;
-3. minimal number of oligos;
-4. likely functional protein product;
-5. existing biological precedent.
-
-The LLM interprets the enumeration. It does not perform exon-frame arithmetic from memory.
+Do not propose a large cocktail before exhausting smaller solutions.
 
 ---
 
-# 6. Step 3 — Search for Biological Precedent
+# 6. Evaluate the Therapeutic Product
 
-For each promising ASO design, search specifically for:
+For each promising RNA product ask:
 
-- naturally occurring equivalent transcript or deletion;
-- human genotype–phenotype evidence;
-- spontaneous exon skipping;
-- published ASOs targeting the same exon;
-- coordinated skipping induced by a single ASO;
-- patient-cell rescue;
-- animal-model rescue;
-- clinical programs against the same exon or nearby exons.
+- Is there a naturally occurring human equivalent?
+- What phenotype does it produce?
+- Is the resulting protein functional?
+- Is there direct rescue evidence?
+- Are there important domain/function consequences?
 
-The important question is:
+Do not infer product quality solely from reading-frame restoration.
 
-> Has biology already shown that this RNA product can work?
-
-Prefer human natural experiments and direct rescue evidence over generic pathway evidence.
+Human genotype–phenotype evidence is particularly valuable.
 
 ---
 
-# 7. Step 4 — Search the Current ASO Technology Landscape
+# 7. Separate Payload Performance from Delivery Performance
 
-This search is mandatory.
-
-The agent must determine what is technically achievable **today**, not what was historically achievable with naked oligonucleotides.
-
-For the relevant tissue and cell type search:
+Observed efficacy reflects multiple independent factors:
 
 ```text
-ASO chemistry
-delivery technology
-targeting receptor / ligand
-cargo
-clinical maturity
-human pharmacodynamic data
-relevant companies
-active programs
-failed programs
+target / splice amenability
+× ASO sequence potency
+× intracellular delivery
+× therapeutic-product functionality
 ```
 
-Examples of delivery categories:
+Do not attribute the full result to one component without evidence.
 
-- unconjugated ASO / PMO;
-- GalNAc;
-- peptide conjugates;
-- antibody-oligonucleotide conjugates;
-- Fab-oligonucleotide conjugates;
-- receptor-targeted conjugates;
-- other tissue-targeting ligands.
+### Target-specific biology matters
 
-For each delivery platform ask:
+Different exons or splice targets may have very different intrinsic amenability because of:
 
-1. Does it reach the required tissue?
-2. Does it reach the required cell type?
-3. Does it produce functional intracellular ASO activity?
-4. Is there human pharmacodynamic evidence?
-5. Has it delivered the same or similar oligo chemistry?
-6. Is heart/CNS/other secondary tissue exposure relevant?
-7. Is the technology realistically accessible through partnership or licensing?
+- endogenous skip rates;
+- splice-site strength;
+- enhancer/silencer architecture;
+- exon definition;
+- transcript context.
 
-Historical failure of naked ASO delivery must not be used to dismiss a strategy if newer targeted delivery has materially changed exposure.
+Therefore:
+
+> Performance against one splice target must not be used as a quantitative expectation for another target unless there is evidence that their biology is comparable.
+
+A program against another target may provide:
+
+- chemistry precedent;
+- architecture precedent;
+- administration precedent;
+- safety precedent;
+- delivery precedent;
+
+without providing a transferable efficacy benchmark.
 
 ---
 
-# 8. Step 5 — Search Existing Programs
+# 8. Delivery Assessment
 
-Search companies, trials, publications, patents where practical, and conference disclosures for programs involving:
+Evaluate delivery independently from payload potency.
 
-- the same exon;
-- adjacent exons;
-- the same target gene;
-- the same tissue;
-- the same delivery receptor;
-- the same ASO mechanism.
+For the required tissue and cell type, identify the best current delivery architectures.
 
-This search must be current.
+Ask:
 
-The agent should explicitly identify:
+1. Does the platform reach the required cell?
+2. Does it produce functional intracellular ASO activity?
+3. What human pharmacodynamic evidence exists?
+4. What dose and dosing frequency are required?
+5. What toxicity is associated with achieving that exposure?
+6. Does it reach other critical tissues?
+7. Is the platform realistically accessible through partnership, licensing, or internal development?
 
-```yaml
-competitive_precedent:
-  organization:
-  program:
-  target:
-  payload:
-  delivery:
-  stage:
-  key_result:
-  relevance:
-```
+Do not default to historically established delivery if newer platforms materially improve exposure, potency, administration, or therapeutic index.
 
-Existing programs may:
+An unconjugated ASO may still be preferred when target-specific evidence supports unusually high potency or when targeted delivery is inaccessible.
 
-- validate the concept;
-- provide a delivery solution;
-- suggest a partnership path;
-- make a new program redundant;
-- reveal a failure mode.
+Keep **payload potency** and **delivery performance** conceptually separate.
 
 ---
 
-# 9. Step 6 — Select the Lead ASO Concept
+# 9. Search Current Technical Precedent
 
-Compare candidate strategies on a small number of decision variables:
+Mandatory searches should cover:
 
-```text
-Does it create the right RNA/protein?
+### Same RNA manipulation
+- same exon or transcript region;
+- adjacent targets;
+- same splice geometry;
+- coordinated skipping or inclusion.
 
-How many oligos are required?
+### Same payload class
+- relevant ASO chemistry;
+- steric-block architecture;
+- linked or multi-target ASOs when relevant.
 
-How much precedent exists for the resulting product?
+### Same delivery problem
+- same tissue;
+- same cell type;
+- same intracellular compartment;
+- same receptor or targeting strategy where relevant.
 
-Can current delivery technology reach the required cells?
+### Current programs
+Identify programs that materially change:
 
-Is there an existing delivery platform or partner?
+- technical feasibility;
+- delivery assumptions;
+- competitive landscape;
+- partnership strategy.
 
-Can the concept be tested cleanly?
+Do not produce a company catalog.
 
-What is the dominant failure mode?
-```
+Only include programs that affect the decision.
 
-Do not use artificial numerical scores.
+---
+
+# 10. Choose the Program
 
 Select:
 
 ```text
 LEAD
 BACKUP
-WATCH / FUTURE
+WATCH
 REJECT
 ```
 
-A two-exon solution should normally outrank an eleven-exon solution if both produce credible proteins, unless evidence strongly favors the larger product.
+The lead should be the best complete **payload + delivery** program, not merely the best RNA product.
 
-A single-ASO strategy that induces coordinated multi-exon skipping should be explicitly investigated before proposing a multi-ASO cocktail.
-
----
-
-# 10. Step 7 — Design the First Experiment
-
-The first experiment should answer the major uncertainty in the ASO concept, not reproduce established disease biology.
-
-For splice-modulating ASOs this will often mean:
-
-```text
-patient-relevant cells
-+
-tiled ASO screen
-+
-delivery-independent transfection initially
-+
-quantitative transcript-product analysis
-+
-protein confirmation
-```
-
-Measure all relevant splice products, not only the desired PCR band.
-
-For example:
+State:
 
 ```yaml
-experiment:
-  question:
-  ASOs_tested:
-  model:
-  primary_readout:
-  undesired_products:
-  protein_readout:
-  success_condition:
-  kill_condition:
+lead:
+  therapeutic_product:
+  ASO_design:
+  delivery_strategy:
+  reason_it_wins:
+  dominant_risk:
 ```
 
-Separate:
-
-### Payload validation
-
-Can the ASO create the desired RNA product when intracellular exposure is not limiting?
-
-from:
-
-### Delivery validation
-
-Can a clinically relevant delivery system achieve sufficient intracellular exposure?
-
-Do not confound these in the first experiment unless necessary.
+Do not use artificial numerical scoring.
 
 ---
 
-# 11. Output
+# 11. First Experiment
 
-The final output should be short.
+Separate payload validation from delivery validation whenever possible.
 
-## Lead concept
+## Payload experiment
 
-One paragraph.
+Ask:
 
-## Why it wins
+> Can the ASO create the intended RNA and protein product when intracellular exposure is not limiting?
+
+For splice programs measure:
+
+- complete splice-product distribution;
+- desired product;
+- important undesired products;
+- protein restoration.
+
+Do not call a program successful from a PCR band or percent exon skipping alone.
+
+## Delivery experiment
+
+After selecting a credible payload ask:
+
+> Can the chosen delivery system achieve sufficient intracellular exposure in the relevant cells?
+
+Do not make payload-selection experiments unnecessarily dependent on delivery.
+
+---
+
+# 12. Output Format
+
+Target: **400–700 words maximum**, excluding references.
+
+Do not narrate the research process.
+
+Use this structure:
+
+## Recommendation
+
+**LEAD — [one-line program]**
+
+2–3 sentences.
+
+## Why this design
 
 Maximum 3 bullets.
 
-## Delivery strategy
+## Delivery
 
-Current best delivery solution and supporting human/clinical precedent.
+One short paragraph.
 
 ## Backup
 
-One or two credible alternatives.
+Maximum 2 alternatives, one sentence each.
 
-## Critical unknown
+## Critical risk
 
-The single largest uncertainty.
+One short paragraph.
 
-## Next experiment
+## First experiment
 
-Specific and decision-changing.
+Maximum 5 bullets:
 
-## Relevant programs / partners
+- model;
+- constructs;
+- primary readout;
+- success criterion;
+- kill criterion.
 
-Only programs that materially affect the development decision.
+## Key precedents
 
-## Verdict
+Maximum 5 entries.
 
-```text
-BUILD
-TEST FIRST
-WAIT FOR PLATFORM
-DO NOT PURSUE
-```
-
-Detailed evidence may appear beneath the main answer but should not interrupt the decision narrative.
+Only precedents that materially change the decision.
 
 ---
 
-# 12. DMD Exon 55 Nonsense — Acceptance Test
+# 13. Writing Rules
 
-The ASO agent is not ready unless it independently reaches the following findings.
+Write like an experienced discovery-team lead preparing for a program meeting.
 
-### Design space
+### Hard rules
 
-It must discover that an exon-55 nonsense mutation should not automatically lead to an exon 45–55 multi-skip program.
-
-It must enumerate smaller frame-restoring possibilities including:
-
-```text
-exons 54 + 55
-exons 55 + 56
-```
-
-and compare them with larger skips.
-
-Published DMD exon-skipping analyses explicitly identify dual-exon strategies around exon 55, so failure to find them is a discovery failure.
-
-### Coordinated skipping
-
-It must investigate whether either dual skip can be achieved with fewer ASOs than the number of exons being skipped.
-
-In particular it should find and evaluate published evidence that targeting exon 54 can induce coordinated skipping involving exons 54 and 55.
-
-### Delivery
-
-It must recognize that naked PMO is no longer an adequate representation of the state of the art in muscle ASO delivery.
-
-It must identify modern receptor-targeted muscle delivery, including TfR1-directed antibody/Fab-oligonucleotide approaches, and determine their relevance to the proposed payload.
-
-### Current competitive landscape
-
-It must identify major current muscle-targeted oligonucleotide programs and, as of 2026, discover that:
-
-- Avidity has clinically tested TfR1-targeted PMO delivery in DMD;
-- Dyne has clinically advanced a TfR1-targeted Fab-PMO platform;
-- Dyne is developing an exon-55 program.
-
-### Program conclusion
-
-A credible answer should therefore evaluate something close to:
-
-```text
-LEAD:
-minimal exon-55-containing dual skip
-using modern targeted muscle delivery
-
-VERSUS:
-
-BACKUP:
-alternative adjacent dual skip
-
-VERSUS:
-
-LOWER PRIORITY:
-large 45–55 multi-exon cocktail
-```
-
-The exact ranking may vary with evidence.
-
-Failing to surface the smaller skip geometries or modern muscle-delivery platforms is unacceptable.
+- No section may repeat information from another section.
+- No paragraph longer than 5 sentences.
+- No evidence dump in the main body.
+- No generic disease background unless it changes the ASO design.
+- No more than 3 lead/backup concepts in the main answer.
+- Do not explain obvious ASO concepts to an expert audience.
+- Put supporting references after the decision, not inside every sentence.
+- If a detail does not change payload, delivery, experiment, or verdict, omit it.
+- Prefer short sentences and bullets over compressed dense prose.
+- Be decisive when the evidence supports a decision; state uncertainty explicitly when it does not.
 
 ---
 
-# 13. Failure Modes
+# 14. Failure Modes
 
 The agent has failed if it:
 
 - produces only obvious textbook ASO strategies;
 - relies on historical delivery limitations without searching current technology;
 - proposes a large multi-ASO cocktail before enumerating smaller solutions;
-- performs exon-frame reasoning purely from LLM memory;
-- fails to search current company pipelines;
+- performs transcript or reading-frame calculations purely from LLM memory;
+- fails to search current company pipelines and clinical programs;
 - equates "no approved product" with "no viable delivery solution";
+- transfers efficacy expectations across biologically different splice targets without justification;
+- conflates sequence potency with delivery potency;
 - produces extensive disease background instead of a drug-discovery recommendation;
 - gives many ideas without selecting a lead;
 - proposes experiments that do not change the program decision.
 
 ---
 
-# 14. Success Criterion
+# 15. Success Criterion
 
-The agent succeeds when an experienced ASO scientist can read its output and say:
+The output should let an ASO discovery team answer, within minutes:
 
-> This found the non-obvious design options I would have considered, understands what current oligonucleotide technology can actually do, and gives me a sensible first experiment.
+> What molecule are we trying to make?
 
-The objective is not completeness.
+> Why this RNA product?
 
-The objective is to find the best buildable ASO program.
+> What delivery platform should we assume?
+
+> What is the main reason it could fail?
+
+> What experiment do we run next?
+
+If those answers are not immediately clear, the agent has failed.

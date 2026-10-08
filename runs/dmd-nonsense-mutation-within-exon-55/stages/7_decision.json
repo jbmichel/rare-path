@@ -1,0 +1,136 @@
+{
+ "recommendation_line": "Δ54-55 dual-PMO product (exon-54 arm + exon-55 arm), validated naked, carried forward as an anti-TfR1 Fab-PMO conjugate pair for cardiac coverage.",
+ "recommendation_text": "Exon 55 is 190 bp (frame remainder 1), so skipping it alone is non-productive. The minimal frame-restoring product is Δ54-55: 345 bp, -115 aa, an in-phase 108-aa hybrid spectrin repeat, 3' endpoint inside the empirically mild exon ≤55 interval, and published PMO leads for both exons. Verdict is TEST FIRST, because no two-exon coordinated skip of this block has ever been quantified and both single-exon intermediates are out of frame.",
+ "why_this_design": [
+  "Enumeration: exon 55 alone is out of frame. Δ54-55 is the smallest in-frame fix, two exons, -115 aa, fewest oligos.",
+  "Junction fuses R21 2580-2624 to R22 2740-2802 = 108-aa in-phase hybrid repeat; cysteine-rich, WW, C-terminal and Dp71 untouched.",
+  "Both exons have published PMO starting sequences, and one exon-54 AO is reported to co-skip 54+55 - a credible single-oligo upside."
+ ],
+ "delivery": "Keep delivery downstream of payload: validate the pair naked, then conjugate. For the clinical product, left-ventricular exposure decides outcome in DMD and naked PMO essentially does not reach cardiomyocytes, so the delivery lead is an anti-TfR1 conjugate; Dyne already has an exon-55 Fab-PMO in IND-enabling work (DYNE-255, for genotypes where exon 55 alone is in frame), so sequence and tox package overlap and partnering beats rebuilding. Avidity/Novartis AOC is the exposure benchmark but is not in-licensable. Naked dual PMO on a brogidirsen-like weekly schedule is the fallback and the fastest IND for an ultra-rare cohort, accepting skeletal-muscle-only benefit. Deprioritise cationic PPMO (hypomagnesaemia, eGFR decline, two clinical failures); AAV9-U7 is the only class that naturally carries two antisense cassettes, but one-shot non-titratable dosing is wrong for a first-in-class exon block.",
+ "backups": [
+  {
+   "concept": "Δ52-55 four-PMO cocktail",
+   "one_sentence": "The only product in this window with in vivo rescue data (Dmd Δ52-55 mouse: WT-like truncated dystrophin, normal sarcolemmal DGC, mild late functional deficit) and an exactly in-phase 103-aa hybrid repeat, at the cost of four simultaneous skips with out-of-frame intermediates."
+  },
+  {
+   "concept": "Δ55-56 two-PMO cocktail",
+   "one_sentence": "Equally minimal and exon 56's 5' end is one of only four natural multi-exon-skipping acceptors, but no human exon-56 ASO was retrieved, the junction breaks R21 helix C, and the endpoint crosses beyond exon 55 where no asymptomatic in-frame deletions are documented."
+  }
+ ],
+ "critical_risk": "Partial skipping is not partial benefit: exon-54-only and exon-55-only transcripts are both out of frame, so anything short of removing the pair from the same transcript yields no protein and more NMD substrate. The single published 54+55 co-skip claim is a one-line Discussion statement with no sequence, cell type or efficiency, while the closest systematic study found no single PMO skipped two exons; exon 55 also sits in the unfavourable 5'Fast-3'Fast intron class. Secondary risk: Δ54-55 has no reported human carrier, so functional quality is inferred from repeat phasing and the exon ≤55 permissive zone, not observed. Regulatory risk is real but does not change the design - ESSENCE missed its functional endpoint, so plan a functional confirmatory readout early. Do not import brogidirsen, del-zota or z-rostudirsen dystrophin percentages as expectations for this block.",
+ "experiment": {
+  "payload_model": "Immortalised myoblasts from an exon-55 nonsense DMD patient differentiated to myotubes, plus an isogenic CRISPR knock-in exon-55 PTC line in a healthy immortalised background as the controlled comparator; confirm in a second patient line before any delivery work.",
+  "payload_constructs": "Dose matrix of (a) exon-54 arm alone (Ex54_Ac42 region walk, 25-31mers), (b) exon-55 arm alone (Ex55_Ac0 / H55 nt 1-34 walk), (c) the 54+55 pair at several ratios, (d) a connected-sequence single molecule linking a 54 arm to a 55 arm, with scrambled PMO and untreated controls; nucleofection and free uptake, three biological replicates.",
+  "primary_readout": "Long-read amplicon sequencing across exons 50-60 quantifying the complete product distribution as a fraction of all DMD reads - full-length, Δ54-only, Δ55-only, Δ54-55, cryptic-site use, intron retention, larger skips - plus junction-specific RT-ddPCR for absolute copies, NMD assessment with and without translation inhibitor, and dystrophin western blot with a C-terminal antibody plus immunostaining; Sanger-verify the ACAGAAACCAAG|GACCTCCAAGGT junction.",
+  "success": "Δ54-55 is the dominant skipped species, Δ54-only plus Δ55-only remain a minor fraction of skipped reads, no new cryptic or intron-retained species above background, and C-terminal-antibody dystrophin of the expected size is reproducibly dose-dependent in both lines.",
+  "kill": "Out-of-frame single-exon intermediates dominate across the dose and ratio matrix, or cryptic/intron-retention products appear, or no protein is detectable despite skipped transcript - then switch to Δ52-55, which has in vivo product validation, rather than optimising this pair further.",
+  "delivery_experiment": "Conjugate the validated arms to an anti-TfR1 Fab and dose IV in hDMD mice then NHP, measuring Δ54-55 junction copies and dystrophin protein separately in left ventricle, diaphragm and quadriceps, with cardiac exposure as the go/no-go."
+ },
+ "precedents": [
+  {
+   "entry": "A single AO to human exon 54 reportedly removed exons 54+55 - the only coordinated-skip signal in this block; unquantified, so it is a probe arm, not the plan.",
+   "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2835229/"
+  },
+  {
+   "entry": "Exons 56+57 and 58+59 double skips each needed one PPMO per exon; no single PMO skipped two exons - justifies budgeting two oligos.",
+   "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7516190/"
+  },
+  {
+   "entry": "Out-of-phase spectrin junctions gave DCM onset 26 y vs 36 y in-phase, exon 50-55 deletions 43 y - selects Δ54-55's in-phase 108-aa hybrid repeat.",
+   "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2826810/"
+  },
+  {
+   "entry": "Dyne DYNE-255, an exon-55 Fab-PMO with in vitro skipping, is already IND-enabling - partner for sequence plus cardiac-capable delivery instead of rebuilding.",
+   "source": "https://www.dyne-tx.com/pipeline/"
+  },
+  {
+   "entry": "Brogidirsen: one product carrying two antisense sequences, 24.47% dystrophin at 80 mg/kg, 5-year safety - regulatory precedent for a two-sequence product.",
+   "source": "https://www.cell.com/molecular-therapy-family/nucleic-acids/fulltext/S2162-2531(23)00252-4"
+  }
+ ],
+ "lead": {
+  "therapeutic_product": "NMD-stable DMD mRNA with exons 54 and 55 excised (345 bp, deletes aa 2625-2739), giving a BMD-like dystrophin with an in-phase 108-aa hybrid spectrin repeat and intact cysteine-rich, WW and C-terminal domains.",
+  "aso_design": "Two PMO arms - exon-54 acceptor region (Ex54_Ac42 series) and exon-55 5' end (Ex55_Ac0 / H55 nt 1-34 series) - developed as a single two-sequence product, with a connected-sequence single molecule and an exon-54-only co-skip oligo run in parallel as oligo-reduction options.",
+  "delivery_strategy": "Naked dual PMO for payload validation and first-in-human optionality; anti-TfR1 Fab-PMO conjugate (partner or licence) as the registrational delivery to reach left ventricle, diaphragm and regenerating fibres.",
+  "reason_it_wins": "Smallest frame-restoring perturbation, fewest oligos, best-anchored junction structure, published starting sequences for both arms, and an exon-55 conjugate delivery package already exists to partner rather than rebuild.",
+  "dominant_risk": "Coordinate penetrance - unless both exons leave the same transcript, the product is out of frame and no protein appears."
+ },
+ "all_candidates": [
+  {
+   "concept": "Skip exons 54-55 (2 oligos)",
+   "role": "LEAD",
+   "reason": "Smallest in-frame fix (-115 aa), in-phase 108-aa hybrid repeat, 3' endpoint inside the exon ≤55 mild zone, published ASOs for both exons, only reported coordinated-skip signal in the region."
+  },
+  {
+   "concept": "Skip exons 52-55 (4 oligos)",
+   "role": "BACKUP",
+   "reason": "Only product here with in vivo rescue (Δ52-55 mouse: WT-like dystrophin, normal DGC, mild deficit at 52 weeks) and an exactly in-phase 103-aa hybrid; cost is four simultaneous skips."
+  },
+  {
+   "concept": "Skip exons 55-56 (2 oligos)",
+   "role": "BACKUP",
+   "reason": "Equally minimal and exon 56 is a natural MES acceptor, but no human exon-56 ASO retrieved, junction breaks R21 helix C, and the endpoint crosses beyond exon 55."
+  },
+  {
+   "concept": "Single exon-54 AO relying on 54+55 co-skip (1 oligo)",
+   "role": "WATCH",
+   "reason": "Best possible outcome - one oligo, lead product - but evidence is one unquantified sentence; run it as an arm of the lead experiment, never as the plan."
+  },
+  {
+   "concept": "Connected-sequence single molecule with arms in exons 54 and 55",
+   "role": "WATCH",
+   "reason": "Brogidirsen proves a two-sequence oligo is a viable single product clinically and regulatorily, but both its arms sit inside one exon; cross-exon linkage is unprecedented."
+  },
+  {
+   "concept": "Skip exons 49-55 or 50-55 (6-7 oligos)",
+   "role": "WATCH",
+   "reason": "Strongest human and clinical precedent via the 45-55 mild genotype and PBGENE-DMD, hinge-3 removal gives latest DCM onset, but 6-7 oligos is unjustifiable before the 2-exon options are exhausted."
+  },
+  {
+   "concept": "Skip exons 54-57 (4 oligos)",
+   "role": "REJECT",
+   "reason": "Oversized 126-aa out-of-phase chimeric repeat, no human equivalent, and includes exon 57, documented as unskippable without double targeting."
+  },
+  {
+   "concept": "Skip exons 52-57 or 53-58 (6 oligos)",
+   "role": "REJECT",
+   "reason": "Six-exon penetrance problem with out-of-frame intermediates, unmeasured exon 56, hard exon 57, del58+59-class isoforms functionally inferior, and outer-exon-only targeting reported to fail at this span."
+  },
+  {
+   "concept": "Skips of ≥8 exons (48-55, 55-62, 50-57, 47-55)",
+   "role": "REJECT",
+   "reason": "Larger deletion and more oligos with no functional gain over the 2-exon products."
+  },
+  {
+   "concept": "PTC readthrough (ataluren)",
+   "role": "REJECT",
+   "reason": "Mechanism-matched but regulators in both regions concluded effectiveness was not established; EU authorisation not renewed, US resubmission withdrawn Feb 2026."
+  },
+  {
+   "concept": "Cationic peptide-PMO (PPMO) delivery",
+   "role": "REJECT",
+   "reason": "SRP-5051 discontinued for prolonged hypomagnesaemia and eGFR decline; PGN-EDO51 stopped for insufficient dystrophin - uninvestable for a new exon."
+  },
+  {
+   "concept": "AAV9-U7snRNA dual-cassette vector",
+   "role": "WATCH",
+   "reason": "Only architecture that naturally carries two antisense sequences with durable one-shot expression, but non-redosable, non-titratable and high CMC cost for a first-in-class two-exon skip."
+  },
+  {
+   "concept": "EEV-conjugated PMO (Entrada)",
+   "role": "WATCH",
+   "reason": "Most realistic independent delivery licensor with no exon-55 asset, but current human gain (+2.36% dystrophin) does not yet beat a naked dual PMO; revisit on higher-dose data."
+  },
+  {
+   "concept": "Integrin αvβ6 peptide ligand (Arrowhead TRiM)",
+   "role": "WATCH",
+   "reason": "Muscle delivery shown for siRNA only, no nuclear splice-switching precedent and no DMD human data - architecture precedent, not a 2026-27 build option."
+  },
+  {
+   "concept": "Bipartite 5' splice-site decoy (5D-ASO)",
+   "role": "WATCH",
+   "reason": "Reported ~30-fold potency gain on exon 51 in NHP is the right rescue lever if the 54/55 pair underperforms, but it is untested on this exon block."
+  }
+ ],
+ "verdict": "TEST FIRST"
+}

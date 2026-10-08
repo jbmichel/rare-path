@@ -1,0 +1,92 @@
+{
+ "total": 14,
+ "max": 14,
+ "passed": true,
+ "words": 722,
+ "dimensions": [
+  {
+   "dimension": "A_design_space",
+   "score": 2,
+   "evidence": "Lead is \"\u039454-55 dual-PMO product\"; backup \"\u039455-56 two-PMO cocktail\"; 16-row computed table (54-55 345bp/115aa, 55-56, 52-55, 49-55, 50-55, 47-55\u2026) with large skips explicitly deprioritised: \"6-7 oligos is unjustifiable before 2-exon options are exhausted.\""
+  },
+  {
+   "dimension": "B_product_reasoning",
+   "score": 2,
+   "evidence": "\"Junction fuses R21 2580-2624 to R22 2740-2802: in-phase 108-aa hybrid repeat; cysteine-rich, WW, C-terminal and Dp71 intact\"; Kaspar DCM onset 43y for exon 50-55 deletions; Fortunato exon \u226455 permissive limit; Dmd \u039452-55 mouse rescue; out-of-phase junction DCM 26y vs 36y."
+  },
+  {
+   "dimension": "C_delivery",
+   "score": 2,
+   "evidence": "\"naked PMO barely reaches cardiomyocytes, so lead delivery is an anti-TfR1 conjugate\"; Dyne Fab-PMO and Avidity AOC profiled on reach/human PD/dose/frequency/tox/access; PPMO rejected for hypomagnesaemia+eGFR; explicit \"Payload vs delivery\" split (delivery- vs amenability- vs potency-driven)."
+  },
+  {
+   "dimension": "D_currentness",
+   "score": 2,
+   "evidence": "\"DYNE-255, exon-55 Fab-PMO with in vitro skipping, is IND-enabling\"; del-zota/AOC 1044 with Novartis acquisition closed Feb 2026; plus Entrada EEV, Wave WVE-N531, PBGENE-DMD exon 45-55 excision, brogidirsen, SRP-5051 discontinuation, 5D-ASO."
+  },
+  {
+   "dimension": "E_program_selection",
+   "score": 2,
+   "evidence": "\"LEAD \u2014 \u039454-55 dual-PMO product\u2026 validate naked, carry forward as anti-TfR1 Fab-PMO conjugates for cardiac coverage\" with \u039452-55 (only in vivo rescue) and \u039455-56 as named backups and stated costs; large cocktails explicitly WATCH/REJECT."
+  },
+  {
+   "dimension": "F_experiment",
+   "score": 2,
+   "evidence": "Patient + isogenic PTC lines; arms = exon-54 alone, exon-55 alone, pair at ratios, connected molecule; long-read amplicon product distribution, junction ddPCR, NMD, western; \"Kill: Single-exon intermediates dominate\u2026 Then switch to \u039452-55\"; cardiac exposure as go/no-go."
+  },
+  {
+   "dimension": "G_concision",
+   "score": 2,
+   "evidence": "722 words, scannable headers (Recommendation / Delivery / Backup / Critical risk / First experiment / Key precedents), bullets carry quantitative substance; no literature-review padding."
+  }
+ ],
+ "unacceptable_failures": [
+  {
+   "failure": "jumps directly to exon 45-55 skipping",
+   "triggered": false,
+   "note": "45-55-class options ranked WATCH only; \"6-7 oligos is unjustifiable before 2-exon options are exhausted.\""
+  },
+  {
+   "failure": "misses both 54+55 and 55+56",
+   "triggered": false,
+   "note": "Both enumerated with bp/aa, junction sequences, domain analysis; 54+55 is lead, 55+56 a named backup."
+  },
+  {
+   "failure": "does not investigate coordinated skipping",
+   "triggered": false,
+   "note": "Found the exon-54 AO 54+55 co-skip claim, graded it unquantified, and cites Li/Wilton negative result (no single PMO skipped two)."
+  },
+  {
+   "failure": "treats exon-44 dystrophin levels as transferable efficacy expectations",
+   "triggered": false,
+   "note": "\"do not import brogidirsen, del-zota or z-rostudirsen dystrophin percentages as expectations\"; notes exon-44 natural skipping inflates baselines."
+  },
+  {
+   "failure": "treats naked PMO as state-of-the-art delivery without justification",
+   "triggered": false,
+   "note": "Naked PMO is an explicit fallback accepting \"skeletal-muscle-only benefit\"; lead delivery is anti-TfR1 conjugate for LV exposure."
+  },
+  {
+   "failure": "misses current TfR1-directed muscle programs",
+   "triggered": false,
+   "note": "Dyne FORCE Fab-PMO and Avidity AOC mAb-PMO both profiled with human PD, dose interval, tox, in-licensability."
+  },
+  {
+   "failure": "misses relevant exon-55 competitive activity",
+   "triggered": false,
+   "note": "DYNE-255 exon-55 Fab-PMO IND-enabling; PBGENE-DMD 45-55 excision covering exon-55 genotypes."
+  },
+  {
+   "failure": "recommends a splice product without evaluating protein functionality",
+   "triggered": false,
+   "note": "Repeat phasing, hinge-3 status, Dp71/WW/CR integrity, Becker/DCM-onset data and mouse rescue assessed per product."
+  },
+  {
+   "failure": "produces a long literature review instead of a program recommendation",
+   "triggered": false,
+   "note": "722-word decision memo with verdict, lead, backups, kill criteria; evidence confined to the appendix."
+  }
+ ],
+ "required_discoveries_missed": [],
+ "summary": "Hits every required discovery. Lands the minimal 54+55 lead over 55+56 and larger blocks, interrogates coordinated skipping and correctly discounts the single unquantified co-skip claim, reasons on repeat phasing and Becker/DCM evidence rather than frame alone, puts TfR1 conjugates at the centre with naked PMO as a justified fallback, and finds DYNE-255. Refuses exon-44 transfer explicitly. 14/14 \u2014 pass. Minor gap: \u039455-56 is not run head-to-head in the first experiment."
+}

@@ -1,0 +1,214 @@
+{
+ "platforms": [
+  {
+   "name": "Unconjugated PMO (naked phosphorodiamidate morpholino), incl. dual-ASO design",
+   "architecture": "Charge-neutral PMO, 20-31mer, no ligand; uptake via dystrophic-membrane leak + fluid-phase endocytosis. Dual-targeting variant (brogidirsen) = two PMOs against two sites in the same exon, co-administered.",
+   "reaches_cell": "Skeletal myofibers only at a low, highly variable level; diaphragm intermediate; cardiomyocytes essentially not reached at clinical doses (intact sarcolemma, no receptor route) - the key liability for a DMD55 program where LV function determines survival. Satellite cells poorly targeted by naked PMO.",
+   "functional_activity": "Yes - nuclear splice switching is proven in humans for exons 44/45/51/53; activity is real but exposure-limited, not mechanism-limited.",
+   "human_pd": "Best naked baseline = brogidirsen (exon 44, dual ASO): dystrophin 10.27% and 15.79% of normal in dose-escalation cohorts, rising to 16.63% (40 mg/kg) and 24.47% (80 mg/kg) of normal at 24 weeks. Single-ASO approved drugs: viltolarsen 5.7-5.9% of normal at wk25 (from 0.3-0.6% baseline); golodirsen 1.019% at wk48 (from 0.095%); casimersen 1.7% vs 0.8% placebo at wk48; eteplirsen 0.93% at 180 weeks.",
+   "dose_frequency": "IV weekly, 30 mg/kg (eteplirsen/golodirsen/casimersen), 80 mg/kg (viltolarsen, brogidirsen up to 80 mg/kg). Weekly infusion for life.",
+   "toxicity": "Best-characterised safety of any class. Brogidirsen: no SAEs, no discontinuations to 80 mg/kg/24 wk. Approved PMOs: hypersensitivity/infusion reactions, rare proteinuria/renal tubular signals at high mg/kg; no magnesium wasting.",
+   "access": "Fully buildable internally - PMO chemistry is commoditised, CDMO capacity exists, and the regulatory path (dystrophin as accelerated-approval surrogate) is established. Fastest route to clinic for an ultra-rare exon 55 cohort; dual-ASO 'connected-sequence' design is in the literature and reproducible.",
+   "findings": [
+    {
+     "claim": "Brogidirsen dual-ASO exon 44 PMO gave dose-dependent dystrophin of 16.63% and 24.47% of normal at 40 and 80 mg/kg after 24 weeks, with no SAEs.",
+     "source": "https://www.sciencedirect.com/science/article/pii/S2666379124006724"
+    },
+    {
+     "claim": "Viltolarsen raised dystrophin from 0.3-0.6% to 5.7-5.9% of normal at week 25; golodirsen 0.095% to 1.019% at week 48.",
+     "source": "https://www.neurology.org/doi/10.1212/WNL.0000000000009233"
+    },
+    {
+     "claim": "Casimersen: mean dystrophin 0.9% to 1.7% of normal at week 48 vs 0.5% to 0.8% on placebo.",
+     "source": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2021/213026Orig1s000SumR.pdf"
+    },
+    {
+     "claim": "Four PMOs are FDA-approved but efficacy is very limited, with delivery remaining the key obstacle (poor uptake, limited endosomal escape).",
+     "source": "https://doi.org/10.1080/15476286.2026.2689117"
+    }
+   ]
+  },
+  {
+   "name": "Anti-TfR1 Fab-PMO conjugate (Dyne FORCE; DYNE-251 / z-rostudirsen)",
+   "architecture": "Humanised anti-transferrin-receptor-1 Fab covalently linked to exon-51 PMO; receptor-mediated endocytosis into TfR1-high muscle.",
+   "reaches_cell": "Skeletal myofibers, diaphragm and heart. NHP: 5 weekly 30 mg/kg doses gave 43% (heart), 52% (diaphragm), 18% (quadriceps) exon 51 skipping at 8 weeks. mdx FORCE-M23D 30 mg/kg: 77% of WT dystrophin by Western in heart, diaphragm and quadriceps with near-complete sarcolemmal localisation in heart and diaphragm. Satellite-cell compartment: PMO delivered to satellite cells and found in nuclei of newly regenerated fibres 3 months post-dose (preclinical, platform-level).",
+   "functional_activity": "Yes - human mRNA skipping, protein restoration, CK fall and functional endpoints moving in the same direction.",
+   "human_pd": "DELIVER (exon 51): 20 mg/kg Q4W mean absolute dystrophin 3.71% of normal (muscle-content-adjusted 8.72%), >10x the 0.3% reported for eteplirsen; Registry Expansion Cohort met primary endpoint at muscle-adjusted 5.46% of normal at 6 months; sustained functional improvement to 12-18 months.",
+   "dose_frequency": "IV 20 mg/kg every 4 weeks (registrational dose/regimen); 546 doses administered at that level.",
+   "toxicity": "Favourable across 54 participants: no new treatment-related SAEs; IRRs 11%, all mild/moderate, no dosing stoppages; headache 16%, nasopharyngitis 16%, vomiting 14%. No anaemia, thrombocytopenia or kidney injury; no clinically meaningful electrolyte (incl. magnesium) changes - i.e. none of the PPMO liabilities.",
+   "access": "Dyne is independent; BLA for z-rostudirsen submitted May 2026 seeking accelerated approval with priority review, launch targeted Q1 2027, Phase 3 FORZETTO running. Platform access only by partnership/licence; an exon 55 asset would be a new conjugate on their established Fab and tox package - plausible co-development but they control the IP and are prioritising their own exon franchise.",
+   "findings": [
+    {
+     "claim": "DYNE-251 20 mg/kg Q4W: mean absolute dystrophin 3.71% of normal, 8.72% muscle-content-adjusted; REC primary endpoint 5.46% muscle-adjusted at 6 months.",
+     "source": "https://investors.dyne-tx.com/news-releases/news-release-details/dyne-therapeutics-announces-new-clinical-data-phase-12-deliver/"
+    },
+    {
+     "claim": "In NHPs, 5 weekly 30 mg/kg DYNE-251 doses produced 43%, 52% and 18% exon 51 skipping in heart, diaphragm and quadriceps at 8 weeks.",
+     "source": "https://www.mdaconference.org/abstract-library/forcetm-platform-delivers-exon-skipping-pmo-leads-to-durable-increases-in-dystrophin-protein-in-mdx-mice-and-is-well-tolerated-in-nhps/"
+    },
+    {
+     "claim": "Safety across 54 DELIVER participants: all IRRs mild/moderate (11%), no treatment-related SAEs, no kidney injury or magnesium changes.",
+     "source": "https://www.dyne-tx.com/wp-content/uploads/Guglieri_2025_WMS_DELIVER%20Poster.pdf"
+    },
+    {
+     "claim": "BLA for z-rostudirsen submitted May 2026 under accelerated approval; Phase 3 FORZETTO initiated.",
+     "source": "https://www.dyne-tx.com/forzetto-trial-initiated/"
+    },
+    {
+     "claim": "TfR1-targeted FORCE conjugation enhanced exon skipping and prolonged dystrophin restoration in mdx mice.",
+     "source": "https://academic.oup.com/nar/article/50/20/11401/6656072"
+    }
+   ]
+  },
+  {
+   "name": "Anti-TfR1 mAb-PMO conjugate (Avidity AOC; AOC 1044 / del-zota)",
+   "architecture": "Full-length anti-TfR1 monoclonal antibody conjugated to exon-44 PMO (AOC). Longer circulating half-life than Fab format, supporting 6-weekly dosing.",
+   "reaches_cell": "Highest measured human muscle PMO exposure of any class: ~200 nM PMO in skeletal muscle, up to 50x the concentrations reported for peptide-conjugated PMOs. Cardiac and smooth muscle targeted by design; preclinical atrial/ventricular exon 44 skipping ~7 skipped copies/ng cDNA. Human cardiac PD: none published.",
+   "functional_activity": "Yes - skipping, protein and a biochemical disease-activity marker all move.",
+   "human_pd": "EXPLORE44, 5 mg/kg: exon 44 skipping +37% absolute (7% to 44%, up to 66%); dystrophin +25% absolute over baseline (7% to 32% of normal; total dystrophin up to 54% of normal); CK reduced >80% from baseline to near-normal. n=10 in the 5 mg/kg cohort, 3 doses.",
+   "dose_frequency": "IV 5 mg/kg every 6 weeks (10 mg/kg tested in healthy volunteers).",
+   "toxicity": "Favourable; most TEAEs mild/moderate in DMD44 participants, well tolerated to 10 mg/kg in healthy volunteers. Note the AOC platform has carried serious safety events in other indications/payloads, so platform tox is payload- and dose-dependent, not a blanket clearance.",
+   "access": "Hardest to access: Novartis completed the $12B Avidity acquisition on 27 Feb 2026; del-zota BLA accepted for priority review under accelerated approval (Sept 2026) with Phase 3 SAFARI44 as the confirmatory trial. An exon 55 program would compete for Novartis internal prioritisation; out-licensing the anti-TfR1 AOC format to a third party is unlikely. Treat as a benchmark and a validation of TfR1, not a realistic in-license.",
+   "findings": [
+    {
+     "claim": "AOC 1044 5 mg/kg: exon 44 skipping rose 37% (7% to 44%, up to 66%) and dystrophin rose 25% (7% to 32% of normal) with CK reduced >80%.",
+     "source": "https://www.prnewswire.com/news-releases/avidity-biosciences-announces-positive-aoc-1044-data-demonstrated-significant-increase-of-25-in-dystrophin-production-and-reduction-of-creatine-kinase-levels-to-near-normal-in-people-living-with-duchenne-muscular-dystrophy-amenab-302218647.html"
+    },
+    {
+     "claim": "AOC 1044 achieved ~200 nM PMO in human skeletal muscle, up to 50x concentrations reported for peptide-conjugated PMOs.",
+     "source": "https://www.prnewswire.com/news-releases/avidity-biosciences-reports-positive-data-demonstrating-aoc-1044-delivers-unprecedented-concentrations-of-pmo-in-muscle-following-a-single-dose-in-healthy-volunteers-from-phase-12-explore44-trial-for-duchenne-muscular-dystrophy-302013456.html"
+    },
+    {
+     "claim": "Dosing was 3 doses once every 6 weeks in the 5 mg/kg DMD44 cohort; most TEAEs mild/moderate.",
+     "source": "https://www.parentprojectmd.org/avidity-biosciences-announces-positive-data-from-phase-1-2-explore44-trial-of-aoc-1044-in-individuals-amenable-to-exon-44-skipping/"
+    },
+    {
+     "claim": "Novartis completed acquisition of Avidity on 27 February 2026 ($72/share, ~$12.0B), taking the muscle AOC platform in-house.",
+     "source": "https://www.novartis.com/news/media-releases/novartis-successfully-completes-acquisition-avidity-biosciences-strengthening-late-stage-neuroscience-pipeline-and-advancing-xrna-strategy"
+    },
+    {
+     "claim": "FDA accepted the del-zota BLA for priority review under accelerated approval; confirmatory Phase 3 SAFARI44 initiated.",
+     "source": "https://www.parentprojectmd.org/novartis-shares-del-zota-regulatory-update-fda-accepts-bla-for-priority-review/"
+    }
+   ]
+  },
+  {
+   "name": "Cell-penetrating peptide-PMO conjugates (PPMO: Sarepta SRP-5051; PepGen EDO)",
+   "architecture": "Cationic/arginine-rich or proprietary 'enhanced delivery oligonucleotide' peptide covalently fused to PMO; adsorptive endocytosis.",
+   "reaches_cell": "Reaches myofibre and (preclinically, e.g. Pip6a-PMO) cardiac muscle, but human exposure is roughly an order of magnitude below antibody conjugates.",
+   "functional_activity": "Yes, skipping demonstrable in humans - but protein output did not follow at tolerated doses.",
+   "human_pd": "PepGen PGN-EDO51 10 mg/kg: exon 51-skipped transcripts 4.26% but total dystrophin only 0.59% of normal - company concluded it could not dose high enough for meaningful benefit. SRP-5051 showed dystrophin increases but was discontinued.",
+   "dose_frequency": "IV monthly (SRP-5051 30 mg/kg Q4W; PGN-EDO51 5-10 mg/kg Q4W).",
+   "toxicity": "Class-defining failure mode: SRP-5051 caused hypomagnesaemia that was prolonged in some participants even after stopping, plus eGFR decline - development discontinued Nov 2024 on long-term safety/tolerability. PGN-EDO51 itself was well tolerated (all related AEs mild, no SAEs) but was stopped May 2025 for insufficient dystrophin; PepGen exited DMD entirely.",
+   "access": "Available in principle (free IP space, several academic Pip/B-peptide series), but two independent clinical failures make it uninvestable for a new exon 55 asset. Deprioritise.",
+   "findings": [
+    {
+     "claim": "PGN-EDO51 10 mg/kg raised exon 51 skipping to 4.26% but total dystrophin only to 0.59% of normal; PepGen ended all DMD work.",
+     "source": "https://www.parentprojectmd.org/pepgen-announces-discontinuation-of-pgn-edo51-development/"
+    },
+    {
+     "claim": "Sarepta discontinued SRP-5051 after prolonged hypomagnesaemia and eGFR decline in some MOMENTUM participants.",
+     "source": "https://www.sarepta.com/community-letter-update-srp-5051-program"
+    },
+    {
+     "claim": "Pip6a-PMO exon skipping activity in mdx skeletal and cardiac muscle cells is determined by cellular trafficking.",
+     "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3950666/"
+    }
+   ]
+  },
+  {
+   "name": "Endosomal Escape Vehicle (EEV)-conjugated PMO (Entrada ENTR-601-44)",
+   "architecture": "Cyclic cell-penetrating peptide engineered for endosomal escape, conjugated to PMO; next-generation of the peptide class.",
+   "reaches_cell": "Reaches skeletal muscle and gives measurable skipping in humans; no human cardiac PD.",
+   "functional_activity": "Yes, but small in magnitude at the doses reported so far.",
+   "human_pd": "ELEVATE-44-201 Cohort 1 (3 x 6 mg/kg IV, ~12 weeks): dystrophin +2.36% over a 4.00% baseline; exon 44 skipping +2.31% over 2.66%. An early functional (time-to-rise velocity) separation vs placebo was reported, ~3.5x MCID, on modest biomarker change.",
+   "dose_frequency": "IV approximately every 4 weeks; dose escalation to 18 mg/kg planned in Cohort 3.",
+   "toxicity": "Met primary safety objectives in Cohort 1. Program had been under FDA clinical hold, lifted 24 Feb 2025 allowing the adult MAD study; the hold history is a diligence item for the chemistry class.",
+   "access": "Entrada is independent with exon 44/45/50/51 assets and no exon 55 program - the most realistic partner/licensor of a targeted-delivery chemistry for a new exon. But current human potency (2.4 percentage-point dystrophin gain) does not yet beat a naked dual-PMO, and higher-dose data are pending end-2026.",
+   "findings": [
+    {
+     "claim": "ENTR-601-44 Cohort 1 (three 6 mg/kg IV doses): dystrophin +2.36% over 4.00% baseline, exon 44 skipping +2.31% over 2.66%.",
+     "source": "https://www.globenewswire.com/news-release/2026/05/07/3289797/0/en/entrada-therapeutics-announces-positive-topline-results-from-cohort-1-of-participants-with-duchenne-muscular-dystrophy-treated-with-entr-601-44-in-phase-1-2-elevate-44-201-study.html"
+    },
+    {
+     "claim": "FDA removed the clinical hold on ENTR-601-44 on 24 Feb 2025, authorising a Phase 1b MAD study in adults.",
+     "source": "https://www.neurologylive.com/view/fda-removes-clinical-hold-duchenne-muscular-dystrophy-agent-entr-601-44"
+    },
+    {
+     "claim": "Cohort 2 MAD and Cohort 1 open-label data expected by end-2026; Cohort 3 doses up to 18 mg/kg.",
+     "source": "https://www.biopharminternational.com/view/entrada-reports-early-functional-benefit-in-phase-1-2-duchenne-study-of-entr-601-44"
+    }
+   ]
+  },
+  {
+   "name": "Vectorised antisense: AAV9-U7snRNA",
+   "architecture": "Self-complementary AAV9 encoding modified U7 small nuclear RNA carrying the antisense sequence; one-time IV dose, continuous intranuclear antisense production.",
+   "reaches_cell": "AAV9 tropism covers skeletal muscle, diaphragm and heart, and transduced myonuclei keep producing the antisense - the only class that addresses durability without chronic infusion. Does not transduce satellite cells durably, so dilution by regeneration remains.",
+   "functional_activity": "Yes - efficient skipping and dystrophin restoration in mdx52 (exon 51) and exon 2 models; a 2026 paper extends U7snRNA to pseudoexon skipping with full-length DMD restoration in patient cells.",
+   "human_pd": "Only human experience is the exon 2 duplication trial scAAV9.U7.ACCA (NCT04240314), systemic IV, results posted Sept 2025. No exon 55 or two-exon construct in humans. Preclinical dose-escalation has defined a therapeutic range for exon 2 skipping.",
+   "dose_frequency": "Single IV dose; effectively non-redosable (capsid immunity).",
+   "toxicity": "NHP GLP studies at clinically relevant doses showed no toxicity for AAV9.U7snRNA; however high-dose systemic AAV in DMD carries the known hepatic/complement/cardiac risk profile and pre-existing-antibody exclusion.",
+   "access": "Academic origin (Nationwide Children's) - licensable, and attractive because a multi-cassette U7 vector can carry two antisense sequences, which is exactly what a frame-correcting 54-55 or 55-56 double skip needs. Build cost and CMC are much higher than an ASO; one-shot dosing with no titration is a real risk for a first-in-class exon.",
+   "findings": [
+    {
+     "claim": "scAAV9.U7.ACCA systemic IV trial for DMD exon 2 duplication posted results Sept 2025.",
+     "source": "https://clinicaltrials.gov/study/NCT04240314"
+    },
+    {
+     "claim": "No toxicity in NHPs at clinically relevant doses of an AAV9.U7snRNA vector designed to induce DMD exon 2 skipping.",
+     "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10112461/"
+    },
+    {
+     "claim": "AAV9-U7snRNA gave long-term exon 51 skipping in mdx52 mice.",
+     "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7240049/"
+    },
+    {
+     "claim": "U7snRNA-mediated pseudoexon skipping restored full-length DMD expression in patient-derived cell lines (2026).",
+     "source": "https://pubmed.ncbi.nlm.nih.gov/42232222/"
+    }
+   ]
+  },
+  {
+   "name": "Integrin alpha-v-beta-6 peptide-ligand platform (Arrowhead TRiM) - adjacent, not yet an exon-skipping platform",
+   "architecture": "Short peptide ligand binding avb6 integrin on myofibres plus lipid modifier; to date conjugated to siRNA (ARO-DUX4, ARO-DM1), not to splice-switching oligos.",
+   "reaches_cell": "Skeletal muscle in humans (programs in clinic); deep durable knockdown in NHP skeletal muscle lasting at least 3 months after IV dosing. Cardiomyocyte targeting is a separate, still-preclinical Arrowhead tissue.",
+   "functional_activity": "Demonstrated for RNAi payloads only. Splice-switching requires nuclear delivery of a steric-block oligo - not yet shown for this ligand, so it is architecture precedent, not efficacy precedent.",
+   "human_pd": "none found for exon skipping with this ligand (searched Arrowhead TRiM muscle DMD exon skipping 2026).",
+   "dose_frequency": "IV; NHP durability >=3 months supports quarterly-type intervals if it translates.",
+   "toxicity": "Not established for an oligo-splice payload; no DMD human data.",
+   "access": "Arrowhead partners selectively; this is a watch item, not a 2026-27 build option for exon 55.",
+   "findings": [
+    {
+     "claim": "Arrowhead's skeletal-muscle TRiM programs use a peptide ligand to avb6 integrin; IV dosing in NHP gave deep durable muscle knockdown lasting at least 3 months; cardiomyocyte targeting remains preclinical.",
+     "source": "https://ir.arrowheadpharma.com/static-files/bd51d6be-2f2c-49b9-927b-4437fd718508"
+    }
+   ]
+  },
+  {
+   "name": "Exon-55-specific clinical precedent",
+   "architecture": "n/a",
+   "reaches_cell": "n/a",
+   "functional_activity": "Exon 55 appears in preclinical multi-exon 45-55 skipping work only: mutation-tailored PMO cocktails removing 3, 8 or 10 exons restored dystrophin in immortalised patient cells, and bodywide 45-55 skipping was achieved in mdx52 mice by systemic antisense. No published single- or dual-ASO optimised for a 54-55 or 55-56 frame-correcting double skip, and no evidence that one ASO drives coordinated skipping of two adjacent exons here - assume 2 ASOs.",
+   "human_pd": "none found. Searches run: ClinicalTrials.gov DMD exon 55 (only hit: PBGENE-DMD ARCUS editing, NCT07429240); PubMed 'DMD exon 55 skipping antisense'; PubMed 'double exon skipping single ASO 54 55 56'; PubMed 'exon 55 PMO cocktail 54-55'.",
+   "dose_frequency": "n/a",
+   "toxicity": "n/a",
+   "access": "Open field - no competitor asset to license or be blocked by; also no de-risking data. A nonsense mutation in exon 55 additionally means in-exon PTC removal has a second, non-skipping option space (readthrough/editing) worth a separate assessment.",
+   "findings": [
+    {
+     "claim": "Mutation-tailored PMO cocktails induced exons 45-55 skipping removing 3, 8 or 10 exons with dystrophin restoration in immortalised DMD patient cells.",
+     "source": "https://pubmed.ncbi.nlm.nih.gov/31416775/"
+    },
+    {
+     "claim": "Bodywide skipping of exons 45-55 was achieved in mdx52 mice by systemic antisense delivery.",
+     "source": "https://pubmed.ncbi.nlm.nih.gov/22869723/"
+    },
+    {
+     "claim": "A ClinicalTrials.gov search for DMD exon 55 returned no exon-skipping study; only Precision BioSciences' PBGENE-DMD ARCUS program (recruiting).",
+     "source": "NCT07429240"
+    }
+   ]
+  }
+ ],
+ "naked_baseline": "Best unconjugated baseline is a dual-ASO naked PMO, not a single ASO: brogidirsen (two PMOs to one exon, exon 44), IV 40 and 80 mg/kg weekly, gave dystrophin 16.63% and 24.47% of normal at 24 weeks (dose-escalation cohorts 10.27% and 15.79%), no SAEs, no discontinuations. Single-ASO naked PMO ceiling: viltolarsen 80 mg/kg weekly = 5.7-5.9% of normal at week 25; golodirsen 30 mg/kg weekly = 1.019% at week 48; casimersen 30 mg/kg weekly = 1.7% vs 0.8% placebo at week 48; eteplirsen 30 mg/kg weekly = 0.93% at 180 weeks. All weekly IV, lifelong, with essentially no cardiomyocyte delivery - the baseline buys skeletal-muscle dystrophin only.",
+ "payload_vs_delivery": "Delivery-driven: Dyne's 3.71-5.46% vs eteplirsen's 0.3-0.9% on the same exon 51 sequence target, and Avidity's ~200 nM muscle PMO vs peptide conjugates. Amenability-driven: exon 44's 4-7% pre-treatment dystrophin (natural skipping) inflates del-zota's 32% and ENTR-601-44's numbers. Potency-driven: brogidirsen's 24% comes from dual-site ASO design plus 80 mg/kg, not delivery. Exon 55 needs a two-exon skip - expect none of these magnitudes to transfer."
+}

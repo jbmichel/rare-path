@@ -1,0 +1,979 @@
+{
+ "gene": "DMD",
+ "transcript": "ENST00000357033",
+ "transcript_name": "DMD-203",
+ "protein_aa": 3685,
+ "target_exon": 55,
+ "target_exon_len": 190,
+ "target_exon_cds_len": 190,
+ "target_exon_frame_mod3": 1,
+ "target_alone_in_frame": false,
+ "exon_lengths": {
+  "48": 186,
+  "49": 102,
+  "50": 109,
+  "51": 233,
+  "52": 118,
+  "53": 212,
+  "54": 155,
+  "55": 190,
+  "56": 173,
+  "57": 157,
+  "58": 121,
+  "59": 269,
+  "60": 147,
+  "61": 79,
+  "62": 61
+ },
+ "viable_in_frame_skips": [
+  {
+   "skip": "54-55",
+   "exons": [
+    54,
+    55
+   ],
+   "n_exons": 2,
+   "bp_removed": 345,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3570,
+   "aa_deleted": 115,
+   "deleted_aa_range": "2625-2739",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 2",
+   "junction": "ACAGAAACCAAG|GACCTCCAAGGT"
+  },
+  {
+   "skip": "55-56",
+   "exons": [
+    55,
+    56
+   ],
+   "n_exons": 2,
+   "bp_removed": 363,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3564,
+   "aa_deleted": 121,
+   "deleted_aa_range": "2676-2796",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 2",
+   "junction": "CATTCATAAAAG|GTCCCATTTGGA"
+  },
+  {
+   "skip": "52-55",
+   "exons": [
+    52,
+    53,
+    54,
+    55
+   ],
+   "n_exons": 4,
+   "bp_removed": 675,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3460,
+   "aa_deleted": 225,
+   "deleted_aa_range": "2515-2739",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 4",
+   "junction": "ATCAAGCAGAAG|GACCTCCAAGGT"
+  },
+  {
+   "skip": "54-57",
+   "exons": [
+    54,
+    55,
+    56,
+    57
+   ],
+   "n_exons": 4,
+   "bp_removed": 675,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3460,
+   "aa_deleted": 225,
+   "deleted_aa_range": "2625-2849",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 4",
+   "junction": "ACAGAAACCAAG|GCCTTCAAGAGG"
+  },
+  {
+   "skip": "52-57",
+   "exons": [
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+   ],
+   "n_exons": 6,
+   "bp_removed": 1005,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3350,
+   "aa_deleted": 335,
+   "deleted_aa_range": "2515-2849",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 6",
+   "junction": "ATCAAGCAGAAG|GCCTTCAAGAGG"
+  },
+  {
+   "skip": "53-58",
+   "exons": [
+    53,
+    54,
+    55,
+    56,
+    57,
+    58
+   ],
+   "n_exons": 6,
+   "bp_removed": 1008,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3349,
+   "aa_deleted": 336,
+   "deleted_aa_range": "2554-2889",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 6",
+   "junction": "TTACGGATCGAA|AGCTGCCTCCTG"
+  },
+  {
+   "skip": "50-55",
+   "exons": [
+    50,
+    51,
+    52,
+    53,
+    54,
+    55
+   ],
+   "n_exons": 6,
+   "bp_removed": 1017,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3346,
+   "aa_deleted": 339,
+   "deleted_aa_range": "2401-2739",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 6",
+   "junction": "CAGCCAGTGAAG|GACCTCCAAGGT"
+  },
+  {
+   "skip": "54-59",
+   "exons": [
+    54,
+    55,
+    56,
+    57,
+    58,
+    59
+   ],
+   "n_exons": 6,
+   "bp_removed": 1065,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3330,
+   "aa_deleted": 355,
+   "deleted_aa_range": "2625-2979",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 6",
+   "junction": "ACAGAAACCAAG|GCACTTCGAGGA"
+  },
+  {
+   "skip": "49-55",
+   "exons": [
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55
+   ],
+   "n_exons": 7,
+   "bp_removed": 1119,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3312,
+   "aa_deleted": 373,
+   "deleted_aa_range": "2367-2739",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 7",
+   "junction": "TTTGACGTTAAG|GACCTCCAAGGT"
+  },
+  {
+   "skip": "54-60",
+   "exons": [
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60
+   ],
+   "n_exons": 7,
+   "bp_removed": 1212,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3281,
+   "aa_deleted": 404,
+   "deleted_aa_range": "2625-3028",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 7",
+   "junction": "ACAGAAACCAAG|GTGGCCGTCGAG"
+  },
+  {
+   "skip": "55-62",
+   "exons": [
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62
+   ],
+   "n_exons": 8,
+   "bp_removed": 1197,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3286,
+   "aa_deleted": 399,
+   "deleted_aa_range": "2676-3074",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 8",
+   "junction": "CATTCATAAAAG|CCACGAGACTCA"
+  },
+  {
+   "skip": "48-55",
+   "exons": [
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55
+   ],
+   "n_exons": 8,
+   "bp_removed": 1305,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3250,
+   "aa_deleted": 435,
+   "deleted_aa_range": "2305-2739",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 8",
+   "junction": "CAGTGGATAAAG|GACCTCCAAGGT"
+  },
+  {
+   "skip": "50-57",
+   "exons": [
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+   ],
+   "n_exons": 8,
+   "bp_removed": 1347,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3236,
+   "aa_deleted": 449,
+   "deleted_aa_range": "2401-2849",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 8",
+   "junction": "CAGCCAGTGAAG|GCCTTCAAGAGG"
+  },
+  {
+   "skip": "52-59",
+   "exons": [
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59
+   ],
+   "n_exons": 8,
+   "bp_removed": 1395,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3220,
+   "aa_deleted": 465,
+   "deleted_aa_range": "2515-2979",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 8",
+   "junction": "ATCAAGCAGAAG|GCACTTCGAGGA"
+  },
+  {
+   "skip": "49-57",
+   "exons": [
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+   ],
+   "n_exons": 9,
+   "bp_removed": 1449,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3202,
+   "aa_deleted": 483,
+   "deleted_aa_range": "2367-2849",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 9",
+   "junction": "TTTGACGTTAAG|GCCTTCAAGAGG"
+  },
+  {
+   "skip": "47-55",
+   "exons": [
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55
+   ],
+   "n_exons": 9,
+   "bp_removed": 1455,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3200,
+   "aa_deleted": 485,
+   "deleted_aa_range": "2255-2739",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 9",
+   "junction": "GAGCAAGTCAAG|GACCTCCAAGGT"
+  },
+  {
+   "skip": "53-61",
+   "exons": [
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61
+   ],
+   "n_exons": 9,
+   "bp_removed": 1503,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3184,
+   "aa_deleted": 501,
+   "deleted_aa_range": "2554-3054",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 9",
+   "junction": "TTACGGATCGAA|CGTCTGTCCAGG"
+  },
+  {
+   "skip": "52-60",
+   "exons": [
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60
+   ],
+   "n_exons": 9,
+   "bp_removed": 1542,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3171,
+   "aa_deleted": 514,
+   "deleted_aa_range": "2515-3028",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 9",
+   "junction": "ATCAAGCAGAAG|GTGGCCGTCGAG"
+  },
+  {
+   "skip": "48-57",
+   "exons": [
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+   ],
+   "n_exons": 10,
+   "bp_removed": 1635,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3140,
+   "aa_deleted": 545,
+   "deleted_aa_range": "2305-2849",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 10",
+   "junction": "CAGTGGATAAAG|GCCTTCAAGAGG"
+  },
+  {
+   "skip": "50-59",
+   "exons": [
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59
+   ],
+   "n_exons": 10,
+   "bp_removed": 1737,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3106,
+   "aa_deleted": 579,
+   "deleted_aa_range": "2401-2979",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 10",
+   "junction": "CAGCCAGTGAAG|GCACTTCGAGGA"
+  },
+  {
+   "skip": "55-65",
+   "exons": [
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65
+   ],
+   "n_exons": 11,
+   "bp_removed": 1536,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3173,
+   "aa_deleted": 512,
+   "deleted_aa_range": "2676-3187",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 11",
+   "junction": "CATTCATAAAAG|GGGACGAACAGG"
+  },
+  {
+   "skip": "53-63",
+   "exons": [
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63
+   ],
+   "n_exons": 11,
+   "bp_removed": 1626,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3143,
+   "aa_deleted": 542,
+   "deleted_aa_range": "2554-3095",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 11",
+   "junction": "TTACGGATCGAA|CTGACCTGAATA"
+  },
+  {
+   "skip": "46-56",
+   "exons": [
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56
+   ],
+   "n_exons": 11,
+   "bp_removed": 1776,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3093,
+   "aa_deleted": 592,
+   "deleted_aa_range": "2205-2796",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 11",
+   "junction": "CAGAAAAAAGAG|GTCCCATTTGGA"
+  },
+  {
+   "skip": "45-55",
+   "exons": [
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55
+   ],
+   "n_exons": 11,
+   "bp_removed": 1779,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3092,
+   "aa_deleted": 593,
+   "deleted_aa_range": "2147-2739",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 11",
+   "junction": "TGGTATCTTAAG|GACCTCCAAGGT"
+  },
+  {
+   "skip": "47-57",
+   "exons": [
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+   ],
+   "n_exons": 11,
+   "bp_removed": 1785,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3090,
+   "aa_deleted": 595,
+   "deleted_aa_range": "2255-2849",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 11",
+   "junction": "GAGCAAGTCAAG|GCCTTCAAGAGG"
+  },
+  {
+   "skip": "49-59",
+   "exons": [
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59
+   ],
+   "n_exons": 11,
+   "bp_removed": 1839,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3072,
+   "aa_deleted": 613,
+   "deleted_aa_range": "2367-2979",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 11",
+   "junction": "TTTGACGTTAAG|GCACTTCGAGGA"
+  },
+  {
+   "skip": "51-61",
+   "exons": [
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61
+   ],
+   "n_exons": 11,
+   "bp_removed": 1854,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3067,
+   "aa_deleted": 618,
+   "deleted_aa_range": "2437-3054",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 11",
+   "junction": "CTATTGGAGCCT|CGTCTGTCCAGG"
+  },
+  {
+   "skip": "50-60",
+   "exons": [
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60
+   ],
+   "n_exons": 11,
+   "bp_removed": 1884,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3057,
+   "aa_deleted": 628,
+   "deleted_aa_range": "2401-3028",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 11",
+   "junction": "CAGCCAGTGAAG|GTGGCCGTCGAG"
+  },
+  {
+   "skip": "53-64",
+   "exons": [
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64
+   ],
+   "n_exons": 12,
+   "bp_removed": 1701,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3118,
+   "aa_deleted": 567,
+   "deleted_aa_range": "2554-3120",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 12",
+   "junction": "TTACGGATCGAA|TGGATCTCTTGA"
+  },
+  {
+   "skip": "49-60",
+   "exons": [
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60
+   ],
+   "n_exons": 12,
+   "bp_removed": 1986,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3023,
+   "aa_deleted": 662,
+   "deleted_aa_range": "2367-3028",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 12",
+   "junction": "TTTGACGTTAAG|GTGGCCGTCGAG"
+  },
+  {
+   "skip": "48-59",
+   "exons": [
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59
+   ],
+   "n_exons": 12,
+   "bp_removed": 2025,
+   "in_frame": true,
+   "frame_shift": 0,
+   "new_stop_at_aa": null,
+   "premature_stop": false,
+   "protein_len": 3010,
+   "aa_deleted": 675,
+   "deleted_aa_range": "2305-2979",
+   "oligos_min_max": "1 (if coordinated skipping exists) to 12",
+   "junction": "CAGTGGATAAAG|GCACTTCGAGGA"
+  }
+ ],
+ "rejected_skips": [
+  {
+   "skip": "55",
+   "why": "out of frame"
+  },
+  {
+   "skip": "53-55",
+   "why": "out of frame"
+  },
+  {
+   "skip": "54-56",
+   "why": "out of frame"
+  },
+  {
+   "skip": "55-57",
+   "why": "out of frame"
+  },
+  {
+   "skip": "53-56",
+   "why": "out of frame"
+  },
+  {
+   "skip": "55-58",
+   "why": "out of frame"
+  },
+  {
+   "skip": "51-55",
+   "why": "out of frame"
+  },
+  {
+   "skip": "52-56",
+   "why": "out of frame"
+  },
+  {
+   "skip": "53-57",
+   "why": "out of frame"
+  },
+  {
+   "skip": "54-58",
+   "why": "out of frame"
+  },
+  {
+   "skip": "55-59",
+   "why": "out of frame"
+  },
+  {
+   "skip": "51-56",
+   "why": "out of frame"
+  },
+  {
+   "skip": "55-60",
+   "why": "out of frame"
+  },
+  {
+   "skip": "50-56",
+   "why": "out of frame"
+  },
+  {
+   "skip": "51-57",
+   "why": "out of frame"
+  },
+  {
+   "skip": "52-58",
+   "why": "out of frame"
+  },
+  {
+   "skip": "53-59",
+   "why": "out of frame"
+  },
+  {
+   "skip": "55-61",
+   "why": "out of frame"
+  },
+  {
+   "skip": "49-56",
+   "why": "out of frame"
+  },
+  {
+   "skip": "51-58",
+   "why": "premature stop at aa 2437"
+  },
+  {
+   "skip": "53-60",
+   "why": "out of frame"
+  },
+  {
+   "skip": "54-61",
+   "why": "out of frame"
+  },
+  {
+   "skip": "48-56",
+   "why": "out of frame"
+  },
+  {
+   "skip": "50-58",
+   "why": "out of frame"
+  },
+  {
+   "skip": "51-59",
+   "why": "out of frame"
+  },
+  {
+   "skip": "54-62",
+   "why": "out of frame"
+  },
+  {
+   "skip": "55-63",
+   "why": "out of frame"
+  },
+  {
+   "skip": "46-55",
+   "why": "out of frame"
+  },
+  {
+   "skip": "47-56",
+   "why": "out of frame"
+  },
+  {
+   "skip": "49-58",
+   "why": "out of frame"
+  },
+  {
+   "skip": "51-60",
+   "why": "out of frame"
+  },
+  {
+   "skip": "52-61",
+   "why": "out of frame"
+  },
+  {
+   "skip": "53-62",
+   "why": "out of frame"
+  },
+  {
+   "skip": "54-63",
+   "why": "out of frame"
+  },
+  {
+   "skip": "55-64",
+   "why": "out of frame"
+  },
+  {
+   "skip": "48-58",
+   "why": "out of frame"
+  },
+  {
+   "skip": "52-62",
+   "why": "out of frame"
+  },
+  {
+   "skip": "54-64",
+   "why": "out of frame"
+  },
+  {
+   "skip": "44-55",
+   "why": "out of frame"
+  },
+  {
+   "skip": "45-56",
+   "why": "out of frame"
+  },
+  {
+   "skip": "46-57",
+   "why": "out of frame"
+  },
+  {
+   "skip": "47-58",
+   "why": "out of frame"
+  },
+  {
+   "skip": "50-61",
+   "why": "out of frame"
+  },
+  {
+   "skip": "51-62",
+   "why": "out of frame"
+  },
+  {
+   "skip": "52-63",
+   "why": "out of frame"
+  },
+  {
+   "skip": "54-65",
+   "why": "out of frame"
+  },
+  {
+   "skip": "55-66",
+   "why": "out of frame"
+  }
+ ],
+ "note": "Contiguous blocks only; coordinated-skipping behaviour (one ASO, several exons) is NOT computed here - it is a literature question."
+}

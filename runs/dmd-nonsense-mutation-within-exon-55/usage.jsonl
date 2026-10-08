@@ -1,0 +1,8 @@
+{"t": "18:48:29", "agent": "rna_defect", "turns": 3, "tokens": 13194, "notional_usd": 0.1294}
+{"t": "19:53:41", "agent": "6_programs", "turns": 31, "tokens": 580073, "notional_usd": 1.7099}
+{"t": "19:54:43", "agent": "4_aso", "turns": 52, "tokens": 860446, "notional_usd": 2.0651}
+{"t": "19:54:49", "agent": "5_delivery", "turns": 30, "tokens": 380427, "notional_usd": 1.741}
+{"t": "19:55:00", "agent": "3_product", "turns": 35, "tokens": 733512, "notional_usd": 1.8747}
+{"t": "19:57:24", "agent": "decision", "turns": 4, "tokens": 132644, "notional_usd": 1.2969}
+{"t": "19:58:59", "agent": "editor", "turns": 3, "tokens": 30724, "notional_usd": 0.3587}
+{"t": "20:00:43", "agent": "editor", "turns": 3, "tokens": 30995, "notional_usd": 0.3224}

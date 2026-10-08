@@ -1,0 +1,17 @@
+{
+ "gene": "DMD",
+ "transcript": "NM_004006.3",
+ "defect": "A nonsense substitution in exon 55 introduces a premature termination codon into a structurally normal pre-mRNA; splice sites are intact so the exon is included, and the mature mRNA is largely degraded by NMD. Any residual protein terminates before the cysteine-rich and C-terminal domains, so it cannot bind beta-dystroglycan or assemble the DAPC - a functional null for Dp427 and for Dp260/Dp140, with Dp116/Dp71 spared.",
+ "desired_rna_product": "A mature, NMD-stable DMD mRNA from which the PTC-bearing exon 55 has been excised together with the minimal set of adjacent exons (if any) required to keep the reading frame, yielding a clean exon 54-56 junction when exon 55 alone is frame-neutral; translation must proceed to the native stop codon with no cryptic-site activation or intron retention, giving an internally deleted BMD-like dystrophin. Frame-neutrality of the chosen exon set must be taken from the exon enumeration, not assumed.",
+ "goal": "skip_exon",
+ "target_exons": [
+  55
+ ],
+ "tissues": [
+  "skeletal muscle myofibers",
+  "diaphragm and intercostal muscle",
+  "cardiomyocytes (left ventricle)",
+  "vascular and GI smooth muscle",
+  "satellite cells (muscle stem cells, for durability)"
+ ]
+}
